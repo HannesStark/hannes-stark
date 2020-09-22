@@ -117,8 +117,13 @@
               "devServerTarget": "hannes-stark:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "hannes-stark"
 }
