@@ -1,15 +1,17 @@
 <mat-toolbar>
-  <mat-toolbar-row>
-    <button mat-icon-button>
-    </button>
-    <h1 [routerLink]="'/main-page'">Hannes' Homepage</h1>
-    <span class="menu-spacer"></span>
-    <div>
+  <mat-toolbar-row fxLayout="row">
+    <div fxFlex="15">
+
+    </div>
+    <div fxFlex="15">
+      <a class="homepage" mat-button [routerLink]="'/main-page'">Hannes' Homepage</a>
+    </div>
+    <div fxFlex="40">
       <a mat-button [routerLink]="'/about'"> about </a>
     </div>
-  </mat-toolbar-row>
+    <div fxFlex="30">
 
-  <mat-toolbar-row>
-      <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
-    </mat-toolbar-row>
+    </div>
+  </mat-toolbar-row>
 </mat-toolbar>
+
