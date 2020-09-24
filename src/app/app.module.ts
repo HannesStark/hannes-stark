@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {AboutComponent} from './about/about.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatToolbarModule,
     MatButtonModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
