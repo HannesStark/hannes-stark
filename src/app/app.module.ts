@@ -12,6 +12,8 @@ import {AboutComponent} from './about/about.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     AppRoutingModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    FontAwesomeModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
