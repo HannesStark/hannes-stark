@@ -1,13 +1,14 @@
 <div fxLayout="row" fxLayoutAlign="center center">
   <div fxFlex="15">First item in row</div>
   <div fxFlex="15" fxLayout="column" fxLayoutAlign="center center">
-    <img class="profile-image" src="assets/blackWhite.jpg" alt="Profile Image">
+    <img class="profile-image" src="assets/squareImage.jpg" alt="Profile Image">
     <h3>Hannes Stärk</h3>
 
-<a href="https://github.com/HannesStark" target="_blank">
-  <fa-icon [icon]="github"></fa-icon> Example External Link
-</a>
-    <a ng-href="https://github.com/HannesStark"><fa-icon [icon]="github"></fa-icon> Check my github</a>
+    <a class="hover-animation" (click)="goToLink('https://github.com/HannesStark')"><fa-icon [icon]="github"></fa-icon>
+      Check my github</a>
+    <a class="hover-animation" (click)="goToLink('https://facebook.com/')">Facebook in new Tab</a>
+    <a class="hover-animation" (click)="goToLink('https://facebook.com/')">Facebook in new Tab</a>
+    <a class="hover-animation" (click)="goToLink('https://facebook.com/')">Facebook in new Tab</a>
     <p>
       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
       A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally

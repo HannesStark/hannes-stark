@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import {Component, OnInit} from '@angular/core';
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-main-page',
@@ -8,9 +8,19 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 })
 export class MainPageComponent implements OnInit {
   github = faGithub;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  goToLink(url: string): void {
+    window.open(url, '_blank');
+  }
+
+  goToPage(url: string): void {
+    window.location.href = url;
   }
 
 }
