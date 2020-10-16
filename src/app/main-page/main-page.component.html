@@ -1,22 +1,28 @@
 <div fxLayout="row" fxLayoutAlign="center center">
-  <div fxFlex="15">First item in row</div>
-  <div fxFlex="15" fxLayout="column" fxLayoutAlign="center center">
+  <div fxFlex="15"></div>
+  <div fxFlex="15" fxLayout="column" fxLayoutAlign="center left">
     <img class="profile-image" src="assets/squareImage.jpg" alt="Profile Image">
-    <h3>Hannes Stärk</h3>
+    <h1 class="Name">Hannes Stärk</h1>
 
-    <a class="hover-animation" (click)="goToLink('https://github.com/HannesStark')"><fa-icon [icon]="github"></fa-icon>
-      Check my github</a>
-    <a class="hover-animation" (click)="goToLink('https://facebook.com/')">Facebook in new Tab</a>
-    <a class="hover-animation" (click)="goToLink('https://facebook.com/')">Facebook in new Tab</a>
-    <a class="hover-animation" (click)="goToLink('https://facebook.com/')">Facebook in new Tab</a>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
+    <a class="hover-animation" (click)="goToLink('https://github.com/HannesStark')">
+      <fa-icon [icon]="github"></fa-icon>
+      GitHub
+    </a>
+    <a class="hover-animation" (click)="goToLink('https://facebook.com/')">
+      <fa-icon [icon]="linkedin"></fa-icon>
+      LinkedIn
+    </a>
+    <a class="hover-animation" (click)="goToLink('https://facebook.com/')">
+      <fa-icon [icon]="twitter"></fa-icon>
+      Twitter
+    </a>
+    <a class="hover-animation" (click)="goToPage('mailto:hannes.staerk@gmail.com')">
+      <fa-icon [icon]="mail"></fa-icon>
+      Hannes.Staerk@gmail.com
+    </a>
   </div>
-  <div fxFlex="40">Second item in row</div>
-  <div fxFlex="30">Second item in row</div>
+  <div fxFlex="40"></div>
+  <div fxFlex="30"></div>
 </div>
 
 

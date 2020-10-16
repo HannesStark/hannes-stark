@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
+import {faGithub, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-main-page',
@@ -8,6 +9,9 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons';
 })
 export class MainPageComponent implements OnInit {
   github = faGithub;
+  linkedin = faLinkedin;
+  twitter = faTwitter;
+  mail = faEnvelope;
 
   constructor() {
   }
@@ -22,5 +26,4 @@ export class MainPageComponent implements OnInit {
   goToPage(url: string): void {
     window.location.href = url;
   }
-
 }
