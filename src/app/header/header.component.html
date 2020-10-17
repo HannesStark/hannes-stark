@@ -1,17 +1,29 @@
-<mat-toolbar>
-  <mat-toolbar-row fxLayout="row" fxLayoutAlign="center center">
-    <div fxFlex="15">
+<p>
+  <mat-toolbar color="primary" class="toolbar-style">
+    <span [class.mat-elevation-z2]="!isActive" [class.mat-elevation-z8]="isActive" class="mat-button"
+          [routerLink]="'/main-page'">Hannes' Homepage</span>
 
-    </div>
-    <div fxFlex="15">
-      <a class="homepage" mat-button [routerLink]="'/main-page'">Hannes' Homepage</a>
-    </div>
-    <div fxFlex="40" fxLayout="row" fxLayoutAlign="left center">
-      <a mat-button [routerLink]="'/about'"> about </a>
-    </div>
-    <div fxFlex="30">
 
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+    <button mat-button>
+      random remidner
+    </button>
+
+
+    <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+
+      sth esl
+
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      fav
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      share
+    </button>
+  </mat-toolbar>
+</p>
+
+
+
 

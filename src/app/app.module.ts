@@ -14,6 +14,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {MatListModule} from '@angular/material/list';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import {MatListModule} from '@angular/material/list';
     FlexLayoutModule,
     MatCardModule,
     FontAwesomeModule,
-    MatListModule
+    MatListModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
