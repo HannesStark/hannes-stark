@@ -61,3 +61,6 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+import cssVars from 'css-vars-ponyfill';
+cssVars({ watch: true, onlyLegacy: true, shadowDOM: true});

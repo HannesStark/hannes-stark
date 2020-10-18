@@ -8,7 +8,6 @@ import {MainPageComponent} from './main-page/main-page.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {HeaderComponent} from './header/header.component';
 import {MatButtonModule} from '@angular/material/button';
-import {AboutComponent} from './about/about.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
@@ -17,6 +16,9 @@ import {MatListModule} from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
+import { ReviewsComponent } from './reviews/reviews.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -24,7 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent,
     MainPageComponent,
     HeaderComponent,
-    AboutComponent
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatListModule,
     LayoutModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,6 @@
 .profile-image {
   border-radius: 50%;
   max-width: 150px;
-  padding: 5px;
-  border: 1px solid #f2f3f3;
 }
 
 .hover-animation {
@@ -10,11 +8,15 @@
   padding: 5px 10px;
 }
 
-.Name{
+.Name {
   padding: 5px 10px;
 }
 
-.hover-animation:hover{
+.hover-animation:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
 }

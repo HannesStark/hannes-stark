@@ -1,26 +1,15 @@
 <p>
-  <mat-toolbar color="primary" class="toolbar-style">
-    <span [class.mat-elevation-z2]="!isActive" [class.mat-elevation-z8]="isActive" class="mat-button"
-          [routerLink]="'/main-page'">Hannes' Homepage</span>
-
-
-    <button mat-button>
-      random remidner
+  <mat-toolbar color="primary">
+    <span class="flex-spacer"> </span>
+    <button #tooltip="matTooltip"
+            *ngFor="let button of buttons" mat-button (click)="clickedButton($event, button)"
+            matTooltip={{button.tooltip}}
+            [routerLink]="button.route" [class.mat-elevation-z8]="button.active" class="mat-button">
+      {{button.text}}
     </button>
-
-
-    <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-
-      sth esl
-
-    </button>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      fav
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      share
-    </button>
+    <span class="flex-spacer"> </span>
+    <span class="flex-spacer"> </span>
+    <span class="flex-spacer"> </span>
   </mat-toolbar>
 </p>
 
