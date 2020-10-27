@@ -1,49 +1,67 @@
-<div fxLayout="column" fxLayoutAlign="center center" class="leftcol">
+<div fxLayout="column" fxLayoutAlign="center center">
   <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center">
-    <div fxFlex="30%" fxLayoutAlign="end center" fxLayoutAlign.lt-md="center center">
+    <div fxFlex="40" fxLayoutAlign="end center" fxLayoutAlign.lt-md="center center">
       <img class="profile-image" src="assets/squareImage.jpg" alt="Profile Image">
     </div>
-    <div fxFlex="70">
-      <div fxFlex.lt-md="" fxFlex="70" class="div-margin" fxLayout="column" fxLayoutAlign.lt-md="center center">
+    <div fxFlex="60" ngClass.lt-md="small-margin">
+      <div fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
         <h1 class="Name">Hannes Stärk</h1>
-        <p class="text-align">contentntenlk alskdnfaölkndsf öalkdsnfö laknsdfölk naösdlkfn ölaksdnföla ksndfö
-          lkansdfölknasdöfl
-          sdflajkndsf ölsakdnfö lkasdnf öalksdnf ölaksdnfö lkasndfö lkansdfö lknasdföl
-          asdflk nasödflknaösdlkfn öaldsknfö aklsndfö akndsöflkansdöfknawecioawnecpoaiwncopin</p>
-        <div fxLayout="row" fxLayout.xs="column">
-          <a class="link-style" (click)="goToLink('https://github.com/HannesStark')">
-            <fa-icon [icon]="github"></fa-icon>
-            GitHub
-          </a>
-          <a class="link-style" (click)="goToLink('https://facebook.com/')">
-            <fa-icon [icon]="linkedin"></fa-icon>
-            LinkedIn
-          </a>
-          <a class="link-style" (click)="goToLink('https://facebook.com/')">
-            <fa-icon [icon]="twitter"></fa-icon>
-            Twitter
-          </a>
-          <a class="link-style" (click)="goToPage('mailto:hannes.staerk@gmail.com')">
-            <fa-icon [icon]="mail"></fa-icon>
-            Hannes.Staerk@gmail.com
-          </a>
+        <div class="underline-title--top" fxLayoutAlign.lt-md="center center">
+          <h1 class="left-titles">EDUCATION</h1>
+        </div>
+        <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+          <p class="text-align">contentntenlk alskdnfaölkndsf öalkdsnfö laknsdfölk naösdlkfn ölaksdnföla ksndfö
+            lkansdfölknasdöfl
+            sdflajkndsf ölsakdnfö lkasdnf öalksdnf ölaksdnfö lkasndfö lkansdfö lknasdföl
+            asdflk nasödflknaösdlkfn öaldsknfö aklsndfö akndsöflkansdöfknawecioawnecpoaiwncopin</p>
+          <div fxLayout="row" fxLayout.xs="column">
+            <a class="link-style" (click)="goToLink('https://github.com/HannesStark')">
+              <fa-icon [icon]="github"></fa-icon>
+              GitHub
+            </a>
+            <a class="link-style" (click)="goToLink('https://facebook.com/')">
+              <fa-icon [icon]="linkedin"></fa-icon>
+              LinkedIn
+            </a>
+            <a class="link-style" (click)="goToLink('https://facebook.com/')">
+              <fa-icon [icon]="twitter"></fa-icon>
+              Twitter
+            </a>
+            <a class="link-style" (click)="goToPage('mailto:hannes.staerk@gmail.com')">
+              <fa-icon [icon]="mail"></fa-icon>
+              Hannes.Staerk@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div fxLayout="column">
-    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
-      <div class="title-underline" fxFlex="30%" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
-        <h1 class="left-titles">EDUCATION</h1>
-      </div>
-      <div  class="title-underline" fxFlex="70">
+    <div fxHide.lt-md>
+      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
+        <div fxFlex="40" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+          <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
+               fxLayoutAlign.lt-md="center center">
+            <h1 class="left-titles">EDUCATION</h1>
+          </div>
+        </div>
+        <div fxFlex="60">
+          <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
+               fxLayoutAlign.lt-md="center center">
+            <h1 class="left-titles hidden-h">.</h1>
+          </div>
+        </div>
       </div>
     </div>
-    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
-      <div fxFlex="30%" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+    <div fxHide.gt-sm ngClass.lt-md="small-margin" class="underline-title" fxLayoutAlign="center center">
+      <h1 class="left-titles">EDUCATION</h1>
+    </div>
+    <div ngClass.lt-md="small-margin" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center"
+         fxLayoutAlign="center start">
+      <div fxFlex="40" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
       </div>
-      <div fxFlex="70">
-        <div fxFlex.lt-md="" fxFlex="70" class="div-margin" fxLayout="column" fxLayoutAlign.lt-md="center center">
+      <div fxFlex="60">
+        <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
 
           <p>contentntenlk alskdnfaölkndsf öalkdsnfö laknsdfölk naösdlkfn ölaksdnföla ksndfö lkansdfölknasdöfl
             sdflajkndsf ölsakdnfö lkasdnf öalksdnf ölaksdnfö lkasndfö lkansdfö lknasdföl
