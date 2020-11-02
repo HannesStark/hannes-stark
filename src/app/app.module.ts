@@ -20,6 +20,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {HttpClientModule} from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     MainPageComponent,
     HeaderComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

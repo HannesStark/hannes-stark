@@ -6,11 +6,13 @@
     <div fxFlex="60" ngClass.lt-md="small-margin">
       <div fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
         <h1 class="Name">Hannes Stärk</h1>
+        <!--
         <div class="underline-title--top" fxLayoutAlign.lt-md="center center">
-          <h1 class="left-titles">EDUCATION</h1>
+          <h1 class="left-titles">M. Sc. Computer Science Student</h1>
         </div>
+        -->
         <div class="item" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
-          <p class="text-align">contentntenlk alskdnfaölkndsf öalkdsnfö laknsdfölk naösdlkfn ölaksdnföla ksndfö
+          <p>contentntenlk alskdnfaölkndsf öalkdsnfö laknsdfölk naösdlkfn ölaksdnföla ksndfö
             lkansdfölknasdöfl
             sdflajkndsf ölsakdnfö lkasdnf öalksdnf ölaksdnfö lkasndfö lkansdfö lknasdföl
             asdflk nasödflknaösdlkfn öaldsknfö aklsndfö akndsöflkansdöfknawecioawnecpoaiwncopin</p>
@@ -72,10 +74,7 @@
                 <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
                 {{item.location}}
               </p>
-              <p class="item-content">contentntenlk alskdnfaölkndsf öalkdsnfö laknsdfölk naösdlkfn ölaksdnföla ksndfö
-                lkansdfölknasdöfl
-                sdflajkndsf ölsakdnfö lkasdnf öalksdnf ölaksdnfö lkasndfö lkansdfö lknasdföl
-                asdflk nasödflknaösdlkfn öaldsknfö aklsndfö akndsöflkansdöfknawecioawnecpoaiwncopin</p>
+              <p class="item-content">{{item.content}}</p>
               <hr *ngIf="!isLast" ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
             </div>
           </div>
