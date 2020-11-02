@@ -1,6 +1,6 @@
 <div fxLayout="column" fxLayoutAlign="center center">
   <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center">
-    <div fxFlex="40" fxLayoutAlign="end center" fxLayoutAlign.lt-md="center center">
+    <div fxFlex="30" fxLayoutAlign="end center" fxLayoutAlign.lt-md="center center">
       <img class="profile-image" src="assets/squareImage.jpg" alt="Profile Image">
     </div>
     <div fxFlex="60" ngClass.lt-md="small-margin">
@@ -9,7 +9,7 @@
         <div class="underline-title--top" fxLayoutAlign.lt-md="center center">
           <h1 class="left-titles">EDUCATION</h1>
         </div>
-        <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+        <div class="item" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
           <p class="text-align">contentntenlk alskdnfaölkndsf öalkdsnfö laknsdfölk naösdlkfn ölaksdnföla ksndfö
             lkansdfölknasdöfl
             sdflajkndsf ölsakdnfö lkasdnf öalksdnf ölaksdnfö lkasndfö lkansdfö lknasdföl
@@ -19,17 +19,17 @@
               <fa-icon [icon]="github"></fa-icon>
               GitHub
             </a>
-            <a class="link-style" (click)="goToLink('https://facebook.com/')">
+            <a class="link-style" (click)="goToLink('https://www.linkedin.com/in/hannes-stark/')">
               <fa-icon [icon]="linkedin"></fa-icon>
               LinkedIn
             </a>
-            <a class="link-style" (click)="goToLink('https://facebook.com/')">
+            <a class="link-style" (click)="goToLink('https://twitter.com/HannesStaerk')">
               <fa-icon [icon]="twitter"></fa-icon>
               Twitter
             </a>
             <a class="link-style" (click)="goToPage('mailto:hannes.staerk@gmail.com')">
               <fa-icon [icon]="mail"></fa-icon>
-              Hannes.Staerk@gmail.com
+              hannes.staerk@gmail.com
             </a>
           </div>
         </div>
@@ -37,58 +37,50 @@
     </div>
   </div>
   <div fxLayout="column">
-    <div fxHide.lt-md>
-      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
-        <div fxFlex="40" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
-          <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
-               fxLayoutAlign.lt-md="center center">
-            <h1 class="left-titles">EDUCATION</h1>
+    <div *ngFor="let section of sections">
+      <div fxHide.lt-md>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
+          <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+            <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles">{{section.title}}</h1>
+            </div>
           </div>
+          <div fxFlex="60">
+            <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles--hidden">.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxHide.gt-sm ngClass.lt-md="small-margin" class="underline-title" fxLayoutAlign="center center">
+        <h1 class="left-titles">{{section.title}}</h1>
+      </div>
+      <div ngClass.lt-md="small-margin" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center"
+           fxLayoutAlign="center start">
+        <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
         </div>
         <div fxFlex="60">
-          <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
-               fxLayoutAlign.lt-md="center center">
-            <h1 class="left-titles hidden-h">.</h1>
+          <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+            <div *ngFor="let item of section.items; let isLast = last;" class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">{{item.title}}</a>
+              <h3 class="item-subtitle">{{item.subtitle}}</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                {{item.date}}
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                {{item.location}}
+              </p>
+              <p class="item-content">contentntenlk alskdnfaölkndsf öalkdsnfö laknsdfölk naösdlkfn ölaksdnföla ksndfö
+                lkansdfölknasdöfl
+                sdflajkndsf ölsakdnfö lkasdnf öalksdnf ölaksdnfö lkasndfö lkansdfö lknasdföl
+                asdflk nasödflknaösdlkfn öaldsknfö aklsndfö akndsöflkansdöfknawecioawnecpoaiwncopin</p>
+              <hr *ngIf="!isLast" ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div fxHide.gt-sm ngClass.lt-md="small-margin" class="underline-title" fxLayoutAlign="center center">
-      <h1 class="left-titles">EDUCATION</h1>
-    </div>
-    <div ngClass.lt-md="small-margin" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center"
-         fxLayoutAlign="center start">
-      <div fxFlex="40" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
-      </div>
-      <div fxFlex="60">
-        <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
-
-          <p>contentntenlk alskdnfaölkndsf öalkdsnfö laknsdfölk naösdlkfn ölaksdnföla ksndfö lkansdfölknasdöfl
-            sdflajkndsf ölsakdnfö lkasdnf öalksdnf ölaksdnfö lkasndfö lkansdfö lknasdföl
-            asdflk nasödflknaösdlkfn öaldsknfö aklsndfö akndsöflkansdöfknawecioawnecpoaiwncopin</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-<!--<div fxLayout="row" fxLayoutAlign="center center">
-  <div fxFlex="15">First item in row</div>
-  <div fxFlex="15" fxLayoutAlign="center">
-    <mat-card class="example-card">
-
-      <img mat-card-image src="assets/blackWhite.jpg" alt="Profile Image">
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <img class="profile-image" src="assets/blackWhite.jpg" alt="Profile Image">
-  </div>
-  <div fxFlex="40">Second item in row</div>
-  <div fxFlex="30">Second item in row</div>
-</div>-->

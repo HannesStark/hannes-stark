@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReviewsComponent } from './reviews/reviews.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatToolbarModule,

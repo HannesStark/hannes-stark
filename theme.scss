@@ -6,26 +6,48 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+@mixin candy-carousel-typography($config-or-theme) {
+  // Extract the typography configuration in case a theme has been passed.
+  $config: mat-get-typography-config($config-or-theme);
+
+  .candy-carousel {
+    font: {
+      family: mat-font-family($config, body-1);
+      size: mat-font-size($config, body-1);
+      weight: mat-font-weight($config, body-1);
+    }
+  }
+}
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$candy-app-primary: mat-palette($mat-teal);
-$candy-app-accent:  mat-palette($mat-green, A200, A100, A400);
+$app-primary: mat-palette($mat-green, 600);
+$app-accent: mat-palette($mat-green, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$candy-app-warn:    mat-palette($mat-light-green);
+$app-warn: mat-palette($mat-light-green);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as `color` or `typography`.
-$candy-app-theme: mat-light-theme((
+$app-theme: mat-light-theme((
   color: (
-    primary: $candy-app-primary,
-    accent: $candy-app-accent,
-    warn: $candy-app-warn,
+    primary: $app-primary,
+    accent: $app-accent,
+    warn: $app-warn,
   )
 ));
+
+
+:root {
+  --color-primary: #{mat-color($app-primary)};
+  --color-accent: #{mat-color($app-accent)};
+  --color-warn: #{mat-color($app-warn)};
+  --color-grey: #808080;
+  --color-light-grey: #bebebe;
+}
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($candy-app-theme);
+@include angular-material-theme($app-theme);
