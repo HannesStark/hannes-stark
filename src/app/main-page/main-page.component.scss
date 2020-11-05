@@ -1,0 +1,113 @@
+
+.profile-image {
+  border-radius: 50%;
+  max-width: 250px;
+  margin: 32px;
+}
+
+.width100{
+  width: 100%;
+}
+
+.socials-links {
+  position: relative;
+  padding: 5px 10px;
+}
+
+.Name {
+  font-size: 40px;
+  color: var(--color-grey);
+  padding: 20px 20px;
+}
+
+.socials-links:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.link-style {
+  color: var(--color-grey);
+}
+
+.link-style:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+fa-icon {
+  color: var(--color-grey);
+}
+
+
+.left-titles {
+  margin-bottom: 0;
+  color: var(--color-primary);
+  font-weight: 520;
+
+  &--hidden {
+    @extend .left-titles;
+    color: transparent;
+  }
+}
+
+.text-area {
+  margin-top: 5px;
+}
+
+.item-title {
+  margin: 0;
+  margin-bottom: 3px;
+  font-weight: 520;
+  font-size: 20px;
+}
+
+.item-subtitle {
+  color: var(--color-primary);
+  font-weight: 520;
+  margin: 0;
+}
+
+.icon-right-margin {
+  margin-right: 5px;
+
+  &--left {
+    @extend .icon-right-margin;
+    margin-left: 40px;
+  }
+}
+
+.separator {
+  border-top: 2px dashed var(--color-light-grey);
+  width: 100%;
+
+  &--small {
+    @extend .separator;
+    width: 80%;
+  }
+}
+
+.item-content {
+  margin: 0;
+}
+
+.item-date-loc {
+  margin: 0;
+}
+
+.underline-title {
+  border-bottom: 5px solid var(--color-primary);;
+
+  &--top {
+    @extend .underline-title;
+    width: 100%;
+  }
+}
+
+.item {
+  margin: 5px 0px;
+}
+
+.small-margin {
+  margin: 0px 60px;
+}
+
