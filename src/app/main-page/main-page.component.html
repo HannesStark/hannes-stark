@@ -12,24 +12,35 @@
         </div>
         -->
         <div class="item" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
-          <p>contentntenlk alskdnfaölkndsf öalkdsnfö laknsdfölk naösdlkfn ölaksdnföla ksndfö
-            lkansdfölknasdöfl
-            sdflajkndsf ölsakdnfö lkasdnf öalksdnf ölaksdnfö lkasndfö lkansdfö lknasdföl
-            asdflk nasödflknaösdlkfn öaldsknfö aklsndfö akndsöflkansdöfknawecioawnecpoaiwncopin</p>
+          <p>
+            Hi there! I am a 21 years old M. Sc. Computer Science student from Germany at TU Munich.
+            <br>
+            In my current research, I apply
+            machine learning methods from natural language processing to make predictions about proteins.
+            Besides that,
+            my main interests are learning on graphs and using machine learning in natural sciences or medicine.
+            <br>
+            From the experiences of my dual study program and a from a number of projects, I know that I want to stay in
+            research for the rest of my life. Right now, I am deciding where to write my masters thesis and looking for
+            a position as a PhD student.
+            <br>
+            Feel free to contact me about anything through the tool you prefer:
+          </p>
+
           <div fxLayout="row" fxLayout.xs="column">
-            <a class="link-style" (click)="goToLink('https://github.com/HannesStark')">
+            <a class="socials-links link-style" (click)="goToLink('https://github.com/HannesStark')">
               <fa-icon [icon]="github"></fa-icon>
               GitHub
             </a>
-            <a class="link-style" (click)="goToLink('https://www.linkedin.com/in/hannes-stark/')">
+            <a class="socials-links link-style" (click)="goToLink('https://www.linkedin.com/in/hannes-stark/')">
               <fa-icon [icon]="linkedin"></fa-icon>
               LinkedIn
             </a>
-            <a class="link-style" (click)="goToLink('https://twitter.com/HannesStaerk')">
+            <a class="socials-links link-style" (click)="goToLink('https://twitter.com/HannesStaerk')">
               <fa-icon [icon]="twitter"></fa-icon>
               Twitter
             </a>
-            <a class="link-style" (click)="goToPage('mailto:hannes.staerk@gmail.com')">
+            <a class="socials-links link-style" (click)="goToPage('mailto:hannes.staerk@gmail.com')">
               <fa-icon [icon]="mail"></fa-icon>
               hannes.staerk@gmail.com
             </a>
@@ -38,14 +49,15 @@
       </div>
     </div>
   </div>
-  <div fxLayout="column">
-    <div *ngFor="let section of sections">
+  <div fxLayout="column" class="width100">
+    <!-- section 1 -->
+    <div>
       <div fxHide.lt-md>
         <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
           <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
             <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
                  fxLayoutAlign.lt-md="center center">
-              <h1 class="left-titles">{{section.title}}</h1>
+              <h1 class="left-titles">EDUCATION</h1>
             </div>
           </div>
           <div fxFlex="60">
@@ -57,7 +69,7 @@
         </div>
       </div>
       <div fxHide.gt-sm ngClass.lt-md="small-margin" class="underline-title" fxLayoutAlign="center center">
-        <h1 class="left-titles">{{section.title}}</h1>
+        <h1 class="left-titles">EDUCATION</h1>
       </div>
       <div ngClass.lt-md="small-margin" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center"
            fxLayoutAlign="center start">
@@ -65,17 +77,296 @@
         </div>
         <div fxFlex="60">
           <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
-            <div *ngFor="let item of section.items; let isLast = last;" class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <a class="item-title">{{item.title}}</a>
-              <h3 class="item-subtitle">{{item.subtitle}}</h3>
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">M.Sc. Computer Science</a>
+              <div fxLayout="row">
+                <h3 class="item-subtitle link-style" (click)="goToLink('https://www.tum.de/en/')">Technical University
+                  Munich</h3>
+              </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                {{item.date}}
+                2019 - 2020
                 <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
-                {{item.location}}
+                Munich, Germany
               </p>
-              <p class="item-content">{{item.content}}</p>
-              <hr *ngIf="!isLast" ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+              <p class="item-content">Focus on machine learning and statistics courses.</p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">B.Sc. Computer Science</a>
+              <h3 class="item-subtitle link-style" (click)="goToLink('https://www.unibw.de/home-en')">Bundeswehr
+                Univsersity Munich</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                Sept 2017 - Sept 2019
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Munich, Germany
+              </p>
+              <p class="item-content">The dual study program of the Bundeswehr University in cooperation with Allianz AG
+                combines theoretical training with
+                practical work experience. Usually the curriculum takes three years but I attained all ECTS and got my
+                degree in two years.</p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">A-Levels</a>
+              <h3 class="item-subtitle">Joseph-Bernhart-Gymnasium</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                2009 - 2017
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Türkheim, Germany
+              </p>
+              <p class="item-content">I participated and helped organizing multiple sports events or shows and was
+                involved in starting the schools chess group.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section 2 -->
+    <div>
+      <div fxHide.lt-md>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
+          <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+            <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles">PROFESSIONAL</h1>
+            </div>
+          </div>
+          <div fxFlex="60">
+            <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles--hidden">.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxHide.gt-sm ngClass.lt-md="small-margin" class="underline-title" fxLayoutAlign="center center">
+        <h1 class="left-titles">PROFESSIONAL</h1>
+      </div>
+      <div ngClass.lt-md="small-margin" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center"
+           fxLayoutAlign="center start">
+        <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+        </div>
+        <div fxFlex="60">
+          <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Teaching Assistant for Introduction to Deep Learning</a>
+              <h3 class="item-subtitle link-style" (click)="goToLink('https://www.tum.de/en/')">Technical University
+                Munich</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                Sept 2020 - March 2021
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Munich, Germany
+              </p>
+              <p class="item-content"></p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Mathematics Lecturer</a>
+              <h3 class="item-subtitle link-style" (click)="goToLink('https://www.bibaugsburg.de/')">BIB Augsburg
+                gGmbH</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                since Feb 2020
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Augsburg, Germany
+              </p>
+              <p class="item-content">Teaching linear algebra and analysis to vocational students.</p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Student Assistant at Chair of Operations Research</a>
+              <h3 class="item-subtitle link-style" (click)="goToLink('https://www.unibw.de/home-en')">Bundeswehr
+                University Munich</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                Sept 2018 - July 2019
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Munich, Germany
+              </p>
+              <p class="item-content">Time Series Analysis and structure learning in Bayesian Networks.</p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Dual Study Program</a>
+              <h3 class="item-subtitle link-style" (click)="goToLink('https://www.allianzdeutschland.de/')">Allianz
+                Deutschland AG</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                Sept 2017 - Sept 2019
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Munich, Germany
+              </p>
+              <p class="item-content">I mainly worked in an agile Web-Development Team and at maintaining digital
+                infrastructure. I learned a lot about software engineering, best coding practices and teamwork.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section 3 -->
+    <div>
+      <div fxHide.lt-md>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
+          <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+            <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles">PROJECTS</h1>
+            </div>
+          </div>
+          <div fxFlex="60">
+            <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles--hidden">.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxHide.gt-sm ngClass.lt-md="small-margin" class="underline-title" fxLayoutAlign="center center">
+        <h1 class="left-titles">PROJECTS</h1>
+      </div>
+      <div ngClass.lt-md="small-margin" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center"
+           fxLayoutAlign="center start">
+        <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+        </div>
+        <div fxFlex="60">
+          <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">IDP Bioinformatics</a>
+              <h3 (click)="goToLink('https://www.rostlab.org/')" class="item-subtitle link-style">Rostlab at TUM</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                since Sept 2020
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Munich, Germany
+              </p>
+              <p class="item-content">Using machine learning methods from natural language processing to predict where a
+                protein occurs in a cell. Check out the project on <a class="link-style"
+                                                                      (click)="goToLink('https://github.com/HannesStark/protein-localization')">GitHub
+                  <fa-icon [icon]="github"></fa-icon>
+                </a>.
+              </p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Guided Research Computer Vision</a>
+              <h3 (click)="goToLink('https://www.niessnerlab.org/')" class="item-subtitle link-style">Niessnerlab at
+                TUM</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                March 2020 - Sept 2020
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Munich, Germany
+              </p>
+              <p class="item-content">We used Neural Radiance Fields to render novel views of a scene containing a
+                human. Besides the desired views, a new and unseen human pose can also be rendered. Check out the
+                project on
+                <a class="link-style"
+                   (click)="goToLink('https://github.com/HannesStark/SMPLNeRF')">GitHub
+                  <fa-icon [icon]="github"></fa-icon>
+                </a>
+                or the
+                <a class="link-style"
+                   (click)="goToLink('https://github.com/HannesStark/SMPLNeRF/blob/master/artefacts/NeRF%20for%20Novel%20View%20and%20Human%20Pose%20Synthesis_Sta%CC%88rk_Reiser_Wolters.pdf')">paper
+                  <fa-icon [icon]="paper"></fa-icon>
+                </a>
+                .
+              </p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Thinktank: Psychological counseling for students - App Coach PTBS</a>
+              <h3 class="item-subtitle link-style" (click)="goToLink('https://www.unibw.de/home-en')">Bundeswehr
+                Univsersity Munich</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                April 2018 - July 2018
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Munich, Germany
+              </p>
+              <p class="item-content">We developed the concept for the mobile App "Coach PTBS" where we came up with a
+                design and wrote a prototype. Check out the final app
+                <a class="link-style"
+                   (click)="goToLink('https://github.com/HannesStark/SMPLNeRF')">here</a>.
+              </p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Talent base Memmingen: Physics</a>
+              <h3 class="item-subtitle link-style" (click)="goToLink('https://bsg-mm.de/begabungsstuetzpunkt/')">Talent
+                Base Memmingen</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                2016 - 2017
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Memmingen, Germany
+              </p>
+              <p class="item-content">
+                We built a nitorgen laser running on the ionized nitrogen of the air.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section 3 -->
+    <div>
+      <div fxHide.lt-md>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
+          <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+            <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles">ACTIVITIES</h1>
+            </div>
+          </div>
+          <div fxFlex="60">
+            <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles--hidden">.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxHide.gt-sm ngClass.lt-md="small-margin" class="underline-title" fxLayoutAlign="center center">
+        <h1 class="left-titles">ACTIVITIES</h1>
+      </div>
+      <div ngClass.lt-md="small-margin" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center"
+           fxLayoutAlign="center start">
+        <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+        </div>
+        <div fxFlex="60">
+          <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Gymnastics Referee</a>
+              <h3 (click)="goToLink('https://www.dtb.de/')" class="item-subtitle link-style">German Gymnastics
+                Association DTB</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                since Jan 2019
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Augsburg, Germany
+              </p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Gymnastics and Acrobatics Trainer</a>
+              <h3 (click)="goToLink('http://vfl-buchloe.de/')" class="item-subtitle link-style">VfL Buchloe</h3>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                since Sept 2015
+                <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                Buchloe, Germany
+              </p>
+              <p class="item-content">I have trained gymnastics groups of all ages from kids to adults. Besides that
+                I am in the acrobatics team
+                <a class="link-style"
+                   (click)="goToLink('https://akrobatikastralbuchloe.com/')">Akrobatik Astral</a>
+                where we choreograph and organize shows for national (and occasionally international) events and
+                competitions.
+              </p>
             </div>
           </div>
         </div>

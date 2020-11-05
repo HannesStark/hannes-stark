@@ -10,19 +10,18 @@ export class HeaderComponent implements OnInit {
   buttons: any[] = [
     {
       text: 'Home',
-      active: true,
       route: '/main',
       tooltip: 'Personal information about me'
     },
     {
       text: 'Lectures Reviewed',
-      active: false,
       route: '/reviews',
       tooltip: 'Reviews of lectures available on YouTube'
     },
     {
-      text: 'Random Reminder',
-      active: false
+      text: 'CV as PDF',
+      dl: 'src/assets/cv_hannes_stark.pdf',
+      tooltip: 'Download CV as PDF'
     }
   ];
 
@@ -33,11 +32,8 @@ export class HeaderComponent implements OnInit {
   }
 
   clickedButton(event, activeButton): void {
-    for (const button of this.buttons) {
-      button.active = false;
+    if (activeButton.dl) {
+      window.open('/assets/cv_hannes_stark.pdf', '_blank');
     }
-    activeButton.active = true;
   }
-
-
 }

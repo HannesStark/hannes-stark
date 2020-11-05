@@ -44,7 +44,7 @@ $app-theme: mat-light-theme((
   --color-accent: #{mat-color($app-accent)};
   --color-warn: #{mat-color($app-warn)};
   --color-grey: #808080;
-  --color-light-grey: #bebebe;
+  --color-light-grey: #d2d2d2;
 }
 
 // Include theme styles for core and each component used in your app.

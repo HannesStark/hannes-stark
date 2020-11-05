@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {faGithub, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
-import {faEnvelope, faMapMarker, faMarker} from '@fortawesome/free-solid-svg-icons';
+import {faCopy, faEnvelope, faMapMarker, faMobile, faPhone} from '@fortawesome/free-solid-svg-icons';
 import {faCalendar} from '@fortawesome/free-solid-svg-icons/faCalendar';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
@@ -17,13 +17,15 @@ export class MainPageComponent implements OnInit {
   mail = faEnvelope;
   calendar = faCalendar;
   location = faMapMarker;
+  paper = faCopy;
+  mobile = faMobile;
   sections: any[];
 
+
   constructor(private http: HttpClient) {
-    this.getYaml().subscribe(data => {
-      this.sections = data;
-      console.log(data);
-    });
+    // this.getYaml().subscribe(data => {
+    //   this.sections = data;
+    // });
   }
 
   ngOnInit(): void {
@@ -40,7 +42,7 @@ export class MainPageComponent implements OnInit {
   getYaml(): Observable<any> {
     return this.http.get('./assets/main-page-content.json', {
       observe: 'body',
-      responseType: 'json'// This one here tells HttpClient to parse it as text, not as JSON
+      responseType: 'json'
     });
   }
 }
