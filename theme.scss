@@ -6,6 +6,39 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+$green-palette: (
+  50: #e8f5e9,
+  100: #c8e6c9,
+  200: #a5d6a7,
+  300: #81c784,
+  400: #66bb6a,
+  500: #4caf50,
+  600: #43a047,
+  700: #228B22,
+  800: #2e7d32,
+  900: #1b5e20,
+  A100: #b9f6ca,
+  A200: #69f0ae,
+  A400: #00e676,
+  A700: #00c853,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text,
+  )
+);
+
 @mixin candy-carousel-typography($config-or-theme) {
   // Extract the typography configuration in case a theme has been passed.
   $config: mat-get-typography-config($config-or-theme);
@@ -22,11 +55,11 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$app-primary: mat-palette($mat-green, 600);
-$app-accent: mat-palette($mat-green, A200, A100, A400);
+$app-primary: mat-palette($green-palette, 700);
+$app-accent: mat-palette($green-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$app-warn: mat-palette($mat-light-green);
+$app-warn: mat-palette($green-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as `color` or `typography`.

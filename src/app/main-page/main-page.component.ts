@@ -31,12 +31,16 @@ export class MainPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToLink(url: string): void {
-    window.open(url, '_blank');
+  goToLink(event, url: string): void {
+    if (event.button === 0 || event.button === 1) {
+      window.open(url, '_blank');
+    }
   }
 
-  goToPage(url: string): void {
-    window.location.href = url;
+  goToPage(event, url: string): void {
+    if (event.button === 0 || event.button === 1) {
+      window.location.href = url;
+    }
   }
 
   getYaml(): Observable<any> {

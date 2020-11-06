@@ -5,7 +5,7 @@
   margin: 32px;
 }
 
-.width100{
+.width100 {
   width: 100%;
 }
 
@@ -14,10 +14,12 @@
   padding: 5px 10px;
 }
 
+
 .Name {
   font-size: 40px;
-  color: var(--color-grey);
-  padding: 20px 20px;
+  font-weight: 480;
+  color: var(--color-primary);
+  padding: 20px 0px;
 }
 
 .socials-links:hover {
@@ -38,6 +40,9 @@ fa-icon {
   color: var(--color-grey);
 }
 
+.socials-icon {
+  color: var(--color-grey);
+}
 
 .left-titles {
   margin-bottom: 0;
@@ -88,6 +93,15 @@ fa-icon {
 
 .item-content {
   margin: 0;
+  margin-top: 3px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
 }
 
 .item-date-loc {
