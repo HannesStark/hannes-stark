@@ -71,6 +71,10 @@ $app-theme: mat-light-theme((
   )
 ));
 
+.elevation {
+  @include mat-elevation-transition;
+  @include mat-elevation(4);
+}
 
 :root {
   --color-primary: #{mat-color($app-primary)};

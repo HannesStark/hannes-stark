@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {faGithub, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 
@@ -12,18 +12,7 @@ export class HeaderComponent implements OnInit {
   linkedin = faLinkedin;
   twitter = faTwitter;
   mail = faEnvelope;
-  buttons: any[] = [
-    {
-      text: 'Home',
-      route: '/main',
-      tooltip: 'Personal information about me'
-    },
-    //{
-    //  text: 'Lectures Reviewed',
-    //  route: '/reviews',
-    //  tooltip: 'Reviews of lectures available on YouTube'
-    //}
-  ];
+
 
   constructor() {
   }
@@ -43,9 +32,21 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  pdf(event): void {
+  pdf(event, path): void {
     if (event.button === 0 || event.button === 1) {
-      window.open('/hannes-stark/assets/cv_hannes_stark.pdf', '_blank');
+      window.open(path, '_blank');
+    }
+  }
+
+  home(event: MouseEvent): void {
+    if (event.button === 0) {
+      window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+    } else if (event.button === 1) {
+      window.open(window.location.href, '_blank');
     }
   }
 }

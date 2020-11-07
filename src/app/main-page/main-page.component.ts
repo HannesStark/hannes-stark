@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {faGithub, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
 import {faCopy, faEnvelope, faMapMarker, faMobile, faPhone} from '@fortawesome/free-solid-svg-icons';
 import {faCalendar} from '@fortawesome/free-solid-svg-icons/faCalendar';
-import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
@@ -43,10 +42,9 @@ export class MainPageComponent implements OnInit {
     }
   }
 
-  getYaml(): Observable<any> {
-    return this.http.get('./assets/main-page-content.json', {
-      observe: 'body',
-      responseType: 'json'
-    });
+  pdf(event, path): void {
+    if (event.button === 0 || event.button === 1) {
+      window.open(path, '_blank');
+    }
   }
 }

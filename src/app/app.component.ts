@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hannes-stark';
+  scrolled = false;
+
+  constructor() {
+  }
+
+  onWindowScroll(event: any): void {
+    this.scrolled = window.scrollY > 50;
+  }
 }

@@ -1,59 +1,23 @@
-<p>
-  <mat-toolbar fxLayout="row" fxLayoutAlign="center center">
-    <div fxHide.lt-md fxFlex="30" fxLayoutAlign="end center">
-      <button #tooltip="matTooltip"
-              *ngFor="let button of buttons" mat-button
-              matTooltip={{button.tooltip}}
-              [routerLink]="button.route" class="mat-button">
-        {{button.text}}
-      </button>
-      <button #tooltip="matTooltip"
-              (mousedown)="pdf($event)"
-              mat-button
-              matTooltip="Get my CV as PDF document"
-              class="mat-button">
-        CV as PDF
-      </button>
-    </div>
-    <div fxHide.lt-md fxFlex="60">
-      <div fxFlex="70" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-                (mousedown)="goToLink($event,'https://github.com/HannesStark')">
-          <fa-icon class="icon" [icon]="github"></fa-icon>
-        </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-                (mousedown)="goToLink($event, 'https://www.linkedin.com/in/hannes-stark/')">
-          <fa-icon class="icon" [icon]="linkedin"></fa-icon>
-        </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-                (mousedown)="goToLink($event, 'https://twitter.com/HannesStaerk')">
-          <fa-icon class="icon" [icon]="twitter"></fa-icon>
-        </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-                (mousedown)="goToPage($event, 'mailto:hannes.staerk@gmail.com')">
-          <fa-icon class="icon" [icon]="mail"></fa-icon>
-        </button>
-      </div>
-    </div>
-    <div fxHide.gt-sm fxFlex="50" fxLayoutAlign="start center">
-      <button #tooltip="matTooltip"
-              *ngFor="let button of buttons" mat-button
-              matTooltip={{button.tooltip}}
-              [routerLink]="button.route" class="mat-button">
-        {{button.text}}
-      </button>
-      <button #tooltip="matTooltip"
-              (click)="pdf($event)"
-              mat-button
-              matTooltip="Get my CV as PDF document"
-              class="mat-button">
-        CV as PDF
-      </button>
-    </div>
-    <div fxHide.gt-sm fxFlex="50" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
-
+<mat-toolbar fxLayout="row" fxLayoutAlign="center center">
+  <div fxHide.lt-md fxFlex="30" fxLayoutAlign="end center">
+    <button #tooltip="matTooltip" mat-button
+            matTooltip="My personal information"
+            [routerLink]="" class="mat-button"
+            (mousedown)="home($event)">
+            Home
+    </button>
+    <button #tooltip="matTooltip"
+            (mousedown)="pdf($event, '/assets/CV_Hannes_Stark.pdf')"
+            mat-button
+            matTooltip="Get my CV as PDF document"
+            class="mat-button">
+      CV as PDF
+    </button>
+  </div>
+  <div fxHide.lt-md fxFlex="60">
+    <div fxFlex="70" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-              (mousedown)="goToLink($event, 'https://github.com/HannesStark')">
+              (mousedown)="goToLink($event,'https://github.com/HannesStark')">
         <fa-icon class="icon" [icon]="github"></fa-icon>
       </button>
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
@@ -68,28 +32,25 @@
               (mousedown)="goToPage($event, 'mailto:hannes.staerk@gmail.com')">
         <fa-icon class="icon" [icon]="mail"></fa-icon>
       </button>
-
     </div>
-  </mat-toolbar>
-  <!--For when there are more buttons-->
-  <!--
-  <mat-toolbar fxHide.gt-xs fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
-
-    <button #tooltip="matTooltip"
-            *ngFor="let button of buttons" mat-button
-            matTooltip={{button.tooltip}}
-            [routerLink]="button.route" class="mat-button">
-      {{button.text}}
+  </div>
+  <div fxHide.gt-sm fxFlex="50" fxLayoutAlign="start center">
+    <button #tooltip="matTooltip" mat-button
+            matTooltip="My personal information"
+            [routerLink]="" class="mat-button"
+            (mousedown)="home($event)">
+            Home
     </button>
     <button #tooltip="matTooltip"
-            (click)="pdf($event)"
+            (mousedown)="pdf($event, '/assets/cv_hannes_stark.pdf')"
             mat-button
             matTooltip="Get my CV as PDF document"
             class="mat-button">
       CV as PDF
     </button>
-  </mat-toolbar>
-  <mat-toolbar fxHide.gt-xs fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
+  </div>
+  <div fxHide.gt-sm fxFlex="50" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
+
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
             (mousedown)="goToLink($event, 'https://github.com/HannesStark')">
       <fa-icon class="icon" [icon]="github"></fa-icon>
@@ -106,9 +67,47 @@
             (mousedown)="goToPage($event, 'mailto:hannes.staerk@gmail.com')">
       <fa-icon class="icon" [icon]="mail"></fa-icon>
     </button>
-  </mat-toolbar>
-  -->
-</p>
+
+  </div>
+</mat-toolbar>
+<!--For when there are more buttons-->
+<!--
+<mat-toolbar fxHide.gt-xs fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
+
+  <button #tooltip="matTooltip"
+          *ngFor="let button of buttons" mat-button
+          matTooltip={{button.tooltip}}
+          [routerLink]="button.route" class="mat-button">
+    {{button.text}}
+  </button>
+  <button #tooltip="matTooltip"
+          (click)="pdf($event, '/assets/cv_hannes_stark.pdf')"
+          mat-button
+          matTooltip="Get my CV as PDF document"
+          class="mat-button">
+    CV as PDF
+  </button>
+</mat-toolbar>
+<mat-toolbar fxHide.gt-xs fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
+          (mousedown)="goToLink($event, 'https://github.com/HannesStark')">
+    <fa-icon class="icon" [icon]="github"></fa-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
+          (mousedown)="goToLink($event, 'https://www.linkedin.com/in/hannes-stark/')">
+    <fa-icon class="icon" [icon]="linkedin"></fa-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
+          (mousedown)="goToLink($event, 'https://twitter.com/HannesStaerk')">
+    <fa-icon class="icon" [icon]="twitter"></fa-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
+          (mousedown)="goToPage($event, 'mailto:hannes.staerk@gmail.com')">
+    <fa-icon class="icon" [icon]="mail"></fa-icon>
+  </button>
+</mat-toolbar>
+-->
+
 
 
 

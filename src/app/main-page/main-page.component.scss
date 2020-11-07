@@ -123,5 +123,9 @@ fa-icon {
 
 .small-margin {
   margin: 0px 60px;
+  &--xs {
+    @extend .small-margin;
+    margin: 0px 10px;
+  }
 }
 

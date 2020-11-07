@@ -5,8 +5,7 @@ import {ReviewsComponent} from './reviews/reviews.component';
 
 const routes: Routes = [
   { path: 'reviews', component: ReviewsComponent },
-  { path: 'main', component: MainPageComponent},
-  { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: '', component: MainPageComponent}
 ];
 
 @NgModule({
