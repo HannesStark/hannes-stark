@@ -21,16 +21,29 @@
 
 .mat-button {
   font-size: 18px;
+  transition-duration: 0.2s;
   color: var(--color-primary);
 }
 
-.icon {
+.mat-button:hover {
+  transition-duration: 0.2s;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.example-icon {
   font-size: 30px;
+  transition-duration: 0.2s;
   color: var(--color-primary);
 }
+.example-icon:hover {
+  transition-duration: 0.2s;
+  background-color: var(--color-primary);
+  color: white;
+}
 
-.flex-spacer {
-  flex: 1 1 auto;
+.smaller {
+  height: 40px;
 }
 
 mat-toolbar {

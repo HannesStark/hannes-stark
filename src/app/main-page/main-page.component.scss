@@ -1,7 +1,7 @@
 
 .profile-image {
   border-radius: 50%;
-  max-width: 250px;
+  max-width: 300px;
   margin: 32px;
 }
 
@@ -9,11 +9,9 @@
   width: 100%;
 }
 
-.socials-links {
-  position: relative;
-  padding: 5px 10px;
+fa-icon {
+  color: var(--color-grey);
 }
-
 
 .Name {
   font-size: 40px;
@@ -22,27 +20,91 @@
   padding: 20px 0px;
 }
 
-.socials-links:hover {
-  cursor: pointer;
-  text-decoration: underline;
+
+.socials-links {
+  position: relative;
+  padding: 5px 10px;
 }
 
-.link-style {
-  color: var(--color-grey);
+
+
+
+
+.link-icon-style-orange {
+  color: var(--color-accent);
 }
 
-.link-style:hover {
-  cursor: pointer;
-  text-decoration: underline;
+.link-icon-style-green {
+  color: var(--color-primary);
 }
 
-fa-icon {
-  color: var(--color-grey);
+.link-style-green:hover {
+  cursor:pointer;
 }
 
-.socials-icon {
-  color: var(--color-grey);
+.link-style-green, .link-style-green:visited {
+	text-decoration: none;
+	position: relative;
+
+	&:after {
+		content: '';
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: var(--color-primary);
+		transition: 0.2s;
+    z-index: 1111;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+
+	&.block {
+		display: block;
+		padding: 0.5em;
+
+		&:hover {
+		}
+	}
 }
+
+.link-style-orange:hover {
+  cursor:pointer;
+}
+
+.link-style-orange, .link-style-orange:visited {
+	text-decoration: none;
+	position: relative;
+  font-weight: 500;
+  color: var(--color-accent);
+	&:after {
+		content: '';
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: var(--color-accent);
+		transition: 0.2s;
+    z-index: 1111;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+
+	&.block {
+		display: block;
+		padding: 0.5em;
+
+		&:hover {
+		}
+	}
+}
+
 
 .left-titles {
   margin-bottom: 0;
@@ -109,7 +171,7 @@ fa-icon {
 }
 
 .underline-title {
-  border-bottom: 5px solid var(--color-primary);;
+  border-bottom: 3px solid var(--color-primary);;
 
   &--top {
     @extend .underline-title;
@@ -123,6 +185,7 @@ fa-icon {
 
 .small-margin {
   margin: 0px 60px;
+
   &--xs {
     @extend .small-margin;
     margin: 0px 10px;

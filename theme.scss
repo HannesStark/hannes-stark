@@ -14,13 +14,13 @@ $green-palette: (
   400: #66bb6a,
   500: #4caf50,
   600: #43a047,
-  700: #228B22,
+  700: #43a047,
   800: #2e7d32,
   900: #1b5e20,
   A100: #b9f6ca,
   A200: #69f0ae,
-  A400: #00e676,
-  A700: #00c853,
+  A400: chocolate,
+  A700: orange,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -56,7 +56,8 @@ $green-palette: (
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $app-primary: mat-palette($green-palette, 700);
-$app-accent: mat-palette($green-palette, A200, A100, A400);
+$app-accent: mat-palette($green-palette, A700);
+$app-accent-light: mat-palette($green-palette, A400);
 
 // The warn palette is optional (defaults to red).
 $app-warn: mat-palette($green-palette);
@@ -68,6 +69,7 @@ $app-theme: mat-light-theme((
     primary: $app-primary,
     accent: $app-accent,
     warn: $app-warn,
+    accent-light: $app-accent-light
   )
 ));
 
@@ -80,6 +82,7 @@ $app-theme: mat-light-theme((
   --color-primary: #{mat-color($app-primary)};
   --color-accent: #{mat-color($app-accent)};
   --color-warn: #{mat-color($app-warn)};
+  --color-accent-light: #{mat-color($app-accent-light)};
   --color-grey: #808080;
   --color-light-grey: #d2d2d2;
 }
