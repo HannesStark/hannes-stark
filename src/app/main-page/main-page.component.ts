@@ -3,6 +3,7 @@ import {faGithub, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icon
 import {faCopy, faEnvelope, faMapMarker, faMobile, faPhone} from '@fortawesome/free-solid-svg-icons';
 import {faCalendar} from '@fortawesome/free-solid-svg-icons/faCalendar';
 import {HttpClient} from '@angular/common/http';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-main-page',
@@ -19,12 +20,11 @@ export class MainPageComponent implements OnInit {
   paper = faCopy;
   mobile = faMobile;
   sections: any[];
+  safeURL;
 
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
+    this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/8MCWE7R0xN8');
 
-  constructor(private http: HttpClient) {
-    // this.getYaml().subscribe(data => {
-    //   this.sections = data;
-    // });
   }
 
   ngOnInit(): void {

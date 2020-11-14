@@ -5,6 +5,32 @@
   margin: 32px;
 }
 
+.responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+.video {
+  padding-bottom: 56.25%;  /* or 75% depending upon the type of video you have */
+}
+
+.video-container {
+  padding-top: 10px;
+}
+
 .width100 {
   width: 100%;
 }
