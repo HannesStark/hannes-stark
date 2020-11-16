@@ -52,9 +52,14 @@ fa-icon {
   padding: 5px 10px;
 }
 
+h3 {
+  margin: 0
+}
 
 
-
+.text-black {
+  color: black;
+}
 
 .link-icon-style-orange {
   color: var(--color-accent);
@@ -71,7 +76,6 @@ fa-icon {
 .link-style-green, .link-style-green:visited {
 	text-decoration: none;
 	position: relative;
-
 	&:after {
 		content: '';
 		height: 2px;

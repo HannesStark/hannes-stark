@@ -32,7 +32,11 @@ export class MainPageComponent implements OnInit {
 
   goToLink(event, url: string): void {
     if (event.button === 0 || event.button === 1) {
+      const parentOpener = window.opener;
+      window.opener = null;
       window.open(url, '_blank');
+      window.opener = parentOpener;
+
     }
   }
 

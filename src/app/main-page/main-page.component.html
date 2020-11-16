@@ -27,21 +27,22 @@
           </p>
 
           <div fxLayout="row" fxLayout.xs="column">
-            <a class="socials-links link-style-green" (mousedown)="goToLink($event, 'https://github.com/HannesStark')">
+            <a href="https://github.com/HannesStark" target="_blank" class="socials-links link-style-green text-black">
               <fa-icon class="link-icon-style-green" [icon]="github"></fa-icon>
               GitHub
             </a>
-            <a class="socials-links link-style-green"
-               (mousedown)="goToLink($event, 'https://www.linkedin.com/in/hannes-stark/')">
+            <a href="https://www.linkedin.com/in/hannes-stark/" target="_blank"
+               class="socials-links link-style-green text-black">
               <fa-icon class="link-icon-style-green" [icon]="linkedin"></fa-icon>
               LinkedIn
             </a>
-            <a class="socials-links link-style-green"
-               (mousedown)="goToLink($event, 'https://twitter.com/HannesStaerk')">
+            <a href='https://twitter.com/HannesStaerk' target="_blank"
+               class="socials-links link-style-green text-black">
               <fa-icon class="link-icon-style-green" [icon]="twitter"></fa-icon>
               Twitter
             </a>
-            <a class="socials-links link-style-green" (mousedown)="goToPage($event, 'mailto:hannes.staerk@gmail.com')">
+            <a class="socials-links link-style-green text-black"
+               (mousedown)="goToPage($event, 'mailto:hannes.staerk@gmail.com')">
               <fa-icon class="link-icon-style-green" [icon]="mail"></fa-icon>
               hannes.staerk@gmail.com
             </a>
@@ -83,10 +84,10 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">M.Sc. Computer Science</a>
               <div fxLayout="row">
-                <h3 class="item-subtitle link-style-green" (mousedown)="goToLink($event, 'https://www.tum.de/en/')">
-                  Technical
-                  University
-                  Munich</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.tum.de/en/" target="_blank">Technical
+                    University
+                    Munich</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -102,9 +103,9 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">B.Sc. Computer Science</a>
               <div fxLayout="row">
-                <h3 class="item-subtitle link-style-green"
-                    (mousedown)="goToLink($event, 'https://www.unibw.de/home-en')">
-                  Bundeswehr Univsersity Munich</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.unibw.de/home-en" target="_blank">
+                    Bundeswehr Univsersity Munich</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -170,9 +171,9 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Teaching Assistant for Introduction to Deep Learning</a>
               <div fxLayout="row">
-                <h3 (mousedown)="goToLink($event, 'https://www.niessnerlab.org/')"
-                    class="item-subtitle link-style-green">
-                  Niessnerlab at TUM</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.niessnerlab.org/" target="_blank">
+                    Niessnerlab at TUM</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -188,10 +189,9 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Mathematics Lecturer</a>
               <div fxLayout="row">
-                <h3 class="item-subtitle link-style-green"
-                    (mousedown)="goToLink($event, 'https://www.bibaugsburg.de/')">BIB
-                  Augsburg
-                  gGmbH</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.bibaugsburg.de/" target="_blank">
+                    BIB Augsburg gGmbH</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -207,10 +207,10 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Student Assistant at Chair of Operations Research</a>
               <div fxLayout="row">
-                <h3 class="item-subtitle link-style-green"
-                    (mousedown)="goToLink($event, 'https://www.unibw.de/home-en')">
-                  Bundeswehr
-                  University Munich</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.unibw.de/home-en" target="_blank">
+                    Bundeswehr University Munich</a>
+                </h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -226,9 +226,9 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Dual Study Program</a>
               <div fxLayout="row">
-                <h3 class="item-subtitle link-style-green"
-                    (mousedown)="goToLink($event, 'https://www.allianzdeutschland.de/')">Allianz
-                  Deutschland AG</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.allianzdeutschland.de/" target="_blank">
+                    Allianz Deutschland AG</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -277,9 +277,10 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">IDP Bioinformatics</a>
               <div fxLayout="row">
-                <h3 (mousedown)="goToLink($event, 'https://www.rostlab.org/')" class="item-subtitle link-style-green">
-                  Rostlab
-                  at TUM</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.rostlab.org/" target="_blank">
+                    Rostlab at TUM</a>
+                </h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -292,8 +293,7 @@
               <p class="item-content">I use statistical learning methods from natural language processing to predict
                 where a protein occurs in a cell. My method outperforms the previous state of the art in terms of
                 accuracy and speed. I am currently writing a paper about it. You can already check out the
-                <a class="link-style-orange"
-                   (mousedown)="goToLink($event, 'https://github.com/HannesStark/protein-localization')">project
+                <a href="https://github.com/HannesStark/protein-localization" target="_blank" class="link-style-orange">project
                   <fa-icon class="link-icon-style-orange" [icon]="github"></fa-icon>
                 </a> and reproduce all the results.
               </p>
@@ -302,9 +302,9 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Guided Research Computer Vision</a>
               <div fxLayout="row">
-                <h3 (mousedown)="goToLink($event, 'https://www.niessnerlab.org/')"
-                    class="item-subtitle link-style-green">
-                  Niessnerlab at TUM</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.niessnerlab.org/" target="_blank">
+                    Niessnerlab at TUM</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -322,13 +322,12 @@
                     a new unseen viewpoint that did not exist in the original images. Our method added the ability to
                     also
                     change the pose of the human such that you can, for instance, make him walk. Check out the
-                    <a class="link-style-orange"
-                       (mousedown)="goToLink($event, 'https://github.com/HannesStark/SMPLNeRF')">project
+                    <a href="https://github.com/HannesStark/SMPLNeRF" target="_blank" class="link-style-orange">project
                       <fa-icon class="link-icon-style-orange" [icon]="github"></fa-icon>
                     </a>
                     or the
-                    <a class="link-style-orange"
-                       (mousedown)="pdf($event, '/assets/NeRF for Novel View and Human Pose Synthesis.pdf')">paper
+                    <a href="/assets/NeRF for Novel View and Human Pose Synthesis.pdf" target="_blank"
+                       class="link-style-orange">paper
                       <fa-icon class="link-icon-style-orange" [icon]="paper"></fa-icon>
                     </a>
                     .
@@ -345,9 +344,10 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Survey Paper on Transformers</a>
               <div fxLayout="row">
-                <h3 (mousedown)="goToLink($event, 'https://www.in.tum.de/daml/startseite/')"
-                    class="item-subtitle link-style-green">
-                  Data Analytics and Machine Learning Group at TUM</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.in.tum.de/daml/startseite/"
+                     target="_blank">
+                    Data Analytics and Machine Learning Group at TUM</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -360,8 +360,7 @@
               <p class="item-content">Transformers are a machine learning method that is the state of the art for many
                 natural language processing tasks but are currently also finding a lot of success in other fields.
                 Check out the
-                <a class="link-style-orange"
-                   (mousedown)="pdf($event, '/assets/transformer_survey.pdf')">paper
+                <a href="/assets/transformer_survey.pdf" target="_blank" class="link-style-orange">paper
                   <fa-icon class="link-icon-style-orange" [icon]="paper"></fa-icon>
                 </a>
                 that explains the architecture, its properties and the main applications in detail.
@@ -371,10 +370,9 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Thinktank: Psychological counseling for students - App Coach PTBS</a>
               <div fxLayout="row">
-                <h3 class="item-subtitle link-style-green"
-                    (mousedown)="goToLink($event, 'https://www.unibw.de/home-en')">
-                  Bundeswehr
-                  University Munich</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.unibw.de/home-en" target="_blank">
+                    Bundeswehr University Munich</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -388,18 +386,18 @@
                 design and wrote a prototype. The app strives to help and inform about forms of psychological distress
                 and is an always accessible tool to easily contact help.
                 Check out the final
-                <a class="link-style-orange"
-                   (mousedown)="goToLink($event, 'https://www.unibw.de/campusleben/beratungsangebote/coachptbs/view')">app</a>.
+                <a href="https://www.unibw.de/campusleben/beratungsangebote/coachptbs/view" target="_blank"
+                   class="link-style-orange">app</a>.
               </p>
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Talent base Memmingen: Physics</a>
               <div fxLayout="row">
-                <h3 class="item-subtitle link-style-green"
-                    (mousedown)="goToLink($event, 'https://bsg-mm.de/begabungsstuetzpunkt/')">
-                  Talent
-                  Base Memmingen</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://bsg-mm.de/begabungsstuetzpunkt/"
+                     target="_blank">
+                    Talent Base Memmingen</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -449,9 +447,9 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Gymnastics Referee</a>
               <div fxLayout="row">
-                <h3 (mousedown)="goToLink($event, 'https://www.dtb.de/')" class="item-subtitle link-style-green">German
-                  Gymnastics
-                  Association DTB</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.dtb.de/" target="_blank">
+                    German Gymnastics Association DTB</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -466,8 +464,9 @@
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Gymnastics and Acrobatics Trainer</a>
               <div fxLayout="row">
-                <h3 (mousedown)="goToLink($event, 'http://vfl-buchloe.de/')" class="item-subtitle link-style-green">VfL
-                  Buchloe</h3>
+                <h3>
+                  <a class="item-subtitle link-style-green" href="http://vfl-buchloe.de/" target="_blank">
+                    VfL Buchloe</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
@@ -479,8 +478,8 @@
               </p>
               <p class="item-content">I have trained gymnastics groups of all ages from kids to adults. Besides that
                 I am in the acrobatics team
-                <a class="link-style-orange"
-                   (mousedown)="goToLink($event, 'https://akrobatikastralbuchloe.com/')">Akrobatik Astral</a>
+                <a href="https://akrobatikastralbuchloe.com/" target="_blank" class="link-style-orange">Akrobatik
+                  Astral</a>
                 where we choreograph and organize shows for national (and occasionally international) events and
                 competitions.
               </p>
