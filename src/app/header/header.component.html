@@ -4,33 +4,36 @@
             matTooltip="My personal information"
             [routerLink]="" class="mat-button"
             (mousedown)="home($event)">
-            Home
+      Home
     </button>
-    <a #tooltip="matTooltip"
-            (mousedown)="pdf($event, '/assets/CV_Hannes_Stark.pdf')"
-            mat-button
-            matTooltip="Get my CV as PDF document"
-            class="mat-button">
+    <a href="/assets/CV_Hannes_Stark.pdf" target="_blank" #tooltip="matTooltip"
+       mat-button
+       matTooltip="Get my CV as PDF document"
+       class="mat-button">
       CV as PDF
     </a>
   </div>
   <div fxHide.lt-md fxFlex="60">
     <div fxFlex="70" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-              (mousedown)="goToLink($event,'https://github.com/HannesStark')">
-        <fa-icon class="icon" [icon]="github"></fa-icon>
+      <button class="button-hover" mat-icon-button aria-label="Example icon-button with share icon">
+        <a href="https://github.com/HannesStark" target="_blank">
+          <fa-icon class="icon" [icon]="github"></fa-icon>
+        </a>
       </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-              (mousedown)="goToLink($event, 'https://www.linkedin.com/in/hannes-stark/')">
-        <fa-icon class="icon" [icon]="linkedin"></fa-icon>
+      <button class="button-hover" mat-icon-button aria-label="icon-button icon">
+        <a href="https://www.linkedin.com/in/hannes-stark/" target="_blank">
+          <fa-icon class="icon" [icon]="linkedin"></fa-icon>
+        </a>
       </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-              (mousedown)="goToLink($event, 'https://twitter.com/HannesStaerk')">
-        <fa-icon class="icon" [icon]="twitter"></fa-icon>
+      <button class="button-hover" mat-icon-button aria-label="icon-button icon">
+        <a href="https://twitter.com/HannesStaerk" target="_blank">
+          <fa-icon class="icon" [icon]="twitter"></fa-icon>
+        </a>
       </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-              (mousedown)="goToPage($event, 'mailto:hannes.staerk@gmail.com')">
-        <fa-icon class="icon" [icon]="mail"></fa-icon>
+      <button class="button-hover" mat-icon-button aria-label="icon-button icon">
+        <a href="mailto:hannes.staerk@gmail.com">
+          <fa-icon class="icon" [icon]="mail"></fa-icon>
+        </a>
       </button>
     </div>
   </div>
@@ -39,35 +42,37 @@
             matTooltip="My personal information"
             [routerLink]="" class="mat-button"
             (mousedown)="home($event)">
-            Home
+      Home
     </button>
     <a #tooltip="matTooltip"
-            (mousedown)="pdf($event, '/assets/CV_Hannes_Stark.pdf')"
-            mat-button
-            matTooltip="Get my CV as PDF document"
-            class="mat-button">
+       (mousedown)="pdf($event, '/assets/CV_Hannes_Stark.pdf')"
+       mat-button
+       matTooltip="Get my CV as PDF document"
+       class="mat-button">
       CV as PDF
     </a>
   </div>
   <div fxHide.gt-sm fxFlex="50" fxLayout="row" fxLayoutGap.gt-xs="10px" fxLayoutAlign="end center">
-
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-            (mousedown)="goToLink($event, 'https://github.com/HannesStark')">
-      <fa-icon class="icon" [icon]="github"></fa-icon>
+    <button class="button-hover" mat-icon-button aria-label="Example icon-button with share icon">
+      <a href="https://github.com/HannesStark" target="_blank">
+        <fa-icon class="icon" [icon]="github"></fa-icon>
+      </a>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-            (mousedown)="goToLink($event, 'https://www.linkedin.com/in/hannes-stark/')">
-      <fa-icon class="icon" [icon]="linkedin"></fa-icon>
+    <button class="button-hover" mat-icon-button aria-label="icon-button icon">
+      <a href="https://www.linkedin.com/in/hannes-stark/" target="_blank">
+        <fa-icon class="icon" [icon]="linkedin"></fa-icon>
+      </a>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-            (mousedown)="goToLink($event, 'https://twitter.com/HannesStaerk')">
-      <fa-icon class="icon" [icon]="twitter"></fa-icon>
+    <button class="button-hover" mat-icon-button aria-label="icon-button icon">
+      <a href="https://twitter.com/HannesStaerk" target="_blank">
+        <fa-icon class="icon" [icon]="twitter"></fa-icon>
+      </a>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
-            (mousedown)="goToPage($event, 'mailto:hannes.staerk@gmail.com')">
-      <fa-icon class="icon" [icon]="mail"></fa-icon>
+    <button class="button-hover" mat-icon-button aria-label="icon-button icon">
+      <a href="mailto:hannes.staerk@gmail.com">
+        <fa-icon class="icon" [icon]="mail"></fa-icon>
+      </a>
     </button>
-
   </div>
 </mat-toolbar>
 <!--For when there are more buttons-->
