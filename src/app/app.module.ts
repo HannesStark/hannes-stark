@@ -21,6 +21,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { FooterComponent } from './footer/footer.component';
     MatSliderModule,
     MatToolbarModule,
     MatButtonModule,
+    MatExpansionModule,
     AppRoutingModule,
     FlexLayoutModule,
     MatCardModule,
