@@ -18,9 +18,11 @@
             In my current research, I apply statistical learning methods from natural language processing to make
             predictions about proteins.
             Besides that,
-            my main interests are learning on graphs and using statistical learning in natural sciences or medicine.
+            my main interests are learning on graphs and using statistical learning in natural sciences.
             <br>
-            From the experiences of my dual study program and through several projects, I found my passion for
+            From the experiences of my dual study program and through several
+            <a (click)="scroll('projects')" class="link-style-orange">projects</a>,
+            I found my passion for
             research and am now working to pursue a career in that area.
             <br>
             Feel free to contact me about anything in whatever way you prefer:
@@ -182,7 +184,10 @@
                   Munich, Germany
                 </a>
               </p>
-              <p class="item-content"></p>
+              <p class="item-content">Teaching TUM's
+                <a href="https://niessner.github.io/I2DL/" target="_blank" class="link-style-orange">deep learning
+                  course</a>.
+              </p>
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
@@ -200,7 +205,7 @@
                   Augsburg, Germany
                 </a>
               </p>
-              <p class="item-content">Teaching linear algebra and analysis to vocational students.</p>
+              <p class="item-content">Teaching linear algebra, statistics and analysis to vocational students.</p>
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
@@ -245,7 +250,7 @@
       </div>
     </div>
     <!-- section 3 -->
-    <div>
+    <div id="projects">
       <div fxHide.lt-md>
         <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
           <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
@@ -367,28 +372,31 @@
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <a class="item-title"> Paper onSurvey Transformers</a>
+              <a class="item-title">Tool for calculating Network centralities</a>
               <div fxLayout="row">
                 <h3>
-                  <a class="item-subtitle link-style-green" href="https://www.in.tum.de/daml/startseite/"
-                     target="_blank">
-                    Data Analytics and Machine Learning Group at TUM</a></h3>
+                  <a class="item-subtitle link-style-green" href="https://www.unibw.de/home-en" target="_blank">
+                    Bundeswehr University Munich</a></h3>
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                April 2020 - Sept 2020
+                Feb 2019 - Aug 2019
                 <a fxHide.xs>
                   <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
                   Munich, Germany
                 </a>
               </p>
-              <p class="item-content">Transformers are a machine learning method that is the state of the art for many
-                natural language processing tasks but are currently also finding a lot of success in other fields.
-                Check out the
-                <a href="/assets/transformer_survey.pdf" target="_blank" class="link-style-orange">paper
+              <p class="item-content">I started by investigating the theory on different graph centrality measures
+                in the context of computer networks. In the end, what came out of the project is a neat little tool
+                with a web interface where you can upload graphs and calculate the centralities for the desired
+                measure. You can check it out on
+                <a href="https://github.com/HannesStark/dependencyNodeRanking" target="_blank"
+                   class="link-style-orange">GitHub
+                  <fa-icon class="link-icon-style-orange" [icon]="github"></fa-icon>
+                </a> or have a look at the
+                <a href="/assets/node_rankings_explained.pdf" target="_blank" class="link-style-orange">report
                   <fa-icon class="link-icon-style-orange" [icon]="paper"></fa-icon>
-                </a>
-                that explains the architecture, its properties and the main applications in detail.
+                </a> which explains the centrality measures and the tool.
               </p>
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">

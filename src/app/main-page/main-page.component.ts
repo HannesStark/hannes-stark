@@ -51,4 +51,16 @@ export class MainPageComponent implements OnInit {
       window.open(path, '_blank');
     }
   }
+
+  scroll(target: string): void {
+    const dims = document.getElementById(target).offsetTop;
+    window.scrollTo(
+      {
+        top: dims - 64,
+        left: window.scrollX,
+        behavior: 'smooth'
+      }
+    );
+
+  }
 }
