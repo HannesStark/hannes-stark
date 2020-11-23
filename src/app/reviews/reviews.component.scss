@@ -174,7 +174,9 @@ h3 {
 }
 
 .separator {
-  border-top: 2px dashed var(--color-light-grey);
+  border: 0;
+  border-bottom: 1px dashed var(--color-light-grey);
+  background: #999;
   width: 100%;
 
   &--small {
