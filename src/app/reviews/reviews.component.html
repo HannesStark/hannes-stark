@@ -50,12 +50,12 @@
           <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <mat-card class="example-card">
-                <mat-card-header (click)="collapsed=!collapsed">
-                  <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-header class="card-header" (click)="open=!open">
+
                   <mat-card-title>Shiba Inu</mat-card-title>
                   <mat-card-subtitle>Dog Breed</mat-card-subtitle>
                 </mat-card-header>
-                <mat-card-content *ngIf="!collapsed">
+                <mat-card-content [@openClose]="open ? 'open' : 'closed'">
                   <p>
                     The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
                     A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
@@ -64,45 +64,9 @@
                 </mat-card-content>
                 <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
                      alt="Photo of a Shiba Inu">
-                <mat-card-actions>
-                  <button mat-button>LIKE</button>
-                  <button mat-button>SHARE</button>
-                </mat-card-actions>
-
-
               </mat-card>
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <mat-expansion-panel hideToggle>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    This is the expansion title
-                  </mat-panel-title>
-                  <mat-panel-description>
-                    This is a summary of the content
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-                <p>This is the primary content of the panel.</p>
-              </mat-expansion-panel>
-            </div>
-            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <mat-card>
-                <mat-card-header>
-                  <mat-card-title style="font-size: 20px;">My collapsible card title</mat-card-title>
-                </mat-card-header>
-
-                <mat-card-content *ngIf="!collapsed">
-                  <p>This is some example text.</p>
-                  <p>This text will disappear when you use the action button in the actions bar below.</p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button (click)="collapsed=true">Collapse text</button>
-                  <button mat-button (click)="collapsed=false">Uncollapse text</button>
-                </mat-card-actions>
-              </mat-card>
-            </div>
           </div>
         </div>
       </div>
