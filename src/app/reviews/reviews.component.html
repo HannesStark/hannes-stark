@@ -49,21 +49,60 @@
         <div fxFlex="60">
           <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <mat-card class="example-card">
-                <mat-card-header class="card-header" (click)="open=!open">
+              <mat-card class="whole-card" (click)="open=!open">
+                <mat-card-header class="card-header">
 
-                  <mat-card-title>Shiba Inu</mat-card-title>
-                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                  <mat-card-title>Probabilistic Machine Learning</mat-card-title>
+                  <mat-card-subtitle>
+                    Prof. Philipp Hennig, University Tübingen
+                  </mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content [@openClose]="open ? 'open' : 'closed'">
-                  <p>
+
                     The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
                     A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
                     bred for hunting.
-                  </p>
+
                 </mat-card-content>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                     alt="Photo of a Shiba Inu">
+
+                <div fxLayout="column" fxLayoutGap="5px">
+                  <div  fxLayout="row" fxLayoutAlign="center center">
+                    <img class="word-cloud" fxFlex="100" src="assets/Cloud_Probabilistic_ML.jpg"
+                         alt="Word cloud of contents">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                </div>
               </mat-card>
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
