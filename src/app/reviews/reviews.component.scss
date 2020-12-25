@@ -1,6 +1,10 @@
 .word-cloud {
   margin-bottom: 16px;
 }
+img {
+  width: 100%;
+}
+
 
 .card-header:hover {
   cursor: pointer;
@@ -39,13 +43,6 @@
   border: 0;
 }
 
-.video {
-  padding-bottom: 56.25%; /* or 75% depending upon the type of video you have */
-}
-
-.video-container {
-  padding-top: 10px;
-}
 
 .width100 {
   width: 100%;
@@ -55,18 +52,8 @@ fa-icon {
   color: var(--color-grey);
 }
 
-.Name {
-  font-size: 40px;
-  font-weight: 480;
-  color: var(--color-primary);
-  padding: 20px 0px;
-}
 
 
-.socials-links {
-  position: relative;
-  padding: 5px 10px;
-}
 
 h3 {
   margin: 0
