@@ -15,10 +15,9 @@
           <p class="text-align-left">
             Hi there! I am a 21 years old M. Sc. Computer Science student from Germany at TU Munich.
             <br>
-            In my current research, I apply machine learning methods from natural language processing to make
-            predictions about proteins.
-            Besides that,
-            my main interests are on the one hand learning on graphs with topics like GNN expressivity or encoding
+            My current research is on semi-supervised learning for molecular graphs and I am writing my master's
+            thesis about that under Pietro Liò at Cambridge.
+            My main interests are on the one hand learning on graphs with topics like GNN expressivity or encoding
             equivariances in GNNs.
             On the other hand, I am very excited by Bayesian optimization, uncertainty estimation, variational inference, or approximate inference methods in
             general.
@@ -282,6 +281,27 @@
         <div fxFlex="60">
           <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Master's Thesis</a>
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-green" href="https://www.cl.cam.ac.uk/~pl219/" target="_blank">
+                    Prof. Pietro Liò at Cambridge</a>
+                </h3>
+              </div>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                since Feb 2021
+                <a fxHide.xs>
+                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                  Cambridge, United Kingdom
+                </a>
+              </p>
+              <p class="item-content">My work for my thesis is on semi-supervised learning for small molecular graphs
+                where I am currently exploring and trying different methods.
+              </p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">IDP Bioinformatics</a>
               <div fxLayout="row">
                 <h3>
@@ -297,10 +317,13 @@
                   Munich, Germany
                 </a>
               </p>
-              <p class="item-content">I use statistical learning methods from natural language processing to predict
-                where a protein occurs in a cell. My method outperforms the previous state of the art in terms of
-                accuracy and speed. I am currently writing a paper about it. You can already check out the
-                <a href="https://github.com/HannesStark/protein-localization" target="_blank" class="link-style-orange">project
+              <p class="item-content">I use machine learning methods from natural language processing and a
+                lightweight attention mechanism to predict
+                where a protein occurs in a cell. The method substantially outperforms the previous state of the art in terms of
+                accuracy and speed. So I wrote up the results and the paper is currently under review at ICML.
+                As soon as review is done you can find the paper here.
+                You can already check out the
+                <a href="https://github.com/HannesStark/protein-localization" target="_blank" class="link-style-orange">code
                   <fa-icon class="link-icon-style-orange" [icon]="github"></fa-icon>
                 </a> and reproduce all the results.
               </p>
