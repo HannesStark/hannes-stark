@@ -69,11 +69,41 @@ h3 {
   color: var(--color-primary);
 }
 
-.link-style-green:hover {
+.link-style-black:hover {
   cursor:pointer;
 }
 
 .link-style-green, .link-style-green:visited {
+  color: var(--color-primary);
+  font-weight: 500;
+	text-decoration: none;
+	position: relative;
+	&:after {
+		content: '';
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: var(--color-primary);
+		transition: 0.2s;
+    z-index: 1111;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+
+	&.block {
+		display: block;
+		padding: 0.5em;
+
+		&:hover {
+		}
+	}
+}
+
+.link-style-black, .link-style-black:visited {
 	text-decoration: none;
 	position: relative;
 	&:after {
