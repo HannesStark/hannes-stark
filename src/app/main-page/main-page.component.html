@@ -24,7 +24,7 @@
             general.
             <br>
             From the experiences of my dual study program and through several
-            <a (click)="scroll('projects')" class="link-style-orange">projects</a>,
+            <a (click)="scroll('projects')" class="link-style-green">projects</a>,
             I found my passion for
             research and am now working to pursue a career in that area.
             <br>
@@ -323,8 +323,12 @@
                   Cambridge, United Kingdom
                 </a>
               </p>
-              <p class="item-content">My work for my thesis is on semi-supervised learning for small molecular graphs
-                where I am currently exploring and trying different methods.
+              <p class="item-content">
+                I am working on semi-supervised learning for molecular graphs where we try to leverage 3D structure information of molecules.
+                The current idea is to maximize the mutual information between a spectral representation of the 3D structure and another embedding that is only based on the molecular graph.
+                After this, the learned representations can be used for downstream prediction tasks, or the weights can be finetuned to obtain better predictions for molecular properties that are important in areas like drug discovery.
+                In this project, I am also collaborating with <a href="https://www.invivoai.com/" target="_blank"
+                               class="link-style-green">Invivo AI</a>.
               </p>
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
@@ -338,22 +342,23 @@
               </div>
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                since Sept 2020
+                Sept 2020 - Feb 2021
                 <a fxHide.xs>
                   <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
                   Munich, Germany
                 </a>
               </p>
-              <p class="item-content">I use machine learning methods from natural language processing and a
-                lightweight attention mechanism to predict
-                where a protein occurs in a cell. The method substantially outperforms the previous state of the art in
-                terms of
-                accuracy and speed. So I wrote up the results and the paper is currently under review at ICML.
-                As soon as review is done you can find the paper here.
-                You can already check out the
-                <a href="https://github.com/HannesStark/protein-localization" target="_blank" class="link-style-orange">code
-                  <fa-icon class="link-icon-style-orange" [icon]="github"></fa-icon>
-                </a> and reproduce all the results.
+              <p class="item-content">
+                I developed a new attention mechanism and architecture for predicting proteins' subcellular location
+                beating the previous state-of-the-art by 5 percentage points.
+                I wrote up the results in a paper that is currently under anonymous review at ICML, but you can already
+                look at the <a href="https://github.com/HannesStark/protein-localization" target="_blank"
+                               class="link-style-green">code
+                <fa-icon class="link-icon-style-green" [icon]="github"></fa-icon>
+              </a> and reproduce all the results.
+                Besides that I evaluated different types of learned representations for proteins and what information is
+                captured by Transformer's protein embeddings, which ultimately led to my method.
+
               </p>
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
@@ -380,13 +385,13 @@
                     a new unseen viewpoint that did not exist in the original images. Our method added the ability to
                     also
                     change the pose of the human such that you can, for instance, make him walk. Check out the
-                    <a href="https://github.com/HannesStark/SMPLNeRF" target="_blank" class="link-style-orange">project
-                      <fa-icon class="link-icon-style-orange" [icon]="github"></fa-icon>
+                    <a href="https://github.com/HannesStark/SMPLNeRF" target="_blank" class="link-style-green">project
+                      <fa-icon class="link-icon-style-green" [icon]="github"></fa-icon>
                     </a>
                     or the
                     <a href="/assets/NeRF for Novel View and Human Pose Synthesis.pdf" target="_blank"
-                       class="link-style-orange">paper
-                      <fa-icon class="link-icon-style-orange" [icon]="paper"></fa-icon>
+                       class="link-style-green">paper
+                      <fa-icon class="link-icon-style-green" [icon]="paper"></fa-icon>
                     </a>
                     .
                   </p>
@@ -418,8 +423,8 @@
               <p class="item-content">Transformers are a machine learning method that is the state of the art for many
                 natural language processing tasks but are currently also finding a lot of success in other fields.
                 Check out the
-                <a href="/assets/transformer_survey.pdf" target="_blank" class="link-style-orange">paper
-                  <fa-icon class="link-icon-style-orange" [icon]="paper"></fa-icon>
+                <a href="/assets/transformer_survey.pdf" target="_blank" class="link-style-green">paper
+                  <fa-icon class="link-icon-style-green" [icon]="paper"></fa-icon>
                 </a>
                 that explains the architecture, its properties and the main applications in detail.
               </p>
@@ -480,12 +485,12 @@
                 Bishop's "Pattern Recognition And Machine Learning" basically saved me and was my main source for
                 learning. It taught me the basics I needed from what neural networks, entropy, or convolutions even are
                 to variational inference and latent variable models. Check out my
-                <a href="/assets/bachelor_thesis.pdf" target="_blank" class="link-style-orange">thesis
-                  <fa-icon class="link-icon-style-orange" [icon]="paper"></fa-icon>
+                <a href="/assets/bachelor_thesis.pdf" target="_blank" class="link-style-green">thesis
+                  <fa-icon class="link-icon-style-green" [icon]="paper"></fa-icon>
                 </a> or have a look at the
                 <a href="https://github.com/HannesStark/bachelorThesis" target="_blank"
-                   class="link-style-orange">code
-                  <fa-icon class="link-icon-style-orange" [icon]="github"></fa-icon>
+                   class="link-style-green">code
+                  <fa-icon class="link-icon-style-green" [icon]="github"></fa-icon>
                 </a>.
 
               </p>
@@ -511,11 +516,11 @@
                 with a web interface where you can upload graphs and calculate the centralities for the desired
                 measure. You can check it out on
                 <a href="https://github.com/HannesStark/dependencyNodeRanking" target="_blank"
-                   class="link-style-orange">GitHub
-                  <fa-icon class="link-icon-style-orange" [icon]="github"></fa-icon>
+                   class="link-style-green">GitHub
+                  <fa-icon class="link-icon-style-green" [icon]="github"></fa-icon>
                 </a> or have a look at the
-                <a href="/assets/node_rankings_explained.pdf" target="_blank" class="link-style-orange">report
-                  <fa-icon class="link-icon-style-orange" [icon]="paper"></fa-icon>
+                <a href="/assets/node_rankings_explained.pdf" target="_blank" class="link-style-green">report
+                  <fa-icon class="link-icon-style-green" [icon]="paper"></fa-icon>
                 </a> which explains the centrality measures and the tool.
               </p>
             </div>
@@ -540,7 +545,7 @@
                 and is an always accessible tool to easily contact help.
                 Check out the final
                 <a href="https://www.unibw.de/campusleben/beratungsangebote/coachptbs/view" target="_blank"
-                   class="link-style-orange">app</a>.
+                   class="link-style-green">app</a>.
               </p>
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
@@ -632,7 +637,7 @@
               </p>
               <p class="item-content">I have trained gymnastics groups of all ages from kids to adults. Besides that
                 I am in the acrobatics team
-                <a href="https://akrobatikastralbuchloe.com/" target="_blank" class="link-style-orange">Akrobatik
+                <a href="https://akrobatikastralbuchloe.com/" target="_blank" class="link-style-green">Akrobatik
                   Astral</a>
                 where we choreograph and organize shows for national (and occasionally international) events and
                 competitions.
