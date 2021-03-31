@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {faGithub, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
-import {faCopy, faEnvelope, faMapMarker, faMobile, faPhone} from '@fortawesome/free-solid-svg-icons';
+import {faCopy, faEnvelope, faMapMarker, faMobile, faPhone, faUser} from '@fortawesome/free-solid-svg-icons';
 import {faCalendar} from '@fortawesome/free-solid-svg-icons/faCalendar';
 import {HttpClient} from '@angular/common/http';
 import {DomSanitizer} from '@angular/platform-browser';
@@ -16,6 +16,7 @@ export class MainPageComponent implements OnInit {
   twitter = faTwitter;
   mail = faEnvelope;
   calendar = faCalendar;
+  authors = faUser;
   location = faMapMarker;
   paper = faCopy;
   mobile = faMobile;

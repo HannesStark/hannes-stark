@@ -15,13 +15,10 @@
           <p class="text-align-left">
             Hi there! I am a 21 years old M. Sc. Computer Science student from Germany at TU Munich.
             <br>
-            My current research is on semi-supervised learning for molecular graphs and I am writing my master's
+            My current research is on Self-supervised learning for molecular graphs and I am writing my master's
             thesis about that under Pietro Liò at Cambridge.
-            My main interests are on the one hand learning on graphs with topics like GNN expressivity or encoding
-            equivariances in GNNs.
-            On the other hand, I am very excited by Bayesian optimization, uncertainty estimation, variational
-            inference, or approximate inference methods in
-            general.
+            My two main interests are (1) learning on graphs, symmetry aware GNNs, and equivariant attention mechanisms;
+            (2) variational inference and uncertainty estimation.
             <br>
             From the experiences of my dual study program and through several
             <a (click)="scroll('projects')" class="link-style-green">projects</a>,
@@ -56,6 +53,62 @@
     </div>
   </div>
   <div fxLayout="column" class="width100">
+    <!-- section 0 -->
+    <div>
+      <div fxHide.lt-md>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
+          <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+            <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles">PUBLICATIONS</h1>
+            </div>
+          </div>
+          <div fxFlex="60">
+            <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles--hidden">.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div fxHide.gt-sm ngClass.sm="small-margin" ngClass.xs="small-margin--xs" class="underline-title"
+           fxLayoutAlign="center center">
+        <h1 class="left-titles">PUBLICATIONS</h1>
+      </div>
+      <div ngClass.sm="small-margin" ngClass.xs="small-margin--xs" fxLayout="row" fxLayout.lt-md="column"
+           fxLayoutAlign.lt-md="center center"
+           fxLayoutAlign="center start">
+        <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+        </div>
+        <div fxFlex="60">
+          <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black"
+                     href="https://hannes-stark.com/assets/Light_Attention_Predicts_Protein_Location_from_the_Language_of_Life.pdf"
+                     target="_blank">Light Attention Predicts Protein Location from the Language of Life</a></h3>
+              </div>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
+                H. Stärk, C. Dallago, M. Heinzinger, B. Rost
+              </p>
+              <p class="item-content">
+                To appear at
+                <a href="https://aiforpublichealth.github.io/papers/" target="_blank"
+                   class="link-style-green">ICLR’21 AI for Public Health Workshop
+                </a>
+                and currently under review for
+                <a href="https://icml.cc/" target="_blank"
+                   class="link-style-green">ICML 2021
+                </a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- section 1 -->
     <div>
       <div fxHide.lt-md>
@@ -74,6 +127,7 @@
           </div>
         </div>
       </div>
+
       <div fxHide.gt-sm ngClass.sm="small-margin" ngClass.xs="small-margin--xs" class="underline-title"
            fxLayoutAlign="center center">
         <h1 class="left-titles">EDUCATION</h1>
@@ -156,150 +210,6 @@
       </div>
     </div>
     <!-- section 2 -->
-    <div>
-      <div fxHide.lt-md>
-        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
-          <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
-            <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
-                 fxLayoutAlign.lt-md="center center">
-              <h1 class="left-titles">PROFESSIONAL</h1>
-            </div>
-          </div>
-          <div fxFlex="60">
-            <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
-                 fxLayoutAlign.lt-md="center center">
-              <h1 class="left-titles--hidden">.</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div fxHide.gt-sm ngClass.sm="small-margin" ngClass.xs="small-margin--xs" class="underline-title"
-           fxLayoutAlign="center center">
-        <h1 class="left-titles">PROFESSIONAL</h1>
-      </div>
-      <div ngClass.sm="small-margin" ngClass.xs="small-margin--xs" fxLayout="row" fxLayout.lt-md="column"
-           fxLayoutAlign.lt-md="center center"
-           fxLayoutAlign="center start">
-        <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
-        </div>
-        <div fxFlex="60">
-          <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
-            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <a class="item-title">Teaching Assistant for Operations Research</a>
-              <div fxLayout="row">
-                <h3>
-                  <a class="item-subtitle link-style-black" href="https://www.tum.de/en/" target="_blank">
-                    Technical University Munich</a> <a class="item-subtitle link-style-black" href="https://dss.in.tum.de/" target="_blank">
-                    Decision Sciences</a></h3>
-              </div>
-              <p class="item-date-loc">
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                April 2021 - Sept 2021
-                <a fxHide.xs>
-                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
-                  Munich, Germany
-                </a>
-              </p>
-              <p class="item-content"> I am primarily holding two exercise sessions per week.
-                Additionally, I answer student questions and explain lecture content in an online forum.
-              </p>
-            </div>
-            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <a class="item-title">Mathematics Lecturer</a>
-              <div fxLayout="row">
-                <h3>
-                  <a class="item-subtitle link-style-black" href="https://www.bibaugsburg.de/" target="_blank">
-                    BIB Augsburg gGmbH</a></h3>
-              </div>
-              <p class="item-date-loc">
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                Feb 2020 - Present
-                <a fxHide.xs>
-                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
-                  Augsburg, Germany
-                </a>
-              </p>
-              <p class="item-content">
-                I am teaching linear algebra, analysis and statistics in small group lessons and sometimes individual
-                lessons.
-                The activity also involves a lot of student mediation and counseling to ensure student wellbeing.
-              </p>
-            </div>
-            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <a class="item-title">Teaching Assistant for Deep Learning</a>
-              <div fxLayout="row">
-                <h3>
-                  <a class="item-subtitle link-style-black" href="https://www.tum.de/en/" target="_blank">
-                    Technical University Munich</a></h3>
-              </div>
-              <p class="item-date-loc">
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                Nov 2020 - April 2021
-                <a fxHide.xs>
-                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
-                  Munich, Germany
-                </a>
-              </p>
-              <p class="item-content"> I am primarily holding office hours and giving lessons to subgroups of all
-                students.
-                Additionally, I create exercises and learning material like jupyter notebooks or explanatory
-                illustrations.
-                Through the online teaching tool Piazza I explain lecture content and answer questions. You can find the
-                course
-                <a href="https://niessner.github.io/I2DL/" target="_blank" class="link-style-green">here</a>.
-              </p>
-            </div>
-            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-
-            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <a class="item-title">Student Assistant</a>
-              <div fxLayout="row">
-                <h3>
-                  <a class="item-subtitle link-style-black" href="https://www.unibw.de/timor" target="_blank">
-                    Institute of Mathematics and OR, Bundeswehr University Munich</a>
-                </h3>
-              </div>
-              <p class="item-date-loc">
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                Sept 2018 - July 2019
-                <a fxHide.xs>
-                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
-                  Munich, Germany
-                </a>
-              </p>
-              <p class="item-content">In the beginning I implemented and evaluated different methods for regression on
-                time-series data like SARIMA, ARIMAX and LSTMs.
-                After that project was done I worked on causal inference for train traffic data using structure learning
-                for bayesian inference and I evaluated the approaches with data from Anylogic simulations.</p>
-            </div>
-            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <a class="item-title">Dual Study Program</a>
-              <div fxLayout="row">
-                <h3>
-                  <a class="item-subtitle link-style-black" href="https://www.allianzdeutschland.de/" target="_blank">
-                    Allianz Deutschland AG</a></h3>
-              </div>
-              <p class="item-date-loc">
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                Sept 2017 - Sept 2019
-                <a fxHide.xs>
-                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
-                  Munich, Germany
-                </a>
-              </p>
-              <p class="item-content">I mainly worked in an agile Web-Development team where I maintained digital
-                infrastructure and wrote code for a customer management application.
-                I learned a lot about software engineering, best coding practices and teamwork. In a side project I
-                designed and developed an app for organizing large software releases together with five other students.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- section 3 -->
     <div id="projects">
       <div fxHide.lt-md>
         <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
@@ -345,11 +255,15 @@
                 </a>
               </p>
               <p class="item-content">
-                I am working on semi-supervised learning for molecular graphs where we try to leverage 3D structure information of molecules.
-                The current idea is to maximize the mutual information between a spectral representation of the 3D structure and another embedding that is only based on the molecular graph.
-                After this, the learned representations can be used for downstream prediction tasks, or the weights can be finetuned to obtain better predictions for molecular properties that are important in areas like drug discovery.
-                In this project, I am also collaborating with <a href="https://www.invivoai.com/" target="_blank"
-                               class="link-style-green">Invivo AI</a>.
+                I am working on self-supervised learning for molecular graphs where we try to leverage 3D structure
+                information of molecules.
+                The current idea is to maximize the mutual information between a spectral representation of the 3D
+                structure and another embedding that is only based on the molecular graph.
+                <!--After this, the learned representations can be used for downstream prediction tasks, or the weights can
+                be fine-tuned to obtain better predictions for molecular properties that are important in areas like drug
+                discovery.-->
+                In this project, I am also collaborating with <a href="https://www.valencediscovery.com/" target="_blank"
+                                                                 class="link-style-green">Valence Discovery</a>.
               </p>
             </div>
             <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
@@ -455,6 +369,155 @@
         </div>
       </div>
     </div>
+    <!-- section 2 -->
+    <div>
+      <div fxHide.lt-md>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
+          <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+            <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles">PROFESSIONAL</h1>
+            </div>
+          </div>
+          <div fxFlex="60">
+            <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles--hidden">.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxHide.gt-sm ngClass.sm="small-margin" ngClass.xs="small-margin--xs" class="underline-title"
+           fxLayoutAlign="center center">
+        <h1 class="left-titles">PROFESSIONAL</h1>
+      </div>
+      <div ngClass.sm="small-margin" ngClass.xs="small-margin--xs" fxLayout="row" fxLayout.lt-md="column"
+           fxLayoutAlign.lt-md="center center"
+           fxLayoutAlign="center start">
+        <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+        </div>
+        <div fxFlex="60">
+          <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Teaching Assistant for Operations Research</a>
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black" href="https://www.tum.de/en/" target="_blank">
+                    Technical University Munich</a>, <a class="item-subtitle link-style-black"
+                                                       href="https://dss.in.tum.de/" target="_blank">
+                  Decision Sciences</a></h3>
+              </div>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                April 2021 - Sept 2021
+                <a fxHide.xs>
+                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                  Munich, Germany
+                </a>
+              </p>
+              <p class="item-content"> I am primarily holding two exercise sessions per week.
+                Additionally, I answer student questions and explain lecture content in an online forum.
+              </p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Mathematics Lecturer</a>
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black" href="https://www.bibaugsburg.de/" target="_blank">
+                    BIB Augsburg gGmbH</a></h3>
+              </div>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                Feb 2020 - Present
+                <a fxHide.xs>
+                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                  Augsburg, Germany
+                </a>
+              </p>
+              <p class="item-content">
+                I am teaching linear algebra, analysis and statistics in small group lessons and sometimes individual
+                lessons.
+                The activity also involves a lot of student mediation and counseling to ensure student wellbeing.
+              </p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Teaching Assistant for Deep Learning</a>
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black" href="https://www.tum.de/en/" target="_blank">
+                    Technical University Munich</a>, <a class="item-subtitle link-style-black"
+                                                       href="https://www.niessnerlab.org/" target="_blank">
+                  AI & CV Niessnerlab</a></h3>
+              </div>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                Nov 2020 - April 2021
+                <a fxHide.xs>
+                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                  Munich, Germany
+                </a>
+              </p>
+              <p class="item-content"> I am primarily holding office hours and giving lessons to subgroups of all
+                students.
+                Additionally, I create exercises and learning material like jupyter notebooks or explanatory
+                illustrations.
+                Through the online teaching tool Piazza I explain lecture content and answer questions. You can find the
+                course
+                <a href="https://niessner.github.io/I2DL/" target="_blank" class="link-style-green">here</a>.
+              </p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Student Assistant</a>
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black" href="https://www.unibw.de/timor" target="_blank">
+                    Institute of Mathematics and OR, Bundeswehr University Munich</a>
+                </h3>
+              </div>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                Sept 2018 - July 2019
+                <a fxHide.xs>
+                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                  Munich, Germany
+                </a>
+              </p>
+              <p class="item-content">In the beginning I implemented and evaluated different methods for regression on
+                time-series data like SARIMA, ARIMAX and LSTMs.
+                After that project was done I worked on causal inference for train traffic data using structure learning
+                for bayesian inference and I evaluated the approaches with data from Anylogic simulations.</p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Dual Study Program</a>
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black" href="https://www.allianzdeutschland.de/" target="_blank">
+                    Allianz Deutschland AG</a></h3>
+              </div>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                Sept 2017 - Sept 2019
+                <a fxHide.xs>
+                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                  Munich, Germany
+                </a>
+              </p>
+              <p class="item-content">I mainly worked in an agile Web-Development team where I maintained digital
+                infrastructure and wrote code for a customer management application.
+                I learned a lot about software engineering, best coding practices and teamwork. In a side project I
+                designed and developed an app for organizing large software releases together with five other students.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section 3 -->
+
     <!-- section 3 -->
     <div>
       <div fxHide.lt-md>
