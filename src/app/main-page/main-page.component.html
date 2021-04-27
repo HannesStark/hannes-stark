@@ -86,7 +86,7 @@
               <div fxLayout="row">
                 <h3>
                   <a class="item-subtitle link-style-black"
-                     href="https://hannes-stark.com/assets/Light_Attention_Predicts_Protein_Location_from_the_Language_of_Life.pdf"
+                     href="https://www.biorxiv.org/content/10.1101/622803v3"
                      target="_blank">Light Attention Predicts Protein Location from the Language of Life</a></h3>
               </div>
               <p class="item-date-loc">
@@ -550,6 +550,35 @@
         </div>
         <div fxFlex="60">
           <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">GNNs in Reinforcement Learning</a>
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black" href="https://www.tum.de/en/" target="_blank">
+                    Technical University of Munich</a></h3>
+              </div>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                Nov 2020 - Mar 2021
+                <a fxHide.xs>
+                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                  Munich, Germany
+                </a>
+              </p>
+              <p class="item-content">This project was part of a course. We used graph representations of robots in reinforcement learning for locomotion problems where the robot has to learn to walk.
+                The idea is that a policy learned by a GNN that captures the structure of the robot will generalize better and enable things like zero-shot transfer to a robot with a different geometry.
+                The results are written up
+                <a href="/assets/graph_representations_in_reinforcement_learning.pdf" target="_blank" class="link-style-green">here
+                  <fa-icon class="link-icon-style-green" [icon]="paper"></fa-icon>
+                </a> and the
+                <a href="https://github.com/HannesStark/gnn-reinforcement-learning" target="_blank"
+                   class="link-style-green">code
+                  <fa-icon class="link-icon-style-green" [icon]="github"></fa-icon>
+                </a> is available to reproduce everything (and render fun videos of robots learning to walk).
+
+              </p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <a class="item-title">Bachelor Thesis: Understanding Variational Autoencoders’ Latent Representations of
                 Remote Sensing Images</a>

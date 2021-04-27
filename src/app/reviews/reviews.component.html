@@ -39,7 +39,7 @@
       </div>
       <div fxHide.gt-sm ngClass.sm="small-margin" ngClass.xs="small-margin--xs" class="underline-title"
            fxLayoutAlign="center center">
-        <h1 class="left-titles">EDUCATION</h1>
+        <h1 class="left-titles">ML + Maths</h1>
       </div>
       <div ngClass.sm="small-margin" ngClass.xs="small-margin--xs" fxLayout="row" fxLayout.lt-md="column"
            fxLayoutAlign.lt-md="center center"
@@ -49,19 +49,27 @@
         <div fxFlex="60">
           <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <mat-card class="whole-card" (click)="open=!open">
-                <mat-card-header class="card-header">
+              <mat-card class="whole-card">
+                <mat-card-header class="card-header" (click)="open=!open">
 
                   <mat-card-title>Probabilistic Machine Learning</mat-card-title>
                   <mat-card-subtitle>
                     Prof. Philipp Hennig, University Tübingen
                   </mat-card-subtitle>
                 </mat-card-header>
+                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
                 <mat-card-content [@openClose]="open ? 'open' : 'closed'">
-
-                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                  bred for hunting.
+                  <a class="bold">Prerequisites: </a> <a class="emphasis">linear algebra, basic calculus,</a> logarithm/exponential, integral, distribution, expectation
+                  <a class="bold">Setting: </a>
+                  <p>Philipp Hennig is an incredible lecturer and in</p>
+                  <h4 class="font-weight-bold">Lecture Content:</h4>
+                  <ol>
+                    <li><a href="https://www.youtube.com/watch?v=M2fUmhGTNrQ&list=PL05umP7R6ij1tHaOFY96m5uX3J21a6yNd&index=2" target="_blank" class="link-style-green">
+                      Introduction:</a> Uncertainty, Kolmogorov's Axioms, mathematical basics of probability theory, measurable spaces, sigma algebras, rules of probability: sum rule, product rule, Bayes's theorem, examples for Bayes's theorem
+                    </li>
+                    <li>Probability as extension of propositional logic, probabilistic reasoning, inference, conditional probability, conditional independence </li>
+                    <li>Probability distributions, probability density, change of variables formula for density functions</li>
+                  </ol>
 
                 </mat-card-content>
 
@@ -105,8 +113,8 @@
             </div>
 
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <mat-card class="whole-card" (click)="open=!open">
-                <mat-card-header class="card-header">
+              <mat-card class="whole-card">
+                <mat-card-header class="card-header" (click)="open=!open">
 
                   <mat-card-title>Statistics and Probability Theory</mat-card-title>
                   <mat-card-subtitle>

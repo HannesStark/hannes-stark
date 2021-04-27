@@ -8,6 +8,15 @@ img {
 
 .card-header:hover {
   cursor: pointer;
+  color: var(--color-grey)
+}
+
+.emphasis {
+  font-style: oblique;
+}
+
+.bold {
+  font-weight: 500;
 }
 
 .mat-card-subtitle {
@@ -103,6 +112,36 @@ h3 {
     &:hover {
     }
   }
+}
+
+.link-style-green, .link-style-green:visited {
+  color: var(--color-primary);
+  font-weight: 500;
+	text-decoration: none;
+	position: relative;
+	&:after {
+		content: '';
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: var(--color-primary);
+		transition: 0.2s;
+    z-index: 1111;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+
+	&.block {
+		display: block;
+		padding: 0.5em;
+
+		&:hover {
+		}
+	}
 }
 
 .link-style-orange:hover {
