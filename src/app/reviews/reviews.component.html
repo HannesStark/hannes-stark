@@ -4,7 +4,7 @@
     </div>
     <div fxFlex="60" ngClass.sm="small-margin" ngClass.xs="small-margin--xs">
       <div fxFlex.lt-md="auto" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
-        <h1 class="Name">Lectures Reviewed!</h1>
+        <h1 class="Name">Lectures Reviewed! **NOT ONLINE**</h1>
         <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
           <p class="text-align-left">
             Since I have no hobbies and watch hours of mathematics lectures every day, I get through quite a few.
@@ -59,16 +59,28 @@
                 </mat-card-header>
                 <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
                 <mat-card-content [@openClose]="open ? 'open' : 'closed'">
-                  <a class="bold">Prerequisites: </a> <a class="emphasis">linear algebra, basic calculus,</a> logarithm/exponential, integral, distribution, expectation
-                  <a class="bold">Setting: </a>
+                  <a class="bold">Prerequisites: </a> <a class="emphasis">linear algebra, basic calculus,</a>
+                  logarithm/exponential, integral, probability distribution, expectation
+                  <br>
+                  <a class="bold">Setting:</a> Online tought course. Slides + Blackboard. Excellent quality video and
+                  audio.
+                  <br>
                   <p>Philipp Hennig is an incredible lecturer and in</p>
                   <h4 class="font-weight-bold">Lecture Content:</h4>
                   <ol>
-                    <li><a href="https://www.youtube.com/watch?v=M2fUmhGTNrQ&list=PL05umP7R6ij1tHaOFY96m5uX3J21a6yNd&index=2" target="_blank" class="link-style-green">
-                      Introduction:</a> Uncertainty, Kolmogorov's Axioms, mathematical basics of probability theory, measurable spaces, sigma algebras, rules of probability: sum rule, product rule, Bayes's theorem, examples for Bayes's theorem
+                    <li><a
+                      href="https://www.youtube.com/watch?v=M2fUmhGTNrQ&list=PL05umP7R6ij1tHaOFY96m5uX3J21a6yNd&index=2"
+                      target="_blank" class="link-style-green">
+                      Introduction:</a> Uncertainty, Kolmogorov's Axioms, mathematical basics of probability theory,
+                      measurable spaces, sigma algebras, rules of probability: sum rule, product rule, Bayes's theorem,
+                      examples for Bayes's theorem
                     </li>
-                    <li>Probability as extension of propositional logic, probabilistic reasoning, inference, conditional probability, conditional independence </li>
-                    <li>Probability distributions, probability density, change of variables formula for density functions</li>
+                    <li>Probability as extension of propositional logic, probabilistic reasoning, inference, conditional
+                      probability, conditional independence
+                    </li>
+                    <li>Probability distributions, probability density, change of variables formula for density
+                      functions
+                    </li>
                   </ol>
 
                 </mat-card-content>
@@ -135,11 +147,1291 @@
                          alt="Word cloud of contents">
                   </div>
                   <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center">
-                    <img fxFlex="33" src="assets/Lecture%201_%20Probability%20and%20Counting%20_%20Statistics%20110%2027-52%20screenshot.jpg">
+                    <img fxFlex="33"
+                         src="assets/Lecture%201_%20Probability%20and%20Counting%20_%20Statistics%20110%2027-52%20screenshot.jpg">
                     <img fxFlex="33"
                          src="assets/Lecture%207_%20Gambler's%20Ruin%20and%20Random%20Variables%20_%20Statistics%20110%2024-6%20screenshot.jpg">
                     <img fxFlex="33"
                          src="assets/Lecture%2027_%20Conditional%20Expectation%20given%20an%20R.V.%20_%20Statistics%20110%2042-43%20screenshot.jpg">
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+
+
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <mat-card class="whole-card">
+                <mat-card-header class="card-header" (click)="open=!open">
+
+                  <mat-card-title>Algorithms</mat-card-title>
+                  <mat-card-subtitle>
+                    Srini Devadas and Erik Demaine, MIT
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <mat-card-content [@openClose]="open ? 'open' : 'closed'">
+                  <a class="bold">Prerequisites: </a> <a class="emphasis">linear algebra, calculus,</a>
+                  logarithm/exponential, integral, basic derivatives, product rule
+                  <br>
+                  <a class="bold">Setting:</a> Online tought course. Slides + Blackboard. Excellent quality video and
+                  audio.
+                  <br>
+                  <p>Good fun. Enthusiastic lecturer, Camera man is not the best and often zooms in too far such that
+                    you cannot see
+                    the stuff on the blackboard that the lecturer is talking about. Sometimes a bit slow. Erik Demaine
+                    is also
+                    a nice lecturer. </p>
+                  <h4 class="font-weight-bold">Lecture Content:</h4>
+                  <ol>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb"
+                      target="_blank" class="link-style-green">
+                      Introduction and Peak finding:</a> overview of course, algorithmic thinking, linear comlexity peak
+                      finding algorithm, worst case complexity, Big-O is a bound from above, Big-theta is the complexity
+                      class,
+                      logarithmic complexity peak finding algorithm, greedy ascent algorithm for 2D peak finding
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2"
+                      target="_blank" class="link-style-green">
+                      Runtime basics and document distance:</a> By Erik Demaine, What is an algorithm, how to measure
+                      running time, random access machine, pointer machine, python examples, document distance function,
+                      ackermann distance,
+                      cosine similarity between documents,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=Kg4bqzAqRBM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=3"
+                      target="_blank" class="link-style-green">
+                      Insert and Merge Sort:</a> binary search, insertion sort algorithm, sorting example, insertion
+                      sort complexity n^2, merge sort algorithm, two finger algorithms, merge sort complexity via its
+                      recursion tree nlog(n),
+                      comparison of merge and insertion sort, merge sort is not inplace, in-place merge sort discussion,
+                      real world numbers for python and C merge and insertion sort,
+                      recurrence solving examples
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=B7hVxCmfPtM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=4"
+                      target="_blank" class="link-style-green">
+                      52min Heaps and Heapsort:</a> priority queues, heaps, heap representation of an array, heap as a
+                      tree, max- and min-heaps, heap operations, max-heapify,
+                      building a max-heap, complexity of max-heap building is n, heapsort,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5"
+                      target="_blank" class="link-style-green">
+                      Binary Search Trees (52 min):</a> scheduling problem example, arrays need n time for insertion
+                      while it is constant for lists however, we cannot do binary search on lists,
+                      binary search trees allow for fast search AND fast insertion, operations on BSTs, augmenting BSTs,
+                      problem of unbalanced BSTs
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6"
+                      target="_blank" class="link-style-green">
+                      Balanced BSTs / AVL Trees (51 min):</a> By Erik Demaine, problem of unbalanced BSTs, tree height,
+                      AVL tree invariant, minimum number of elements in an AVL tree and proof,
+                      maintaining AVL tree property after insert and delete, rotations in trees, AVL sort
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=7"
+                      target="_blank" class="link-style-green">
+                      More on sorting (52 min):</a> By Erik Demaine, the comparison model, decision trees for algorithm
+                      analysis, lower bound for search complexity, lower bound for sorting complexity,
+                      random access machine, linear time integer sorting, counting sort, array lists, radix sort
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=0M_kIqhwbFo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8"
+                      target="_blank" class="link-style-green">
+                      Hashing with Chaining (51 min):</a> By Erik Demaine, dictionaries, dictionary applications and
+                      motivation, direct access tables, prehashing and hashing,
+                      collisions and dealing with them with chaining, hash function examples, universal hashing
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=BRO7mVIFt08&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=9"
+                      target="_blank" class="link-style-green">
+                      Tricks for hash tables (52 min):</a> By Erik Demaine, growing hash tables by doubling, amortized
+                      runtime, shrinking tables, resizable arrays, string matching motivation,
+                      comparing hashes instead of strings for linear time string matching, rolling hash computation,
+                      Karp Rabin Algorithm
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10"
+                      target="_blank" class="link-style-green">
+                      More on hashing and hashtabels (50 min):</a> Open addressing for collision handling, insertion
+                      with open addressing, searching with open addressing,
+                      deleting with open addressing, linear probing, double hashing, uniform hashing assumption,
+                      cryptographic hash functions
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=11"
+                      target="_blank" class="link-style-green">
+                      High precision numerics (47 min):</a> Catalan numbers, Newton's method, High precision
+                      multiplication algorithm, Karatsuba algorithm, demonstration of high precision computation
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=2YeJ-5UAke8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=12"
+                      target="_blank" class="link-style-green">
+                      Numerics (51 min):</a> Review, Rate of convergence and error analysis of Newton's method,
+                      multiplication algorithms, iterated logarithm,
+                      high-precision division, Newton's method for division runtime analysis of division
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=11"
+                      target="_blank" class="link-style-green">
+                      Breadth-Frist Search (50 min):</a> By Erik Demaine, definition of graph search problems,
+                      definition of graphs, pocket cube example, graph representations,
+                      breadth-frist search, negative weight cycles,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=AfSk24UTFS8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=14"
+                      target="_blank" class="link-style-green">
+                      Depth-First Search (50 min):</a> By Erik Demaine, depth-first search algorithm, DFS runtime
+                      analysis, edge types during DFS, cycle detection, job scheduling example
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=Aa2sqUhIn-E&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=15"
+                      target="_blank" class="link-style-green">
+                      Shortest Path Problems (53 min):</a> Dijkstra for positive weight edges, Bellman-Ford for negative
+                      and positive weight edges, weighted graphs,
+                      general structure of shortest path algorithms, relaxation,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=2E7MmKv0Y24&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=16"
+                      target="_blank" class="link-style-green">
+                      Dijkstra (51 min):</a> Shortest path on DAGs, Dijkstra algorithm, complexity analysis of Dijkstra,
+                      implementation methods for Dijkstra
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=17"
+                      target="_blank" class="link-style-green">
+                      Bellman-Ford (48 min):</a> Bellman-Ford algorithm, proof for Bellman-Ford correctness, finding
+                      longest paths, negative cycle detection proof,
+                      Bellman-Ford examples
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=18"
+                      target="_blank" class="link-style-green">
+                      Source Target Shortest Path (53 min):</a> single source single destination problems,
+                      bi-directional shorteset path search, goal directed search,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=19"
+                      target="_blank" class="link-style-green">
+                      Source Target Shortest Path (53 min):</a> single source single destination problems,
+                      bi-directional shorteset path search, goal directed search,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=20"
+                      target="_blank" class="link-style-green">
+                      Dynamic Programming (51 min):</a> By Erik Demaine, dynamic programming origin, fibonacci number
+                      example, memoization, fibonacci numbers with memoization,
+                      bottom-up dynamic programming, dynamic programming for shortest paths, dynamic programming is
+                      guessin + recursion + momoization, dependency graphs for
+                      dynamic programming need to be acyclic
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=21"
+                      target="_blank" class="link-style-green">
+                      Dynamic Programming examples (52 min):</a> By Erik Demaine, summary of last lecture, justifying
+                      text in documents, Black-Jack example
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=22"
+                      target="_blank" class="link-style-green">
+                      Dynamic Programming examples (52 min):</a> By Erik Demaine, summary of dynamic programming
+                      strategies, finding optimal parenthesization in matrix multiplication, edit distance,
+                      knapsack-problem, pseudopolynomial runtime
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=23"
+                      target="_blank" class="link-style-green">
+                      Dynamic Programming examples (49 min):</a> By Erik Demaine, how to optimally choose fingers for
+                      playing notes on a piano, tetris example, Super Mario example
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=24"
+                      target="_blank" class="link-style-green">
+                      Computational complexity (51 min):</a> By Erik Demaine, complexity classes, polynomial exponential
+                      and finite time classes, decision problem setup,
+                      uncomputability, almost all problems are unsolvable proof, non-deterministic polynomial time
+                      problems, NP-hard and NP-complete, reductions,
+                      3-partition problem, examples of NP-complete problems
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25"
+                      target="_blank" class="link-style-green">
+                      Algorithms Research Overview (46 min):</a> history of CPUs, parallelization, problems with
+                      parallel systems, dynamic programming for memory access cost,
+                      Erik Demain's research topics, goemetric folding algorithms
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=26"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=27"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=28"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+
+
+                  </ol>
+
+                </mat-card-content>
+
+                <div fxLayout="column" fxLayoutGap="5px">
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <img class="word-cloud" ngClass.xs="width100" fxFlex="100" src="assets/Cloud_Probabilistic_ML.jpg"
+                         alt="Word cloud of contents">
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+                    <img fxFlex="50" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="50"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+
+
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <mat-card class="whole-card">
+                <mat-card-header class="card-header" (click)="open=!open">
+
+                  <mat-card-title>Differential Equations</mat-card-title>
+                  <mat-card-subtitle>
+                    Prof. Gilbert Strang, MIT
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <mat-card-content [@openClose]="open ? 'open' : 'closed'">
+                  <a class="bold">Prerequisites: </a> <a class="emphasis">linear algebra, calculus,</a>
+                  logarithm/exponential, integral, basic derivatives, product rule
+                  <br>
+                  <a class="bold">Setting:</a> Online tought course. Slides + Blackboard. Excellent quality video and
+                  audio.
+                  <br>
+                  <p>Many see Gilbert Strangs lectures on linear algebra as the best lectures online. </p>
+                  <h4 class="font-weight-bold">Lecture Content:</h4>
+                  <ol>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=1"
+                      target="_blank" class="link-style-green">
+                      Greedy algorithms (1h 23min):</a> Overiew, revision, runtime classes, interval scheduling, greedy
+                      algorithms, weighted interval scheduling, dynamic programming,
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    v
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      (46 min):</a>
+                    </li>
+
+
+                  </ol>
+
+                </mat-card-content>
+
+                <div fxLayout="column" fxLayoutGap="5px">
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <img class="word-cloud" ngClass.xs="width100" fxFlex="100" src="assets/Cloud_Probabilistic_ML.jpg"
+                         alt="Word cloud of contents">
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+                    <img fxFlex="50" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="50"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+
+
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <mat-card class="whole-card">
+                <mat-card-header class="card-header" (click)="open=!open">
+
+                  <mat-card-title>Design and Analysis of Algorithms</mat-card-title>
+                  <mat-card-subtitle>
+                    Prof. Srinivas Devadas, MIT
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <mat-card-content [@openClose]="open ? 'open' : 'closed'">
+                  <a class="bold">Prerequisites: </a> <a class="emphasis">6.006 lecture,</a>
+                  sorting, dynamic programming, datastructures, shortest paths, complex numbers for one lecture
+                  <br>
+                  <a class="bold">Setting:</a> Shitty cameraman
+                  <br>
+                  <p>Many see Gilbert Strangs lectures on linear algebra as the best lectures online. </p>
+                  <h4 class="font-weight-bold">Lecture Content:</h4>
+                  <ol>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=1"
+                      target="_blank" class="link-style-green">
+                      Greedy algorithms (1h 23min):</a> Overiew, revision, runtime classes, interval scheduling, greedy
+                      algorithms, weighted interval scheduling, dynamic programming,
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Divide and Conquer (1h 20min):</a> Basics of divide and conquer, finding convex hull example,
+                      median finding faster than n*log(n)
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=3"
+                      target="_blank" class="link-style-green">
+                      Recitation (53 min):</a> By Ling Ren, weighted interval scheduling, strassen algorithm for matrix
+                      multiplication, master theorem for solving the complexity of
+                      recursions
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=4"
+                      target="_blank" class="link-style-green">
+                      Fast Fourier Transform (1h 20min):</a> By Erik Demaine, polynomials, operations on polynomials,
+                      Horner's rule, polynomial multiplication and convolution, sample representation of polynomials,
+                      Vandermonde matrix, divide and conquer for evaluating polynomials at n points, fast Fourier
+                      transform algorithm for the discrete Fourier transform,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=5"
+                      target="_blank" class="link-style-green">
+                      Recitation (30 min):</a> binary search trees vs. b-trees
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=6"
+                      target="_blank" class="link-style-green">
+                      van Emde Boas Trees (1h 20min):</a> finding predecessors or successors, bit vectors representation
+                      of sets, summary vectors, high low and index in cluster
+                      representations, lazy propagation, deletion in van Emde Boas Trees
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=7"
+                      target="_blank" class="link-style-green">
+                      Amortization (1h 15min):</a> table doubling for hash tables revision, aggregate method, amortized
+                      bounds definition, accounting method, charging method,
+                      table doubling and halving, potential functions for datastructures, amortized cost of incrementing
+                      a binary counter, 2-3 tree insertion amortized cost
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=8"
+                      target="_blank" class="link-style-green">
+                      Randomized Algorithms (1h 21min):</a> definition of probabilistic algorithms, probably fast,
+                      probably correct algorithms,
+                      probably correct matrix multiplication with O(n^2), Frievald's algorithm, quicksort is inplace
+                      compared to O(n) auxiliary space of merge sort, basic quicksort,
+                      shuffling for basic quicksort, quicksort with median finding algorithm, Las Vegas random
+                      quicksort,
+
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=9"
+                      target="_blank" class="link-style-green">
+                      Recitation (39 min):</a> combining B-trees, comparison of different quicksort algorithms,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=10"
+                      target="_blank" class="link-style-green">
+                      Skip Lists (1h 20min):</a> Skip list explanation, random skip list, analysis of levels in skip
+                      list, definition of "with high probability"
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=11"
+                      target="_blank" class="link-style-green">
+                      Random Hashing (1h 21min):</a> By Eric Demaine, dictionary problem, hashing with chaining,
+                      problems with hash functions,
+                      universal hashing, dot-product hash family, static dictionary problem, perfect hashing
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=12"
+                      target="_blank" class="link-style-green">
+                      Recitation (52 min):</a> number of paths in a grid, stacking blocks, knapsack problem, universal
+                      and perfect hashing,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=13"
+                      target="_blank" class="link-style-green">
+                      Tree Augmentations (1h 24min):</a> By Eric Demaine, easy tree augmentation, order statistic trees,
+                      level linked 2-3 trees, finger search property,
+                      orthogonal range searching, 1D range tree,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=Tw1k46ywN6E&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=14"
+                      target="_blank" class="link-style-green">
+                      Advanced Dynamic Programming (1h 20min):</a> longest palindromic sequence problem, optimal binary
+                      search trees, minimax dynamic programming
+                      for a game,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=15"
+                      target="_blank" class="link-style-green">
+                      All-pairs Shortest Paths (1h 21min):</a> revision of shortest path algorithms, all-pairs shortest
+                      path problem, naive dynamic programming solution,
+                      matrix multiplications connection to shortest paths, transitive closure problem, Floyd-Warshall
+                      algorithm, Johnson's algorithm for sparse graphs,
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=16"
+                      target="_blank" class="link-style-green">
+                      Minimum Spanning Trees (1h 22min):</a> spanning trees, minimum weigth spanning tree problem,
+                      greedy choice property, cut and paste proof, prim's algorithm,
+                      Kruskal's algorithm
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=17"
+                      target="_blank" class="link-style-green">
+                      Recitation (22min):</a> Greedy algorithm for change optimization problem, interval scheduling
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=18"
+                      target="_blank" class="link-style-green">
+                      Max-Flow Min-Cut (1h 22min):</a> flow problem, max-flow example, flow definition, cut definition,
+                      residual networks, Ford-Fulkerson algorithm example
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=19"
+                      target="_blank" class="link-style-green">
+                      Matchings (1h 22min):</a> revision of flow networks, Ford-Fulkerson algorithm, max-flow min-cut
+                      theorem and proof, pathology of Ford-Fulkerson algorithm,
+                      Edmons Karp improvement, runtime discussion, application example for network flow
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=20"
+                      target="_blank" class="link-style-green">
+                      Recitation (51min): </a> Ford-Fulkerson revision, bipartite matchings, optimal cover, Edmonds Karp
+                      algorithm
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=21"
+                      target="_blank" class="link-style-green">
+                      Linear Programming (1h 22min):</a> linear program example, standard form, certificate of
+                      optimality, duality, max-flow as linear program, shortest paths LP, simplex algorithm
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=22"
+                      target="_blank" class="link-style-green">
+                      Complexity Theory and reductions (1h 22min):</a> revision of polynomial, non-deterministic
+                      polynomial, exponential classes, 3SAT problem, NP-completeness, NP-hardness, reduction,
+                      NP-completeness proofs, 3SAT to super mario brothers reduction, reduction to 3-dimensional
+                      matching problem, reduction to subset sum problem,
+                      weakly NP-hardness, partition problem, rectangle packing, strong NP-hardness, 4 partition problem
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=23"
+                      target="_blank" class="link-style-green">
+                      Recitation (45min):</a> revision of complexity classes, Hamiltonian Path to Hamiltonian cycle,
+                      finding k-clique, k-SAT
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=MEz1J9wY2iM&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=24"
+                      target="_blank" class="link-style-green">
+                      Approximation Algorithms (1h 21min):</a> approximation algorithm definition, vertex cover problem,
+                      set cover problem, approximate set cover, parition problem
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Fixed-Point Algorithms (1h 17min):</a> By Erik Demaine, k-vertex cover decision problem, bounded-search-tree algorithm, kernelization,
+                      polynomial kernel for k-vertex cover decision problem,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Recitation (31min):</a> traveling salesman problem and metric travelling salesman problem, euler circuits
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Distributed Algorithms (1h 17min):</a> By Nancy Lynch,  leader election problem, symmetry breaking, Luby's algorithm, BFS spanning trees
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Distributed Algorithms (1h 12min):</a> By Nancy Lynch, shortest paths spanning trees,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Recitation (50min):</a> leader election, synchronous spanning tree
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Cryptographic Hash Functions (1h 22min):</a> hash function definition, random oracle, file modification detector, commitments
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Cryptographic Encryption (1h 24min):</a> communication setup, public private key cryptography, number theory for public key cryptography,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Recitation (49min):</a> cryptography, RSA algorithm
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Cache obliviousness (1h 20min):</a> By Erik Demaine, memory hierarchy as motivation for cache obliviousness, blocking and spatial locality,
+                      external-memory model, cache-oblivious model, FiFo, scanning, contiguousness, parallel scans, divide and conquer under memory models,
+                      median finding, matrix multiplication
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=EzeYI7p9MjU&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Cache Oblivious Search and Sort (1h 20min):</a> By Erik Demaine, online vs. offline algorithms, search, B-trees for search without memory obliviousness,
+                      van Emde Boas for cache oblivious search, sorting
+
+                    </li>
+
+
+                  </ol>
+
+                </mat-card-content>
+
+                <div fxLayout="column" fxLayoutGap="5px">
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <img class="word-cloud" ngClass.xs="width100" fxFlex="100" src="assets/Cloud_Probabilistic_ML.jpg"
+                         alt="Word cloud of contents">
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+                    <img fxFlex="50" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="50"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+
+
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <mat-card class="whole-card">
+                <mat-card-header class="card-header" (click)="open=!open">
+
+                  <mat-card-title>Design and Analysis of Algorithms</mat-card-title>
+                  <mat-card-subtitle>
+                    Prof. Jure Leskovec, MIT
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <mat-card-content [@openClose]="open ? 'open' : 'closed'">
+                  <a class="bold">Prerequisites: </a> <a class="emphasis">6.006 lecture,</a>
+                  sorting, dynamic programming, datastructures, shortest paths, complex numbers for one lecture
+                  <br>
+                  <a class="bold">Setting:</a> Online tought course. Slides + Blackboard. Excellent quality video and
+                  audio.
+                  <br>
+                  <p>Many see Gilbert Strangs lectures on linear algebra as the best lectures online. </p>
+                  <h4 class="font-weight-bold">Lecture Content:</h4>
+                  <ol>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Motivation (11min):</a>
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Applications (20min):</a> node classification, link prediction, graph classification, clustering,
+                      graph generation,
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Graph representations (20min):</a> Undirected vs. directed, bipartite graphs, sparsity, weighted
+                      vs. unweighted, multigraphs, self-loops, adjacency matrix
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Node-Level Predictions (27min):</a> feature design, node degree, eigenvector centrality, betweenness
+                      centrality, closeness centrality, clustering coefficient
+                      graphlets, graphlet degree vectors,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Link prediction (16min):</a> problem definition, prediction by proximity, distance-based features, local neighborhood overlap, global neighborhood overlap,
+                      Jaccard's coefficient, Adamic-Adar index, Katz index, exponential of adjacency matrix is the number of paths,
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Graph-Level Predictions (20min):</a> kernel explanation, graphlet kernels, bag of words relation, subgraph counting is NP-hard, Weisfeiler-Lehman kernel
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Node Embeddings (14min):</a> node embedding example, encoder decoder setup, shallow encoding
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Random Walk Node Embeddings (27min):</a> sigmoid and softmax function, random walks, negative sampling approximation, noise contrastive estimation,
+                      stochastic gradient descent, random walk strategies, node2vec, biased random walks
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Graph Level Embeddings (18min):</a> virtual nodes, anonymous random walks, walk embeddings
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Page Rank (27min):</a> Page Rank motivation, page rank definition, stochastic adjacency matrix, page rank connection to random walks, power iteration
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Page Rank (20min):</a> page rank convergence, dead ends, spider traps, random teleports
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Personalized Page Rank (13min):</a> recommendation example, pixie random walk, personalized page rank
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Node Embedding relation to Matrix Factorization (12min):</a> node embeddings with edges as similarity equivalent to factoring adjacency matrix, matrix factorization for nod2vec,
+                      limitations of node embeddings via random walks
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Message Passing (18min):</a> node classification example, homophily and influence, markov assumption
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Relational and Iterative Classifier (29min):</a> probabilistic relational classifier, iterative classifier to also use node attributes for label propagation
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Belief Propagation (24min):</a> loopy belief propagation, message passing to count the number of nodes in a graph, cycles in belief propagation
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Graph Neural Networks (10min):</a> recap of shallow embedding, limitations of shallow embeddings, deep graph encoders
+
+                    </li>
+
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Deep learning Basics (27min):</a> deep learning basics, supervised learning, optimization, stochastic gradient descent, back-propagation, MLPs
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Deep learning for graphs (35min):</a> Adjacency matrix as input to an MLP, convolutional neural networks, graph convolutional networks, neighborhood aggregation,
+                      matrix formulation of neighborhood aggregation
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      General Perspective on GNNs (5min):</a> creating messages, layer connectivity, aggregation, LSTM aggregation,
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Message Passing Neural Network (40min):</a> message computation, message aggregation, Graph convolutional layer as MPNN, GraphSAGE, graph attention networks, multiple attention heads,
+                      bachnorm in GNNs, dropout, different activation functions
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Stacking GNN Layers (18min):</a> over-smoothing problem, receptive field, overcoming over-smoothing, increasing expressivity without increasing layer number,
+                      skip connections
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Graph Augmentations (27min):</a> revision, motivation for augmentation, feature augmentation, encoding graph structure in features, virtual edges and nodes,
+                      neighborhood sampling
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Training GNNs (40min):</a> edge-level tasks, node-level predictions, graph level predictions, hierarchical pooling, differentiable pooling,
+                      cross-entropy loss, mean-squared error, precision, recall, ROC Curve and ROC AUC, F1 Score
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Setting up GNN Prediction Tasks (17min):</a> dataset splits for graphs, transductive setting
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      GNN Expressivity (25min):</a> Local neighborhood structure, computational graphs, distinguishing nodes, injective aggregation functions
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      GNN Expressivity (25min):</a> expressive power of aggregation functions, aggregation as multiset functions, graph isomorphism networks,
+                      relation to the WL graph kernel
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
+                      target="_blank" class="link-style-green">
+                      Heterogeneous Graphs (34min):</a> extending GCNs to heterographs, sparsifying weight matrices, 
+
+                    </li>
+
+                  </ol>
+
+                </mat-card-content>
+
+                <div fxLayout="column" fxLayoutGap="5px">
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <img class="word-cloud" ngClass.xs="width100" fxFlex="100" src="assets/Cloud_Probabilistic_ML.jpg"
+                         alt="Word cloud of contents">
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+                    <img fxFlex="50" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="50"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <mat-card class="whole-card">
+                <mat-card-header class="card-header" (click)="open=!open">
+
+                  <mat-card-title>Discrete Differential Geometry</mat-card-title>
+                  <mat-card-subtitle>
+                    Prof. Keenan Crane, CMU
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <mat-card-content [@openClose]="open ? 'open' : 'closed'">
+                  <a class="bold">Prerequisites: </a> <a class="emphasis">6.006 lecture,</a>
+                  sorting, dynamic programming, datastructures, shortest paths, complex numbers for one lecture
+                  <br>
+                  <a class="bold">Setting:</a> Online tought course. Slides + Blackboard. Excellent quality video and
+                  audio.
+                  <br>
+                  <p>Many see Gilbert Strangs lectures on linear algebra as the best lectures online. </p>
+                  <h4 class="font-weight-bold">Lecture Content:</h4>
+                  <ol>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=8JCR6z3GLVI&list=PL9_jI1bdZmz0hIrNCMQW1YmZysAiIYSSS&index=2"
+                      target="_blank" class="link-style-green">
+                      Motivation (1h 7min):</a> motivation, applications of DDG: machine learning, numerical simulation,
+
+                    </li>
+
+                  </ol>
+
+                </mat-card-content>
+
+                <div fxLayout="column" fxLayoutGap="5px">
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <img class="word-cloud" ngClass.xs="width100" fxFlex="100" src="assets/Cloud_Probabilistic_ML.jpg"
+                         alt="Word cloud of contents">
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+                    <img fxFlex="50" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="50"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <mat-card class="whole-card">
+                <mat-card-header class="card-header" (click)="open=!open">
+
+                  <mat-card-title>MIT 8.333 Statistical Mechanics I: Statistical Mechanics of Particles</mat-card-title>
+                  <mat-card-subtitle>
+                    Prof. Mehran Kardar, MIT
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <mat-card-content [@openClose]="open ? 'open' : 'closed'">
+                  <a class="bold">Prerequisites: </a> <a class="emphasis">6.006 lecture,</a>
+                  sorting, dynamic programming, datastructures, shortest paths, complex numbers for one lecture
+                  <br>
+                  <a class="bold">Setting:</a> Online tought course. Slides + Blackboard. Excellent quality video and
+                  audio.
+                  <br>
+                  <p>Many see Gilbert Strangs lectures on linear algebra as the best lectures online. </p>
+                  <h4 class="font-weight-bold">Lecture Content:</h4>
+                  <ol>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=4RX_lpoGRBg&list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg"
+                      target="_blank" class="link-style-green">
+                      Thermodynamics Part 1 (1h 26min):</a> overview, system definition, adiabatic vs diathemic walls, isolation, equilibrium and mechanical properties,
+                      ideal gas scale
+
+                    </li>
+
+                  </ol>
+
+                </mat-card-content>
+
+                <div fxLayout="column" fxLayoutGap="5px">
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <img class="word-cloud" ngClass.xs="width100" fxFlex="100" src="assets/Cloud_Probabilistic_ML.jpg"
+                         alt="Word cloud of contents">
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+                    <img fxFlex="50" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="50"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <mat-card class="whole-card">
+                <mat-card-header class="card-header" (click)="open=!open">
+
+                  <mat-card-title>MIT 6.890 Algorithmic Lower Bounds: Fun with Hardness Proofs</mat-card-title>
+                  <mat-card-subtitle>
+                    Prof. Erik Demaine, MIT
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <mat-card-content [@openClose]="open ? 'open' : 'closed'">
+                  <a class="bold">Prerequisites: </a> <a class="emphasis">6.006 lecture,</a>
+                  sorting, dynamic programming, datastructures, shortest paths, complex numbers for one lecture
+                  <br>
+                  <a class="bold">Setting:</a> Online tought course. Slides + Blackboard. Excellent quality video and
+                  audio.
+                  <br>
+                  <p>Many see Gilbert Strangs lectures on linear algebra as the best lectures online. </p>
+                  <h4 class="font-weight-bold">Lecture Content:</h4>
+                  <ol>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=7d73E1DiH0w&list=PLUl4u3cNGP63d33STUUBfZUpzFCVR5-PV"
+                      target="_blank" class="link-style-green">
+                      Motivation (11min):</a>
+
+                    </li>
+
+                  </ol>
+
+                </mat-card-content>
+
+                <div fxLayout="column" fxLayoutGap="5px">
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <img class="word-cloud" ngClass.xs="width100" fxFlex="100" src="assets/Cloud_Probabilistic_ML.jpg"
+                         alt="Word cloud of contents">
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+                    <img fxFlex="50" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="50"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <mat-card class="whole-card">
+                <mat-card-header class="card-header" (click)="open=!open">
+
+                  <mat-card-title>Linar Algebra</mat-card-title>
+                  <mat-card-subtitle>
+                    Adrian Banner, Princeton
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <mat-card-content [@openClose]="open ? 'open' : 'closed'">
+                  <a class="bold">Prerequisites: </a> <a class="emphasis">6.006 lecture,</a>
+                  sorting, dynamic programming, datastructures, shortest paths, complex numbers for one lecture
+                  <br>
+                  <a class="bold">Setting:</a> Recorded lecture with audience on blackboard. Good audio and poor video quality but nothing that is actually annoying.
+                  <br>
+                  <p>Many would recommend Gilbert Strang's lectures for Linear algebra but in my opinion this is an order of magnitude better </p>
+                  <h4 class="font-weight-bold">Lecture Content:</h4>
+                  <ol>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=h2KbDX98ENI&list=PLGqzsq0erqU7w7ZrTZ-pWWk4-AOkiGEGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Overview of Differential Equations (58min):</a> Definition of differential equations, ordinary
+                      differential equations, examples of applications,
+                      review of integration by parts, separable ODEs
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=h2KbDX98ENI&list=PLGqzsq0erqU7w7ZrTZ-pWWk4-AOkiGEGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Imporant Linear Transformations (2h):</a> scaling transformation, projection, reflections, rotations, shears, inverse matrix, matrix multiplication
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=h2KbDX98ENI&list=PLGqzsq0erqU7w7ZrTZ-pWWk4-AOkiGEGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Span, Kernel, and Subspaces (2h 2min):</a> revision of projection, rotation and reflection example, solving linear systems, invertibility, span, image, linear dependence
+
+                    </li>
+                    <li><a
+                      href="https://www.youtube.com/watch?v=h2KbDX98ENI&list=PLGqzsq0erqU7w7ZrTZ-pWWk4-AOkiGEGp&index=2"
+                      target="_blank" class="link-style-green">
+                      Imporant Linear Transformations (2h 2min):</a> revision span, kernel and subspace,
+
+                    </li>
+
+
+                  </ol>
+
+                </mat-card-content>
+
+                <div fxLayout="column" fxLayoutGap="5px">
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <img class="word-cloud" ngClass.xs="width100" fxFlex="100" src="assets/Cloud_Probabilistic_ML.jpg"
+                         alt="Word cloud of contents">
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+                    <img fxFlex="50" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="50"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                  </div>
+                  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
+                       [@openClose]="open ? 'open' : 'closed'">
+                    <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic ML — Lecture 22 — Variational Inference 44-40 screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
+                    <img fxFlex="33"
+                         src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
+                         alt="Photo of lecture probabilistic ML">
                   </div>
                 </div>
               </mat-card>

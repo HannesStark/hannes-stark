@@ -131,6 +131,20 @@ h3 {
 	}
 }
 
+
+.previewable-image:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+.previewable-image:hover {
+  cursor:pointer;
+  filter: grayscale(40%);
+  -webkit-filter: grayscale(40%);
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+}
+
 .link-style-orange:hover {
   cursor:pointer;
 }

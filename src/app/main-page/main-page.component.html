@@ -13,11 +13,12 @@
         -->
         <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
           <p class="text-align-left">
-            Hi there! I am a 21 years old M. Sc. Computer Science student from Germany at TU Munich.
+            Hi! I am a M. Sc. Computer Science student at TU Munich.
             <br>
-            My current research is on self-supervised learning for molecular graphs, and I am writing my master's
-            thesis about that under Pietro Liò at Cambridge.
-            My main interest is graph representation learning and symmetry-aware architectures to leverage equivariances and invariances.
+            My current research is on self-supervised learning for molecular graphs under Prof. Pietro Liò at Cambridge
+            and Prof. Stephan Günnemann at TUM.
+            My main interests are graph representation learning, symmetry-aware architectures, and self-supervised
+            learning.
             <br>
             From the experiences of my dual study program and through several
             <a (click)="scroll('projects')" class="link-style-green">projects</a>,
@@ -28,7 +29,8 @@
           </p>
 
           <div fxLayout="row" fxLayout.xs="column">
-            <a href="https://scholar.google.com/citations?user=bnXfJdEAAAAJ" target="_blank" class="socials-links link-style-black text-black">
+            <a href="https://scholar.google.com/citations?user=bnXfJdEAAAAJ" target="_blank"
+               class="socials-links link-style-black text-black">
               <fa-icon class="link-icon-style-green" [icon]="Gscholar"></fa-icon>
               Google Scholar
             </a>
@@ -79,6 +81,7 @@
            fxLayoutAlign="center center">
         <h1 class="left-titles">PUBLICATIONS</h1>
       </div>
+
       <div ngClass.sm="small-margin" ngClass.xs="small-margin--xs" fxLayout="row" fxLayout.lt-md="column"
            fxLayoutAlign.lt-md="center center"
            fxLayoutAlign="center start">
@@ -98,17 +101,34 @@
                 H. Stärk, C. Dallago, M. Heinzinger, B. Rost
               </p>
               <p class="item-content">
-                To appear at the
+                Currently under review at
+                <a href="https://academic.oup.com/bioinformatics" target="_blank"
+                   class="link-style-green">Oxford UP Bioinformatics</a>.
+                Poster and talk at
+                <a href="https://icml-compbio.github.io/" target="_blank"
+                   class="link-style-green">ICML 2021 Workshop on Computational Biology</a>.
+                Poster at
                 <a href="https://aiforpublichealth.github.io" target="_blank"
-                   class="link-style-green">ICLR 2021 AI for Public Health Workshop
-                </a>
-                and the
+                   class="link-style-green">ICLR 2021 AI4PH</a>.
+                Poster and contributed talk at
                 <a href="https://mlpcp21.github.io/index.html" target="_blank"
-                   class="link-style-green">ICLR 2021 Machine Learning for Preventing and Combating Pandemics Workshop</a>.
-                Currently under review for
-                <a href="https://icml.cc/" target="_blank"
-                   class="link-style-green">ICML 2021</a>.
+                   class="link-style-green">ICLR 2021 MLPCP</a>.
+                Poster and long talk at
+                <a href="http://cosi.iscb.org/wiki/MLCSB:Home" target="_blank"
+                   class="link-style-green">ML for Computational Science and Biology 2021</a>.
               </p>
+              <div fxLayout="column" fxLayoutGap="5px">
+                <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+                  <div fxFlex="50" class="video-container">
+                    <div class="responsive video">
+                      <iframe [src]='safeURLLightAttention' allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <img class="previewable-image" fxFlex="50" (click)="openLAImage()"
+                       src="assets/annotated_light_attention_comparison.png"
+                       alt="image at full size">
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -215,6 +235,79 @@
       </div>
     </div>
     <!-- section 2 -->
+    <div>
+      <div fxHide.lt-md>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
+          <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+            <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles">TALKS</h1>
+            </div>
+          </div>
+          <div fxFlex="60">
+            <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles--hidden">.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxHide.gt-sm ngClass.sm="small-margin" ngClass.xs="small-margin--xs" class="underline-title"
+           fxLayoutAlign="center center">
+        <h1 class="left-titles">TALKS</h1>
+      </div>
+      <div ngClass.sm="small-margin" ngClass.xs="small-margin--xs" fxLayout="row" fxLayout.lt-md="column"
+           fxLayoutAlign.lt-md="center center"
+           fxLayoutAlign="center start">
+        <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+        </div>
+        <div fxFlex="60">
+          <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Pretrained Language Models for Protein Prediction</a>
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black" href="https://www.iscb.org/ismbeccb2021" target="_blank">
+                    ISMB/ECCB 2021</a></h3>
+              </div>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                July 2021
+                <a fxHide.xs>
+                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                  Remote
+                </a>
+              </p>
+              <p class="item-content">About Protein Language models and how to most efficiently leverage their
+                representations.
+              </p>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <a class="item-title">Contributed talk ICLR'21 MLPCP</a>
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black" href="https://mlpcp21.github.io/index.html" target="_blank">
+                    ICLR 2021 MLPCP</a></h3>
+              </div>
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                May 2019 - Sept 2019
+                <a fxHide.xs>
+                  <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
+                  Munich, Germany
+                </a>
+              </p>
+              <p class="item-content">Presented work on learning protein representations for downstream predictions such
+                as state-of-the-art subcellular localization prediction.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section 1 -->
     <div id="projects">
       <div fxHide.lt-md>
         <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
@@ -248,7 +341,10 @@
               <div fxLayout="row">
                 <h3>
                   <a class="item-subtitle link-style-black" href="https://www.cl.cam.ac.uk/~pl219/" target="_blank">
-                    Prof. Pietro Liò, Cambridge University</a>
+                    Prof. Pietro Liò, Cambridge University</a> + <a class="item-subtitle link-style-black"
+                                                                    href="https://www.professoren.tum.de/en/guennemann-stephan"
+                                                                    target="_blank">
+                  Prof. Stephan Günnemann, TUM</a>
                 </h3>
               </div>
               <p class="item-date-loc">
@@ -267,7 +363,8 @@
                 <!--After this, the learned representations can be used for downstream prediction tasks, or the weights can
                 be fine-tuned to obtain better predictions for molecular properties that are important in areas like drug
                 discovery.-->
-                In this project, I am also collaborating with <a href="https://www.valencediscovery.com/" target="_blank"
+                In this project, I am also collaborating with <a href="https://www.valencediscovery.com/"
+                                                                 target="_blank"
                                                                  class="link-style-green">Valence Discovery</a>.
               </p>
             </div>
@@ -338,7 +435,7 @@
                 </div>
                 <div class="video-container">
                   <div class="responsive video">
-                    <iframe [src]='safeURL' allowfullscreen></iframe>
+                    <iframe [src]='safeURLNerf' allowfullscreen></iframe>
                   </div>
                 </div>
               </div>
@@ -409,7 +506,7 @@
                 <h3>
                   <a class="item-subtitle link-style-black" href="https://www.tum.de/en/" target="_blank">
                     Technical University Munich</a>, <a class="item-subtitle link-style-black"
-                                                       href="https://dss.in.tum.de/" target="_blank">
+                                                        href="https://dss.in.tum.de/" target="_blank">
                   Decision Sciences</a></h3>
               </div>
               <p class="item-date-loc">
@@ -453,7 +550,7 @@
                 <h3>
                   <a class="item-subtitle link-style-black" href="https://www.tum.de/en/" target="_blank">
                     Technical University Munich</a>, <a class="item-subtitle link-style-black"
-                                                       href="https://www.niessnerlab.org/" target="_blank">
+                                                        href="https://www.niessnerlab.org/" target="_blank">
                   AI & CV Niessnerlab</a></h3>
               </div>
               <p class="item-date-loc">
@@ -567,10 +664,13 @@
                   Munich, Germany
                 </a>
               </p>
-              <p class="item-content">This project was part of a course. We used graph representations of robots in reinforcement learning for locomotion problems where the robot has to learn to walk.
-                The idea is that a policy learned by a GNN that captures the structure of the robot will generalize better and enable things like zero-shot transfer to a robot with a different geometry.
+              <p class="item-content">This project was part of a course. We used graph representations of robots in
+                reinforcement learning for locomotion problems where the robot has to learn to walk.
+                The idea is that a policy learned by a GNN that captures the structure of the robot will generalize
+                better and enable things like zero-shot transfer to a robot with a different geometry.
                 The results are written up
-                <a href="/assets/graph_representations_in_reinforcement_learning.pdf" target="_blank" class="link-style-green">here
+                <a href="/assets/graph_representations_in_reinforcement_learning.pdf" target="_blank"
+                   class="link-style-green">here
                   <fa-icon class="link-icon-style-green" [icon]="paper"></fa-icon>
                 </a> and the
                 <a href="https://github.com/HannesStark/gnn-reinforcement-learning" target="_blank"
@@ -608,7 +708,8 @@
                 </a> or have a look at the
                 <a href="https://github.com/HannesStark/bachelorThesis" target="_blank"
                    class="link-style-green">code
-                  <fa-icon class="link-icon-style-green" [icon]="github"></fa-icon></a>.
+                  <fa-icon class="link-icon-style-green" [icon]="github"></fa-icon>
+                </a>.
 
               </p>
             </div>
@@ -629,7 +730,7 @@
                 </a>
               </p>
               <p class="item-content">I started by investigating the theory on different graph centrality measures
-                in the context of computer networks. In the end, what came out of the project is a neat little tool
+                in the context of computer networks. In the end, what came out of the project is a neat tool
                 with a web interface where you can upload graphs and calculate the centralities for the desired
                 measure. You can check it out on
                 <a href="https://github.com/HannesStark/dependencyNodeRanking" target="_blank"

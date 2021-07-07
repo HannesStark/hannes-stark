@@ -22,6 +22,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDialogModule} from '@angular/material/dialog';
+import { LAImageComponent } from './laimage/laimage.component';
+
 
 
 @NgModule({
@@ -30,7 +33,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MainPageComponent,
     HeaderComponent,
     ReviewsComponent,
-    FooterComponent
+    FooterComponent,
+    LAImageComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,9 +53,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatSidenavModule,
     MatIconModule,
     MatGridListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
