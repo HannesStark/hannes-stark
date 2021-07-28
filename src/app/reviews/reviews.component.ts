@@ -25,6 +25,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   ],
 })
 export class ReviewsComponent implements OnInit {
+  probabilisticMLopen = false;
   open = false;
 
   constructor() {

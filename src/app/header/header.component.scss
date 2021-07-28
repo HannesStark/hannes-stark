@@ -51,6 +51,18 @@
   color: white;
 }
 
+.small-button-hover {
+  font-size: 20px;
+  transition-duration: 0.2s;
+  color: var(--color-primary);
+}
+
+.small-button-hover:hover {
+  transition-duration: 0.2s;
+  background-color: var(--color-primary);
+  color: white;
+}
+
 .smaller {
   height: 40px;
 }

@@ -50,7 +50,7 @@
           <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
               <mat-card class="whole-card">
-                <mat-card-header class="card-header" (click)="open=!open">
+                <mat-card-header class="card-header" (click)="probabilisticMLopen=!probabilisticMLopen">
 
                   <mat-card-title>Probabilistic Machine Learning</mat-card-title>
                   <mat-card-subtitle>
@@ -58,14 +58,14 @@
                   </mat-card-subtitle>
                 </mat-card-header>
                 <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-                <mat-card-content [@openClose]="open ? 'open' : 'closed'">
+                <mat-card-content [@openClose]="probabilisticMLopen ? 'open' : 'closed'">
                   <a class="bold">Prerequisites: </a> <a class="emphasis">linear algebra, basic calculus,</a>
                   logarithm/exponential, integral, probability distribution, expectation
                   <br>
                   <a class="bold">Setting:</a> Online tought course. Slides + Blackboard. Excellent quality video and
                   audio.
                   <br>
-                  <p>Philipp Hennig is an incredible lecturer and in</p>
+                  <p>Philipp Hennig is an incredible lecturer and there really are no drawbacks to this lecture</p>
                   <h4 class="font-weight-bold">Lecture Content:</h4>
                   <ol>
                     <li><a
@@ -98,7 +98,7 @@
                          alt="Photo of lecture probabilistic ML">
                   </div>
                   <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
-                       [@openClose]="open ? 'open' : 'closed'">
+                       [@openClose]="probabilisticMLopen ? 'open' : 'closed'">
                     <img fxFlex="33"
                          src="assets/Probabilistic%20ML%20-%20Lecture%209%20-%20Gaussian%20Processes%201-19-7%20screenshot.jpg"
                          alt="Photo of lecture probabilistic ML">
@@ -110,7 +110,7 @@
                          alt="Photo of lecture probabilistic ML">
                   </div>
                   <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px" fxLayoutAlign="center center"
-                       [@openClose]="open ? 'open' : 'closed'">
+                       [@openClose]="probabilisticMLopen ? 'open' : 'closed'">
                     <img fxFlex="33" src="assets/Probabilistic ML - Lecture 17 - Factor Graphs 1-15-9 screenshot.jpg"
                          alt="Photo of lecture probabilistic ML">
                     <img fxFlex="33"
@@ -1089,7 +1089,7 @@
                     <li><a
                       href="https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1"
                       target="_blank" class="link-style-green">
-                      Heterogeneous Graphs (34min):</a> extending GCNs to heterographs, sparsifying weight matrices, 
+                      Heterogeneous Graphs (34min):</a> extending GCNs to heterographs, sparsifying weight matrices,
 
                     </li>
 
