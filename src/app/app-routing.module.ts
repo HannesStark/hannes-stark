@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import {MainPageComponent} from './main-page/main-page.component';
 import {ReviewsComponent} from './reviews/reviews.component';
 import {RedirectGuard} from './redirect.guard';
+import {ReadingGroupComponent} from './reading-group/reading-group.component';
 
 const routes: Routes = [
   { path: 'reviews', component: ReviewsComponent },
+  { path: 'reading-group', component: ReadingGroupComponent },
   { path: '', component: MainPageComponent},
   {
      path: 'assets/Light_Attention_Predicts_Protein_Location_from_the_Language_of_Life.pdf',

@@ -24,6 +24,9 @@ import { FooterComponent } from './footer/footer.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LAImageComponent } from './laimage/laimage.component';
+import { ReadingGroupComponent } from './reading-group/reading-group.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 
 
@@ -35,6 +38,7 @@ import { LAImageComponent } from './laimage/laimage.component';
     ReviewsComponent,
     FooterComponent,
     LAImageComponent,
+    ReadingGroupComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,8 @@ import { LAImageComponent } from './laimage/laimage.component';
     MatIconModule,
     MatGridListModule,
     MatTooltipModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule
   ],
   bootstrap: [AppComponent]
 })
