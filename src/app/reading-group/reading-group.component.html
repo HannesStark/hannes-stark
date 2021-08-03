@@ -1,0 +1,120 @@
+<div fxLayout="column" fxLayoutAlign="center center" ngClass.lt-md="text-align-center">
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center">
+    <div fxFlex="30" fxLayoutAlign="end center" fxLayoutAlign.lt-md="center center">
+      <img class="profile-image" src="assets/randomEuclidean.png" alt="Euclid Elements">
+    </div>
+    <div fxFlex="60" ngClass.sm="small-margin" ngClass.xs="small-margin--xs">
+      <div fxFlex.lt-md="auto" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+        <h1 class="Title">The Learning on Graphs and Geometry Reading Group!</h1>
+        <!--
+        <div class="underline-title--top" fxLayoutAlign.lt-md="center center">
+          <h1 class="left-titles">M. Sc. Computer Science Student</h1>
+        </div>
+        -->
+        <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+          <p class="text-align-left">
+            Welcome to the LoGaG reading group that I am organizing with the incredible support of my supervisor Prof.
+            <a
+              href="https://www.cl.cam.ac.uk/~pl219/" target="_blank" class="link-style-green">Pietro Liò</a>. A
+            thousand thanks to him and the Cambridge Computer Laboratory!
+          </p>
+          <p>
+            We use this <a href="https://docs.google.com/document/d/1RbV-8csUdIMCBntS5pXBwHel6LvqpaDQWy5w29YISHI/edit"
+                           target="_blank"
+                           class="link-style-green">google doc</a>
+            to vote for papers and there you can also find all
+            upcoming + past presentations as well as paper suggestions.
+          </p>
+          <p>
+            We meet every Tuesday at 5pm CEST / 3pm UTC / 11am EST / 8am PST in this <a
+            href="https://us02web.zoom.us/j/4556095405?pwd=UmZRbC95d050TkRsZ2QvWER3SDdqUT09" target="_blank"
+            class="link-style-green">Zoom room</a>.
+          </p>
+          <p>
+            You can also subscribe to the meetings via <a
+            href="https://calendar.google.com/calendar/u/0?cid=dmR1am4ycGJwa2hncjVmNTVjbTM5cWJtdThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+            target="_blank"
+            class="link-style-green">Google Calendar</a>, or <a
+            href="https://calendar.google.com/calendar/ical/vdujn2pbpkhgr5f55cm39qbmu8%40group.calendar.google.com/public/basic.ics"
+            target="_blank"
+            class="link-style-green">via iCal</a>. Alternatively, <a
+            href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MWhmZDJzMnI0aG10YTlvZzZpZGVsYnJmaWNfMjAyMTA4MDNUMTUwMDAwWiB2ZHVqbjJwYnBraGdyNWY1NWNtMzlxYm11OEBn&tmsrc=vdujn2pbpkhgr5f55cm39qbmu8%40group.calendar.google.com&scp=ALL"
+            target="_blank"
+            class="link-style-green">add the events</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column" class="width100">
+    <!-- section 0 -->
+    <div>
+      <div fxHide.lt-md>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
+          <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+            <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles">MAILING LIST</h1>
+            </div>
+          </div>
+          <div fxFlex="60">
+            <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
+                 fxLayoutAlign.lt-md="center center">
+              <h1 class="left-titles--hidden">.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div fxHide.gt-sm ngClass.sm="small-margin" ngClass.xs="small-margin--xs" class="underline-title"
+           fxLayoutAlign="center center">
+        <h1 class="left-titles">MAILING LIST</h1>
+      </div>
+
+      <div ngClass.sm="small-margin" ngClass.xs="small-margin--xs" fxLayout="row" fxLayout.lt-md="column"
+           fxLayoutAlign.lt-md="center center"
+           fxLayoutAlign="center start">
+        <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
+        </div>
+        <div fxFlex="60">
+          <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
+            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-title">Get weekly updates with all information via email!</a></h3>
+              </div>
+              <div class="item-content">
+                <form
+                  action="https://formspree.io/f/mqkwyejz"
+                  method="POST"
+
+                >
+                  <div fxLayout="column">
+                    <label>
+                      Email:
+                      <input placeholder="example.mail@gmail.com" type="email" name="email" required>
+                    </label>
+                    <label>
+                      Optional Name:
+                      <input placeholder="Your Name" name="name">
+                    </label>
+                  </div>
+
+
+                  <!-- your other form fields go here -->
+
+                  <button #tooltip="matTooltip" mat-button
+                          matTooltip="Submit your email"
+                          type="submit">
+                    Submit
+                  </button>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
