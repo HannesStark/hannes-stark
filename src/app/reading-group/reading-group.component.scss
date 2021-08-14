@@ -12,6 +12,9 @@
   overflow: hidden;
 }
 
+.submit-button{
+}
+
 .responsive iframe {
   position: absolute;
   top: 0;
@@ -20,6 +23,10 @@
   height: 100%;
   width: 100%;
   border: 0;
+}
+
+.slight-bold {
+  font-weight: 580;
 }
 
 .video {
@@ -190,8 +197,8 @@ h3 {
   }
 }
 
-.text-area {
-  margin-top: 5px;
+.top-margin {
+  margin-top: 30px;
 }
 
 .item-title {
@@ -252,8 +259,15 @@ h3 {
   text-align: left;
 }
 
+.no-margin {
+  margin: 0
+}
+
 .item-date-loc {
   margin: 0;
+}
+.paragraph {
+  margin-bottom: 5px;
 }
 
 .underline-title {

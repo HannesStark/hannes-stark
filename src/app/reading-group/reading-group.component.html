@@ -1,123 +1,433 @@
-<div fxLayout="column" fxLayoutAlign="center center" ngClass.lt-md="text-align-center">
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center">
-    <div fxFlex="30" fxLayoutAlign="end center" fxLayoutAlign.lt-md="center center">
+<div fxLayout="column" fxLayoutAlign="center center">
+
+  <div class="width100" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center">
+    <div fxFlex="35" fxLayoutAlign="end center" fxLayoutAlign.lt-md="center center">
       <img class="profile-image" src="assets/randomEuclidean.png" alt="Euclid Elements">
     </div>
-    <div fxFlex="60" ngClass.sm="small-margin" ngClass.xs="small-margin--xs">
-      <div fxFlex.lt-md="auto" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
-        <h1 class="Title">The Learning on Graphs and Geometry Reading Group!</h1>
-        <!--
-        <div class="underline-title--top" fxLayoutAlign.lt-md="center center">
-          <h1 class="left-titles">M. Sc. Computer Science Student</h1>
-        </div>
-        -->
-        <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-          <p class="text-align-left">
-            Welcome to the LoGaG reading group that I am organizing with the incredible support of Prof.
-            <a
-              href="https://www.cl.cam.ac.uk/~pl219/" target="_blank" class="link-style-green">Pietro Liò</a>!
-          </p>
-          <p>
-            You can find the schedule, past presentations, and paper notes in this <a href="https://docs.google.com/document/d/1RbV-8csUdIMCBntS5pXBwHel6LvqpaDQWy5w29YISHI/edit"
-                           target="_blank"
-                           class="link-style-green">Google Doc</a>.
-          </p>
-          <p>
-            For discussions outside of our meetings and to vote for papers please join this <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg"
-                           target="_blank"
-                           class="link-style-green">Slack Workspace</a>.
-          </p>
-          <p>
-            We meet every Tuesday at 5pm CEST / 3pm UTC / 11am EST / 8am PST in this <a
+    <div fxFlex="55" fxFlex.xs="65" ngClass.sm="small-margin" ngClass.xs="small-margin--xs">
+      <h1 class="Title" ngClass.lt-md="text-align-center">The Learning on Graphs and Geometry Reading Group!</h1>
+      <!--
+      <div class="underline-title--top" fxLayoutAlign.lt-md="center center">
+        <h1 class="left-titles">M. Sc. Computer Science Student</h1>
+      </div>
+      -->
+      <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+        <p class="text-align-left">
+          Welcome to the LoGaG reading group that I am organizing with the incredible support of Prof.
+          <a
+            href="https://www.cl.cam.ac.uk/~pl219/" target="_blank" class="link-style-green">Pietro Liò</a>!
+        </p>
+        <p>
+          <a
             href="https://us02web.zoom.us/j/4556095405?pwd=UmZRbC95d050TkRsZ2QvWER3SDdqUT09" target="_blank"
-            class="link-style-green">Zoom room</a>.
-          </p>
-          <p>
-            You can also subscribe to the meetings via <a
-            href="https://calendar.google.com/calendar/u/0?cid=dmR1am4ycGJwa2hncjVmNTVjbTM5cWJtdThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+            class="link-style-green">Zoom link</a>: We meet every Tuesday at 5pm CEST / 3pm UTC / 11am EST / 8am PST
+        </p>
+        <p>
+          <a
+            href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg"
             target="_blank"
-            class="link-style-green">Google Calendar</a>, or <a
-            href="https://calendar.google.com/calendar/ical/vdujn2pbpkhgr5f55cm39qbmu8%40group.calendar.google.com/public/basic.ics"
-            target="_blank"
-            class="link-style-green">via iCal</a>. Alternatively, <a
-            href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MWhmZDJzMnI0aG10YTlvZzZpZGVsYnJmaWNfMjAyMTA4MDNUMTUwMDAwWiB2ZHVqbjJwYnBraGdyNWY1NWNtMzlxYm11OEBn&tmsrc=vdujn2pbpkhgr5f55cm39qbmu8%40group.calendar.google.com&scp=ALL"
-            target="_blank"
-            class="link-style-green">add the events</a>.
-          </p>
+            class="link-style-green">Slack Workspace</a>: For discussions outside of our meetings and to vote for
+          papers.
+        </p>
+
+        <p>
+          You can also subscribe to the meetings via <a
+          href="https://calendar.google.com/calendar/u/0?cid=dmR1am4ycGJwa2hncjVmNTVjbTM5cWJtdThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+          target="_blank"
+          class="link-style-green">Google Calendar</a>, or <a
+          href="https://calendar.google.com/calendar/ical/vdujn2pbpkhgr5f55cm39qbmu8%40group.calendar.google.com/public/basic.ics"
+          target="_blank"
+          class="link-style-green">via iCal</a>. Alternatively, <a
+          href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MWhmZDJzMnI0aG10YTlvZzZpZGVsYnJmaWNfMjAyMTA4MDNUMTUwMDAwWiB2ZHVqbjJwYnBraGdyNWY1NWNtMzlxYm11OEBn&tmsrc=vdujn2pbpkhgr5f55cm39qbmu8%40group.calendar.google.com&scp=ALL"
+          target="_blank"
+          class="link-style-green">add the events</a>.
+        </p>
+        <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+          <div fxLayout="row">
+            <h3>
+              <a class="item-title">Get weekly updates with the next paper and all other information via email!</a>
+            </h3>
+          </div>
+          <div class="item-content">
+            <div>
+              <form
+                action="https://formcarry.com/s/xejfAa3AVBs"
+                method="POST"
+                accept-charset="UTF-8"
+
+              >
+                <div fxLayout="column">
+                  <label>
+                    Email:
+                    <input placeholder="example.mail@gmail.com" type="email" name="email" required>
+                  </label>
+                  <label>
+                    Optional Name:
+                    <input placeholder="Your Name" name="name">
+                  </label>
+                </div>
+
+
+                <!-- your other form fields go here -->
+
+                <button #tooltip="matTooltip" mat-button
+                        matTooltip="Submit your email"
+                        type="submit">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div fxFlex="10" fxFlex.xs=""></div>
   </div>
+
   <div fxLayout="column" class="width100">
     <!-- section 0 -->
+
+
     <div>
-      <div fxHide.lt-md>
-        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign="center start">
-          <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
-            <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
-                 fxLayoutAlign.lt-md="center center">
-              <h1 class="left-titles">MAILING LIST</h1>
-            </div>
-          </div>
-          <div fxFlex="60">
-            <div fxFlex.lt-md="" fxFlex="70" class="underline-title" fxLayout="column"
-                 fxLayoutAlign.lt-md="center center">
-              <h1 class="left-titles--hidden">.</h1>
-            </div>
-          </div>
+      <div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+        <div fxFlex="80" fxFlex.xs="96" class="underline-title">
+          <h1 class="left-titles">UPCOMING</h1>
         </div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
 
-      <div fxHide.gt-sm ngClass.sm="small-margin" ngClass.xs="small-margin--xs" class="underline-title"
-           fxLayoutAlign="center center">
-        <h1 class="left-titles">MAILING LIST</h1>
-      </div>
 
-      <div ngClass.sm="small-margin" ngClass.xs="small-margin--xs" fxLayout="row" fxLayout.lt-md="column"
-           fxLayoutAlign.lt-md="center center"
-           fxLayoutAlign="center start">
-        <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
-        </div>
-        <div fxFlex="60">
-          <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
-            <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-              <div fxLayout="row">
-                <h3>
-                  <a class="item-title">Get weekly updates with the next paper and all other information via email!</a></h3>
+      <div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+        <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.07594" target="_blank">
+                  Graph Contrastive Learning Automated</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                17th of August 2021
               </div>
-              <div class="item-content">
-                <form
-                  action="https://formcarry.com/s/xejfAa3AVBs"
-                  method="POST"
-                  accept-charset="UTF-8"
-
-                >
-                  <div fxLayout="column">
-                    <label>
-                      Email:
-                      <input placeholder="example.mail@gmail.com" type="email" name="email" required>
-                    </label>
-                    <label>
-                      Optional Name:
-                      <input placeholder="Your Name" name="name">
-                    </label>
-                  </div>
-
-
-                  <!-- your other form fields go here -->
-
-                  <button #tooltip="matTooltip" mat-button
-                          matTooltip="Submit your email"
-                          type="submit">
-                    Submit
-                  </button>
-                </form>
-
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Yuning You, Tianlong Chen, Yang Shen, Zhangyang Wang
+                </a>
               </div>
             </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author of the paper
+              <a href="https://yyou1996.github.io/" target="_blank" class="link-style-green">Yuning You</a>
+              who is a third-year Ph.D. student in ECE at Texas A&M University supervised by Prof.
+              <a href="https://shen-lab.github.io/" target="_blank" class="link-style-green">Yang Shen</a>,
+              and unofficially co-supervised by Prof. Zhangyang Wang. He has done a lot of popular work on
+              self-supervised learning on graphs.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Self-supervised learning on graph-structured data has drawn recent interest for learning generalizable,
+              transferable and robust representations from unlabeled graphs. Among many, graph contrastive learning
+              (GraphCL) has emerged with promising representation learning performance. Unfortunately, unlike its
+              counterpart on image data, the effectiveness of GraphCL hinges on ad-hoc data augmentations, which have
+              to be manually picked per dataset, by either rules of thumb or trial-and-errors, owing to the diverse
+              nature of graph data. That significantly limits the more general applicability of GraphCL. Aiming to
+              fill in this crucial gap, this paper proposes a unified bi-level optimization framework to
+              automatically, adaptively and dynamically select data augmentations when performing GraphCL on specific
+              graph data. The general framework, dubbed JOint Augmentation Optimization (JOAO), is instantiated as
+              min-max optimization. The selections of augmentations made by JOAO are shown to be in general aligned
+              with previous "best practices" observed from handcrafted tuning: yet now being automated, more flexible
+              and versatile. Moreover, we propose a new augmentation-aware projection head mechanism, which will route
+              output features through different projection heads corresponding to different augmentations chosen at
+              each training step. Extensive experiments demonstrate that JOAO performs on par with or sometimes better
+              than the state-of-the-art competitors including GraphCL, on multiple graph datasets of various scales
+              and types, yet without resorting to any laborious dataset-specific tuning on augmentation selection. We
+              release the code at this https URL.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2103.06857" target="_blank">
+                  Should Graph Neural Networks Use Features, Edges, Or Both?</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                24th of August 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Lukas Faber, Yifan Lu, Roger Wattenhofer
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author of the paper
+              <a href="https://disco.ethz.ch/members/lfaber" target="_blank"
+                 class="link-style-green">Lukas Faber</a>
+              who is a PhD student in the Distributed Computing Group at ETH Zürich supervised by Prof. Roger
+              Wattenhofer. He is also working at Google Zürich.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Graph Neural Networks (GNNs) are the first choice for learning algorithms on graph data. GNNs promise to
+              integrate (i) node features as well as (ii) edge information in an end-to-end learning algorithm. How does
+              this promise work out practically? In this paper, we study to what extend GNNs are necessary to solve
+              prominent graph classification problems. We find that for graph classification, a GNN is not more than the
+              sum of its parts. We also find that, unlike features, predictions with an edge-only model do not always
+              transfer to GNNs.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                31st of August 2021
+              </div>
+
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or somewhere else!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                7th of September 2021
+              </div>
+
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or somewhere else!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                14th of September 2021
+              </div>
+
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or somewhere else!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.10934" target="_blank">
+                  GRAND: Graph Neural Diffusion</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                21st of September 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Benjamin Paul Chamberlain, James Rowbottom, Maria Gorinova, Stefan Webb, Emanuele Rossi, Michael M.
+                  Bronstein
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Joint first author of the paper
+              <a href="https://www.linkedin.com/in/jamesrowbottom/?originalSubdomain=uk" target="_blank"
+                 class="link-style-green">James Rowbottom</a>
+              who received his master in AI with distinction from Imperial College London and worked on GRAND as an ML
+              Reserch intern at Prof.
+              <a href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
+                 class="link-style-green">Michael Bronstein's</a>
+              graph ML research group at Twitter.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              We present Graph Neural Diffusion (GRAND) that approaches deep learning on graphs as a continuous
+              diffusion process and treats Graph Neural Networks (GNNs) as discretisations of an underlying PDE. In our
+              model, the layer structure and topology correspond to the discretisation choices of temporal and spatial
+              operators. Our approach
+              allows a principled development of a broad new class of GNNs that are able to address the common plights
+              of graph learning models such as depth, oversmoothing, and bottlenecks. Key to the success of our models
+              are stability with respect to perturbations in the data and this is addressed for both implicit and
+              explicit discretisation schemes. We develop linear and nonlinear versions of GRAND, which achieve
+              competitive results on many standard graph benchmarks.
+            </p>
           </div>
         </div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+      </div>
+    </div>
+
+
+    <div class="top-margin">
+      <div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+        <div fxFlex="80" fxFlex.xs="96" class="underline-title">
+          <h1 class="left-titles">PREVIOUS PAPERS WITH NOTES</h1>
+        </div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+      </div>
+
+
+      <div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+        <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2105.04550" target="_blank">
+                  Optimization of Graph Neural Networks: Implicit Acceleration by Skip Connections and More Depth</a>
+              </h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                10th of August 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Keyulu Xu, Mozhi Zhang, Stefanie Jegelka, Kenji Kawaguchi
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Resources:</a> My
+              <a
+                href="https://hannes-stark.com/assets/Optimization%20of%20Graph%20Neural%20Networks%20Implicit%20Acceleration%20by%20Skip%20Connections%20and%20More%20Depth.pdf"
+                target="_blank"
+                class="link-style-green">Paper Annotations</a>.
+              Keyulu's
+              <a href="https://people.csail.mit.edu/keyulux/pdf/optimization.pdf" target="_blank"
+                 class="link-style-green">Slides</a>.
+            </p>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author of the paper Dr. <a href="https://people.csail.mit.edu/keyulux/" target="_blank"
+                                               class="link-style-green">Keyulu Xu</a>: He received his Ph.D. in EECS
+              from MIT, where he was affiliated
+              with CSAIL and advised by <a href="https://people.csail.mit.edu/stefje/" target="_blank"
+                                           class="link-style-green">Stefanie Jegelka</a>. His papers got multiple
+              spotlights + orals and one was, for
+              instance, the highest reviewed paper at ICLR 2021. Also joining us is paper author <a
+              href="http://www.mozhi.umiacs.io/" target="_blank" class="link-style-green">Mozhi Zhang</a> who is a
+              last year PhD student at the University of Maryland working with Jordan Boyd-Graber as advisor on
+              generalization properties of neural networks among other topics.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Graph Neural Networks (GNNs) have been studied through the lens of expressive power and generalization.
+              However, their optimization properties are less well understood. We take the first step towards analyzing
+              GNN training by studying the gradient dynamics of GNNs. First, we analyze linearized GNNs and prove that
+              despite the non-convexity of training, convergence to a global minimum at a linear rate is guaranteed
+              under mild assumptions that we validate on real world graphs. Second, we study what may affect the GNNs’
+              training speed. Our results show that the training of GNNs is implicitly accelerated by skip connections,
+              more depth, and/or a good label distribution. Empirical results confirm that our theoretical results for
+              linearized GNNs align with the training behavior of nonlinear GNNs. Our results provide the first
+              theoretical support for the success of GNNs with skip connections in terms of optimization, and suggest
+              that deep GNNs with skip connections would be promising in practice.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.05234" target="_blank">
+                  Do Transformers Really Perform Bad for Graph Representation?</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                3rd of August 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Chengxuan Ying, Tianle Cai, Shengjie Luo, Shuxin Zheng, Guolin Ke, Di He, Yanming Shen, Tie-Yan Liu
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Resources:</a> My
+              <a
+                href="https://hannes-stark.com/assets/Do%20Transformers%20Really%20Perform%20Bad%20for%20Graph%20Representation.pdf"
+                target="_blank"
+                class="link-style-green">Paper Annotations</a>.
+            </p>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Hey thats me!
+              <a href="https://hannes-stark.com/" target="_blank"
+                 class="link-style-green">Hannes Stärk</a>.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              The Transformer architecture has become a dominant choice in many domains, such as natural language
+              processing and computer vision. Yet, it has not achieved competitive performance on popular leaderboards
+              of graph-level prediction compared to mainstream GNN variants. Therefore, it remains a mystery how
+              Transformers could perform well for graph representation learning. In this paper, we solve this mystery by
+              presenting Graphormer, which is built upon the standard Transformer architecture, and could attain
+              excellent results on a broad range of graph representation learning tasks, especially on the recent OGB
+              Large-Scale Challenge. Our key insight to utilizing Transformer in the graph is the necessity of
+              effectively encoding the structural information of a graph into the model. To this end, we propose several
+              simple yet effective structural encoding methods to help Graphormer better model graph-structured data.
+              Besides, we mathematically characterize the expressive power of Graphormer and exhibit that with our ways
+              of encoding the structural information of graphs, many popular GNN variants could be covered as the
+              special cases of Graphormer.
+            </p>
+          </div>
+        </div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
     </div>
   </div>
 </div>
+

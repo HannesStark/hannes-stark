@@ -19,7 +19,6 @@ export class LowerCaseUrlSerializer extends DefaultUrlSerializer {
 
 const routes: Routes = [
   {path: 'reviews', component: ReviewsComponent},
-  {path: 'LoGaG-reading-group', component: ReadingGroupComponent},
   {path: 'logag-reading-group', component: ReadingGroupComponent},
   {path: '', component: MainPageComponent},
   {

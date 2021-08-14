@@ -12,14 +12,12 @@
        class="mat-button">
       CV as PDF
     </a>
-    <a #tooltip="matTooltip"
-     href="https://docs.google.com/document/d/1RbV-8csUdIMCBntS5pXBwHel6LvqpaDQWy5w29YISHI/edit"
-     target="_blank"
-     mat-button
-     matTooltip="The Learning on Graphs and Geometry Reading Group"
-     class="mat-button">
-    Reading Group
-  </a>
+    <button #tooltip="matTooltip" mat-button
+            matTooltip="The Learning on Graphs and Geometry Reading Group"
+            [routerLink]="['logag-reading-group']" class="mat-button"
+            (mousedown)="home($event)">
+      Reading Group
+    </button>
   </div>
   <div fxHide.lt-md fxFlex="60">
     <div fxFlex="70" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
@@ -49,7 +47,7 @@
   <div fxHide.gt-sm fxFlex="50" fxLayoutAlign="start center">
     <button #tooltip="matTooltip" mat-button
             matTooltip="My personal information"
-            [routerLink]="" class="mat-button"
+            [routerLink]="['']" class="mat-button"
             (mousedown)="home($event)">
       Home
     </button>
@@ -60,14 +58,12 @@
        class="mat-button">
       CV as PDF
     </a>
-    <a #tooltip="matTooltip"
-     href="https://docs.google.com/document/d/1RbV-8csUdIMCBntS5pXBwHel6LvqpaDQWy5w29YISHI/edit"
-     target="_blank"
-     mat-button
-     matTooltip="The Learning on Graphs and Geometry Reading Group"
-     class="mat-button">
-    Reading Group
-  </a>
+    <button #tooltip="matTooltip" mat-button
+            matTooltip="The Learning on Graphs and Geometry Reading Group"
+            [routerLink]="['logag-reading-group']" class="mat-button"
+            (mousedown)="home($event)">
+      Reading Group
+    </button>
   </div>
   <div fxHide.gt-sm fxFlex="50" fxLayout="row" fxLayoutGap.gt-xs="10px" fxLayoutAlign="end center">
     <a href="https://scholar.google.com/citations?user=bnXfJdEAAAAJ" target="_blank" class="button-hover"
@@ -97,11 +93,11 @@
 <mat-toolbar class="smaller" fxHide.gt-xs fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
 
   <button #tooltip="matTooltip" mat-button
-          matTooltip="My personal information"
-          [routerLink]="" class="mat-button"
-          (mousedown)="home($event)">
-    Home
-  </button>
+            matTooltip="My personal information"
+            [routerLink]="['']" class="mat-button"
+            (mousedown)="home($event)">
+      Home
+    </button>
   <a #tooltip="matTooltip"
      (mousedown)="pdf($event, '/assets/CV_Hannes_Stark.pdf')"
      mat-button
@@ -109,14 +105,12 @@
      class="mat-button">
     CV as PDF
   </a>
-  <a #tooltip="matTooltip"
-     href="https://docs.google.com/document/d/1RbV-8csUdIMCBntS5pXBwHel6LvqpaDQWy5w29YISHI/edit"
-     target="_blank"
-     mat-button
-     matTooltip="The Learning on Graphs and Geometry Reading Group"
-     class="mat-button">
+  <button #tooltip="matTooltip" mat-button
+          matTooltip="The Learning on Graphs and Geometry Reading Group"
+          [routerLink]="['logag-reading-group']" class="mat-button"
+          (mousedown)="home($event)">
     Reading Group
-  </a>
+  </button>
 </mat-toolbar>
 <mat-toolbar class="smaller" fxHide.gt-xs fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
   <a href="https://scholar.google.com/citations?user=bnXfJdEAAAAJ" target="_blank" class="small-button-hover"
