@@ -16,6 +16,7 @@
           Welcome to the LoGaG reading group that I am organizing with the incredible support of Prof.
           <a
             href="https://www.cl.cam.ac.uk/~pl219/" target="_blank" class="link-style-green">Pietro Liò</a>!
+          Below the schedule you can find previously covered papers with my Notes and other resources that came out of the meeting.
         </p>
         <p>
           <a
@@ -102,56 +103,7 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.07594" target="_blank">
-                  Graph Contrastive Learning Automated</a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                17th of August 2021
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Yuning You, Tianlong Chen, Yang Shen, Zhangyang Wang
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author of the paper
-              <a href="https://yyou1996.github.io/" target="_blank" class="link-style-green">Yuning You</a>
-              who is a third-year Ph.D. student in ECE at Texas A&M University supervised by Prof.
-              <a href="https://shen-lab.github.io/" target="_blank" class="link-style-green">Yang Shen</a>,
-              and unofficially co-supervised by Prof. Zhangyang Wang. He has done a lot of popular work on
-              self-supervised learning on graphs.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Self-supervised learning on graph-structured data has drawn recent interest for learning generalizable,
-              transferable and robust representations from unlabeled graphs. Among many, graph contrastive learning
-              (GraphCL) has emerged with promising representation learning performance. Unfortunately, unlike its
-              counterpart on image data, the effectiveness of GraphCL hinges on ad-hoc data augmentations, which have
-              to be manually picked per dataset, by either rules of thumb or trial-and-errors, owing to the diverse
-              nature of graph data. That significantly limits the more general applicability of GraphCL. Aiming to
-              fill in this crucial gap, this paper proposes a unified bi-level optimization framework to
-              automatically, adaptively and dynamically select data augmentations when performing GraphCL on specific
-              graph data. The general framework, dubbed JOint Augmentation Optimization (JOAO), is instantiated as
-              min-max optimization. The selections of augmentations made by JOAO are shown to be in general aligned
-              with previous "best practices" observed from handcrafted tuning: yet now being automated, more flexible
-              and versatile. Moreover, we propose a new augmentation-aware projection head mechanism, which will route
-              output features through different projection heads corresponding to different augmentations chosen at
-              each training step. Extensive experiments demonstrate that JOAO performs on par with or sometimes better
-              than the state-of-the-art competitors including GraphCL, on multiple graph datasets of various scales
-              and types, yet without resorting to any laborious dataset-specific tuning on augmentation selection. We
-              release the code at this https URL.
-            </p>
-          </div>
 
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -214,44 +166,109 @@
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
-
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.12575" target="_blank">
+                  Weisfeiler and Lehman Go Cellular: CW Networks</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 7th of September 2021
               </div>
-
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Cristian Bodnar, Fabrizio Frasca, Nina Otter, Yu Guang Wang, Pietro Liò, Guido Montúfar, Michael
+                  Bronstein
+                </a>
+              </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or somewhere else!
+              Joint first authors of the paper
+              <a href="https://crisbodnar.github.io/" target="_blank"
+                 class="link-style-green">Cristian Bodnar</a> and <a
+              href="https://scholar.google.com/citations?user=PT2CDA4AAAAJ&hl=en" target="_blank"
+              class="link-style-green">Fabrizio Frasca</a>. Cristian is a second-year PhD student
+              at Cambridge supervised by Prof. <a href="https://www.cl.cam.ac.uk/~pl219/" target="_blank"
+                                                  class="link-style-green">Pietro Liò</a>. He works on topological and
+              geometric deep learning. Fabrizio
+              is a PhD candidate at Imperial College London supervised by Prof. <a
+              href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
+              class="link-style-green">Michael Bronstein</a> and he works as an ML
+              researcher at Twitter.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Graph Neural Networks (GNNs) are limited in their expressive power, struggle with long-range interactions
+              and lack a principled way to model higher-order structures. These problems can be attributed to the strong
+              coupling between the computational graph and the input graph structure. The recently proposed Message
+              Passing Simplicial Networks naturally decouple these elements by performing message passing on the clique
+              complex of the graph. Nevertheless, these models are severely constrained by the rigid combinatorial
+              structure of Simplicial Complexes (SCs). In this work, we extend recent theoretical results on SCs to
+              regular Cell Complexes, topological objects that flexibly subsume SCs and graphs. We show that this
+              generalisation provides a powerful set of graph ``lifting'' transformations, each leading to a unique
+              hierarchical message passing procedure. The resulting methods, which we collectively call CW Networks
+              (CWNs), are strictly more powerful than the WL test and, in certain cases, not less powerful than the 3-WL
+              test. In particular, we demonstrate the effectiveness of one such scheme, based on rings, when applied to
+              molecular graph problems. The proposed architecture benefits from provably larger expressivity than
+              commonly used GNNs, principled modelling of higher-order signals and from compressing the distances
+              between nodes. We demonstrate that our model achieves state-of-the-art results on a variety of molecular
+              datasets.
             </p>
           </div>
 
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
-
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2107.01952" target="_blank">
+                  Partition and Code: learning how to compress graphs</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 14th of September 2021
               </div>
-
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Giorgos Bouritsas, Andreas Loukas, Nikolaos Karalias, Michael M. Bronstein
+                </a>
+              </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or somewhere else!
+              The main presenter will be first author <a
+              href="https://www.linkedin.com/in/giorgos-bouritsas/?originalSubdomain=uk" target="_blank"
+              class="link-style-green">Giorgos Bouritsas</a> who is a PhD student at Imperial College London
+              under the supervision of Prof. <a
+              href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
+              class="link-style-green">Michael Bronstein</a> and he is currently a visiting PhD at EPFL, Switzerland.
+              Also joining us will be paper author <a
+              href="https://andreasloukas.blog/" target="_blank"
+              class="link-style-green">Dr. Andreas Loukas</a> who is a research scientist (Ambizione fellow) at
+              the LTS2 lab in EPFL.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Can we use machine learning to compress graph data? The absence of ordering in graphs poses a significant
+              challenge to conventional compression algorithms, limiting their attainable gains as well as their ability
+              to discover relevant patterns. On the other hand, most graph compression approaches rely on
+              domain-dependent handcrafted representations and cannot adapt to different underlying graph distributions.
+              This work aims to establish the necessary principles a lossless graph compression method should follow to
+              approach the entropy storage lower bound. Instead of making rigid assumptions about the graph
+              distribution, we formulate the compressor as a probabilistic model that can be learned from data and
+              generalise to unseen instances. Our "Partition and Code" framework entails three steps: first, a
+              partitioning algorithm decomposes the graph into elementary structures, then these are mapped to the
+              elements of a small dictionary on which we learn a probability distribution, and finally, an entropy
+              encoder translates the representation into bits. All three steps are parametric and can be trained with
+              gradient descent. We theoretically compare the compression quality of several graph encodings and prove,
+              under mild conditions, a total ordering of their expected description lengths. Moreover, we show that,
+              under the same conditions, PnC achieves compression gains w.r.t. the baselines that grow either linearly
+              or quadratically with the number of vertices. Our algorithms are quantitatively evaluated on diverse
+              real-world networks obtaining significant performance improvements with respect to different families of
+              non-parametric and parametric graph compressors.
             </p>
           </div>
 
@@ -319,6 +336,68 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.07594" target="_blank">
+                  Graph Contrastive Learning Automated</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                17th of August 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Yuning You, Tianlong Chen, Yang Shen, Zhangyang Wang
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Resources:</a> My
+              <a
+                href="https://hannes-stark.com/assets/Graph Contrastive Learning Automated.pdf"
+                target="_blank"
+                class="link-style-green">Paper Annotations</a>.
+              Yuning's
+              <a href="https://hannes-stark.com/assets/yuning_LoGaG_talk.pdf" target="_blank"
+                 class="link-style-green">Slides</a>.
+              (32 participants)
+            </p>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author of the paper
+              <a href="https://yyou1996.github.io/" target="_blank" class="link-style-green">Yuning You</a>
+              who is a third-year Ph.D. student in ECE at Texas A&M University supervised by Prof.
+              <a href="https://shen-lab.github.io/" target="_blank" class="link-style-green">Yang Shen</a>,
+              and unofficially co-supervised by Prof. Zhangyang Wang. He has done a lot of popular work on
+              self-supervised learning on graphs.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Self-supervised learning on graph-structured data has drawn recent interest for learning generalizable,
+              transferable and robust representations from unlabeled graphs. Among many, graph contrastive learning
+              (GraphCL) has emerged with promising representation learning performance. Unfortunately, unlike its
+              counterpart on image data, the effectiveness of GraphCL hinges on ad-hoc data augmentations, which have
+              to be manually picked per dataset, by either rules of thumb or trial-and-errors, owing to the diverse
+              nature of graph data. That significantly limits the more general applicability of GraphCL. Aiming to
+              fill in this crucial gap, this paper proposes a unified bi-level optimization framework to
+              automatically, adaptively and dynamically select data augmentations when performing GraphCL on specific
+              graph data. The general framework, dubbed JOint Augmentation Optimization (JOAO), is instantiated as
+              min-max optimization. The selections of augmentations made by JOAO are shown to be in general aligned
+              with previous "best practices" observed from handcrafted tuning: yet now being automated, more flexible
+              and versatile. Moreover, we propose a new augmentation-aware projection head mechanism, which will route
+              output features through different projection heads corresponding to different augmentations chosen at
+              each training step. Extensive experiments demonstrate that JOAO performs on par with or sometimes better
+              than the state-of-the-art competitors including GraphCL, on multiple graph datasets of various scales
+              and types, yet without resorting to any laborious dataset-specific tuning on augmentation selection. We
+              release the code at this https URL.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -347,6 +426,7 @@
               Keyulu's
               <a href="https://people.csail.mit.edu/keyulux/pdf/optimization.pdf" target="_blank"
                  class="link-style-green">Slides</a>.
+              (50 participants)
             </p>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
@@ -401,6 +481,7 @@
                 href="https://hannes-stark.com/assets/Do%20Transformers%20Really%20Perform%20Bad%20for%20Graph%20Representation.pdf"
                 target="_blank"
                 class="link-style-green">Paper Annotations</a>.
+              (35 participants)
             </p>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
