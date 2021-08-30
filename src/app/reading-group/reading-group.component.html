@@ -16,7 +16,8 @@
           Welcome to the LoGaG reading group that I am organizing with the incredible support of Prof.
           <a
             href="https://www.cl.cam.ac.uk/~pl219/" target="_blank" class="link-style-green">Pietro Liò</a>!
-          Below the schedule you can find previously covered papers with my Notes and other resources that came out of the meeting.
+          Below the schedule you can find previously covered papers with my Notes and other resources that came out of
+          the meeting.
         </p>
         <p>
           <a
@@ -51,31 +52,39 @@
           </div>
           <div class="item-content">
             <div>
-              <form
-                action="https://formcarry.com/s/xejfAa3AVBs"
-                method="POST"
-                accept-charset="UTF-8"
-
-              >
-                <div fxLayout="column">
-                  <label>
-                    Email:
-                    <input placeholder="example.mail@gmail.com" type="email" name="email" required>
-                  </label>
-                  <label>
-                    Optional Name:
-                    <input placeholder="Your Name" name="name">
-                  </label>
+              <form class="contact" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+                <div fxLayout="row" fxLayout.lt-md="column">
+                  <mat-form-field>
+                    <mat-label>Name (optional)</mat-label>
+                    <input matInput [formControl]="name">
+                    <mat-error *ngIf="name.invalid">Please enter your name</mat-error>
+                  </mat-form-field>
+                  <mat-form-field [ngClass.gt-sm]="'margin-left'">
+                    <mat-label>Email</mat-label>
+                    <input matInput [formControl]="email" placeholder="email@example.com" required type="email">
+                    <mat-error *ngIf="email.invalid">Please enter a valid email</mat-error>
+                  </mat-form-field>
+                  <!--
+                  <mat-form-field>
+                    <mat-label>Message</mat-label>
+                    <textarea matInput [formControl]="message" placeholder="I'm interested in..."
+                              ></textarea>
+                    <mat-error *ngIf="message.invalid">Please enter a message</mat-error>
+                  </mat-form-field>-->
                 </div>
-
-
-                <!-- your other form fields go here -->
-
-                <button #tooltip="matTooltip" mat-button
-                        matTooltip="Submit your email"
-                        type="submit">
-                  Submit
-                </button>
+                <div style="text-align:center">
+                  <button mat-button [class.spinner]="isLoading" [disabled]="isLoading" class="submit submit-button"
+                          type="submit">
+                    Submit
+                  </button>
+                </div>
+                <input [formControl]="honeypot" class="hidden" type="text"/>
+                <div [ngClass]="!(success && submit)? 'hidden' : 'visible'" class="success-message">
+                  <span>{{responseMessage}}</span>
+                </div>
+                <div [ngClass]="!(!success && submit)? 'hidden' : 'visible'" class="failed-message">
+                  <span>{{responseMessage}}</span>
+                </div>
               </form>
             </div>
           </div>
@@ -107,59 +116,48 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2103.06857" target="_blank">
-                  Should Graph Neural Networks Use Features, Edges, Or Both?</a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                24th of August 2021
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Lukas Faber, Yifan Lu, Roger Wattenhofer
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author of the paper
-              <a href="https://disco.ethz.ch/members/lfaber" target="_blank"
-                 class="link-style-green">Lukas Faber</a>
-              who is a PhD student in the Distributed Computing Group at ETH Zürich supervised by Prof. Roger
-              Wattenhofer. He is also working at Google Zürich.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Graph Neural Networks (GNNs) are the first choice for learning algorithms on graph data. GNNs promise to
-              integrate (i) node features as well as (ii) edge information in an end-to-end learning algorithm. How does
-              this promise work out practically? In this paper, we study to what extend GNNs are necessary to solve
-              prominent graph classification problems. We find that for graph classification, a GNN is not more than the
-              sum of its parts. We also find that, unlike features, predictions with an edge-only model do not always
-              transfer to GNNs.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-
+                <a class="item-subtitle link-style-black" href="https://openreview.net/forum?id=-qh0M9XWxnv"
+                   target="_blank">
+                  Analyzing the Expressive Power of Graph Neural Networks in a Spectral Perspective</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 31st of August 2021
               </div>
-
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Muhammet Balcilar, Guillaume Renton, Pierre Héroux, Benoit Gaüzère, Sébastien Adam, Paul Honeine
+                </a>
+              </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or somewhere else!
+              First author of the paper Dr.
+              <a href="https://scholar.google.com.tr/citations?user=LRyde44AAAAJ&hl=en" target="_blank"
+                 class="link-style-green">Muhammet Balcilar</a>
+              who works as R&I Researcher at Interdigital, Rennes. He obtained his Ph.D. at Yildiz Technical University
+              and has held several PostDoc positions since then.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              In the recent literature of Graph Neural Networks (GNN), the expressive power of models has been studied
+              through their capability to distinguish if two given graphs are isomorphic or not. Since the graph
+              isomorphism problem is NP-intermediate, and Weisfeiler-Lehman (WL) test can give sufficient but not enough
+              evidence in polynomial time, the theoretical power of GNNs is usually evaluated by the equivalence of
+              WL-test order, followed by an empirical analysis of the models on some reference inductive and
+              transductive datasets. However, such analysis does not account the signal processing pipeline, whose
+              capability is generally evaluated in the spectral domain. In this paper, we argue that a spectral analysis
+              of GNNs behavior can provide a complementary point of view to go one step further in the understanding of
+              GNNs. By bridging the gap between the spectral and spatial design of graph convolutions, we theoretically
+              demonstrate some equivalence of the graph convolution process regardless it is designed in the spatial or
+              the spectral domain. Using this connection, we managed to re-formulate most of the state-of-the-art graph
+              neural networks into one common framework. This general framework allows to lead a spectral analysis of
+              the most popular GNNs, explaining their performance and showing their limits according to spectral point
+              of view. Our theoretical spectral analysis is confirmed by experiments on various graph databases.
+              Furthermore, we demonstrate the necessity of high and/or band-pass filters on a graph dataset, while the
+              majority of GNN is limited to only low-pass and inevitably it fails.
             </p>
           </div>
 
@@ -316,6 +314,118 @@
               competitive results on many standard graph benchmarks.
             </p>
           </div>
+
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2010.09891" target="_blank">
+                  FLAG: Adversarial Data Augmentation for Graph Neural Networks</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                28th of September 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Kezhi Kong, Guohao Li, Mucong Ding, Zuxuan Wu, Chen Zhu, Bernard Ghanem, Gavin Taylor, Tom Goldstein
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author <a
+              href="https://scholar.google.com/citations?user=MG46jrMAAAAJ&hl=en" target="_blank"
+              class="link-style-green">Kezhi Kong</a> who is a PhD student at the University of Maryland. Advised by
+              Prof. Tom Goldstein, he does research in Machine Learning, with a focus on Graph Learning and Adversarial
+              Attacks/Defenses.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Data augmentation helps neural networks generalize better, but it remains an open question how to
+              effectively augment graph data to enhance the performance of GNNs (Graph Neural Networks). While most
+              existing graph regularizers focus on augmenting graph topological structures by adding/removing edges, we
+              offer a novel direction to augment in the input node feature space for better performance. We propose a
+              simple but effective solution, FLAG (Free Large-scale Adversarial Augmentation on Graphs), which
+              iteratively augments node features with gradient-based adversarial perturbations during training, and
+              boosts performance at test time. Empirically, FLAG can be easily implemented with a dozen lines of code
+              and is flexible enough to function with any GNN backbone, on a wide variety of large-scale datasets, and
+              in both transductive and inductive settings. Without modifying a model's architecture or training setup,
+              FLAG yields a consistent and salient performance boost across both node and graph classification tasks.
+              Using FLAG, we reach state-of-the-art performance on the large-scale ogbg-molpcba, ogbg-ppa, and ogbg-code
+              datasets.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                5th of October 2021
+              </div>
+
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or somewhere else!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.05152" target="_blank">
+                  On Explainability of Graph Neural Networks via Subgraph Explorations</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                12th of October 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Hao Yuan, Haiyang Yu, Jie Wang, Kang Li, Shuiwang Ji
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Author of the paper
+              <a href="https://scholar.google.com/citations?user=LZKU1hUAAAAJ&hl=en" target="_blank"
+                 class="link-style-green">Haiyang Yu</a> who is a PhD student
+              at Texas A&M University supervised by Prof. <a href="http://people.tamu.edu/~sji/" target="_blank"
+                                                             class="link-style-green">Shuiwang Ji</a>.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              We consider the problem of explaining the predictions of graph neural networks (GNNs), which otherwise are
+              considered as black boxes. Existing methods invariably focus on explaining the importance of graph nodes
+              or edges but ignore the substructures of graphs, which are more intuitive and human-intelligible. In this
+              work, we propose a novel method, known as SubgraphX, to explain GNNs by identifying important subgraphs.
+              Given a trained GNN model and an input graph, our SubgraphX explains its predictions by efficiently
+              exploring different subgraphs with Monte Carlo tree search. To make the tree search more effective, we
+              propose to use Shapley values as a measure of subgraph importance, which can also capture the interactions
+              among different subgraphs. To expedite computations, we propose efficient approximation schemes to compute
+              Shapley values for graph data. Our work represents the first attempt to explain GNNs via identifying
+              subgraphs explicitly and directly. Experimental results show that our SubgraphX achieves significantly
+              improved explanations, while keeping computations at a reasonable level.
+            </p>
+          </div>
+
+
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
@@ -335,6 +445,53 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2103.06857" target="_blank">
+                  Should Graph Neural Networks Use Features, Edges, Or Both?</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                24th of August 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Lukas Faber, Yifan Lu, Roger Wattenhofer
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Resources:</a> My
+              <a
+                href="https://hannes-stark.com/assets/Should Graph Neural Networks Use Edges Features of Both.pdf"
+                target="_blank"
+                class="link-style-green">Paper Annotations</a>.
+              (48 participants)
+            </p>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author of the paper
+              <a href="https://disco.ethz.ch/members/lfaber" target="_blank"
+                 class="link-style-green">Lukas Faber</a>
+              who is a PhD student in the Distributed Computing Group at ETH Zürich supervised by Prof. Roger
+              Wattenhofer. He is also working at Google Zürich.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Graph Neural Networks (GNNs) are the first choice for learning algorithms on graph data. GNNs promise to
+              integrate (i) node features as well as (ii) edge information in an end-to-end learning algorithm. How does
+              this promise work out practically? In this paper, we study to what extend GNNs are necessary to solve
+              prominent graph classification problems. We find that for graph classification, a GNN is not more than the
+              sum of its parts. We also find that, unlike features, predictions with an edge-only model do not always
+              transfer to GNNs.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
 
           <div class="item" fxLayout="column">
