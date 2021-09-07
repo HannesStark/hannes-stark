@@ -116,55 +116,6 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://openreview.net/forum?id=-qh0M9XWxnv"
-                   target="_blank">
-                  Analyzing the Expressive Power of Graph Neural Networks in a Spectral Perspective</a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                31st of August 2021
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Muhammet Balcilar, Guillaume Renton, Pierre Héroux, Benoit Gaüzère, Sébastien Adam, Paul Honeine
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author of the paper Dr.
-              <a href="https://scholar.google.com.tr/citations?user=LRyde44AAAAJ&hl=en" target="_blank"
-                 class="link-style-green">Muhammet Balcilar</a>
-              who works as R&I Researcher at Interdigital, Rennes. He obtained his Ph.D. at Yildiz Technical University
-              and has held several PostDoc positions since then.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              In the recent literature of Graph Neural Networks (GNN), the expressive power of models has been studied
-              through their capability to distinguish if two given graphs are isomorphic or not. Since the graph
-              isomorphism problem is NP-intermediate, and Weisfeiler-Lehman (WL) test can give sufficient but not enough
-              evidence in polynomial time, the theoretical power of GNNs is usually evaluated by the equivalence of
-              WL-test order, followed by an empirical analysis of the models on some reference inductive and
-              transductive datasets. However, such analysis does not account the signal processing pipeline, whose
-              capability is generally evaluated in the spectral domain. In this paper, we argue that a spectral analysis
-              of GNNs behavior can provide a complementary point of view to go one step further in the understanding of
-              GNNs. By bridging the gap between the spectral and spatial design of graph convolutions, we theoretically
-              demonstrate some equivalence of the graph convolution process regardless it is designed in the spatial or
-              the spectral domain. Using this connection, we managed to re-formulate most of the state-of-the-art graph
-              neural networks into one common framework. This general framework allows to lead a spectral analysis of
-              the most popular GNNs, explaining their performance and showing their limits according to spectral point
-              of view. Our theoretical spectral analysis is confirmed by experiments on various graph databases.
-              Furthermore, we demonstrate the necessity of high and/or band-pass filters on a graph dataset, while the
-              majority of GNN is limited to only low-pass and inevitably it fails.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.12575" target="_blank">
                   Weisfeiler and Lehman Go Cellular: CW Networks</a></h3>
             </div>
@@ -274,8 +225,8 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.10934" target="_blank">
-                  GRAND: Graph Neural Diffusion</a></h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.03893" target="_blank">
+                  Rethinking Graph Transformers with Spectral Attention</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
@@ -285,33 +236,33 @@
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Benjamin Paul Chamberlain, James Rowbottom, Maria Gorinova, Stefan Webb, Emanuele Rossi, Michael M.
-                  Bronstein
+                  Devin Kreuzer, Dominique Beaini, William L. Hamilton, Vincent Létourneau, Prudencio Tossou
                 </a>
               </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Joint first author of the paper
-              <a href="https://www.linkedin.com/in/jamesrowbottom/?originalSubdomain=uk" target="_blank"
-                 class="link-style-green">James Rowbottom</a>
-              who received his master in AI with distinction from Imperial College London and worked on GRAND as an ML
-              Reserch intern at Prof.
-              <a href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
-                 class="link-style-green">Michael Bronstein's</a>
-              graph ML research group at Twitter.
+              Joint first authors of the paper: Dr.
+              <a href="https://www.linkedin.com/in/dbeaini/" target="_blank"
+                 class="link-style-green">Dominique Beaini</a> who obtained his PhD at École Polytechnique de Montréal and is now working as ML Researcher at Valence Discovery on using GNNs for molecules.
+              And <a href="https://www.linkedin.com/in/devin-kreuzer-847b52b5/" target="_blank"
+                 class="link-style-green">Devin Kreuzer</a> who is doing his masters at McGill University supervised by Prof. <a href="https://williamleif.github.io/" target="_blank"
+                 class="link-style-green">William L. Hamilton</a> while working at MILA.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
-              We present Graph Neural Diffusion (GRAND) that approaches deep learning on graphs as a continuous
-              diffusion process and treats Graph Neural Networks (GNNs) as discretisations of an underlying PDE. In our
-              model, the layer structure and topology correspond to the discretisation choices of temporal and spatial
-              operators. Our approach
-              allows a principled development of a broad new class of GNNs that are able to address the common plights
-              of graph learning models such as depth, oversmoothing, and bottlenecks. Key to the success of our models
-              are stability with respect to perturbations in the data and this is addressed for both implicit and
-              explicit discretisation schemes. We develop linear and nonlinear versions of GRAND, which achieve
-              competitive results on many standard graph benchmarks.
+              In recent years, the Transformer architecture has proven to be very successful in sequence processing, but
+              its application to other data structures, such as graphs, has remained limited due to the difficulty of
+              properly defining positions. Here, we present the Spectral Attention Network (SAN), which uses a learned
+              positional encoding (LPE) that can take advantage of the full Laplacian spectrum to learn the position of
+              each node in a given graph. This LPE is then added to the node features of the graph and passed to a
+              fully-connected Transformer. By leveraging the full spectrum of the Laplacian, our model is theoretically
+              powerful in distinguishing graphs, and can better detect similar sub-structures from their resonance.
+              Further, by fully connecting the graph, the Transformer does not suffer from over-squashing, an
+              information bottleneck of most GNNs, and enables better modeling of physical phenomenons such as heat
+              transfer and electric interaction. When tested empirically on a set of 4 standard datasets, our model
+              performs on par or better than state-of-the-art GNNs, and outperforms any attention-based model by a wide
+              margin, becoming the first fully-connected architecture to perform well on graph benchmarks.
             </p>
           </div>
 
@@ -425,6 +376,120 @@
             </p>
           </div>
 
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2006.05205" target="_blank">
+                  On the Bottleneck of Graph Neural Networks and its Practical Implications</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                19th of October 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Uri Alon, Eran Yahav
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author of the paper Dr.
+              <a href="https://urialon.ml/" target="_blank"
+                 class="link-style-green">Uri Alon</a> who obtained his PhD at Technion advised by Prof.
+              <a href="https://www.cs.technion.ac.il/~yahave/" target="_blank"
+                 class="link-style-green">Eran Yahav</a> and is now a PostDoc at Carnegie Mellon University working on
+              generating source code where GNNs find many applications.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Since the proposal of the graph neural network (GNN) by Gori et al. (2005) and Scarselli et al. (2008),
+              one of the major problems in training GNNs was their struggle to propagate information between distant
+              nodes in the graph. We propose a new explanation for this problem: GNNs are susceptible to a bottleneck
+              when aggregating messages across a long path. This bottleneck causes the over-squashing of exponentially
+              growing information into fixed-size vectors. As a result, GNNs fail to propagate messages originating from
+              distant nodes and perform poorly when the prediction task depends on long-range interaction. In this
+              paper, we highlight the inherent problem of over-squashing in GNNs: we demonstrate that the bottleneck
+              hinders popular GNNs from fitting long-range signals in the training data; we further show that GNNs that
+              absorb incoming edges equally, such as GCN and GIN, are more susceptible to over-squashing than GAT and
+              GGNN; finally, we show that prior work, which extensively tuned GNN models of long-range problems, suffers
+              from over-squashing, and that breaking the bottleneck improves their state-of-the-art results without any
+              tuning or additional weights. Our code is available at this <a
+              href="https://github.com/tech-srl/bottleneck/" target="_blank"
+              class="link-style-green">https URL</a>.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                26th of October 2021
+              </div>
+
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or somewhere else!
+            </p>
+          </div>
+
+
+          <!--hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.10934" target="_blank">
+                  GRAND: Graph Neural Diffusion</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                21st of September 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Benjamin Paul Chamberlain, James Rowbottom, Maria Gorinova, Stefan Webb, Emanuele Rossi, Michael M.
+                  Bronstein
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Joint first author of the paper
+              <a href="https://www.linkedin.com/in/jamesrowbottom/?originalSubdomain=uk" target="_blank"
+                 class="link-style-green">James Rowbottom</a>
+              who received his master in AI with distinction from Imperial College London and worked on GRAND as an ML
+              Reserch intern at Prof.
+              <a href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
+                 class="link-style-green">Michael Bronstein's</a>
+              graph ML research group at Twitter.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              We present Graph Neural Diffusion (GRAND) that approaches deep learning on graphs as a continuous
+              diffusion process and treats Graph Neural Networks (GNNs) as discretisations of an underlying PDE. In our
+              model, the layer structure and topology correspond to the discretisation choices of temporal and spatial
+              operators. Our approach
+              allows a principled development of a broad new class of GNNs that are able to address the common plights
+              of graph learning models such as depth, oversmoothing, and bottlenecks. Key to the success of our models
+              are stability with respect to perturbations in the data and this is addressed for both implicit and
+              explicit discretisation schemes. We develop linear and nonlinear versions of GRAND, which achieve
+              competitive results on many standard graph benchmarks.
+            </p>
+          </div-->
 
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
@@ -445,6 +510,64 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://openreview.net/forum?id=-qh0M9XWxnv"
+                   target="_blank">
+                  Analyzing the Expressive Power of Graph Neural Networks in a Spectral Perspective</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                31st of August 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Muhammet Balcilar, Guillaume Renton, Pierre Héroux, Benoit Gaüzère, Sébastien Adam, Paul Honeine
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Resources:</a>
+              Muhammet's
+              <a href="https://hannes-stark.com/assets/structural_spectral_awareness_GNN.pdf" target="_blank"
+                 class="link-style-green">Slides</a>.
+              (54 participants)
+            </p>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author of the paper Dr.
+              <a href="https://scholar.google.com.tr/citations?user=LRyde44AAAAJ&hl=en" target="_blank"
+                 class="link-style-green">Muhammet Balcilar</a>
+              who works as R&I Researcher at Interdigital, Rennes. He obtained his Ph.D. at Yildiz Technical University
+              and has held several PostDoc positions since then.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              In the recent literature of Graph Neural Networks (GNN), the expressive power of models has been studied
+              through their capability to distinguish if two given graphs are isomorphic or not. Since the graph
+              isomorphism problem is NP-intermediate, and Weisfeiler-Lehman (WL) test can give sufficient but not enough
+              evidence in polynomial time, the theoretical power of GNNs is usually evaluated by the equivalence of
+              WL-test order, followed by an empirical analysis of the models on some reference inductive and
+              transductive datasets. However, such analysis does not account the signal processing pipeline, whose
+              capability is generally evaluated in the spectral domain. In this paper, we argue that a spectral analysis
+              of GNNs behavior can provide a complementary point of view to go one step further in the understanding of
+              GNNs. By bridging the gap between the spectral and spatial design of graph convolutions, we theoretically
+              demonstrate some equivalence of the graph convolution process regardless it is designed in the spatial or
+              the spectral domain. Using this connection, we managed to re-formulate most of the state-of-the-art graph
+              neural networks into one common framework. This general framework allows to lead a spectral analysis of
+              the most popular GNNs, explaining their performance and showing their limits according to spectral point
+              of view. Our theoretical spectral analysis is confirmed by experiments on various graph databases.
+              Furthermore, we demonstrate the necessity of high and/or band-pass filters on a graph dataset, while the
+              majority of GNN is limited to only low-pass and inevitably it fails.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
