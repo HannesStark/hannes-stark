@@ -1,12 +1,22 @@
 import {Component, OnInit} from '@angular/core';
 import {faGithub, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
-import {faCopy, faEnvelope, faMapMarker, faMobile, faPhone, faUser, faGraduationCap} from '@fortawesome/free-solid-svg-icons';
+import {
+  faCopy,
+  faEnvelope,
+  faMapMarker,
+  faMobile,
+  faPhone,
+  faUser,
+  faGraduationCap
+} from '@fortawesome/free-solid-svg-icons';
 import {faCalendar} from '@fortawesome/free-solid-svg-icons/faCalendar';
 import {HttpClient} from '@angular/common/http';
 import {DomSanitizer} from '@angular/platform-browser';
 
 import {LAImageComponent} from "../laimage/laimage.component";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {NerfImageComponent} from "../nerfimage/nerfimage.component";
+import {PreTrainImageComponent} from "../3Dpretrainimage/3dpretrainimage.component";
 
 @Component({
   selector: 'app-main-page',
@@ -26,12 +36,13 @@ export class MainPageComponent implements OnInit {
   mobile = faMobile;
   sections: any[];
   safeURLNerf;
+  safeURL3DPretrain;
   safeURLLightAttention;
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer, private dialog: MatDialog) {
     this.safeURLNerf = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/8MCWE7R0xN8');
     this.safeURLLightAttention = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/6gDy8-yOJqY');
-
+    this.safeURL3DPretrain = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/1wcpJdy2xxc');
   }
 
   ngOnInit(): void {
@@ -59,12 +70,25 @@ export class MainPageComponent implements OnInit {
     }
   }
 
+  openNerfImage(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    this.dialog.open(NerfImageComponent, dialogConfig);
+  }
+  openPretrainImage(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    this.dialog.open(PreTrainImageComponent, dialogConfig);
+  }
+
   openLAImage(): void {
-      const dialogConfig = new MatDialogConfig();
-      dialogConfig.disableClose = false;
-      dialogConfig.autoFocus = true;
-      this.dialog.open(LAImageComponent, dialogConfig);
-    }
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    this.dialog.open(LAImageComponent, dialogConfig);
+  }
 
 
   scroll(target: string): void {
