@@ -4,6 +4,7 @@ import {faCopy, faEnvelope, faGraduationCap, faMapMarker, faMobile, faUser} from
 import {faCalendar} from '@fortawesome/free-solid-svg-icons/faCalendar';
 import {FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-reading-group',
@@ -31,14 +32,16 @@ export class ReadingGroupComponent implements OnInit {
   submit: boolean = false; // show and hide the success message
   isLoading: boolean = false; // disable the submit button if we're loading
   responseMessage: string; // the response message to show to the user
+  safeURLCWNetworks;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
       name: this.name,
       email: this.email,
       message: this.message,
       honeypot: this.honeypot
     });
+    this.safeURLCWNetworks = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/MTQGNVTn9lQ');
   }
 
   ngOnInit(): void {
