@@ -115,84 +115,68 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.12575" target="_blank">
-                  Weisfeiler and Lehman Go Cellular: CW Networks</a></h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.03893" target="_blank">
+                  Rethinking Graph Transformers with Spectral Attention</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                7th of September 2021
+                21st of September 2021
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Cristian Bodnar, Fabrizio Frasca, Nina Otter, Yu Guang Wang, Pietro Liò, Guido Montúfar, Michael
-                  Bronstein
+                  Devin Kreuzer, Dominique Beaini, William L. Hamilton, Vincent Létourneau, Prudencio Tossou
                 </a>
               </div>
             </div>
-
-
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLCWNetworks' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLSAN' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                The <a href="https://youtu.be/MTQGNVTn9lQ" target="_blank"
-                       class="link-style-green">Recording</a> of the whole presentation.
-                Cristian's and Fabrizio's slides
-                <a href="https://crisbodnar.github.io/files/cwn_logag_talk.pdf" target="_blank"
-                   class="link-style-green">Slides</a>. My
-                <a
-                  href="https://hannes-stark.com/assets/Weisfeiler and Lehman Go Cellular CW Networks.pdf"
-                  target="_blank"
-                  class="link-style-green">Paper Annotations</a>.
-                (49 participants)
+                Devin's
+                <a href="https://hannes-stark.com/assets/spectral_attention_networks.pdf" target="_blank"
+                   class="link-style-green">slides</a>. Recording is coming soon!
+                (69 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                Joint first authors of the paper
-                <a href="https://crisbodnar.github.io/" target="_blank"
-                   class="link-style-green">Cristian Bodnar</a> and <a
-                href="https://scholar.google.com/citations?user=PT2CDA4AAAAJ&hl=en" target="_blank"
-                class="link-style-green">Fabrizio Frasca</a>. Cristian is a second-year PhD student
-                at Cambridge supervised by Prof. <a href="https://www.cl.cam.ac.uk/~pl219/" target="_blank"
-                                                    class="link-style-green">Pietro Liò</a>. He works on topological and
-                geometric deep learning. Fabrizio
-                is a PhD candidate at Imperial College London supervised by Prof. <a
-                href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
-                class="link-style-green">Michael Bronstein</a> and he works as an ML
-                researcher at Twitter.
+                Joint first authors of the paper: Dr.
+                <a href="https://www.linkedin.com/in/dbeaini/" target="_blank"
+                   class="link-style-green">Dominique Beaini</a> who obtained his PhD at École Polytechnique de Montréal
+                and is now working as ML Researcher at Valence Discovery on using GNNs for molecules.
+                And <a href="https://www.linkedin.com/in/devin-kreuzer-847b52b5/" target="_blank"
+                       class="link-style-green">Devin Kreuzer</a> who is doing his masters at McGill University
+                supervised
+                by Prof. <a href="https://williamleif.github.io/" target="_blank"
+                            class="link-style-green">William L. Hamilton</a> while working at MILA on GNNs and
+                AI-enabled
+                drug discovery.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Graph Neural Networks (GNNs) are limited in their expressive power, struggle with long-range
-                interactions
-                and lack a principled way to model higher-order structures. These problems can be attributed to the
-                strong
-                coupling between the computational graph and the input graph structure. The recently proposed Message
-                Passing Simplicial Networks naturally decouple these elements by performing message passing on the
-                clique
-                complex of the graph. Nevertheless, these models are severely constrained by the rigid combinatorial
-                structure of Simplicial Complexes (SCs). In this work, we extend recent theoretical results on SCs to
-                regular Cell Complexes, topological objects that flexibly subsume SCs and graphs. We show that this
-                generalisation provides a powerful set of graph ``lifting'' transformations, each leading to a unique
-                hierarchical message passing procedure. The resulting methods, which we collectively call CW Networks
-                (CWNs), are strictly more powerful than the WL test and, in certain cases, not less powerful than the
-                3-WL
-                test. In particular, we demonstrate the effectiveness of one such scheme, based on rings, when applied
-                to
-                molecular graph problems. The proposed architecture benefits from provably larger expressivity than
-                commonly used GNNs, principled modelling of higher-order signals and from compressing the distances
-                between nodes. We demonstrate that our model achieves state-of-the-art results on a variety of
-                molecular
-                datasets.
+                In recent years, the Transformer architecture has proven to be very successful in sequence processing,
+                but
+                its application to other data structures, such as graphs, has remained limited due to the difficulty of
+                properly defining positions. Here, we present the Spectral Attention Network (SAN), which uses a learned
+                positional encoding (LPE) that can take advantage of the full Laplacian spectrum to learn the position
+                of
+                each node in a given graph. This LPE is then added to the node features of the graph and passed to a
+                fully-connected Transformer. By leveraging the full spectrum of the Laplacian, our model is
+                theoretically
+                powerful in distinguishing graphs, and can better detect similar sub-structures from their resonance.
+                Further, by fully connecting the graph, the Transformer does not suffer from over-squashing, an
+                information bottleneck of most GNNs, and enables better modeling of physical phenomenons such as heat
+                transfer and electric interaction. When tested empirically on a set of 4 standard datasets, our model
+                performs on par or better than state-of-the-art GNNs, and outperforms any attention-based model by a
+                wide
+                margin, becoming the first fully-connected architecture to perform well on graph benchmarks.
               </p>
-
             </div>
-
           </div>
 
         </div>
@@ -457,12 +441,13 @@
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
               First author <a class="item-subtitle link-style-black" href="https://matej-zecevic.de/" target="_blank">
-              Matej Zečević</a>  who is a PhD candidate at TU Darmstadt working with <a
+              Matej Zečević</a> who is a PhD candidate at TU Darmstadt working with <a
               class="item-subtitle link-style-black" href="https://ml-research.github.io/people/kkersting/index.html"
               target="_blank">
               Kristian Kersting</a> on
               Causality for ML. Before that, he completed his M.Sc. in Computer Science under <a
-              class="item-subtitle link-style-black" href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters" target="_blank">
+              class="item-subtitle link-style-black" href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters"
+              target="_blank">
               Jan Peters</a>, <a
               class="item-subtitle link-style-black" href="https://cifar.ca/bios/stefan-bauer/" target="_blank">
               Stefan Bauer</a>,
@@ -523,40 +508,49 @@
                 </a>
               </div>
             </div>
-            <p class="paragraph">
-              <a class="slight-bold">Resources:</a>
-              Devin's
-              <a href="https://hannes-stark.com/assets/spectral_attention_networks.pdf" target="_blank"
-                 class="link-style-green">slides</a>. Recording is coming soon!
-              (69 participants)
-            </p>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Joint first authors of the paper: Dr.
-              <a href="https://www.linkedin.com/in/dbeaini/" target="_blank"
-                 class="link-style-green">Dominique Beaini</a> who obtained his PhD at École Polytechnique de Montréal
-              and is now working as ML Researcher at Valence Discovery on using GNNs for molecules.
-              And <a href="https://www.linkedin.com/in/devin-kreuzer-847b52b5/" target="_blank"
-                     class="link-style-green">Devin Kreuzer</a> who is doing his masters at McGill University supervised
-              by Prof. <a href="https://williamleif.github.io/" target="_blank"
-                          class="link-style-green">William L. Hamilton</a> while working at MILA on GNNs and AI-enabled
-              drug discovery.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              In recent years, the Transformer architecture has proven to be very successful in sequence processing, but
-              its application to other data structures, such as graphs, has remained limited due to the difficulty of
-              properly defining positions. Here, we present the Spectral Attention Network (SAN), which uses a learned
-              positional encoding (LPE) that can take advantage of the full Laplacian spectrum to learn the position of
-              each node in a given graph. This LPE is then added to the node features of the graph and passed to a
-              fully-connected Transformer. By leveraging the full spectrum of the Laplacian, our model is theoretically
-              powerful in distinguishing graphs, and can better detect similar sub-structures from their resonance.
-              Further, by fully connecting the graph, the Transformer does not suffer from over-squashing, an
-              information bottleneck of most GNNs, and enables better modeling of physical phenomenons such as heat
-              transfer and electric interaction. When tested empirically on a set of 4 standard datasets, our model
-              performs on par or better than state-of-the-art GNNs, and outperforms any attention-based model by a wide
-              margin, becoming the first fully-connected architecture to perform well on graph benchmarks.
-            </p>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLSAN' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Devin's
+                <a href="https://hannes-stark.com/assets/spectral_attention_networks.pdf" target="_blank"
+                   class="link-style-green">slides</a>. Recording is coming soon!
+                (69 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                Joint first authors of the paper: Dr.
+                <a href="https://www.linkedin.com/in/dbeaini/" target="_blank"
+                   class="link-style-green">Dominique Beaini</a> who obtained his PhD at École Polytechnique de Montréal
+                and is now working as ML Researcher at Valence Discovery on using GNNs for molecules.
+                And <a href="https://www.linkedin.com/in/devin-kreuzer-847b52b5/" target="_blank"
+                       class="link-style-green">Devin Kreuzer</a> who is doing his masters at McGill University
+                supervised
+                by Prof. <a href="https://williamleif.github.io/" target="_blank"
+                            class="link-style-green">William L. Hamilton</a> while working at MILA on GNNs and
+                AI-enabled
+                drug discovery.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                In recent years, the Transformer architecture has proven to be very successful in sequence processing,
+                but
+                its application to other data structures, such as graphs, has remained limited due to the difficulty of
+                properly defining positions. Here, we present the Spectral Attention Network (SAN), which uses a learned
+                positional encoding (LPE) that can take advantage of the full Laplacian spectrum to learn the position
+                of
+                each node in a given graph. This LPE is then added to the node features of the graph and passed to a
+                fully-connected Transformer. By leveraging the full spectrum of the Laplacian, our model is
+                theoretically
+                powerful in distinguishing graphs, and can better detect similar sub-structures from their resonance.
+                Further, by fully connecting the graph, the Transformer does not suffer from over-squashing, an
+                information bottleneck of most GNNs, and enables better modeling of physical phenomenons such as heat
+                transfer and electric interaction. When tested empirically on a set of 4 standard datasets, our model
+                performs on par or better than state-of-the-art GNNs, and outperforms any attention-based model by a
+                wide
+                margin, becoming the first fully-connected architecture to perform well on graph benchmarks.
+              </p>
+            </div>
           </div>
 
 

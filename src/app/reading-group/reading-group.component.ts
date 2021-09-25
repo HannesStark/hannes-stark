@@ -33,6 +33,7 @@ export class ReadingGroupComponent implements OnInit {
   isLoading: boolean = false; // disable the submit button if we're loading
   responseMessage: string; // the response message to show to the user
   safeURLCWNetworks;
+  safeURLSAN;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -42,6 +43,7 @@ export class ReadingGroupComponent implements OnInit {
       honeypot: this.honeypot
     });
     this.safeURLCWNetworks = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/MTQGNVTn9lQ');
+    this.safeURLSAN = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/51_K8RDVlXY');
   }
 
   ngOnInit(): void {
