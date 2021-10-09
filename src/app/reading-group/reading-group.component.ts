@@ -58,7 +58,7 @@ export class ReadingGroupComponent implements OnInit {
       //formData.append('message', this.form.get('message').value);
       this.isLoading = true; // sending the post request async so it's in progress
       this.submit = false;
-      this.http.post('https://script.google.com/macros/s/AKfycbwL1PlWxp1Pd-l2HTPUJKZVsfNni5QkcH0QEDOb6hAHgsw59AdKmlLb9ZAONp8wmEaDig/exec', formData).subscribe(
+      this.http.post('https://script.google.com/macros/s/AKfycbwaP69LoS5sbofbQO88IvUKULekm-fQUzMuUC60qntRM70rnIwee398_fZ9ycsMLPWs4Q/exec', formData).subscribe(
         (response) => {
           // choose the response message
           if (response['result'] == 'success') {

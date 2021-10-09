@@ -5,7 +5,7 @@
       <img class="profile-image" src="assets/randomEuclidean.png" alt="Euclid Elements">
     </div>
     <div fxFlex="55" fxFlex.xs="65" ngClass.sm="small-margin" ngClass.xs="small-margin--xs">
-      <h1 class="Title" ngClass.lt-md="text-align-center">The Learning on Graphs and Geometry Reading Group!</h1>
+      <h1 class="Title" ngClass.lt-md="text-align-center">LoGaG: Learning on Graphs and Geometry Reading Group!</h1>
       <!--
       <div class="underline-title--top" fxLayoutAlign.lt-md="center center">
         <h1 class="left-titles">M. Sc. Computer Science Student</h1>
@@ -52,12 +52,12 @@
         </p>
         <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
           <div fxLayout="row">
-            <h3>
-              <a class="item-title">Get weekly updates with the next paper and all other information via email!</a>
-            </h3>
+              <a mat-button class="group-button item-title" href="https://groups.google.com/g/logag"
+            target="_blank">Sign up for email updates!</a>
           </div>
-          <div class="item-content">
+          <!--div class="item-content">
             <div>
+
               <form class="contact" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
                 <div fxLayout="row" fxLayout.lt-md="column">
                   <mat-form-field>
@@ -70,13 +70,7 @@
                     <input matInput [formControl]="email" placeholder="email@example.com" required type="email">
                     <mat-error *ngIf="email.invalid">Please enter a valid email</mat-error>
                   </mat-form-field>
-                  <!--
-                  <mat-form-field>
-                    <mat-label>Message</mat-label>
-                    <textarea matInput [formControl]="message" placeholder="I'm interested in..."
-                              ></textarea>
-                    <mat-error *ngIf="message.invalid">Please enter a message</mat-error>
-                  </mat-form-field>-->
+
                 </div>
                 <div style="text-align:center">
                   <button mat-button [class.spinner]="isLoading" [disabled]="isLoading" class="submit submit-button"
@@ -93,7 +87,7 @@
                 </div>
               </form>
             </div>
-          </div>
+          </div-->
         </div>
       </div>
     </div>
@@ -198,7 +192,7 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
-          
+
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>

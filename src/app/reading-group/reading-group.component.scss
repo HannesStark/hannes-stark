@@ -329,6 +329,21 @@ form.contact {
   margin-left: 10px;
 }
 
+.group-button {
+  transition-duration: 0.2s;
+  color: var(--color-primary);
+  background-color: white;
+  border: 2px solid var(--color-primary);
+  transition: 0.4s;
+
+}
+
+.group-button:hover:enabled {
+  transition-duration: 0.2s;
+  background-color: var(--color-primary);
+  color: white;
+}
+
 .submit-button {
   transition-duration: 0.2s;
   color: var(--color-primary);
