@@ -30,6 +30,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {NerfImageComponent} from './nerfimage/nerfimage.component';
 import {PreTrainImageComponent} from "./3Dpretrainimage/3dpretrainimage.component";
+import {LAArchImageComponent} from "./laarchimage/laarchimage.component";
+import {MultiConfImageComponent} from "./multiconfimage/multiconfimage.component";
+import {BYOLImageComponent} from "./byolimage/byolimage.component";
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import {PreTrainImageComponent} from "./3Dpretrainimage/3dpretrainimage.componen
     LAImageComponent,
     NerfImageComponent,
     ReadingGroupComponent,
-    PreTrainImageComponent
+    PreTrainImageComponent,
+    LAArchImageComponent,
+    MultiConfImageComponent,
+    BYOLImageComponent
   ],
   imports: [
     BrowserModule,

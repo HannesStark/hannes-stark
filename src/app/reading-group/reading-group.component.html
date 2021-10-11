@@ -13,11 +13,9 @@
       -->
       <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
         <p class="text-align-left">
-          Welcome to the LoGaG reading group that I am organizing with the incredible support of Prof.
-          <a
-            href="https://www.cl.cam.ac.uk/~pl219/" target="_blank" class="link-style-green">Pietro Liò</a>!
-          Below the schedule you can find previously covered papers with my Notes and other resources that came out of
-          the meeting.
+          Welcome to the LoGaG reading group where GraphML researchers present and discuss their papers every week! <br> Below
+          are the <a (click)="scroll('upcoming')" class="link-style-green">upcoming</a> and <a
+          (click)="scroll('previous')" class="link-style-green">previously</a> covered papers.
         </p>
         <p>
           <a
@@ -32,13 +30,6 @@
           papers.
         </p>
         <p>
-          Watch our
-          <a
-            href="https://www.youtube.com/channel/UC4uWMmEGc5EZVn5pAox-iww/videos"
-            target="_blank"
-            class="link-style-green">recorded meetings</a>!
-        </p>
-        <p>
           You can also subscribe to the meetings via <a
           href="https://calendar.google.com/calendar/u/0?cid=dmR1am4ycGJwa2hncjVmNTVjbTM5cWJtdThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
           target="_blank"
@@ -50,10 +41,15 @@
           target="_blank"
           class="link-style-green">add the events</a>.
         </p>
+        <p class="item-title2">
+          Join our mailing list (via google groups) to get weekly updates on the next paper and discussion session:
+        </p>
         <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
           <div fxLayout="row">
-              <a mat-button class="group-button item-title" href="https://groups.google.com/g/logag"
-            target="_blank">Sign up for email updates!</a>
+            <p>
+            <a mat-button class="group-button item-title" href="https://groups.google.com/g/logag"
+               target="_blank">Sign up for email updates!</a>
+            </p>
           </div>
           <!--div class="item-content">
             <div>
@@ -178,7 +174,7 @@
       </div>
     </div>
 
-    <div class="top-margin">
+    <div class="top-margin" id="upcoming">
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" class="underline-title">
@@ -407,11 +403,11 @@
     </div>
 
 
-    <div class="top-margin">
+    <div class="top-margin" id="previous">
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" class="underline-title">
-          <h1 class="left-titles">PREVIOUS PAPERS WITH NOTES</h1>
+          <h1 class="left-titles">PREVIOUS PAPERS AND RECORDINGS</h1>
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
@@ -440,12 +436,12 @@
               </div>
             </div>
             <p class="paragraph">
-                <a class="slight-bold">Resources:</a>
-                Kezhi's
-                <a href="https://hannes-stark.com/assets/FLAG_slides.pdf" target="_blank"
-                   class="link-style-green">slides</a>.
-                (46 participants)
-              </p>
+              <a class="slight-bold">Resources:</a>
+              Kezhi's
+              <a href="https://hannes-stark.com/assets/FLAG_slides.pdf" target="_blank"
+                 class="link-style-green">slides</a>.
+              (46 participants)
+            </p>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
               First author <a

@@ -86,4 +86,16 @@ export class ReadingGroupComponent implements OnInit {
     }
     this.submit = true;
   }
+
+  scroll(target: string): void {
+    const dims = document.getElementById(target).offsetTop;
+    window.scrollTo(
+      {
+        top: dims - 64,
+        left: window.scrollX,
+        behavior: 'smooth'
+      }
+    );
+
+  }
 }

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {faGithub, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
+import {faGithub, faLinkedin, faTwitter, faYoutube} from '@fortawesome/free-brands-svg-icons';
 import {
   faCopy,
   faEnvelope,
@@ -7,7 +7,8 @@ import {
   faMobile,
   faPhone,
   faUser,
-  faGraduationCap
+  faGraduationCap,
+  faBook
 } from '@fortawesome/free-solid-svg-icons';
 import {faCalendar} from '@fortawesome/free-solid-svg-icons/faCalendar';
 import {HttpClient} from '@angular/common/http';
@@ -17,6 +18,9 @@ import {LAImageComponent} from "../laimage/laimage.component";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {NerfImageComponent} from "../nerfimage/nerfimage.component";
 import {PreTrainImageComponent} from "../3Dpretrainimage/3dpretrainimage.component";
+import {LAArchImageComponent} from "../laarchimage/laarchimage.component";
+import {MultiConfImageComponent} from "../multiconfimage/multiconfimage.component";
+import {BYOLImageComponent} from "../byolimage/byolimage.component";
 
 @Component({
   selector: 'app-main-page',
@@ -28,6 +32,8 @@ export class MainPageComponent implements OnInit {
   linkedin = faLinkedin;
   twitter = faTwitter;
   mail = faEnvelope;
+  youtube = faYoutube;
+  book = faBook;
   calendar = faCalendar;
   authors = faUser;
   Gscholar = faGraduationCap;
@@ -70,12 +76,20 @@ export class MainPageComponent implements OnInit {
     }
   }
 
+  openLAArchImage(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    this.dialog.open(LAArchImageComponent, dialogConfig);
+  }
+
   openNerfImage(): void {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
     this.dialog.open(NerfImageComponent, dialogConfig);
   }
+
   openPretrainImage(): void {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
@@ -103,5 +117,18 @@ export class MainPageComponent implements OnInit {
 
   }
 
+  openMultiConfImage(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    this.dialog.open(MultiConfImageComponent, dialogConfig);
+  }
+
+  openBYOLImage(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    this.dialog.open(BYOLImageComponent, dialogConfig);
+  }
 }
 

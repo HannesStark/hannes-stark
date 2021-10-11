@@ -195,11 +195,28 @@ h3 {
   margin-top: 5px;
 }
 
+.float-right {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border: 0;
+  float: right;
+  display: block;
+  width: 320px;
+  height: 180px;
+  margin-right: 10px;
+}
+
 .item-title {
   margin: 0;
   margin-bottom: 3px;
   font-weight: 520;
   font-size: 20px;
+}
+
+.margin-left-right {
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .item-subtitle {
@@ -224,6 +241,18 @@ h3 {
 
   &--small {
     @extend .separator;
+    width: 80%;
+  }
+}
+
+.separator-slim {
+  border: 0;
+  margin: 0;
+  border-top: 2px dashed var(--color-light-grey);
+  width: 100%;
+
+  &--small {
+    @extend .separator-slim;
     width: 80%;
   }
 }
