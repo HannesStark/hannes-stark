@@ -13,7 +13,8 @@
       -->
       <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
         <p class="text-align-left">
-          Welcome to the LoGaG reading group where GraphML researchers present and discuss their papers every week! <br> Below
+          Welcome to the LoGaG reading group where GraphML researchers present and discuss their papers every week! <br>
+          Below
           are the <a (click)="scroll('upcoming')" class="link-style-green">upcoming</a> and <a
           (click)="scroll('previous')" class="link-style-green">previously</a> covered papers.
         </p>
@@ -47,8 +48,8 @@
         <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
           <div fxLayout="row">
             <p>
-            <a mat-button class="group-button item-title" href="https://groups.google.com/g/logag"
-               target="_blank">Sign up for email updates!</a>
+              <a mat-button class="group-button item-title" href="https://groups.google.com/g/logag"
+                 target="_blank">Sign up for email updates!</a>
             </p>
           </div>
           <!--div class="item-content">
@@ -189,49 +190,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.05152" target="_blank">
-                  On Explainability of Graph Neural Networks via Subgraph Explorations</a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                12th of October 2021
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Hao Yuan, Haiyang Yu, Jie Wang, Kang Li, Shuiwang Ji
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Author of the paper
-              <a href="https://scholar.google.com/citations?user=LZKU1hUAAAAJ&hl=en" target="_blank"
-                 class="link-style-green">Haiyang Yu</a> who is a PhD student
-              at Texas A&M University supervised by Prof. <a href="http://people.tamu.edu/~sji/" target="_blank"
-                                                             class="link-style-green">Shuiwang Ji</a>.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              We consider the problem of explaining the predictions of graph neural networks (GNNs), which otherwise are
-              considered as black boxes. Existing methods invariably focus on explaining the importance of graph nodes
-              or edges but ignore the substructures of graphs, which are more intuitive and human-intelligible. In this
-              work, we propose a novel method, known as SubgraphX, to explain GNNs by identifying important subgraphs.
-              Given a trained GNN model and an input graph, our SubgraphX explains its predictions by efficiently
-              exploring different subgraphs with Monte Carlo tree search. To make the tree search more effective, we
-              propose to use Shapley values as a measure of subgraph importance, which can also capture the interactions
-              among different subgraphs. To expedite computations, we propose efficient approximation schemes to compute
-              Shapley values for graph data. Our work represents the first attempt to explain GNNs via identifying
-              subgraphs explicitly and directly. Experimental results show that our SubgraphX achieves significantly
-              improved explanations, while keeping computations at a reasonable level.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -397,6 +355,79 @@
             </p>
           </div>
 
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                16th of November 2021
+              </div>
+
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or somewhere else!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://openreview.net/forum?id=Wi5KUNlqWty"
+                   target="_blank">
+                  How to Find Your Friendly Neighborhood: Graph Attention Design with Self-Supervision</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                23rd of November 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Dongkwan Kim, Alice Oh
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author <a class="item-subtitle link-style-black" href="https://dongkwan-kim.github.io/"
+                              target="_blank">Dongkwan
+              Kim</a> who is a Ph.D. student at KAIST School of Computing, advised by <a
+              class="item-subtitle link-style-black" href="https://aliceoh9.github.io/" target="_blank">Alice Oh</a>.
+              His
+              research interest is graph representation learning models and applications to
+              social networks, code, or molecules.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Attention mechanism in graph neural networks is designed to assign larger weights to important neighbor
+              nodes for better representation. However, what graph attention learns is not understood well,
+              particularly
+              when graphs are noisy. In this paper, we propose a self-supervised graph attention network (SuperGAT),
+              an
+              improved graph attention model for noisy graphs. Specifically, we exploit two attention forms compatible
+              with a self-supervised task to predict edges, whose presence and absence contain the inherent
+              information
+              about the importance of the relationships between nodes. By encoding edges, SuperGAT learns more
+              expressive attention in distinguishing mislinked neighbors. We find two graph characteristics influence
+              the effectiveness of attention forms and self-supervision: homophily and average degree. Thus, our
+              recipe
+              provides guidance on which attention design to use when those two graph characteristics are known. Our
+              experiment on 17 real-world datasets demonstrates that our recipe generalizes across 15 datasets of
+              them,
+              and our models designed by recipe show improved performance over baselines.
+            </p>
+          </div>
+
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
@@ -416,6 +447,57 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.05152" target="_blank">
+                  On Explainability of Graph Neural Networks via Subgraph Explorations</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                12th of October 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Hao Yuan, Haiyang Yu, Jie Wang, Kang Li, Shuiwang Ji
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Resources:</a>
+              Haiyang's
+              <a href="https://hannes-stark.com/assets/.pdf" target="_blank"
+                 class="link-style-green">slides</a>.
+              (59 participants)
+            </p>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Author of the paper
+              <a href="https://scholar.google.com/citations?user=LZKU1hUAAAAJ&hl=en" target="_blank"
+                 class="link-style-green">Haiyang Yu</a> who is a PhD student
+              at Texas A&M University supervised by Prof. <a href="http://people.tamu.edu/~sji/" target="_blank"
+                                                             class="link-style-green">Shuiwang Ji</a>.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              We consider the problem of explaining the predictions of graph neural networks (GNNs), which otherwise are
+              considered as black boxes. Existing methods invariably focus on explaining the importance of graph nodes
+              or edges but ignore the substructures of graphs, which are more intuitive and human-intelligible. In this
+              work, we propose a novel method, known as SubgraphX, to explain GNNs by identifying important subgraphs.
+              Given a trained GNN model and an input graph, our SubgraphX explains its predictions by efficiently
+              exploring different subgraphs with Monte Carlo tree search. To make the tree search more effective, we
+              propose to use Shapley values as a measure of subgraph importance, which can also capture the interactions
+              among different subgraphs. To expedite computations, we propose efficient approximation schemes to compute
+              Shapley values for graph data. Our work represents the first attempt to explain GNNs via identifying
+              subgraphs explicitly and directly. Experimental results show that our SubgraphX achieves significantly
+              improved explanations, while keeping computations at a reasonable level.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
@@ -447,14 +529,16 @@
               First author <a
               href="https://scholar.google.com/citations?user=MG46jrMAAAAJ&hl=en" target="_blank"
               class="link-style-green">Kezhi Kong</a> who is a PhD student at the University of Maryland. Advised by
-              Prof. Tom Goldstein, he does research in Machine Learning, with a focus on Graph Learning and Adversarial
+              Prof. Tom Goldstein, he does research in Machine Learning, with a focus on Graph Learning and
+              Adversarial
               Attacks/Defenses.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
               Data augmentation helps neural networks generalize better, but it remains an open question how to
               effectively augment graph data to enhance the performance of GNNs (Graph Neural Networks). While most
-              existing graph regularizers focus on augmenting graph topological structures by adding/removing edges, we
+              existing graph regularizers focus on augmenting graph topological structures by adding/removing edges,
+              we
               offer a novel direction to augment in the input node feature space for better performance. We propose a
               simple but effective solution, FLAG (Free Large-scale Adversarial Augmentation on Graphs), which
               iteratively augments node features with gradient-based adversarial perturbations during training, and
@@ -462,7 +546,8 @@
               and is flexible enough to function with any GNN backbone, on a wide variety of large-scale datasets, and
               in both transductive and inductive settings. Without modifying a model's architecture or training setup,
               FLAG yields a consistent and salient performance boost across both node and graph classification tasks.
-              Using FLAG, we reach state-of-the-art performance on the large-scale ogbg-molpcba, ogbg-ppa, and ogbg-code
+              Using FLAG, we reach state-of-the-art performance on the large-scale ogbg-molpcba, ogbg-ppa, and
+              ogbg-code
               datasets.
             </p>
           </div>
@@ -500,7 +585,8 @@
                 <a class="slight-bold">Speaker:</a>
                 Joint first authors of the paper: Dr.
                 <a href="https://www.linkedin.com/in/dbeaini/" target="_blank"
-                   class="link-style-green">Dominique Beaini</a> who obtained his PhD at École Polytechnique de Montréal
+                   class="link-style-green">Dominique Beaini</a> who obtained his PhD at École Polytechnique de
+                Montréal
                 and is now working as ML Researcher at Valence Discovery on using GNNs for molecules.
                 And <a href="https://www.linkedin.com/in/devin-kreuzer-847b52b5/" target="_blank"
                        class="link-style-green">Devin Kreuzer</a> who is doing his masters at McGill University
@@ -514,8 +600,10 @@
                 <a class="slight-bold">Abstract:</a>
                 In recent years, the Transformer architecture has proven to be very successful in sequence processing,
                 but
-                its application to other data structures, such as graphs, has remained limited due to the difficulty of
-                properly defining positions. Here, we present the Spectral Attention Network (SAN), which uses a learned
+                its application to other data structures, such as graphs, has remained limited due to the difficulty
+                of
+                properly defining positions. Here, we present the Spectral Attention Network (SAN), which uses a
+                learned
                 positional encoding (LPE) that can take advantage of the full Laplacian spectrum to learn the position
                 of
                 each node in a given graph. This LPE is then added to the node features of the graph and passed to a
@@ -577,11 +665,15 @@
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
-              Can we use machine learning to compress graph data? The absence of ordering in graphs poses a significant
-              challenge to conventional compression algorithms, limiting their attainable gains as well as their ability
+              Can we use machine learning to compress graph data? The absence of ordering in graphs poses a
+              significant
+              challenge to conventional compression algorithms, limiting their attainable gains as well as their
+              ability
               to discover relevant patterns. On the other hand, most graph compression approaches rely on
-              domain-dependent handcrafted representations and cannot adapt to different underlying graph distributions.
-              This work aims to establish the necessary principles a lossless graph compression method should follow to
+              domain-dependent handcrafted representations and cannot adapt to different underlying graph
+              distributions.
+              This work aims to establish the necessary principles a lossless graph compression method should follow
+              to
               approach the entropy storage lower bound. Instead of making rigid assumptions about the graph
               distribution, we formulate the compressor as a probabilistic model that can be learned from data and
               generalise to unseen instances. Our "Partition and Code" framework entails three steps: first, a
@@ -642,7 +734,8 @@
                 href="https://scholar.google.com/citations?user=PT2CDA4AAAAJ&hl=en" target="_blank"
                 class="link-style-green">Fabrizio Frasca</a>. Cristian is a second-year PhD student
                 at Cambridge supervised by Prof. <a href="https://www.cl.cam.ac.uk/~pl219/" target="_blank"
-                                                    class="link-style-green">Pietro Liò</a>. He works on topological and
+                                                    class="link-style-green">Pietro Liò</a>. He works on topological
+                and
                 geometric deep learning. Fabrizio
                 is a PhD candidate at Imperial College London supervised by Prof. <a
                 href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
@@ -712,22 +805,29 @@
               First author of the paper Dr.
               <a href="https://scholar.google.com.tr/citations?user=LRyde44AAAAJ&hl=en" target="_blank"
                  class="link-style-green">Muhammet Balcilar</a>
-              who works as R&I Researcher at Interdigital, Rennes. He obtained his Ph.D. at Yildiz Technical University
+              who works as R&I Researcher at Interdigital, Rennes. He obtained his Ph.D. at Yildiz Technical
+              University
               and has held several PostDoc positions since then.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
               In the recent literature of Graph Neural Networks (GNN), the expressive power of models has been studied
               through their capability to distinguish if two given graphs are isomorphic or not. Since the graph
-              isomorphism problem is NP-intermediate, and Weisfeiler-Lehman (WL) test can give sufficient but not enough
+              isomorphism problem is NP-intermediate, and Weisfeiler-Lehman (WL) test can give sufficient but not
+              enough
               evidence in polynomial time, the theoretical power of GNNs is usually evaluated by the equivalence of
               WL-test order, followed by an empirical analysis of the models on some reference inductive and
               transductive datasets. However, such analysis does not account the signal processing pipeline, whose
-              capability is generally evaluated in the spectral domain. In this paper, we argue that a spectral analysis
-              of GNNs behavior can provide a complementary point of view to go one step further in the understanding of
-              GNNs. By bridging the gap between the spectral and spatial design of graph convolutions, we theoretically
-              demonstrate some equivalence of the graph convolution process regardless it is designed in the spatial or
-              the spectral domain. Using this connection, we managed to re-formulate most of the state-of-the-art graph
+              capability is generally evaluated in the spectral domain. In this paper, we argue that a spectral
+              analysis
+              of GNNs behavior can provide a complementary point of view to go one step further in the understanding
+              of
+              GNNs. By bridging the gap between the spectral and spatial design of graph convolutions, we
+              theoretically
+              demonstrate some equivalence of the graph convolution process regardless it is designed in the spatial
+              or
+              the spectral domain. Using this connection, we managed to re-formulate most of the state-of-the-art
+              graph
               neural networks into one common framework. This general framework allows to lead a spectral analysis of
               the most popular GNNs, explaining their performance and showing their limits according to spectral point
               of view. Our theoretical spectral analysis is confirmed by experiments on various graph databases.
@@ -775,9 +875,11 @@
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
               Graph Neural Networks (GNNs) are the first choice for learning algorithms on graph data. GNNs promise to
-              integrate (i) node features as well as (ii) edge information in an end-to-end learning algorithm. How does
+              integrate (i) node features as well as (ii) edge information in an end-to-end learning algorithm. How
+              does
               this promise work out practically? In this paper, we study to what extend GNNs are necessary to solve
-              prominent graph classification problems. We find that for graph classification, a GNN is not more than the
+              prominent graph classification problems. We find that for graph classification, a GNN is not more than
+              the
               sum of its parts. We also find that, unlike features, predictions with an edge-only model do not always
               transfer to GNNs.
             </p>
@@ -893,11 +995,13 @@
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
               Graph Neural Networks (GNNs) have been studied through the lens of expressive power and generalization.
-              However, their optimization properties are less well understood. We take the first step towards analyzing
+              However, their optimization properties are less well understood. We take the first step towards
+              analyzing
               GNN training by studying the gradient dynamics of GNNs. First, we analyze linearized GNNs and prove that
               despite the non-convexity of training, convergence to a global minimum at a linear rate is guaranteed
               under mild assumptions that we validate on real world graphs. Second, we study what may affect the GNNs’
-              training speed. Our results show that the training of GNNs is implicitly accelerated by skip connections,
+              training speed. Our results show that the training of GNNs is implicitly accelerated by skip
+              connections,
               more depth, and/or a good label distribution. Empirical results confirm that our theoretical results for
               linearized GNNs align with the training behavior of nonlinear GNNs. Our results provide the first
               theoretical support for the success of GNNs with skip connections in terms of optimization, and suggest
@@ -943,13 +1047,16 @@
               The Transformer architecture has become a dominant choice in many domains, such as natural language
               processing and computer vision. Yet, it has not achieved competitive performance on popular leaderboards
               of graph-level prediction compared to mainstream GNN variants. Therefore, it remains a mystery how
-              Transformers could perform well for graph representation learning. In this paper, we solve this mystery by
+              Transformers could perform well for graph representation learning. In this paper, we solve this mystery
+              by
               presenting Graphormer, which is built upon the standard Transformer architecture, and could attain
               excellent results on a broad range of graph representation learning tasks, especially on the recent OGB
               Large-Scale Challenge. Our key insight to utilizing Transformer in the graph is the necessity of
-              effectively encoding the structural information of a graph into the model. To this end, we propose several
+              effectively encoding the structural information of a graph into the model. To this end, we propose
+              several
               simple yet effective structural encoding methods to help Graphormer better model graph-structured data.
-              Besides, we mathematically characterize the expressive power of Graphormer and exhibit that with our ways
+              Besides, we mathematically characterize the expressive power of Graphormer and exhibit that with our
+              ways
               of encoding the structural information of graphs, many popular GNN variants could be covered as the
               special cases of Graphormer.
             </p>
