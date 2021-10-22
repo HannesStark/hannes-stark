@@ -131,7 +131,7 @@
                 <a class="slight-bold">Resources:</a>
                 Devin's
                 <a href="https://hannes-stark.com/assets/spectral_attention_networks.pdf" target="_blank"
-                   class="link-style-green">slides</a>. Recording is coming soon!
+                   class="link-style-green">slides</a>.
                 (69 participants)
               </p>
               <p class="paragraph">
@@ -193,59 +193,10 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2006.05205" target="_blank">
-                  On the Bottleneck of Graph Neural Networks and its Practical Implications</a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                19th of October 2021
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Uri Alon, Eran Yahav
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author of the paper Dr. <a href="https://urialon.ml/" target="_blank"
-                 class="link-style-green">Uri Alon</a> who obtained my PhD at Technion (Israel), advised by Prof. <a href="https://www.cs.technion.ac.il/~yahave/" target="_blank"
-                 class="link-style-green">Eran Yahav</a>. He is now a Postdoctoral Researcher at the Language Technologies Institute of Carnegie Mellon
-              University, working with Prof. <a href="http://www.phontron.com/" target="_blank"
-                 class="link-style-green">Graham Neubig</a> on NLP and learning from source code, where GNNs find many
-              applications. My most recent GNN work includes "<a href="https://openreview.net/pdf?id=i80OPhOCVH2" target="_blank"
-                 class="link-style-green">On the Bottleneck of Graph Neural Networks and its
-              Practical Implications</a>" and "<a href="https://arxiv.org/pdf/2105.14491.pdf" target="_blank"
-                 class="link-style-green">How Attentive are Graph Attention Networks?</a>".
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Since the proposal of the graph neural network (GNN) by Gori et al. (2005) and Scarselli et al. (2008),
-              one of the major problems in training GNNs was their struggle to propagate information between distant
-              nodes in the graph. We propose a new explanation for this problem: GNNs are susceptible to a bottleneck
-              when aggregating messages across a long path. This bottleneck causes the over-squashing of exponentially
-              growing information into fixed-size vectors. As a result, GNNs fail to propagate messages originating from
-              distant nodes and perform poorly when the prediction task depends on long-range interaction. In this
-              paper, we highlight the inherent problem of over-squashing in GNNs: we demonstrate that the bottleneck
-              hinders popular GNNs from fitting long-range signals in the training data; we further show that GNNs that
-              absorb incoming edges equally, such as GCN and GIN, are more susceptible to over-squashing than GAT and
-              GGNN; finally, we show that prior work, which extensively tuned GNN models of long-range problems, suffers
-              from over-squashing, and that breaking the bottleneck improves their state-of-the-art results without any
-              tuning or additional weights. Our code is available at this <a
-              href="https://github.com/tech-srl/bottleneck/" target="_blank"
-              class="link-style-green">https URL</a>.
-            </p>
-          </div>
-
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.10934" target="_blank">
-                  GRAND: Graph Neural Diffusion</a></h3>
+                  GRAND: Graph Neural Diffusion</a> + <a class="item-subtitle link-style-black"
+                                                         href="https://arxiv.org/abs/2110.09443" target="_blank">
+                Beltrami Flow and Neural Diffusion on Graphs</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
@@ -255,24 +206,33 @@
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Benjamin Paul Chamberlain, James Rowbottom, Maria Gorinova, Stefan Webb, Emanuele Rossi, Michael M.
+                  First paper: Benjamin Paul Chamberlain, James Rowbottom, Maria Gorinova, Stefan Webb, Emanuele Rossi,
+                  Michael M.
                   Bronstein
+                </a>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Second paper: Benjamin Paul Chamberlain, James Rowbottom, Davide Eynard, Francesco Di Giovanni,
+                  Xiaowen Dong, Michael M Bronstein
                 </a>
               </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Joint first author of the paper
-              <a href="https://www.linkedin.com/in/jamesrowbottom/?originalSubdomain=uk" target="_blank"
-                 class="link-style-green">James Rowbottom</a>
-              who received his master in AI with distinction from Imperial College London and worked on GRAND as an ML
+              Joint first authors of the paper
+              <a href="https://www.linkedin.com/in/jamesrowbottom/" target="_blank"
+                 class="link-style-green">James Rowbottom</a> and Dr. <a
+              href="https://www.linkedin.com/in/benjaminchamberlain/" target="_blank"
+              class="link-style-green">Benjamin Paul Chamberlain</a>.
+              James received his master in AI with distinction from Imperial College London and worked on GRAND as an ML
               Reserch intern at Prof.
               <a href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
                  class="link-style-green">Michael Bronstein's</a>
-              graph ML research group at Twitter.
+              graph ML research group at Twitter. Ben is a Machine Learning Researcher at Twitter who received his PhD
+              from Imperial College London.
             </p>
             <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
+              <a class="slight-bold">Abstract GRAND:</a>
               We present Graph Neural Diffusion (GRAND) that approaches deep learning on graphs as a continuous
               diffusion process and treats Graph Neural Networks (GNNs) as discretisations of an underlying PDE. In our
               model, the layer structure and topology correspond to the discretisation choices of temporal and spatial
@@ -283,28 +243,67 @@
               explicit discretisation schemes. We develop linear and nonlinear versions of GRAND, which achieve
               competitive results on many standard graph benchmarks.
             </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract BLEND:</a>
+              We propose a novel class of graph neural networks based on the discretised Beltrami flow, a non-Euclidean
+              diffusion PDE. In our model, node features are supplemented with positional encodings derived from the
+              graph topology and jointly evolved by the Beltrami flow, producing simultaneously continuous feature
+              learning and topology evolution. The resulting model generalises many popular graph neural networks and
+              achieves state-of-the-art results on several benchmarks.
+            </p>
           </div>
 
 
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
-
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.06790" target="_blank">
+                  A Unified Lottery Ticket Hypothesis for Graph Neural Networks</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 2nd of November 2021
               </div>
-
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Tianlong Chen, Yongduo Sui, Xuxi Chen, Aston Zhang, Zhangyang Wang
+                </a>
+              </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or somewhere else!
+              First author <a class="item-subtitle link-style-black" href="https://tianlong-chen.github.io/about/"
+                              target="_blank">Tianlong Chen (陈天龙)</a> who is a third-year Ph.D. student of Electrical
+              and Computer Engineering
+              (DICE) at VITA, The University of Texas at Austin, advised by Dr. <a
+              class="item-subtitle link-style-black" href="https://vita-group.github.io/" target="_blank">Zhangyang
+              (Atlas) Wang</a>. His research
+              interests include AutoML, Adversarial Robustness, Self-Supervision, and Graph Neural Networks.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              With graphs rapidly growing in size and deeper graph neural networks (GNNs) emerging, the training and
+              inference of GNNs become increasingly expensive. Existing network weight pruning algorithms cannot address
+              the main space and computational bottleneck in GNNs, caused by the size and connectivity of the graph. To
+              this end, this paper first presents a unified GNN sparsification (UGS) framework that simultaneously
+              prunes the graph adjacency matrix and the model weights, for effectively accelerating GNN inference on
+              large-scale graphs. Leveraging this new tool, we further generalize the recently popular lottery ticket
+              hypothesis to GNNs for the first time, by defining a graph lottery ticket (GLT) as a pair of core
+              sub-dataset and sparse sub-network, which can be jointly identified from the original GNN and the full
+              dense graph by iteratively applying UGS. Like its counterpart in convolutional neural networks, GLT can be
+              trained in isolation to match the performance of training with the full model and graph, and can be drawn
+              from both randomly initialized and self-supervised pre-trained GNNs. Our proposal has been experimentally
+              verified across various GNN architectures and diverse tasks, on both small-scale graph datasets (Cora,
+              Citeseer and PubMed), and large-scale datasets from the challenging Open Graph Benchmark (OGB).
+              Specifically, for node classification, our found GLTs achieve the same accuracies with 20%~98% MACs saving
+              on small graphs and 25%~85% MACs saving on large ones. For link prediction, GLTs lead to 48%~97% and 70%
+              MACs saving on small and large graph datasets, respectively, without compromising predictive performance.
+              Codes available at <a class="item-subtitle link-style-black"
+                                    href="https://github.com/VITA-Group/Unified-LTH-GNN" target="_blank">this https
+              URL</a>.
             </p>
           </div>
 
@@ -361,22 +360,52 @@
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
-
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/1905.12560"
+                   target="_blank">
+                  On the equivalence between graph isomorphism testing and function approximation with GNNs
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 16th of November 2021
               </div>
-
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Zhengdao Chen, Soledad Villar, Lei Chen, Joan Bruna
+                </a>
+              </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or somewhere else!
+
+              Joint authors of the paper <a class="item-subtitle link-style-black"
+                                            href="https://cims.nyu.edu/~chenzh/">Zhengdao Chen</a> and Prof. <a
+              class="item-subtitle link-style-black" href="https://www.ams.jhu.edu/villar/">Soledad Villar</a>. Zhengdao
+              is a PhD
+              student in Mathematics at New York University. Prof. Villar holds her position at the
+              <a
+                class="item-subtitle link-style-black" href="https://engineering.jhu.edu/ams/">Department of Applied
+                Mathematics & Statistics</a>, and <a
+              class="item-subtitle link-style-black" href="https://www.minds.jhu.edu/">Mathematical Institute for Data
+              Science</a> at Johns Hopkins University. She is interested in ML, optimization, graph
+              representation learning, and GNNs.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Graph neural networks (GNNs) have achieved lots of success on graph-structured data. In the light of this,
+              there has been increasing interest in studying their representation power. One line of work focuses on the
+              universal approximation of permutation-invariant functions by certain classes of GNNs, and another
+              demonstrates the limitation of GNNs via graph isomorphism tests.
+              Our work connects these two perspectives and proves their equivalence. We further develop a framework of
+              the representation power of GNNs with the language of sigma-algebra, which incorporates both viewpoints.
+              Using this framework, we compare the expressive power of different classes of GNNs as well as other
+              methods on graphs. In particular, we prove that order-2 Graph G-invariant networks fail to distinguish
+              non-isomorphic regular graphs with the same degree. We then extend them to a new architecture, Ring-GNNs,
+              which succeeds on distinguishing these graphs and provides improvements on real-world social network
+              datasets.
             </p>
           </div>
 
@@ -451,6 +480,72 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2006.05205" target="_blank">
+                  On the Bottleneck of Graph Neural Networks and its Practical Implications</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                19th of October 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Uri Alon, Eran Yahav
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Resources:</a>
+              Uri's
+              <a href="https://hannes-stark.com/assets/.pdf"
+                 target="_blank"
+                 class="link-style-green">slides</a> and video are coming soon.
+              (50 participants)
+            </p>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author of the paper Dr. <a href="https://urialon.ml/" target="_blank"
+                                               class="link-style-green">Uri Alon</a> who obtained my PhD at Technion
+              (Israel), advised by Prof. <a href="https://www.cs.technion.ac.il/~yahave/" target="_blank"
+                                            class="link-style-green">Eran Yahav</a>. He is now a Postdoctoral Researcher
+              at the Language Technologies Institute of Carnegie Mellon
+              University, working with Prof. <a href="http://www.phontron.com/" target="_blank"
+                                                class="link-style-green">Graham Neubig</a> on NLP and learning from
+              source code, where GNNs find many
+              applications. My most recent GNN work includes "<a href="https://openreview.net/pdf?id=i80OPhOCVH2"
+                                                                 target="_blank"
+                                                                 class="link-style-green">On the Bottleneck of Graph
+              Neural Networks and its
+              Practical Implications</a>" and "<a href="https://arxiv.org/pdf/2105.14491.pdf" target="_blank"
+                                                  class="link-style-green">How Attentive are Graph Attention
+              Networks?</a>".
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Since the proposal of the graph neural network (GNN) by Gori et al. (2005) and Scarselli et al. (2008),
+              one of the major problems in training GNNs was their struggle to propagate information between distant
+              nodes in the graph. We propose a new explanation for this problem: GNNs are susceptible to a bottleneck
+              when aggregating messages across a long path. This bottleneck causes the over-squashing of exponentially
+              growing information into fixed-size vectors. As a result, GNNs fail to propagate messages originating from
+              distant nodes and perform poorly when the prediction task depends on long-range interaction. In this
+              paper, we highlight the inherent problem of over-squashing in GNNs: we demonstrate that the bottleneck
+              hinders popular GNNs from fitting long-range signals in the training data; we further show that GNNs that
+              absorb incoming edges equally, such as GCN and GIN, are more susceptible to over-squashing than GAT and
+              GGNN; finally, we show that prior work, which extensively tuned GNN models of long-range problems, suffers
+              from over-squashing, and that breaking the bottleneck improves their state-of-the-art results without any
+              tuning or additional weights. Our code is available at this <a
+              href="https://github.com/tech-srl/bottleneck/" target="_blank"
+              class="link-style-green">https URL</a>.
+            </p>
+          </div>
+
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
