@@ -34,6 +34,7 @@ export class ReadingGroupComponent implements OnInit {
   responseMessage: string; // the response message to show to the user
   safeURLCWNetworks;
   safeURLSAN;
+  safeURLoversquashing;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -44,6 +45,7 @@ export class ReadingGroupComponent implements OnInit {
     });
     this.safeURLCWNetworks = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/MTQGNVTn9lQ');
     this.safeURLSAN = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/51_K8RDVlXY');
+    this.safeURLoversquashing = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/XQHfkHTAo0s');
   }
 
   ngOnInit(): void {

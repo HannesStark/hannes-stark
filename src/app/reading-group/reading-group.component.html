@@ -110,62 +110,70 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.03893" target="_blank">
-                  Rethinking Graph Transformers with Spectral Attention</a></h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2006.05205" target="_blank">
+                  On the Bottleneck of Graph Neural Networks and its Practical Implications</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                21st of September 2021
+                19th of October 2021
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Devin Kreuzer, Dominique Beaini, William L. Hamilton, Vincent Létourneau, Prudencio Tossou
+                  Uri Alon, Eran Yahav
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLSAN' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLoversquashing' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Devin's
-                <a href="https://hannes-stark.com/assets/spectral_attention_networks.pdf" target="_blank"
+                Uri's
+                <a href="https://hannes-stark.com/assets/bottleneck-tum.pdf"
+                   target="_blank"
                    class="link-style-green">slides</a>.
-                (69 participants)
+                (50 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                Joint first authors of the paper: Dr.
-                <a href="https://www.linkedin.com/in/dbeaini/" target="_blank"
-                   class="link-style-green">Dominique Beaini</a> who obtained his PhD at École Polytechnique de Montréal
-                and is now working as ML Researcher at Valence Discovery on using GNNs for molecules.
-                And <a href="https://www.linkedin.com/in/devin-kreuzer-847b52b5/" target="_blank"
-                       class="link-style-green">Devin Kreuzer</a> who is doing his masters at McGill University
-                supervised
-                by Prof. <a href="https://williamleif.github.io/" target="_blank"
-                            class="link-style-green">William L. Hamilton</a> while working at MILA on GNNs and
-                AI-enabled
-                drug discovery.
+                First author of the paper Dr. <a href="https://urialon.ml/" target="_blank"
+                                                 class="link-style-green">Uri Alon</a> who obtained my PhD at Technion
+                (Israel), advised by Prof. <a href="https://www.cs.technion.ac.il/~yahave/" target="_blank"
+                                              class="link-style-green">Eran Yahav</a>. He is now a Postdoctoral
+                Researcher
+                at the Language Technologies Institute of Carnegie Mellon
+                University, working with Prof. <a href="http://www.phontron.com/" target="_blank"
+                                                  class="link-style-green">Graham Neubig</a> on NLP and learning from
+                source code, where GNNs find many
+                applications. My most recent GNN work includes "<a href="https://openreview.net/pdf?id=i80OPhOCVH2"
+                                                                   target="_blank"
+                                                                   class="link-style-green">On the Bottleneck of Graph
+                Neural Networks and its
+                Practical Implications</a>" and "<a href="https://arxiv.org/pdf/2105.14491.pdf" target="_blank"
+                                                    class="link-style-green">How Attentive are Graph Attention
+                Networks?</a>".
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                In recent years, the Transformer architecture has proven to be very successful in sequence processing,
-                but
-                its application to other data structures, such as graphs, has remained limited due to the difficulty of
-                properly defining positions. Here, we present the Spectral Attention Network (SAN), which uses a learned
-                positional encoding (LPE) that can take advantage of the full Laplacian spectrum to learn the position
-                of
-                each node in a given graph. This LPE is then added to the node features of the graph and passed to a
-                fully-connected Transformer. By leveraging the full spectrum of the Laplacian, our model is
-                theoretically
-                powerful in distinguishing graphs, and can better detect similar sub-structures from their resonance.
-                Further, by fully connecting the graph, the Transformer does not suffer from over-squashing, an
-                information bottleneck of most GNNs, and enables better modeling of physical phenomenons such as heat
-                transfer and electric interaction. When tested empirically on a set of 4 standard datasets, our model
-                performs on par or better than state-of-the-art GNNs, and outperforms any attention-based model by a
-                wide
-                margin, becoming the first fully-connected architecture to perform well on graph benchmarks.
+                Since the proposal of the graph neural network (GNN) by Gori et al. (2005) and Scarselli et al. (2008),
+                one of the major problems in training GNNs was their struggle to propagate information between distant
+                nodes in the graph. We propose a new explanation for this problem: GNNs are susceptible to a bottleneck
+                when aggregating messages across a long path. This bottleneck causes the over-squashing of exponentially
+                growing information into fixed-size vectors. As a result, GNNs fail to propagate messages originating
+                from
+                distant nodes and perform poorly when the prediction task depends on long-range interaction. In this
+                paper, we highlight the inherent problem of over-squashing in GNNs: we demonstrate that the bottleneck
+                hinders popular GNNs from fitting long-range signals in the training data; we further show that GNNs
+                that
+                absorb incoming edges equally, such as GCN and GIN, are more susceptible to over-squashing than GAT and
+                GGNN; finally, we show that prior work, which extensively tuned GNN models of long-range problems,
+                suffers
+                from over-squashing, and that breaking the bottleneck improves their state-of-the-art results without
+                any
+                tuning or additional weights. Our code is available at this <a
+                href="https://github.com/tech-srl/bottleneck/" target="_blank"
+                class="link-style-green">https URL</a>.
               </p>
             </div>
           </div>
@@ -175,7 +183,7 @@
       </div>
     </div>
 
-    <div class="top-margin" id="upcoming">
+    <div  id="upcoming">
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" class="underline-title">
@@ -499,49 +507,57 @@
                 </a>
               </div>
             </div>
-            <p class="paragraph">
-              <a class="slight-bold">Resources:</a>
-              Uri's
-              <a href="https://hannes-stark.com/assets/.pdf"
-                 target="_blank"
-                 class="link-style-green">slides</a> and video are coming soon.
-              (50 participants)
-            </p>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author of the paper Dr. <a href="https://urialon.ml/" target="_blank"
-                                               class="link-style-green">Uri Alon</a> who obtained my PhD at Technion
-              (Israel), advised by Prof. <a href="https://www.cs.technion.ac.il/~yahave/" target="_blank"
-                                            class="link-style-green">Eran Yahav</a>. He is now a Postdoctoral Researcher
-              at the Language Technologies Institute of Carnegie Mellon
-              University, working with Prof. <a href="http://www.phontron.com/" target="_blank"
-                                                class="link-style-green">Graham Neubig</a> on NLP and learning from
-              source code, where GNNs find many
-              applications. My most recent GNN work includes "<a href="https://openreview.net/pdf?id=i80OPhOCVH2"
-                                                                 target="_blank"
-                                                                 class="link-style-green">On the Bottleneck of Graph
-              Neural Networks and its
-              Practical Implications</a>" and "<a href="https://arxiv.org/pdf/2105.14491.pdf" target="_blank"
-                                                  class="link-style-green">How Attentive are Graph Attention
-              Networks?</a>".
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Since the proposal of the graph neural network (GNN) by Gori et al. (2005) and Scarselli et al. (2008),
-              one of the major problems in training GNNs was their struggle to propagate information between distant
-              nodes in the graph. We propose a new explanation for this problem: GNNs are susceptible to a bottleneck
-              when aggregating messages across a long path. This bottleneck causes the over-squashing of exponentially
-              growing information into fixed-size vectors. As a result, GNNs fail to propagate messages originating from
-              distant nodes and perform poorly when the prediction task depends on long-range interaction. In this
-              paper, we highlight the inherent problem of over-squashing in GNNs: we demonstrate that the bottleneck
-              hinders popular GNNs from fitting long-range signals in the training data; we further show that GNNs that
-              absorb incoming edges equally, such as GCN and GIN, are more susceptible to over-squashing than GAT and
-              GGNN; finally, we show that prior work, which extensively tuned GNN models of long-range problems, suffers
-              from over-squashing, and that breaking the bottleneck improves their state-of-the-art results without any
-              tuning or additional weights. Our code is available at this <a
-              href="https://github.com/tech-srl/bottleneck/" target="_blank"
-              class="link-style-green">https URL</a>.
-            </p>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLoversquashing' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Uri's
+                <a href="https://hannes-stark.com/assets/bottleneck-tum.pdf"
+                   target="_blank"
+                   class="link-style-green">slides</a>.
+                (50 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author of the paper Dr. <a href="https://urialon.ml/" target="_blank"
+                                                 class="link-style-green">Uri Alon</a> who obtained my PhD at Technion
+                (Israel), advised by Prof. <a href="https://www.cs.technion.ac.il/~yahave/" target="_blank"
+                                              class="link-style-green">Eran Yahav</a>. He is now a Postdoctoral
+                Researcher
+                at the Language Technologies Institute of Carnegie Mellon
+                University, working with Prof. <a href="http://www.phontron.com/" target="_blank"
+                                                  class="link-style-green">Graham Neubig</a> on NLP and learning from
+                source code, where GNNs find many
+                applications. My most recent GNN work includes "<a href="https://openreview.net/pdf?id=i80OPhOCVH2"
+                                                                   target="_blank"
+                                                                   class="link-style-green">On the Bottleneck of Graph
+                Neural Networks and its
+                Practical Implications</a>" and "<a href="https://arxiv.org/pdf/2105.14491.pdf" target="_blank"
+                                                    class="link-style-green">How Attentive are Graph Attention
+                Networks?</a>".
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Since the proposal of the graph neural network (GNN) by Gori et al. (2005) and Scarselli et al. (2008),
+                one of the major problems in training GNNs was their struggle to propagate information between distant
+                nodes in the graph. We propose a new explanation for this problem: GNNs are susceptible to a bottleneck
+                when aggregating messages across a long path. This bottleneck causes the over-squashing of exponentially
+                growing information into fixed-size vectors. As a result, GNNs fail to propagate messages originating
+                from
+                distant nodes and perform poorly when the prediction task depends on long-range interaction. In this
+                paper, we highlight the inherent problem of over-squashing in GNNs: we demonstrate that the bottleneck
+                hinders popular GNNs from fitting long-range signals in the training data; we further show that GNNs
+                that
+                absorb incoming edges equally, such as GCN and GIN, are more susceptible to over-squashing than GAT and
+                GGNN; finally, we show that prior work, which extensively tuned GNN models of long-range problems,
+                suffers
+                from over-squashing, and that breaking the bottleneck improves their state-of-the-art results without
+                any
+                tuning or additional weights. Our code is available at this <a
+                href="https://github.com/tech-srl/bottleneck/" target="_blank"
+                class="link-style-green">https URL</a>.
+              </p>
+            </div>
           </div>
 
 
