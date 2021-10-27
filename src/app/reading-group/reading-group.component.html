@@ -183,7 +183,7 @@
       </div>
     </div>
 
-    <div  id="upcoming">
+    <div id="upcoming">
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" class="underline-title">
@@ -198,71 +198,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.10934" target="_blank">
-                  GRAND: Graph Neural Diffusion</a> + <a class="item-subtitle link-style-black"
-                                                         href="https://arxiv.org/abs/2110.09443" target="_blank">
-                Beltrami Flow and Neural Diffusion on Graphs</a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                26th of October 2021
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  First paper: Benjamin Paul Chamberlain, James Rowbottom, Maria Gorinova, Stefan Webb, Emanuele Rossi,
-                  Michael M.
-                  Bronstein
-                </a>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Second paper: Benjamin Paul Chamberlain, James Rowbottom, Davide Eynard, Francesco Di Giovanni,
-                  Xiaowen Dong, Michael M Bronstein
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Joint first authors of the paper
-              <a href="https://www.linkedin.com/in/jamesrowbottom/" target="_blank"
-                 class="link-style-green">James Rowbottom</a> and Dr. <a
-              href="https://www.linkedin.com/in/benjaminchamberlain/" target="_blank"
-              class="link-style-green">Benjamin Paul Chamberlain</a>.
-              James received his master in AI with distinction from Imperial College London and worked on GRAND as an ML
-              Reserch intern at Prof.
-              <a href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
-                 class="link-style-green">Michael Bronstein's</a>
-              graph ML research group at Twitter. Ben is a Machine Learning Researcher at Twitter who received his PhD
-              from Imperial College London.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract GRAND:</a>
-              We present Graph Neural Diffusion (GRAND) that approaches deep learning on graphs as a continuous
-              diffusion process and treats Graph Neural Networks (GNNs) as discretisations of an underlying PDE. In our
-              model, the layer structure and topology correspond to the discretisation choices of temporal and spatial
-              operators. Our approach
-              allows a principled development of a broad new class of GNNs that are able to address the common plights
-              of graph learning models such as depth, oversmoothing, and bottlenecks. Key to the success of our models
-              are stability with respect to perturbations in the data and this is addressed for both implicit and
-              explicit discretisation schemes. We develop linear and nonlinear versions of GRAND, which achieve
-              competitive results on many standard graph benchmarks.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract BLEND:</a>
-              We propose a novel class of graph neural networks based on the discretised Beltrami flow, a non-Euclidean
-              diffusion PDE. In our model, node features are supplemented with positional encodings derived from the
-              graph topology and jointly evolved by the Beltrami flow, producing simultaneously continuous feature
-              learning and topology evolution. The resulting model generalises many popular graph neural networks and
-              achieves state-of-the-art results on several benchmarks.
-            </p>
-          </div>
-
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -468,6 +403,79 @@
             </p>
           </div>
 
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.07875"
+                   target="_blank">
+                  Graph Neural Networks with Learnable Structural and Positional Representations</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                30th of November 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Vijay Prakash Dwivedi, Anh Tuan Luu, Thomas Laurent, Yoshua Bengio, Xavier Bresson
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author <a class="item-subtitle link-style-black" href="https://vijaydwivedi.com.np/"
+                              target="_blank">Vijay Prakash Dwivedi</a> who is a PhD student in Machine Learning at
+              Nanyang Technological
+              University, Singapore working with Prof. <a class="item-subtitle link-style-black"
+                                                          href="https://tuanluu.github.io/"
+                                                          target="_blank">Luu Anh Tuan</a> (NTU) and Prof. <a
+              class="item-subtitle link-style-black" href="https://scholar.google.com/citations?user=9pSK04MAAAAJ&hl=en"
+              target="_blank">Xavier Bresson</a> (NUS). His primary
+              interest is ML for graph-structured data and he has contributed in "<a
+              class="item-subtitle link-style-black" href="https://arxiv.org/abs/2003.00982"
+              target="_blank">Benchmarking Graph Neural Networks</a>"
+              and “<a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2012.09699"
+                      target="_blank">A Generalization of Transformer Networks to Graphs</a>” as part of his research.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Graph neural networks (GNNs) have become the standard learning architectures for graphs. GNNs have been
+              applied to numerous domains ranging from quantum chemistry, recommender systems to knowledge graphs and
+              natural language processing. A major issue with arbitrary graphs is the absence of canonical positional
+              information of nodes, which decreases the representation power of GNNs to distinguish e.g. isomorphic
+              nodes and other graph symmetries. An approach to tackle this issue is to introduce Positional Encoding
+              (PE) of nodes, and inject it into the input layer, like in Transformers. Possible graph PE are Laplacian
+              eigenvectors. In this work, we propose to decouple structural and positional representations to make easy
+              for the network to learn these two essential properties. We introduce a novel generic architecture which
+              we call LSPE (Learnable Structural and Positional Encodings). We investigate several sparse and
+              fully-connected (Transformer-like) GNNs, and observe a performance increase for molecular datasets, from
+              2.87% up to 64.14% when considering learnable PE for both GNN classes.
+            </p>
+          </div>
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                7th of December 2021
+              </div>
+
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or somewhere else!
+            </p>
+          </div>
+
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
@@ -488,6 +496,78 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.10934" target="_blank">
+                  GRAND: Graph Neural Diffusion</a> + <a class="item-subtitle link-style-black"
+                                                         href="https://arxiv.org/abs/2110.09443" target="_blank">
+                Beltrami Flow and Neural Diffusion on Graphs</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                26th of October 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  First paper: Benjamin Paul Chamberlain, James Rowbottom, Maria Gorinova, Stefan Webb, Emanuele Rossi,
+                  Michael M.
+                  Bronstein
+                </a>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Second paper: Benjamin Paul Chamberlain, James Rowbottom, Davide Eynard, Francesco Di Giovanni,
+                  Xiaowen Dong, Michael M Bronstein
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Resources:</a>
+              Ben's and James's
+              <a href="https://hannes-stark.com/assets/.pdf"
+                 target="_blank"
+                 class="link-style-green">slides</a> come soon.
+              (75 participants)
+            </p>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Joint first authors of the paper
+              <a href="https://www.linkedin.com/in/jamesrowbottom/" target="_blank"
+                 class="link-style-green">James Rowbottom</a> and Dr. <a
+              href="https://www.linkedin.com/in/benjaminchamberlain/" target="_blank"
+              class="link-style-green">Benjamin Paul Chamberlain</a>.
+              James received his master in AI with distinction from Imperial College London and worked on GRAND as an ML
+              Reserch intern at Prof.
+              <a href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
+                 class="link-style-green">Michael Bronstein's</a>
+              graph ML research group at Twitter. Ben is a Machine Learning Researcher at Twitter who received his PhD
+              from Imperial College London.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract GRAND:</a>
+              We present Graph Neural Diffusion (GRAND) that approaches deep learning on graphs as a continuous
+              diffusion process and treats Graph Neural Networks (GNNs) as discretisations of an underlying PDE. In our
+              model, the layer structure and topology correspond to the discretisation choices of temporal and spatial
+              operators. Our approach
+              allows a principled development of a broad new class of GNNs that are able to address the common plights
+              of graph learning models such as depth, oversmoothing, and bottlenecks. Key to the success of our models
+              are stability with respect to perturbations in the data and this is addressed for both implicit and
+              explicit discretisation schemes. We develop linear and nonlinear versions of GRAND, which achieve
+              competitive results on many standard graph benchmarks.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract BLEND:</a>
+              We propose a novel class of graph neural networks based on the discretised Beltrami flow, a non-Euclidean
+              diffusion PDE. In our model, node features are supplemented with positional encodings derived from the
+              graph topology and jointly evolved by the Beltrami flow, producing simultaneously continuous feature
+              learning and topology evolution. The resulting model generalises many popular graph neural networks and
+              achieves state-of-the-art results on several benchmarks.
+            </p>
+          </div>
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
