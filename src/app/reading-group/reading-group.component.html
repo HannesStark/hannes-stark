@@ -22,18 +22,40 @@
           target="_blank"
           class="link-style-green">Valence Discovery</a>!
         </p>
-        <p>
-          <a
-            href="https://us02web.zoom.us/j/4556095405?pwd=UmZRbC95d050TkRsZ2QvWER3SDdqUT09" target="_blank"
-            class="link-style-green">Zoom link</a>: We meet every Tuesday at 5pm CEST / 3pm UTC / 11am EST / 8am PST
-        </p>
-        <p>
-          <a
-            href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg"
-            target="_blank"
-            class="link-style-green">Slack Workspace</a>: For discussions outside of our meetings and to vote for
-          papers.
-        </p>
+
+        <div fxLayout="row" fxLayoutAlign="left center">
+          <p>
+            <a mat-button class="group-button item-title"
+               href="https://us02web.zoom.us/j/4556095405?pwd=UmZRbC95d050TkRsZ2QvWER3SDdqUT09"
+               target="_blank">Zoom Link</a>
+          </p>
+          <div class="next-to-button">
+            Just hop on! We meet every Tuesday at 5pm CET / 4pm UTC / 11am EDT / 8am PT.
+          </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="left center">
+          <p>
+            <a mat-button class="group-button item-title"
+               href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg"
+               target="_blank">Join Slack!</a>
+          </p>
+          <div class="next-to-button">
+            For discussions outside of our meetings and to vote for papers.
+          </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="left center">
+          <p>
+            <a mat-button class="group-button item-title"
+               href="https://groups.google.com/g/logag"
+               target="_blank">Join Mailing List!</a>
+          </p>
+          <div class="next-to-button">
+            For weekly updates about the next paper (via Google groups).
+          </div>
+        </div>
+
         <p>
           You can also subscribe to the meetings via <a
           href="https://calendar.google.com/calendar/u/0?cid=dmR1am4ycGJwa2hncjVmNTVjbTM5cWJtdThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
@@ -46,17 +68,14 @@
           target="_blank"
           class="link-style-green">add the events</a>.
         </p>
-        <p class="item-title2">
-          Join our mailing list (via google groups) to get weekly updates on the next paper and discussion session:
-        </p>
-        <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+        <!--div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
           <div fxLayout="row">
             <p>
               <a mat-button class="group-button item-title" href="https://groups.google.com/g/logag"
                  target="_blank">Sign up for email updates!</a>
             </p>
           </div>
-          <!--div class="item-content">
+          <div class="item-content">
             <div>
 
               <form class="contact" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
@@ -88,8 +107,8 @@
                 </div>
               </form>
             </div>
-          </div-->
-        </div>
+          </div>
+        </div-->
       </div>
     </div>
     <div fxFlex="10" fxFlex.xs="">

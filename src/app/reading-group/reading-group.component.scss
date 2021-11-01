@@ -9,6 +9,7 @@
   display: block;
 
 }
+
 .float-right {
   top: 0;
   left: 0;
@@ -19,6 +20,11 @@
   width: 320px;
   height: 180px;
   margin-right: 10px;
+}
+
+.next-to-button {
+  margin-left: 10px;
+  margin-bottom: 12px;
 }
 
 .responsive iframe {
@@ -342,7 +348,6 @@ form.contact {
   background-color: white;
   border: 2px solid var(--color-primary);
   transition: 0.4s;
-
 }
 
 .group-button:hover:enabled {
@@ -367,7 +372,9 @@ form.contact {
 }
 
 @keyframes spinner {
-  to {transform: rotate(360deg);}
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .spinner:before {
