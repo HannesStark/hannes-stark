@@ -134,76 +134,69 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.10934" target="_blank">
-                  GRAND: Graph Neural Diffusion</a> + <a class="item-subtitle link-style-black"
-                                                         href="https://arxiv.org/abs/2110.09443" target="_blank">
-                Beltrami Flow and Neural Diffusion on Graphs</a></h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.06790" target="_blank">
+                  A Unified Lottery Ticket Hypothesis for Graph Neural Networks</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                26th of October 2021
+                2nd of November 2021
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  First paper: Benjamin Paul Chamberlain, James Rowbottom, Maria Gorinova, Stefan Webb, Emanuele Rossi,
-                  Michael M.
-                  Bronstein
-                </a>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Second paper: Benjamin Paul Chamberlain, James Rowbottom, Davide Eynard, Francesco Di Giovanni,
-                  Xiaowen Dong, Michael M Bronstein
+                  Tianlong Chen, Yongduo Sui, Xuxi Chen, Aston Zhang, Zhangyang Wang
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLGRAND' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLLTH' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Ben's and James's
-                <a href="https://hannes-stark.com/assets/.pdf"
+                Tianlong's
+                <a href="https://hannes-stark.com/assets/Paper Reading Presentation in LoGaG.pdf"
                    target="_blank"
-                   class="link-style-green">slides</a> come soon.
-                (75 participants)
+                   class="link-style-green">slides</a>.
+                (54 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                Joint first authors of the paper
-                <a href="https://www.linkedin.com/in/jamesrowbottom/" target="_blank"
-                   class="link-style-green">James Rowbottom</a> and Dr. <a
-                href="https://www.linkedin.com/in/benjaminchamberlain/" target="_blank"
-                class="link-style-green">Benjamin Paul Chamberlain</a>.
-                James received his master in AI with distinction from Imperial College London and worked on GRAND as an
-                ML
-                Reserch intern at Prof.
-                <a href="https://www.imperial.ac.uk/people/m.bronstein" target="_blank"
-                   class="link-style-green">Michael Bronstein's</a>
-                graph ML research group at Twitter. Ben is a Machine Learning Researcher at Twitter who received his PhD
-                from Imperial College London.
+                First author <a class="item-subtitle link-style-black" href="https://tianlong-chen.github.io/about/"
+                                target="_blank">Tianlong Chen (陈天龙)</a> who is a third-year Ph.D. student of Electrical
+                and Computer Engineering
+                (DICE) at VITA, The University of Texas at Austin, advised by Dr. <a
+                class="item-subtitle link-style-black" href="https://vita-group.github.io/" target="_blank">Zhangyang
+                (Atlas) Wang</a>. His research
+                interests include AutoML, Adversarial Robustness, Self-Supervision, and Graph Neural Networks.
               </p>
               <p class="no-margin">
-                <a class="slight-bold">Abstract GRAND:</a>
-                We present Graph Neural Diffusion (GRAND) that approaches deep learning on graphs as a continuous
-                diffusion process and treats Graph Neural Networks (GNNs) as discretisations of an underlying PDE. In
-                our
-                model, the layer structure and topology correspond to the discretisation choices of temporal and spatial
-                operators. Our approach
-                allows a principled development of a broad new class of GNNs that are able to address the common plights
-                of graph learning models such as depth, oversmoothing, and bottlenecks. Key to the success of our models
-                are stability with respect to perturbations in the data and this is addressed for both implicit and
-                explicit discretisation schemes. We develop linear and nonlinear versions of GRAND, which achieve
-                competitive results on many standard graph benchmarks.
-              </p>
-              <p class="no-margin">
-                <a class="slight-bold">Abstract BLEND:</a>
-                We propose a novel class of graph neural networks based on the discretised Beltrami flow, a
-                non-Euclidean
-                diffusion PDE. In our model, node features are supplemented with positional encodings derived from the
-                graph topology and jointly evolved by the Beltrami flow, producing simultaneously continuous feature
-                learning and topology evolution. The resulting model generalises many popular graph neural networks and
-                achieves state-of-the-art results on several benchmarks.
+                <a class="slight-bold">Abstract:</a>
+                With graphs rapidly growing in size and deeper graph neural networks (GNNs) emerging, the training and
+                inference of GNNs become increasingly expensive. Existing network weight pruning algorithms cannot
+                address
+                the main space and computational bottleneck in GNNs, caused by the size and connectivity of the graph.
+                To
+                this end, this paper first presents a unified GNN sparsification (UGS) framework that simultaneously
+                prunes the graph adjacency matrix and the model weights, for effectively accelerating GNN inference on
+                large-scale graphs. Leveraging this new tool, we further generalize the recently popular lottery ticket
+                hypothesis to GNNs for the first time, by defining a graph lottery ticket (GLT) as a pair of core
+                sub-dataset and sparse sub-network, which can be jointly identified from the original GNN and the full
+                dense graph by iteratively applying UGS. Like its counterpart in convolutional neural networks, GLT can
+                be
+                trained in isolation to match the performance of training with the full model and graph, and can be
+                drawn
+                from both randomly initialized and self-supervised pre-trained GNNs. Our proposal has been
+                experimentally
+                verified across various GNN architectures and diverse tasks, on both small-scale graph datasets (Cora,
+                Citeseer and PubMed), and large-scale datasets from the challenging Open Graph Benchmark (OGB).
+                Specifically, for node classification, our found GLTs achieve the same accuracies with 20%~98% MACs
+                saving
+                on small graphs and 25%~85% MACs saving on large ones. For link prediction, GLTs lead to 48%~97% and 70%
+                MACs saving on small and large graph datasets, respectively, without compromising predictive
+                performance.
+                Codes available at <a class="item-subtitle link-style-black"
+                                      href="https://github.com/VITA-Group/Unified-LTH-GNN" target="_blank">this https
+                URL</a>.
               </p>
             </div>
           </div>
@@ -228,59 +221,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.06790" target="_blank">
-                  A Unified Lottery Ticket Hypothesis for Graph Neural Networks</a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                2nd of November 2021
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Tianlong Chen, Yongduo Sui, Xuxi Chen, Aston Zhang, Zhangyang Wang
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author <a class="item-subtitle link-style-black" href="https://tianlong-chen.github.io/about/"
-                              target="_blank">Tianlong Chen (陈天龙)</a> who is a third-year Ph.D. student of Electrical
-              and Computer Engineering
-              (DICE) at VITA, The University of Texas at Austin, advised by Dr. <a
-              class="item-subtitle link-style-black" href="https://vita-group.github.io/" target="_blank">Zhangyang
-              (Atlas) Wang</a>. His research
-              interests include AutoML, Adversarial Robustness, Self-Supervision, and Graph Neural Networks.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              With graphs rapidly growing in size and deeper graph neural networks (GNNs) emerging, the training and
-              inference of GNNs become increasingly expensive. Existing network weight pruning algorithms cannot address
-              the main space and computational bottleneck in GNNs, caused by the size and connectivity of the graph. To
-              this end, this paper first presents a unified GNN sparsification (UGS) framework that simultaneously
-              prunes the graph adjacency matrix and the model weights, for effectively accelerating GNN inference on
-              large-scale graphs. Leveraging this new tool, we further generalize the recently popular lottery ticket
-              hypothesis to GNNs for the first time, by defining a graph lottery ticket (GLT) as a pair of core
-              sub-dataset and sparse sub-network, which can be jointly identified from the original GNN and the full
-              dense graph by iteratively applying UGS. Like its counterpart in convolutional neural networks, GLT can be
-              trained in isolation to match the performance of training with the full model and graph, and can be drawn
-              from both randomly initialized and self-supervised pre-trained GNNs. Our proposal has been experimentally
-              verified across various GNN architectures and diverse tasks, on both small-scale graph datasets (Cora,
-              Citeseer and PubMed), and large-scale datasets from the challenging Open Graph Benchmark (OGB).
-              Specifically, for node classification, our found GLTs achieve the same accuracies with 20%~98% MACs saving
-              on small graphs and 25%~85% MACs saving on large ones. For link prediction, GLTs lead to 48%~97% and 70%
-              MACs saving on small and large graph datasets, respectively, without compromising predictive performance.
-              Codes available at <a class="item-subtitle link-style-black"
-                                    href="https://github.com/VITA-Group/Unified-LTH-GNN" target="_blank">this https
-              URL</a>.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -526,6 +466,77 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.06790" target="_blank">
+                  A Unified Lottery Ticket Hypothesis for Graph Neural Networks</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                2nd of November 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Tianlong Chen, Yongduo Sui, Xuxi Chen, Aston Zhang, Zhangyang Wang
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLLTH' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Tianlong's
+                <a href="https://hannes-stark.com/assets/Paper Reading Presentation in LoGaG.pdf"
+                   target="_blank"
+                   class="link-style-green">slides</a>.
+                (54 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author <a class="item-subtitle link-style-black" href="https://tianlong-chen.github.io/about/"
+                                target="_blank">Tianlong Chen (陈天龙)</a> who is a third-year Ph.D. student of Electrical
+                and Computer Engineering
+                (DICE) at VITA, The University of Texas at Austin, advised by Dr. <a
+                class="item-subtitle link-style-black" href="https://vita-group.github.io/" target="_blank">Zhangyang
+                (Atlas) Wang</a>. His research
+                interests include AutoML, Adversarial Robustness, Self-Supervision, and Graph Neural Networks.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                With graphs rapidly growing in size and deeper graph neural networks (GNNs) emerging, the training and
+                inference of GNNs become increasingly expensive. Existing network weight pruning algorithms cannot
+                address
+                the main space and computational bottleneck in GNNs, caused by the size and connectivity of the graph.
+                To
+                this end, this paper first presents a unified GNN sparsification (UGS) framework that simultaneously
+                prunes the graph adjacency matrix and the model weights, for effectively accelerating GNN inference on
+                large-scale graphs. Leveraging this new tool, we further generalize the recently popular lottery ticket
+                hypothesis to GNNs for the first time, by defining a graph lottery ticket (GLT) as a pair of core
+                sub-dataset and sparse sub-network, which can be jointly identified from the original GNN and the full
+                dense graph by iteratively applying UGS. Like its counterpart in convolutional neural networks, GLT can
+                be
+                trained in isolation to match the performance of training with the full model and graph, and can be
+                drawn
+                from both randomly initialized and self-supervised pre-trained GNNs. Our proposal has been
+                experimentally
+                verified across various GNN architectures and diverse tasks, on both small-scale graph datasets (Cora,
+                Citeseer and PubMed), and large-scale datasets from the challenging Open Graph Benchmark (OGB).
+                Specifically, for node classification, our found GLTs achieve the same accuracies with 20%~98% MACs
+                saving
+                on small graphs and 25%~85% MACs saving on large ones. For link prediction, GLTs lead to 48%~97% and 70%
+                MACs saving on small and large graph datasets, respectively, without compromising predictive
+                performance.
+                Codes available at <a class="item-subtitle link-style-black"
+                                      href="https://github.com/VITA-Group/Unified-LTH-GNN" target="_blank">this https
+                URL</a>.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
