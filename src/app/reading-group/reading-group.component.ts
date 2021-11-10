@@ -37,6 +37,7 @@ export class ReadingGroupComponent implements OnInit {
   safeURLoversquashing;
   safeURLGRAND;
   safeURLLTH;
+  safeURLGNNSCM;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -50,6 +51,7 @@ export class ReadingGroupComponent implements OnInit {
     this.safeURLoversquashing = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/XQHfkHTAo0s');
     this.safeURLGRAND = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/9SMbH18nMUg');
     this.safeURLLTH = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/LZ9DfYcwDMM');
+    this.safeURLGNNSCM = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/XC-Bfg3dO0I');
   }
 
   ngOnInit(): void {

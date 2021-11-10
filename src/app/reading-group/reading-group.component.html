@@ -134,69 +134,63 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.06790" target="_blank">
-                  A Unified Lottery Ticket Hypothesis for Graph Neural Networks</a></h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2109.04173" target="_blank">
+                  Relating Graph Neural Networks to Structural Causal Model</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                2nd of November 2021
+                9th of November 2021
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Tianlong Chen, Yongduo Sui, Xuxi Chen, Aston Zhang, Zhangyang Wang
+                  Matej Zečević, Devendra Singh Dhami, Petar Veličković, Kristian Kersting
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLLTH' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLGNNSCM' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Tianlong's
-                <a href="https://hannes-stark.com/assets/Paper Reading Presentation in LoGaG.pdf"
+                Matej's
+                <a href="https://hannes-stark.com/assets/MZ-NeuroCausality-Talk-LoGaG.pdf"
                    target="_blank"
                    class="link-style-green">slides</a>.
-                (54 participants)
+                (100 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First author <a class="item-subtitle link-style-black" href="https://tianlong-chen.github.io/about/"
-                                target="_blank">Tianlong Chen (陈天龙)</a> who is a third-year Ph.D. student of Electrical
-                and Computer Engineering
-                (DICE) at VITA, The University of Texas at Austin, advised by Dr. <a
-                class="item-subtitle link-style-black" href="https://vita-group.github.io/" target="_blank">Zhangyang
-                (Atlas) Wang</a>. His research
-                interests include AutoML, Adversarial Robustness, Self-Supervision, and Graph Neural Networks.
+                First author <a class="item-subtitle link-style-black" href="https://matej-zecevic.de/" target="_blank">
+                Matej Zečević</a> who is a PhD candidate at TU Darmstadt working with <a
+                class="item-subtitle link-style-black" href="https://ml-research.github.io/people/kkersting/index.html"
+                target="_blank">
+                Kristian Kersting</a> on
+                Causality for ML. Before that, he completed his M.Sc. in Computer Science under <a
+                class="item-subtitle link-style-black"
+                href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters"
+                target="_blank">
+                Jan Peters</a>, <a
+                class="item-subtitle link-style-black" href="https://cifar.ca/bios/stefan-bauer/" target="_blank">
+                Stefan Bauer</a>,
+                and <a
+                class="item-subtitle link-style-black" href="https://www.is.mpg.de/~bs" target="_blank">
+                Bernhard Schölkopf</a> at MPI for Intelligent Systems (Tübingen).
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                With graphs rapidly growing in size and deeper graph neural networks (GNNs) emerging, the training and
-                inference of GNNs become increasingly expensive. Existing network weight pruning algorithms cannot
-                address
-                the main space and computational bottleneck in GNNs, caused by the size and connectivity of the graph.
-                To
-                this end, this paper first presents a unified GNN sparsification (UGS) framework that simultaneously
-                prunes the graph adjacency matrix and the model weights, for effectively accelerating GNN inference on
-                large-scale graphs. Leveraging this new tool, we further generalize the recently popular lottery ticket
-                hypothesis to GNNs for the first time, by defining a graph lottery ticket (GLT) as a pair of core
-                sub-dataset and sparse sub-network, which can be jointly identified from the original GNN and the full
-                dense graph by iteratively applying UGS. Like its counterpart in convolutional neural networks, GLT can
-                be
-                trained in isolation to match the performance of training with the full model and graph, and can be
-                drawn
-                from both randomly initialized and self-supervised pre-trained GNNs. Our proposal has been
-                experimentally
-                verified across various GNN architectures and diverse tasks, on both small-scale graph datasets (Cora,
-                Citeseer and PubMed), and large-scale datasets from the challenging Open Graph Benchmark (OGB).
-                Specifically, for node classification, our found GLTs achieve the same accuracies with 20%~98% MACs
-                saving
-                on small graphs and 25%~85% MACs saving on large ones. For link prediction, GLTs lead to 48%~97% and 70%
-                MACs saving on small and large graph datasets, respectively, without compromising predictive
-                performance.
-                Codes available at <a class="item-subtitle link-style-black"
-                                      href="https://github.com/VITA-Group/Unified-LTH-GNN" target="_blank">this https
-                URL</a>.
+                Causality can be described in terms of a structural causal model (SCM) that carries information on the
+                variables of interest and their mechanistic relations. For most processes of interest the underlying SCM
+                will only be partially observable, thus causal inference tries to leverage any exposed information.
+                Graph
+                neural networks (GNN) as universal approximators on structured input pose a viable candidate for causal
+                learning, suggesting a tighter integration with SCM. To this effect we present a theoretical analysis
+                from
+                first principles that establishes a novel connection between GNN and SCM while providing an extended
+                view
+                on general neural-causal models. We then establish a new model class for GNN-based causal inference that
+                is necessary and sufficient for causal effect identification. Our empirical illustration on simulations
+                and standard benchmarks validate our theoretical proofs.
               </p>
             </div>
           </div>
@@ -221,56 +215,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2109.04173" target="_blank">
-                  Relating Graph Neural Networks to Structural Causal Model</a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                9th of November 2021
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Matej Zečević, Devendra Singh Dhami, Petar Veličković, Kristian Kersting
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author <a class="item-subtitle link-style-black" href="https://matej-zecevic.de/" target="_blank">
-              Matej Zečević</a> who is a PhD candidate at TU Darmstadt working with <a
-              class="item-subtitle link-style-black" href="https://ml-research.github.io/people/kkersting/index.html"
-              target="_blank">
-              Kristian Kersting</a> on
-              Causality for ML. Before that, he completed his M.Sc. in Computer Science under <a
-              class="item-subtitle link-style-black" href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters"
-              target="_blank">
-              Jan Peters</a>, <a
-              class="item-subtitle link-style-black" href="https://cifar.ca/bios/stefan-bauer/" target="_blank">
-              Stefan Bauer</a>,
-              and <a
-              class="item-subtitle link-style-black" href="https://www.is.mpg.de/~bs" target="_blank">
-              Bernhard Schölkopf</a> at MPI for Intelligent Systems (Tübingen).
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Causality can be described in terms of a structural causal model (SCM) that carries information on the
-              variables of interest and their mechanistic relations. For most processes of interest the underlying SCM
-              will only be partially observable, thus causal inference tries to leverage any exposed information. Graph
-              neural networks (GNN) as universal approximators on structured input pose a viable candidate for causal
-              learning, suggesting a tighter integration with SCM. To this effect we present a theoretical analysis from
-              first principles that establishes a novel connection between GNN and SCM while providing an extended view
-              on general neural-causal models. We then establish a new model class for GNN-based causal inference that
-              is necessary and sufficient for causal effect identification. Our empirical illustration on simulations
-              and standard benchmarks validate our theoretical proofs.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -446,6 +390,61 @@
             </p>
           </div>
 
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.02910"
+                   target="_blank">
+                  Equivariant Subgraph Aggregation Networks
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                14th of December 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Beatrice Bevilacqua, Fabrizio Frasca, Derek Lim, Balasubramaniam Srinivasan, Chen Cai, Gopinath
+                  Balamurugan, Michael M. Bronstein, Haggai Maron
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speakers:</a>
+              Joint first authors <a class="item-subtitle link-style-black" href="https://www.linkedin.com/in/beabevi/"
+                                     target="_blank">Beatrice Bevilacqua</a>, <a class="item-subtitle link-style-black"
+                                                                                 href="https://scholar.google.com/citations?user=PT2CDA4AAAAJ&hl=en"
+                                                                                 target="_blank">Fabrizio Frasca</a>,
+              and <a class="item-subtitle link-style-black" href="https://cptq.github.io/"
+                     target="_blank">Derek Lim</a>. Beatrice is a PhD Student at
+              Purdue University with Prof. Bruno Ribeiro. Fabrizio is a PhD candidate at Imperial College London
+              supervised by Prof. Michael Bronstein and he works as an ML researcher at Twitter. Derek is a PhD student
+              at MIT under the supervision of Prof. Stefanie Jegelka.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Message-passing neural networks (MPNNs) are the leading architecture for deep learning on graph-structured
+              data, in large part due to their simplicity and scalability. Unfortunately, it was shown that these
+              architectures are limited in their expressive power. This paper proposes a novel framework called
+              Equivariant Subgraph Aggregation Networks (ESAN) to address this issue. Our main observation is that while
+              two graphs may not be distinguishable by an MPNN, they often contain distinguishable subgraphs. Thus, we
+              propose to represent each graph as a set of subgraphs derived by some predefined policy, and to process it
+              using a suitable equivariant architecture. We develop novel variants of the 1-dimensional Weisfeiler-Leman
+              (1-WL) test for graph isomorphism, and prove lower bounds on the expressiveness of ESAN in terms of these
+              new WL variants. We further prove that our approach increases the expressive power of both MPNNs and more
+              expressive architectures. Moreover, we provide theoretical results that describe how design choices such
+              as the subgraph selection policy and equivariant neural architecture affect our architecture's expressive
+              power. To deal with the increased computational cost, we propose a subgraph sampling scheme, which can be
+              viewed as a stochastic version of our framework. A comprehensive set of experiments on real and synthetic
+              datasets demonstrates that our framework improves the expressive power and overall performance of popular
+              GNN architectures.
+            </p>
+          </div>
+
+
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
@@ -465,6 +464,72 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2109.04173" target="_blank">
+                  Relating Graph Neural Networks to Structural Causal Model</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                9th of November 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Matej Zečević, Devendra Singh Dhami, Petar Veličković, Kristian Kersting
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLGNNSCM' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Matej's
+                <a href="https://hannes-stark.com/assets/MZ-NeuroCausality-Talk-LoGaG.pdf"
+                   target="_blank"
+                   class="link-style-green">slides</a>.
+                (100 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author <a class="item-subtitle link-style-black" href="https://matej-zecevic.de/" target="_blank">
+                Matej Zečević</a> who is a PhD candidate at TU Darmstadt working with <a
+                class="item-subtitle link-style-black" href="https://ml-research.github.io/people/kkersting/index.html"
+                target="_blank">
+                Kristian Kersting</a> on
+                Causality for ML. Before that, he completed his M.Sc. in Computer Science under <a
+                class="item-subtitle link-style-black"
+                href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters"
+                target="_blank">
+                Jan Peters</a>, <a
+                class="item-subtitle link-style-black" href="https://cifar.ca/bios/stefan-bauer/" target="_blank">
+                Stefan Bauer</a>,
+                and <a
+                class="item-subtitle link-style-black" href="https://www.is.mpg.de/~bs" target="_blank">
+                Bernhard Schölkopf</a> at MPI for Intelligent Systems (Tübingen).
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Causality can be described in terms of a structural causal model (SCM) that carries information on the
+                variables of interest and their mechanistic relations. For most processes of interest the underlying SCM
+                will only be partially observable, thus causal inference tries to leverage any exposed information.
+                Graph
+                neural networks (GNN) as universal approximators on structured input pose a viable candidate for causal
+                learning, suggesting a tighter integration with SCM. To this effect we present a theoretical analysis
+                from
+                first principles that establishes a novel connection between GNN and SCM while providing an extended
+                view
+                on general neural-causal models. We then establish a new model class for GNN-based causal inference that
+                is necessary and sufficient for causal effect identification. Our empirical illustration on simulations
+                and standard benchmarks validate our theoretical proofs.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
