@@ -109,13 +109,15 @@
               <p class="item-date-loc">
                 <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                 H. Stärk, D. Beaini, G. Corso, P. Tossou, C. Dallago, S. Günnemann, P. Liò
-                <fa-icon class="icon-right-margin--left" [icon]="book"></fa-icon>
-                <i>Preprint. Under review. Accepted at <a href="https://ai4sciencecommunity.github.io/" target="_blank"
-                       class="link-style-green">NeurIPS 2021 AI4S</a> and <a href="https://ml4physicalsciences.github.io/2021/" target="_blank"
-                       class="link-style-green">NeurIPS 2021 ML4PH</a></i>
+
+
               </p>
               <p class="item-content">
-
+                <i>Preprint. Under review. Accepted at <a href="https://ai4sciencecommunity.github.io/" target="_blank"
+                       class="link-style-green">NeurIPS'21 AI4S</a>, <a href="https://ml4physicalsciences.github.io/2021/" target="_blank"
+                       class="link-style-green">NeurIPS'21 ML4PH</a> and  <a class="item-subtitle link-style-black"
+                       href="https://sslneurips21.github.io/"
+                                                                   target="_blank">NeurIPS'21 SSL</a> workshops.</i>
               </p>
               <div fxLayout="column" fxLayoutGap="5px">
                 <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
@@ -145,7 +147,9 @@
                     Z. Kefato, S. Girdzijauskas, H. Stärk
 
                     <fa-icon class="icon-right-margin--left" [icon]="book"></fa-icon>
-                    <i>Preprint. Under review.</i>
+                    <i>Preprint. Under review. Also accepted at <a class="item-subtitle link-style-black"
+                       href="https://sslneurips21.github.io/"
+                                                                   target="_blank">NeurIPS'21 SSL Workshop</a>.</i>
                   </p>
 
                 </div>
@@ -156,7 +160,7 @@
                 <div fxLayout="row">
                   <h3>
                     <a class="item-subtitle link-style-black"
-                       href="https://www.biorxiv.org/content/10.1101/2021.04.25.441334v1"
+                       href="https://academic.oup.com/bioinformaticsadvances/advance-article/doi/10.1093/bioadv/vbab035/6432029"
                        target="_blank">Light Attention Predicts Protein Location from the Language of Life</a></h3>
                 </div>
                 <p class="item-date-loc">
@@ -164,18 +168,18 @@
                   H. Stärk, C. Dallago, M. Heinzinger, B. Rost
                 </p>
                 <p class="item-content">
-                  <i>Accepted at
-                    <a href="https://academic.oup.com/bioinformatics" target="_blank"
-                       class="link-style-green">OUP Bioinformatics</a>.
+                  <i>In:
+                    <a href="https://academic.oup.com/bioinformaticsadvances" target="_blank"
+                       class="link-style-green">OUP Bioinformatics Advances</a>.
                     Poster and talks at
                     <a href="https://icml-compbio.github.io/" target="_blank"
-                       class="link-style-green">ICML 2021 WCB</a>,
+                       class="link-style-green">ICML'21 WCB</a>,
                     <a href="https://aiforpublichealth.github.io" target="_blank"
-                       class="link-style-green">ICLR 2021 AI4PH</a>,
+                       class="link-style-green">ICLR'21 AI4PH</a>,
                     <a href="https://mlpcp21.github.io/index.html" target="_blank"
-                       class="link-style-green">ICLR 2021 MLPCP</a>,
+                       class="link-style-green">ICLR'21 MLPCP</a>,
                     <a href="http://cosi.iscb.org/wiki/MLCSB:Home" target="_blank"
-                       class="link-style-green">ISMB/ECCB 2021</a>.</i>
+                       class="link-style-green">ISMB/ECCB 2021</a></i>
                 </p>
                 <div fxLayout="column" fxLayoutGap="5px">
                   <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
@@ -241,6 +245,9 @@
                   </a>
                 </p>
                 <p class="item-content">
+                  Passed with high distinction (GPA 1.2) - No corrections for <a href="https://hannes-stark.com/assets/Hannes_Thesis.pdf"
+                                                  target="_blank"
+                                                  class="link-style-green">thesis</a> on graph representation learning for molecules<br>
                   • 2nd Year: Advanced topics in machine learning and probabilistic inference<br>
                   • 1st Year: Introduction to machine learning and learning theory<br>
                   Attending the
@@ -273,6 +280,7 @@
                   degree in two years.
                 </p>
               </div>
+              <!--
               <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
               <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
                 <a class="item-title">A-Levels</a>
@@ -288,6 +296,7 @@
                 <p class="item-content">I participated and helped organizing multiple sports events or shows and was
                   involved in starting the schools chess group.</p>
               </div>
+              -->
             </div>
           </div>
         </div>
@@ -550,7 +559,14 @@
                     WCB ICML 2021</a>
                   </p>
                 </div>
-
+                <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+                  <p class="item-content">
+                    Strong student award at <a class="item-subtitle link-style-black"
+                                                    href="http://mlss.cc/"
+                                                    target="_blank">
+                    MLSS 2021</a>
+                  </p>
+                </div>
 
               </div>
             </div>
@@ -588,49 +604,52 @@
               <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
 
                 <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-                  <a class="item-title">3D Pre-training improves GNNs for Molecular Property Prediction</a>
                   <div fxLayout="row">
                     <h3>
                       <a class="item-subtitle link-style-black" href="http://talks.cam.ac.uk/talk/index/162541"
                          target="_blank">
-                        Cambridge Computer Laboratory AI Research Talk</a></h3>
+                        University of Cambridge</a></h3>
                   </div>
                   <p class="item-date-loc">
                     <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                    Oct 2021
-                    <a fxHide.xs>
-                      <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
-                      Remote
-                    </a>
+                    Oct 2021:
+                  AI Research Seminar hosted by Prof. <a class="item-subtitle link-style-black" href="https://www.cl.cam.ac.uk/~mj201/"
+                                                         target="_blank">Mateja Jamnik</a>.
                   </p>
                   <p class="item-content">
+                  </p>
+                </div>
+                <hr ngClass.gt-sm="separator-slim" ngClass.lt-md="separator-slim--small">
+                <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+                  <div fxLayout="row">
+                    <h3>
+                      <a class="item-subtitle link-style-black" href="https://www.valencediscovery.com/" target="_blank">
+                        Valence Discovery</a></h3>
+                  </div>
+                  <p class="item-date-loc">
+                    <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                    Oct 2021:
+                    Researach Talk hosted by Daniel Cohen
 
                   </p>
                 </div>
-                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <hr ngClass.gt-sm="separator-slim" ngClass.lt-md="separator-slim--small">
                 <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-                  <a class="item-title">Self-Supervised learning on Proteins</a>
                   <div fxLayout="row">
                     <h3>
-                      <a class="item-subtitle link-style-black" href="https://icml-compbio.github.io/" target="_blank">
-                        ICML 2021 Workshop on Computational Biology</a></h3>
+                      <a class="item-subtitle link-style-black" href="https://icml-compbio.github.io/"
+                         target="_blank">
+                        ICML 2021 WCB</a></h3>
                   </div>
                   <p class="item-date-loc">
                     <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                    July 2021
-                    <a fxHide.xs>
-                      <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
-                      Remote
-                    </a>
+                    July 2021:
+                      Contributed talk for top 4 paper
                   </p>
-                  <p class="item-content">16 minutes contributed talk on attention patterns in protein language models
-                    and
-                    their embeddings for downstream predictions.
-                  </p>
+
                 </div>
-                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <hr ngClass.gt-sm="separator-slim" ngClass.lt-md="separator-slim--small">
                 <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-                  <a class="item-title">Pretrained Language Models for Protein Prediction</a>
                   <div fxLayout="row">
                     <h3>
                       <a class="item-subtitle link-style-black" href="https://www.iscb.org/ismbeccb2021"
@@ -639,39 +658,36 @@
                   </div>
                   <p class="item-date-loc">
                     <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                    July 2021
-                    <a fxHide.xs>
-                      <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
-                      Remote
-                    </a>
-                  </p>
-                  <p class="item-content">20 minutes talk about Protein Language models and how to most efficiently
-                    leverage
-                    their
-                    representations.
+                    July 2021:
+                      Presented a "Long Talk" on representation learning
                   </p>
                 </div>
-                <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+                <hr ngClass.gt-sm="separator-slim" ngClass.lt-md="separator-slim--small">
                 <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-                  <a class="item-title">Contributed talk ICLR'21 MLPCP</a>
+                  <div fxLayout="row">
+                    <h3>
+                      <a class="item-subtitle link-style-black" href="https://representation.learning.bio/home"
+                         target="_blank">
+                        RLB Workshop</a></h3>
+                  </div>
+                  <p class="item-date-loc">
+                    <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                    July 2021:
+                      Talk on protein localization hosted by Dr. Christian Dallago
+                  </p>
+                </div>
+                <hr ngClass.gt-sm="separator-slim" ngClass.lt-md="separator-slim--small">
+                <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
                   <div fxLayout="row">
                     <h3>
                       <a class="item-subtitle link-style-black" href="https://mlpcp21.github.io/index.html"
                          target="_blank">
-                        ICLR 2021 MLPCP Workshop</a></h3>
+                        ICLR 2021 MLPCP</a></h3>
                   </div>
                   <p class="item-date-loc">
                     <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                    May 2021
-                    <a fxHide.xs>
-                      <fa-icon class="icon-right-margin--left" [icon]="location"></fa-icon>
-                      Remote
-                    </a>
-                  </p>
-                  <p class="item-content">15 minutes talk where I presented our work on learning protein representations
-                    for
-                    downstream predictions such
-                    as state-of-the-art subcellular localization prediction.
+                    May 2021:
+                      Contributed talk for top paper at workshop
                   </p>
                 </div>
 
@@ -733,7 +749,7 @@
                 </div>
                 <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
                 <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-                  <a class="item-title">Mathematics Lecturer</a>
+                  <a class="item-title">Mathematics Instructor</a>
                   <div fxLayout="row">
                     <h3>
                       <a class="item-subtitle link-style-black" href="https://www.bibaugsburg.de/" target="_blank">

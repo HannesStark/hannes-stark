@@ -26,7 +26,7 @@ const routes: Routes = [
     canActivate: [RedirectGuard],
     component: RedirectGuard,
     data: {
-      externalUrl: 'https://www.biorxiv.org/content/10.1101/2021.04.25.441334v1'
+      externalUrl: 'https://academic.oup.com/bioinformaticsadvances/advance-article/doi/10.1093/bioadv/vbab035/6432029'
     }
   }
 ];
