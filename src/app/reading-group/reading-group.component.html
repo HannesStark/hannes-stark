@@ -134,63 +134,63 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2109.04173" target="_blank">
-                  Relating Graph Neural Networks to Structural Causal Model</a></h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.07875"
+                   target="_blank">
+                  Graph Neural Networks with Learnable Structural and Positional Representations</a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                9th of November 2021
+                30th of November 2021
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Matej Zečević, Devendra Singh Dhami, Petar Veličković, Kristian Kersting
+                  Vijay Prakash Dwivedi, Anh Tuan Luu, Thomas Laurent, Yoshua Bengio, Xavier Bresson
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLGNNSCM' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLLSPE' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Matej's
-                <a href="https://hannes-stark.com/assets/MZ-NeuroCausality-Talk-LoGaG.pdf"
+                Vijay's
+                <a href="https://hannes-stark.com/assets/VPDwivedi_GNN_LSPE_LoGaG_2021.pdf"
                    target="_blank"
                    class="link-style-green">slides</a>.
-                (100 participants)
+                (71 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First author <a class="item-subtitle link-style-black" href="https://matej-zecevic.de/" target="_blank">
-                Matej Zečević</a> who is a PhD candidate at TU Darmstadt working with <a
-                class="item-subtitle link-style-black" href="https://ml-research.github.io/people/kkersting/index.html"
-                target="_blank">
-                Kristian Kersting</a> on
-                Causality for ML. Before that, he completed his M.Sc. in Computer Science under <a
+                First author <a class="item-subtitle link-style-black" href="https://vijaydwivedi.com.np/"
+                                target="_blank">Vijay Prakash Dwivedi</a> who is a PhD student in Machine Learning at
+                Nanyang Technological
+                University, Singapore working with Prof. <a class="item-subtitle link-style-black"
+                                                            href="https://tuanluu.github.io/"
+                                                            target="_blank">Luu Anh Tuan</a> (NTU) and Prof. <a
                 class="item-subtitle link-style-black"
-                href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters"
-                target="_blank">
-                Jan Peters</a>, <a
-                class="item-subtitle link-style-black" href="https://cifar.ca/bios/stefan-bauer/" target="_blank">
-                Stefan Bauer</a>,
-                and <a
-                class="item-subtitle link-style-black" href="https://www.is.mpg.de/~bs" target="_blank">
-                Bernhard Schölkopf</a> at MPI for Intelligent Systems (Tübingen).
+                href="https://scholar.google.com/citations?user=9pSK04MAAAAJ&hl=en"
+                target="_blank">Xavier Bresson</a> (NUS). His primary
+                interest is ML for graph-structured data and he has contributed in "<a
+                class="item-subtitle link-style-black" href="https://arxiv.org/abs/2003.00982"
+                target="_blank">Benchmarking Graph Neural Networks</a>"
+                and “<a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2012.09699"
+                        target="_blank">A Generalization of Transformer Networks to Graphs</a>” as part of his research.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Causality can be described in terms of a structural causal model (SCM) that carries information on the
-                variables of interest and their mechanistic relations. For most processes of interest the underlying SCM
-                will only be partially observable, thus causal inference tries to leverage any exposed information.
-                Graph
-                neural networks (GNN) as universal approximators on structured input pose a viable candidate for causal
-                learning, suggesting a tighter integration with SCM. To this effect we present a theoretical analysis
-                from
-                first principles that establishes a novel connection between GNN and SCM while providing an extended
-                view
-                on general neural-causal models. We then establish a new model class for GNN-based causal inference that
-                is necessary and sufficient for causal effect identification. Our empirical illustration on simulations
-                and standard benchmarks validate our theoretical proofs.
+                Graph neural networks (GNNs) have become the standard learning architectures for graphs. GNNs have been
+                applied to numerous domains ranging from quantum chemistry, recommender systems to knowledge graphs and
+                natural language processing. A major issue with arbitrary graphs is the absence of canonical positional
+                information of nodes, which decreases the representation power of GNNs to distinguish e.g. isomorphic
+                nodes and other graph symmetries. An approach to tackle this issue is to introduce Positional Encoding
+                (PE) of nodes, and inject it into the input layer, like in Transformers. Possible graph PE are Laplacian
+                eigenvectors. In this work, we propose to decouple structural and positional representations to make
+                easy
+                for the network to learn these two essential properties. We introduce a novel generic architecture which
+                we call LSPE (Learnable Structural and Positional Encodings). We investigate several sparse and
+                fully-connected (Transformer-like) GNNs, and observe a performance increase for molecular datasets, from
+                2.87% up to 64.14% when considering learnable PE for both GNN classes.
               </p>
             </div>
           </div>
@@ -473,44 +473,49 @@
                 </a>
               </div>
             </div>
-            <p class="paragraph">
-              <a class="slight-bold">Resources:</a>
-              Vijay's
-              <a href="https://hannes-stark.com/assets/VPDwivedi_GNN_LSPE_LoGaG_2021.pdf"
-                 target="_blank"
-                 class="link-style-green">slides</a>.
-              (71 participants)
-            </p>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author <a class="item-subtitle link-style-black" href="https://vijaydwivedi.com.np/"
-                              target="_blank">Vijay Prakash Dwivedi</a> who is a PhD student in Machine Learning at
-              Nanyang Technological
-              University, Singapore working with Prof. <a class="item-subtitle link-style-black"
-                                                          href="https://tuanluu.github.io/"
-                                                          target="_blank">Luu Anh Tuan</a> (NTU) and Prof. <a
-              class="item-subtitle link-style-black" href="https://scholar.google.com/citations?user=9pSK04MAAAAJ&hl=en"
-              target="_blank">Xavier Bresson</a> (NUS). His primary
-              interest is ML for graph-structured data and he has contributed in "<a
-              class="item-subtitle link-style-black" href="https://arxiv.org/abs/2003.00982"
-              target="_blank">Benchmarking Graph Neural Networks</a>"
-              and “<a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2012.09699"
-                      target="_blank">A Generalization of Transformer Networks to Graphs</a>” as part of his research.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Graph neural networks (GNNs) have become the standard learning architectures for graphs. GNNs have been
-              applied to numerous domains ranging from quantum chemistry, recommender systems to knowledge graphs and
-              natural language processing. A major issue with arbitrary graphs is the absence of canonical positional
-              information of nodes, which decreases the representation power of GNNs to distinguish e.g. isomorphic
-              nodes and other graph symmetries. An approach to tackle this issue is to introduce Positional Encoding
-              (PE) of nodes, and inject it into the input layer, like in Transformers. Possible graph PE are Laplacian
-              eigenvectors. In this work, we propose to decouple structural and positional representations to make easy
-              for the network to learn these two essential properties. We introduce a novel generic architecture which
-              we call LSPE (Learnable Structural and Positional Encodings). We investigate several sparse and
-              fully-connected (Transformer-like) GNNs, and observe a performance increase for molecular datasets, from
-              2.87% up to 64.14% when considering learnable PE for both GNN classes.
-            </p>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLLSPE' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Vijay's
+                <a href="https://hannes-stark.com/assets/VPDwivedi_GNN_LSPE_LoGaG_2021.pdf"
+                   target="_blank"
+                   class="link-style-green">slides</a>.
+                (71 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author <a class="item-subtitle link-style-black" href="https://vijaydwivedi.com.np/"
+                                target="_blank">Vijay Prakash Dwivedi</a> who is a PhD student in Machine Learning at
+                Nanyang Technological
+                University, Singapore working with Prof. <a class="item-subtitle link-style-black"
+                                                            href="https://tuanluu.github.io/"
+                                                            target="_blank">Luu Anh Tuan</a> (NTU) and Prof. <a
+                class="item-subtitle link-style-black"
+                href="https://scholar.google.com/citations?user=9pSK04MAAAAJ&hl=en"
+                target="_blank">Xavier Bresson</a> (NUS). His primary
+                interest is ML for graph-structured data and he has contributed in "<a
+                class="item-subtitle link-style-black" href="https://arxiv.org/abs/2003.00982"
+                target="_blank">Benchmarking Graph Neural Networks</a>"
+                and “<a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2012.09699"
+                        target="_blank">A Generalization of Transformer Networks to Graphs</a>” as part of his research.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Graph neural networks (GNNs) have become the standard learning architectures for graphs. GNNs have been
+                applied to numerous domains ranging from quantum chemistry, recommender systems to knowledge graphs and
+                natural language processing. A major issue with arbitrary graphs is the absence of canonical positional
+                information of nodes, which decreases the representation power of GNNs to distinguish e.g. isomorphic
+                nodes and other graph symmetries. An approach to tackle this issue is to introduce Positional Encoding
+                (PE) of nodes, and inject it into the input layer, like in Transformers. Possible graph PE are Laplacian
+                eigenvectors. In this work, we propose to decouple structural and positional representations to make
+                easy
+                for the network to learn these two essential properties. We introduce a novel generic architecture which
+                we call LSPE (Learnable Structural and Positional Encodings). We investigate several sparse and
+                fully-connected (Transformer-like) GNNs, and observe a performance increase for molecular datasets, from
+                2.87% up to 64.14% when considering learnable PE for both GNN classes.
+              </p>
+            </div>
           </div>
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
