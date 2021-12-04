@@ -230,7 +230,7 @@
 
             </div>
             <p class="paragraph">
-              <a class="slight-bold">What we will do:</a><br>
+              <a class="slight-bold">What we will do:</a>
 
               The first NeurIPS poster session is on Tuesday Dec 7th at 4:30pm UTC - 30 minutes after our reading group
               starts. I decided to have a meeting for the 30 minutes before the first poster session starts, but we
@@ -429,6 +429,107 @@
               represent any arbitrary GCA with finite and discrete state space. Then, we test our approach on three
               different tasks: 1) learning the transition rule of a GCA on a Voronoi tessellation; 2) imitating the
               behaviour of a group of flocking agents; 3) learning a rule that converges to a desired target state.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14056" target="_blank">
+                  How to transfer algorithmic reasoning knowledge to learn new algorithms?</a> + <a
+                class="item-subtitle link-style-black"
+                href="https://arxiv.org/abs/2110.05442" target="_blank">
+                Neural Algorithmic Reasoners are Implicit Planners (2021)</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                18th of January 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  First paper: Louis-Pascal A. C. Xhonneux, Andreea Deac, Petar Velickovic, Jian Tang
+                </a>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Second paper: Andreea Deac, Petar Veličković, Ognjen Milinković, Pierre-Luc Bacon, Jian Tang, Mladen
+                  Nikolić
+                </a>
+              </div>
+            </div>
+            <div>
+              <p class="paragraph">
+                <a class="slight-bold">Speakers:</a>
+
+                First authors of the papers <a href="https://www.linkedin.com/in/louis-pascal-xhonneux-3a85a2141/"
+                                               target="_blank"
+                                               class="link-style-green">Luis-Pascal Xhonneux</a> and <a
+                href="https://andreeadeac22.github.io/" target="_blank"
+                class="link-style-green">Andreea-Ioana Deac</a>.
+                Luis-Pascal did his master's at Cambridge and is now a PhD student at Mila. Andreea is a PhD student
+                in Machine Learning at Mila, with Prof Jian Tang. She is broadly interested in how learning can be
+                improved through the use of graph representations, having previously worked on algorithmic alignment
+                for implicit planning and applications to biotechnology (drug discovery and drug combinations).
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract Paper 1:</a>
+                Learning to execute algorithms is a fundamental problem that has been widely studied. Prior work has
+                shown that to enable systematic generalisation on graph algorithms it is critical to have access to the
+                intermediate steps of the program/algorithm. In many reasoning tasks, where algorithmic-style reasoning
+                is important, we only have access to the input and output examples. Thus, inspired by the success of
+                pre-training on similar tasks or data in Natural Language Processing (NLP) and Computer Vision, we set
+                out to study how we can transfer algorithmic reasoning knowledge. Specifically, we investigate how we
+                can use algorithms for which we have access to the execution trace to learn to solve similar tasks for
+                which we do not. We investigate two major classes of graph algorithms, parallel algorithms such as
+                breadth-first search and Bellman-Ford and sequential greedy algorithms such as Prim and Dijkstra. Due to
+                the fundamental differences between algorithmic reasoning knowledge and feature extractors such as used
+                in Computer Vision or NLP, we hypothesise that standard transfer techniques will not be sufficient to
+                achieve systematic generalisation. To investigate this empirically we create a dataset including 9
+                algorithms and 3 different graph types. We validate this empirically and show how instead multi-task
+                learning can be used to achieve the transfer of algorithmic reasoning knowledge.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract Paper 2:</a>
+                Implicit planning has emerged as an elegant technique for combining learned models of the world with
+                end-to-end model-free reinforcement learning. We study the class of implicit planners inspired by value
+                iteration, an algorithm that is guaranteed to yield perfect policies in fully-specified tabular
+                environments. We find that prior approaches either assume that the environment is provided in such a
+                tabular form -- which is highly restrictive -- or infer "local neighbourhoods" of states to run value
+                iteration over -- for which we discover an algorithmic bottleneck effect. This effect is caused by
+                explicitly running the planning algorithm based on scalar predictions in every state, which can be
+                harmful to data efficiency if such scalars are improperly predicted. We propose eXecuted Latent Value
+                Iteration Networks (XLVINs), which alleviate the above limitations. Our method performs all planning
+                computations in a high-dimensional latent space, breaking the algorithmic bottleneck. It maintains
+                alignment with value iteration by carefully leveraging neural graph-algorithmic reasoning and
+                contrastive self-supervised learning. Across eight low-data settings -- including classical control,
+                navigation and Atari -- XLVINs provide significant improvements to data efficiency against value
+                iteration-based implicit planners, as well as relevant model-free baselines. Lastly, we empirically
+                verify that XLVINs can closely align with value iteration.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                25th of January 2022
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or via email!
             </p>
           </div>
 
