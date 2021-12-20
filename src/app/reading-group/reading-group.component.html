@@ -267,20 +267,48 @@
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black"
+                   href="https://physical-reasoning.github.io/assets/pdf/papers/06.pdf"
+                   target="_blank">
+                  Learning Graph Search Heuristics (2021)
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 28th of December 2021
               </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Michal Pándy, Rex Ying, Gabriele Corso, Petar Veličković, Jure Leskovec, Pietro Liò
+                </a>
+              </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or via email!
+              First author of the paper <a class="item-subtitle link-style-black"
+                                           href="https://mpmisko.github.io/"
+                                           target="_blank">Michal Pándy</a> who is an incoming ML Engineer at Waymo. He
+              will join Prof. Shimon Whiteson 's team to work on self-driving cars. He did his master's at the
+              University of Cambridge and is currently a research intern at Google Research.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Searching for a path between two nodes in a graph is one of the most well-studied and fundamental problems
+              in computer science. In numerous domains such as robotics, AI, or biology, practitioners develop search
+              heuristics to accelerate their pathfinding algorithms. However, it is a laborious and complex process to
+              hand-design heuristics based on the problem and the structure of a given use case. Here we present PHIL
+              (Path Heuristic with Imitation Learning), a novel neural architecture and a training algorithm for
+              discovering graph search and navigation heuristics from data by leveraging recent advances in imitation
+              learning and graph representation learning. At training time, we aggregate datasets of search trajectories
+              and ground-truth shortest path distances, which we use to train a specialized graph neural network-based
+              heuristic function using backpropagation through steps of the pathfinding process. Our heuristic function
+              learns graph embeddings useful for inferring node distances, runs in constant time independent of graph
+              sizes, and can be easily incorporated in an algorithm such as A* at test time. Experiments show that PHIL
+              reduces the number of explored nodes compared to state-of-the-art methods on benchmark datasets by 40.8%
+              on average and allows for fast planning in time-critical robotics domains.
             </p>
           </div>
 
@@ -308,7 +336,7 @@
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
               First author <a class="item-subtitle link-style-black"
-                              href="https://danielegrattarola.github.io/"
+                              href="https://kiddozhu.github.io/"
                               target="_blank">Zhaocheng Zhu</a>, who is a third-year Ph.D.
               candidate at Mila - Quebec AI Institute, University of Montreal, advised by Prof. Jian Tang. He works on
               graph representation learning, machine learning systems, and drug discovery.
