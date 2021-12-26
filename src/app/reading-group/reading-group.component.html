@@ -134,63 +134,62 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.07875"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.04624"
                    target="_blank">
-                  Graph Neural Networks with Learnable Structural and Positional Representations</a></h3>
+                  Iterative Refinement Graph Neural Network for Antibody Sequence-Structure Co-design (2021)
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                30th of November 2021
+                21st of December 2021
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Vijay Prakash Dwivedi, Anh Tuan Luu, Thomas Laurent, Yoshua Bengio, Xavier Bresson
+                  Wengong Jin, Jeremy Wohlwend, Regina Barzilay, Tommi Jaakkola
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLLSPE' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLIterativeGNN' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Vijay's
-                <a href="https://hannes-stark.com/assets/VPDwivedi_GNN_LSPE_LoGaG_2021.pdf"
-                   target="_blank"
-                   class="link-style-green">slides</a>.
-                (71 participants)
+                I recommend <a class="item-subtitle link-style-black" href="https://youtu.be/FpXIGTFD8Qs"
+                               target="_blank">this lecture</a> on immunology to learn a bit about antibodies. (61 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First author <a class="item-subtitle link-style-black" href="https://vijaydwivedi.com.np/"
-                                target="_blank">Vijay Prakash Dwivedi</a> who is a PhD student in Machine Learning at
-                Nanyang Technological
-                University, Singapore working with Prof. <a class="item-subtitle link-style-black"
-                                                            href="https://tuanluu.github.io/"
-                                                            target="_blank">Luu Anh Tuan</a> (NTU) and Prof. <a
-                class="item-subtitle link-style-black"
-                href="https://scholar.google.com/citations?user=9pSK04MAAAAJ&hl=en"
-                target="_blank">Xavier Bresson</a> (NUS). His primary
-                interest is ML for graph-structured data and he has contributed in "<a
-                class="item-subtitle link-style-black" href="https://arxiv.org/abs/2003.00982"
-                target="_blank">Benchmarking Graph Neural Networks</a>"
-                and “<a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2012.09699"
-                        target="_blank">A Generalization of Transformer Networks to Graphs</a>” as part of his research.
+                First author Dr. <a class="item-subtitle link-style-black" href="http://people.csail.mit.edu/wengong/"
+                                    target="_blank">Wengong Jin</a> who is a Postdoctoral Associate at Eric and Wendy
+                Schmidt Center of the Broad
+                Institute. He finished his Ph.D. in MIT CSAIL, advised by <a class="item-subtitle link-style-black"
+                                                                             href="https://www.regina.csail.mit.edu/"
+                                                                             target="_blank">Regina Barzilay</a> and <a
+                class="item-subtitle link-style-black" href="https://people.csail.mit.edu/tommi/"
+                target="_blank">Tommi Jaakkola</a>. He develops
+                novel machine learning algorithms for biology, including drug discovery, immunology, genetic
+                engineering,
+                and synthetic biology. He is particularly interested in deep generative models and graph neural
+                networks.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Graph neural networks (GNNs) have become the standard learning architectures for graphs. GNNs have been
-                applied to numerous domains ranging from quantum chemistry, recommender systems to knowledge graphs and
-                natural language processing. A major issue with arbitrary graphs is the absence of canonical positional
-                information of nodes, which decreases the representation power of GNNs to distinguish e.g. isomorphic
-                nodes and other graph symmetries. An approach to tackle this issue is to introduce Positional Encoding
-                (PE) of nodes, and inject it into the input layer, like in Transformers. Possible graph PE are Laplacian
-                eigenvectors. In this work, we propose to decouple structural and positional representations to make
-                easy
-                for the network to learn these two essential properties. We introduce a novel generic architecture which
-                we call LSPE (Learnable Structural and Positional Encodings). We investigate several sparse and
-                fully-connected (Transformer-like) GNNs, and observe a performance increase for molecular datasets, from
-                2.87% up to 64.14% when considering learnable PE for both GNN classes.
+                Antibodies are versatile proteins that bind to pathogens like viruses and stimulate the adaptive immune
+                system. The specificity of antibody binding is determined by complementarity-determining regions (CDRs)
+                at
+                the tips of these Y-shaped proteins. In this paper, we propose a generative model to automatically
+                design
+                the CDRs of antibodies with enhanced binding specificity or neutralization capabilities. Previous
+                generative approaches formulate protein design as a structure-conditioned sequence generation task,
+                assuming the desired 3D structure is given a priori. In contrast, we propose to co-design the sequence
+                and
+                3D structure of CDRs as graphs. Our model unravels a sequence autoregressively while iteratively
+                refining
+                its predicted global structure. The inferred structure in turn guides subsequent residue choices. For
+                efficiency, we model the conditional dependence between residues inside and outside of a CDR in a
+                coarse-grained manner. Our method achieves superior log-likelihood on the test set and outperforms
+                previous baselines in designing antibodies capable of neutralizing the SARS-CoV-2 virus.
               </p>
             </div>
           </div>
@@ -215,56 +214,7 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.04624"
-                   target="_blank">
-                  Iterative Refinement Graph Neural Network for Antibody Sequence-Structure Co-design (2021)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                21st of December 2021
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Wengong Jin, Jeremy Wohlwend, Regina Barzilay, Tommi Jaakkola
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author Dr. <a class="item-subtitle link-style-black" href="http://people.csail.mit.edu/wengong/"
-                                  target="_blank">Wengong Jin</a> who is a Postdoctoral Associate at Eric and Wendy
-              Schmidt Center of the Broad
-              Institute. He finished his Ph.D. in MIT CSAIL, advised by <a class="item-subtitle link-style-black"
-                                                                           href="https://www.regina.csail.mit.edu/"
-                                                                           target="_blank">Regina Barzilay</a> and <a
-              class="item-subtitle link-style-black" href="https://people.csail.mit.edu/tommi/"
-              target="_blank">Tommi Jaakkola</a>. He develops
-              novel machine learning algorithms for biology, including drug discovery, immunology, genetic engineering,
-              and synthetic biology. He is particularly interested in deep generative models and graph neural networks.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Antibodies are versatile proteins that bind to pathogens like viruses and stimulate the adaptive immune
-              system. The specificity of antibody binding is determined by complementarity-determining regions (CDRs) at
-              the tips of these Y-shaped proteins. In this paper, we propose a generative model to automatically design
-              the CDRs of antibodies with enhanced binding specificity or neutralization capabilities. Previous
-              generative approaches formulate protein design as a structure-conditioned sequence generation task,
-              assuming the desired 3D structure is given a priori. In contrast, we propose to co-design the sequence and
-              3D structure of CDRs as graphs. Our model unravels a sequence autoregressively while iteratively refining
-              its predicted global structure. The inferred structure in turn guides subsequent residue choices. For
-              efficiency, we model the conditional dependence between residues inside and outside of a CDR in a
-              coarse-grained manner. Our method achieves superior log-likelihood on the test set and outperforms
-              previous baselines in designing antibodies capable of neutralizing the SARS-CoV-2 virus.
-            </p>
-          </div>
 
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -554,6 +504,74 @@
               alleviate the over-squashing.
             </p>
           </div>
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                8th of February 2022
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or via email!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14012"
+                   target="_blank">
+                  Graph Posterior Network: Bayesian Predictive Uncertainty for Node Classification (2021)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                15th of February 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Maximilian Stadler, Bertrand Charpentier, Simon Geisler, Daniel Zügner, Stephan Günnemann
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First authors <a
+              class="item-subtitle link-style-black"
+              href="https://maximilian-stadler.de/"
+              target="_blank">Maximilian Stadler</a> and <a
+              class="item-subtitle link-style-black"
+              href="https://www.in.tum.de/en/daml/team/bertrand-charpentier/"
+              target="_blank">Bertrand Charpentier</a>. Maximilian received his M.Sc.
+              with high distinction from the Technical University of Munich. He wrote his thesis in the group of Prof.
+              Günnemann. In this group, Bertrand is a PhD candidate working on uncertainty estimation and ML for graphs.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              The interdependence between nodes in graphs is key to improve class predictions on nodes and utilized in
+              approaches like Label Propagation (LP) or in Graph Neural Networks (GNN). Nonetheless, uncertainty
+              estimation for non-independent node-level predictions is under-explored. In this work, we explore
+              uncertainty quantification for node classification in three ways: (1) We derive three axioms explicitly
+              characterizing the expected predictive uncertainty behavior in homophilic attributed graphs. (2) We
+              propose a new model Graph Posterior Network (GPN) which explicitly performs Bayesian posterior updates for
+              predictions on interdependent nodes. GPN provably obeys the proposed axioms. (3) We extensively evaluate
+              GPN and a strong set of baselines on semi-supervised node classification including detection of anomalous
+              features, and detection of left-out classes. GPN outperforms existing approaches for uncertainty
+              estimation in the experiments.
+            </p>
+          </div>
 
 
         </div>
@@ -580,6 +598,71 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.04624"
+                   target="_blank">
+                  Iterative Refinement Graph Neural Network for Antibody Sequence-Structure Co-design (2021)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                21st of December 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Wengong Jin, Jeremy Wohlwend, Regina Barzilay, Tommi Jaakkola
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLIterativeGNN' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                I recommend <a class="item-subtitle link-style-black" href="https://youtu.be/FpXIGTFD8Qs"
+                               target="_blank">this lecture</a> on immunology to learn a bit about antibodies. (61 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author Dr. <a class="item-subtitle link-style-black" href="http://people.csail.mit.edu/wengong/"
+                                    target="_blank">Wengong Jin</a> who is a Postdoctoral Associate at Eric and Wendy
+                Schmidt Center of the Broad
+                Institute. He finished his Ph.D. in MIT CSAIL, advised by <a class="item-subtitle link-style-black"
+                                                                             href="https://www.regina.csail.mit.edu/"
+                                                                             target="_blank">Regina Barzilay</a> and <a
+                class="item-subtitle link-style-black" href="https://people.csail.mit.edu/tommi/"
+                target="_blank">Tommi Jaakkola</a>. He develops
+                novel machine learning algorithms for biology, including drug discovery, immunology, genetic
+                engineering,
+                and synthetic biology. He is particularly interested in deep generative models and graph neural
+                networks.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Antibodies are versatile proteins that bind to pathogens like viruses and stimulate the adaptive immune
+                system. The specificity of antibody binding is determined by complementarity-determining regions (CDRs)
+                at
+                the tips of these Y-shaped proteins. In this paper, we propose a generative model to automatically
+                design
+                the CDRs of antibodies with enhanced binding specificity or neutralization capabilities. Previous
+                generative approaches formulate protein design as a structure-conditioned sequence generation task,
+                assuming the desired 3D structure is given a priori. In contrast, we propose to co-design the sequence
+                and
+                3D structure of CDRs as graphs. Our model unravels a sequence autoregressively while iteratively
+                refining
+                its predicted global structure. The inferred structure in turn guides subsequent residue choices. For
+                efficiency, we model the conditional dependence between residues inside and outside of a CDR in a
+                coarse-grained manner. Our method achieves superior log-likelihood on the test set and outperforms
+                previous baselines in designing antibodies capable of neutralizing the SARS-CoV-2 virus.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.02910"
                    target="_blank">
                   Equivariant Subgraph Aggregation Networks (2021)
@@ -598,44 +681,60 @@
                 </a>
               </div>
             </div>
-            <p class="paragraph">
-              <a class="slight-bold">Resources:</a>
-              Their
-              <a href="https://hannes-stark.com/assets/ESAN_Reading_Group_Slides.pdf"
-                 target="_blank"
-                 class="link-style-green">slides</a>.
-              (35 participants)
-            </p>
-            <p class="paragraph">
-              <a class="slight-bold">Speakers:</a>
-              Joint first authors <a class="item-subtitle link-style-black" href="https://www.linkedin.com/in/beabevi/"
-                                     target="_blank">Beatrice Bevilacqua</a>, <a class="item-subtitle link-style-black"
-                                                                                 href="https://scholar.google.com/citations?user=PT2CDA4AAAAJ&hl=en"
-                                                                                 target="_blank">Fabrizio Frasca</a>,
-              and <a class="item-subtitle link-style-black" href="https://cptq.github.io/"
-                     target="_blank">Derek Lim</a>. Beatrice is a PhD Student at
-              Purdue University with Prof. Bruno Ribeiro. Fabrizio is a PhD candidate at Imperial College London
-              supervised by Prof. Michael Bronstein and he works as an ML researcher at Twitter. Derek is a PhD student
-              at MIT under the supervision of Prof. Stefanie Jegelka.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Message-passing neural networks (MPNNs) are the leading architecture for deep learning on graph-structured
-              data, in large part due to their simplicity and scalability. Unfortunately, it was shown that these
-              architectures are limited in their expressive power. This paper proposes a novel framework called
-              Equivariant Subgraph Aggregation Networks (ESAN) to address this issue. Our main observation is that while
-              two graphs may not be distinguishable by an MPNN, they often contain distinguishable subgraphs. Thus, we
-              propose to represent each graph as a set of subgraphs derived by some predefined policy, and to process it
-              using a suitable equivariant architecture. We develop novel variants of the 1-dimensional Weisfeiler-Leman
-              (1-WL) test for graph isomorphism, and prove lower bounds on the expressiveness of ESAN in terms of these
-              new WL variants. We further prove that our approach increases the expressive power of both MPNNs and more
-              expressive architectures. Moreover, we provide theoretical results that describe how design choices such
-              as the subgraph selection policy and equivariant neural architecture affect our architecture's expressive
-              power. To deal with the increased computational cost, we propose a subgraph sampling scheme, which can be
-              viewed as a stochastic version of our framework. A comprehensive set of experiments on real and synthetic
-              datasets demonstrates that our framework improves the expressive power and overall performance of popular
-              GNN architectures.
-            </p>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLESAN' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Their
+                <a href="https://hannes-stark.com/assets/ESAN_Reading_Group_Slides.pdf"
+                   target="_blank"
+                   class="link-style-green">slides</a>.
+                (35 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speakers:</a>
+                Joint first authors <a class="item-subtitle link-style-black"
+                                       href="https://www.linkedin.com/in/beabevi/"
+                                       target="_blank">Beatrice Bevilacqua</a>, <a
+                class="item-subtitle link-style-black"
+                href="https://scholar.google.com/citations?user=PT2CDA4AAAAJ&hl=en"
+                target="_blank">Fabrizio Frasca</a>,
+                and <a class="item-subtitle link-style-black" href="https://cptq.github.io/"
+                       target="_blank">Derek Lim</a>. Beatrice is a PhD Student at
+                Purdue University with Prof. Bruno Ribeiro. Fabrizio is a PhD candidate at Imperial College London
+                supervised by Prof. Michael Bronstein and he works as an ML researcher at Twitter. Derek is a PhD
+                student
+                at MIT under the supervision of Prof. Stefanie Jegelka.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Message-passing neural networks (MPNNs) are the leading architecture for deep learning on
+                graph-structured
+                data, in large part due to their simplicity and scalability. Unfortunately, it was shown that these
+                architectures are limited in their expressive power. This paper proposes a novel framework called
+                Equivariant Subgraph Aggregation Networks (ESAN) to address this issue. Our main observation is that
+                while
+                two graphs may not be distinguishable by an MPNN, they often contain distinguishable subgraphs. Thus, we
+                propose to represent each graph as a set of subgraphs derived by some predefined policy, and to process
+                it
+                using a suitable equivariant architecture. We develop novel variants of the 1-dimensional
+                Weisfeiler-Leman
+                (1-WL) test for graph isomorphism, and prove lower bounds on the expressiveness of ESAN in terms of
+                these
+                new WL variants. We further prove that our approach increases the expressive power of both MPNNs and
+                more
+                expressive architectures. Moreover, we provide theoretical results that describe how design choices such
+                as the subgraph selection policy and equivariant neural architecture affect our architecture's
+                expressive
+                power. To deal with the increased computational cost, we propose a subgraph sampling scheme, which can
+                be
+                viewed as a stochastic version of our framework. A comprehensive set of experiments on real and
+                synthetic
+                datasets demonstrates that our framework improves the expressive power and overall performance of
+                popular
+                GNN architectures.
+              </p>
+            </div>
           </div>
 
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
