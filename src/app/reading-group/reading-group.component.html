@@ -134,62 +134,59 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.04624"
+                <a class="item-subtitle link-style-black"
+                   href="https://physical-reasoning.github.io/assets/pdf/papers/06.pdf"
                    target="_blank">
-                  Iterative Refinement Graph Neural Network for Antibody Sequence-Structure Co-design (2021)
+                  Learning Graph Search Heuristics (2021)
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                21st of December 2021
+                28th of December 2021
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Wengong Jin, Jeremy Wohlwend, Regina Barzilay, Tommi Jaakkola
+                  Michal Pándy, Rex Ying, Gabriele Corso, Petar Veličković, Jure Leskovec, Pietro Liò
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLIterativeGNN' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLGraphSearch' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                I recommend <a class="item-subtitle link-style-black" href="https://youtu.be/FpXIGTFD8Qs"
-                               target="_blank">this lecture</a> on immunology to learn a bit about antibodies. (61 participants)
+                Michal's <a class="item-subtitle link-style-black" href="https://youtu.be/FpXIGTFD8Qs"
+                            target="_blank">slides </a> should be coming soon! (46 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First author Dr. <a class="item-subtitle link-style-black" href="http://people.csail.mit.edu/wengong/"
-                                    target="_blank">Wengong Jin</a> who is a Postdoctoral Associate at Eric and Wendy
-                Schmidt Center of the Broad
-                Institute. He finished his Ph.D. in MIT CSAIL, advised by <a class="item-subtitle link-style-black"
-                                                                             href="https://www.regina.csail.mit.edu/"
-                                                                             target="_blank">Regina Barzilay</a> and <a
-                class="item-subtitle link-style-black" href="https://people.csail.mit.edu/tommi/"
-                target="_blank">Tommi Jaakkola</a>. He develops
-                novel machine learning algorithms for biology, including drug discovery, immunology, genetic
-                engineering,
-                and synthetic biology. He is particularly interested in deep generative models and graph neural
-                networks.
+                First author of the paper <a class="item-subtitle link-style-black"
+                                             href="https://mpmisko.github.io/"
+                                             target="_blank">Michal Pándy</a> who is an incoming ML Engineer at Waymo.
+                He
+                will join Prof. Shimon Whiteson 's team to work on self-driving cars. He did his master's at the
+                University of Cambridge and is currently a research intern at Google Research.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Antibodies are versatile proteins that bind to pathogens like viruses and stimulate the adaptive immune
-                system. The specificity of antibody binding is determined by complementarity-determining regions (CDRs)
-                at
-                the tips of these Y-shaped proteins. In this paper, we propose a generative model to automatically
-                design
-                the CDRs of antibodies with enhanced binding specificity or neutralization capabilities. Previous
-                generative approaches formulate protein design as a structure-conditioned sequence generation task,
-                assuming the desired 3D structure is given a priori. In contrast, we propose to co-design the sequence
-                and
-                3D structure of CDRs as graphs. Our model unravels a sequence autoregressively while iteratively
-                refining
-                its predicted global structure. The inferred structure in turn guides subsequent residue choices. For
-                efficiency, we model the conditional dependence between residues inside and outside of a CDR in a
-                coarse-grained manner. Our method achieves superior log-likelihood on the test set and outperforms
-                previous baselines in designing antibodies capable of neutralizing the SARS-CoV-2 virus.
+                Searching for a path between two nodes in a graph is one of the most well-studied and fundamental
+                problems
+                in computer science. In numerous domains such as robotics, AI, or biology, practitioners develop search
+                heuristics to accelerate their pathfinding algorithms. However, it is a laborious and complex process to
+                hand-design heuristics based on the problem and the structure of a given use case. Here we present PHIL
+                (Path Heuristic with Imitation Learning), a novel neural architecture and a training algorithm for
+                discovering graph search and navigation heuristics from data by leveraging recent advances in imitation
+                learning and graph representation learning. At training time, we aggregate datasets of search
+                trajectories
+                and ground-truth shortest path distances, which we use to train a specialized graph neural network-based
+                heuristic function using backpropagation through steps of the pathfinding process. Our heuristic
+                function
+                learns graph embeddings useful for inferring node distances, runs in constant time independent of graph
+                sizes, and can be easily incorporated in an algorithm such as A* at test time. Experiments show that
+                PHIL
+                reduces the number of explored nodes compared to state-of-the-art methods on benchmark datasets by 40.8%
+                on average and allows for fast planning in time-critical robotics domains.
               </p>
             </div>
           </div>
@@ -214,55 +211,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black"
-                   href="https://physical-reasoning.github.io/assets/pdf/papers/06.pdf"
-                   target="_blank">
-                  Learning Graph Search Heuristics (2021)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                28th of December 2021
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Michal Pándy, Rex Ying, Gabriele Corso, Petar Veličković, Jure Leskovec, Pietro Liò
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author of the paper <a class="item-subtitle link-style-black"
-                                           href="https://mpmisko.github.io/"
-                                           target="_blank">Michal Pándy</a> who is an incoming ML Engineer at Waymo. He
-              will join Prof. Shimon Whiteson 's team to work on self-driving cars. He did his master's at the
-              University of Cambridge and is currently a research intern at Google Research.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Searching for a path between two nodes in a graph is one of the most well-studied and fundamental problems
-              in computer science. In numerous domains such as robotics, AI, or biology, practitioners develop search
-              heuristics to accelerate their pathfinding algorithms. However, it is a laborious and complex process to
-              hand-design heuristics based on the problem and the structure of a given use case. Here we present PHIL
-              (Path Heuristic with Imitation Learning), a novel neural architecture and a training algorithm for
-              discovering graph search and navigation heuristics from data by leveraging recent advances in imitation
-              learning and graph representation learning. At training time, we aggregate datasets of search trajectories
-              and ground-truth shortest path distances, which we use to train a specialized graph neural network-based
-              heuristic function using backpropagation through steps of the pathfinding process. Our heuristic function
-              learns graph embeddings useful for inferring node distances, runs in constant time independent of graph
-              sizes, and can be easily incorporated in an algorithm such as A* at test time. Experiments show that PHIL
-              reduces the number of explored nodes compared to state-of-the-art methods on benchmark datasets by 40.8%
-              on average and allows for fast planning in time-critical robotics domains.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -594,6 +542,67 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black"
+                   href="https://physical-reasoning.github.io/assets/pdf/papers/06.pdf"
+                   target="_blank">
+                  Learning Graph Search Heuristics (2021)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                28th of December 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Michal Pándy, Rex Ying, Gabriele Corso, Petar Veličković, Jure Leskovec, Pietro Liò
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLGraphSearch' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Michal's <a class="item-subtitle link-style-black" href="https://youtu.be/FpXIGTFD8Qs"
+                            target="_blank">slides </a> should be coming soon! (46 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author of the paper <a class="item-subtitle link-style-black"
+                                             href="https://mpmisko.github.io/"
+                                             target="_blank">Michal Pándy</a> who is an incoming ML Engineer at Waymo.
+                He
+                will join Prof. Shimon Whiteson 's team to work on self-driving cars. He did his master's at the
+                University of Cambridge and is currently a research intern at Google Research.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Searching for a path between two nodes in a graph is one of the most well-studied and fundamental
+                problems
+                in computer science. In numerous domains such as robotics, AI, or biology, practitioners develop search
+                heuristics to accelerate their pathfinding algorithms. However, it is a laborious and complex process to
+                hand-design heuristics based on the problem and the structure of a given use case. Here we present PHIL
+                (Path Heuristic with Imitation Learning), a novel neural architecture and a training algorithm for
+                discovering graph search and navigation heuristics from data by leveraging recent advances in imitation
+                learning and graph representation learning. At training time, we aggregate datasets of search
+                trajectories
+                and ground-truth shortest path distances, which we use to train a specialized graph neural network-based
+                heuristic function using backpropagation through steps of the pathfinding process. Our heuristic
+                function
+                learns graph embeddings useful for inferring node distances, runs in constant time independent of graph
+                sizes, and can be easily incorporated in an algorithm such as A* at test time. Experiments show that
+                PHIL
+                reduces the number of explored nodes compared to state-of-the-art methods on benchmark datasets by 40.8%
+                on average and allows for fast planning in time-critical robotics domains.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
@@ -620,7 +629,8 @@
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
                 I recommend <a class="item-subtitle link-style-black" href="https://youtu.be/FpXIGTFD8Qs"
-                               target="_blank">this lecture</a> on immunology to learn a bit about antibodies. (61 participants)
+                               target="_blank">this lecture</a> on immunology to learn a bit about antibodies. (61
+                participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
