@@ -211,55 +211,7 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.06935"
-                   target="_blank">
-                  Neural Bellman-Ford Networks: A General Graph Neural Network Framework for Link Prediction (2021)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                4th of January 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Zhaocheng Zhu, Zuobai Zhang, Louis-Pascal Xhonneux, Jian Tang
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author <a class="item-subtitle link-style-black"
-                              href="https://kiddozhu.github.io/"
-                              target="_blank">Zhaocheng Zhu</a>, who is a third-year Ph.D.
-              candidate at Mila - Quebec AI Institute, University of Montreal, advised by Prof. Jian Tang. He works on
-              graph representation learning, machine learning systems, and drug discovery.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Link prediction is a very fundamental task on graphs. Inspired by traditional path-based methods, in this
-              paper we propose a general and flexible representation learning framework based on paths for link
-              prediction. Specifically, we define the representation of a pair of nodes as the generalized sum of all
-              path representations, with each path representation as the generalized product of the edge representations
-              in the path. Motivated by the Bellman-Ford algorithm for solving the shortest path problem, we show that
-              the proposed path formulation can be efficiently solved by the generalized Bellman-Ford algorithm. To
-              further improve the capacity of the path formulation, we propose the Neural Bellman-Ford Network (NBFNet),
-              a general graph neural network framework that solves the path formulation with learned operators in the
-              generalized Bellman-Ford algorithm. The NBFNet parameterizes the generalized Bellman-Ford algorithm with 3
-              neural components, namely INDICATOR, MESSAGE and AGGREGATE functions, which corresponds to the boundary
-              condition, multiplication operator, and summation operator respectively. The NBFNet is very general,
-              covers many traditional path-based methods, and can be applied to both homogeneous graphs and
-              multi-relational graphs (e.g., knowledge graphs) in both transductive and inductive settings. Experiments
-              on both homogeneous graphs and knowledge graphs show that the proposed NBFNet outperforms existing methods
-              by a large margin in both transductive and inductive settings, achieving new state-of-the-art results.
-            </p>
-          </div>
 
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -541,6 +493,61 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.06935"
+                   target="_blank">
+                  Neural Bellman-Ford Networks: A General Graph Neural Network Framework for Link Prediction (2021)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                4th of January 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Zhaocheng Zhu, Zuobai Zhang, Louis-Pascal Xhonneux, Jian Tang
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Zhaocheng's <a class="item-subtitle link-style-black" href="https://hannes-stark.com/assets/NBFNetLoGaG.pdf"
+                            target="_blank">slides </a>. (77 participants)
+              </p>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author <a class="item-subtitle link-style-black"
+                              href="https://kiddozhu.github.io/"
+                              target="_blank">Zhaocheng Zhu</a>, who is a third-year Ph.D.
+              candidate at Mila - Quebec AI Institute, University of Montreal, advised by Prof. Jian Tang. He works on
+              graph representation learning, machine learning systems, and drug discovery.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Link prediction is a very fundamental task on graphs. Inspired by traditional path-based methods, in this
+              paper we propose a general and flexible representation learning framework based on paths for link
+              prediction. Specifically, we define the representation of a pair of nodes as the generalized sum of all
+              path representations, with each path representation as the generalized product of the edge representations
+              in the path. Motivated by the Bellman-Ford algorithm for solving the shortest path problem, we show that
+              the proposed path formulation can be efficiently solved by the generalized Bellman-Ford algorithm. To
+              further improve the capacity of the path formulation, we propose the Neural Bellman-Ford Network (NBFNet),
+              a general graph neural network framework that solves the path formulation with learned operators in the
+              generalized Bellman-Ford algorithm. The NBFNet parameterizes the generalized Bellman-Ford algorithm with 3
+              neural components, namely INDICATOR, MESSAGE and AGGREGATE functions, which corresponds to the boundary
+              condition, multiplication operator, and summation operator respectively. The NBFNet is very general,
+              covers many traditional path-based methods, and can be applied to both homogeneous graphs and
+              multi-relational graphs (e.g., knowledge graphs) in both transductive and inductive settings. Experiments
+              on both homogeneous graphs and knowledge graphs show that the proposed NBFNet outperforms existing methods
+              by a large margin in both transductive and inductive settings, achieving new state-of-the-art results.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
