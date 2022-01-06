@@ -42,6 +42,7 @@ export class ReadingGroupComponent implements OnInit {
   safeURLESAN;
   safeURLIterativeGNN;
   safeURLGraphSearch: any;
+  safeURLNBFNets: any;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -60,6 +61,7 @@ export class ReadingGroupComponent implements OnInit {
     this.safeURLESAN = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/voMue3G-_vk');
     this.safeURLIterativeGNN = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/gcf5HiwLW2U');
     this.safeURLGraphSearch = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/uZu3Kl8UZ60');
+    this.safeURLNBFNets = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/x8S0e56o70I');
   }
 
   ngOnInit(): void {
