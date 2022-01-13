@@ -121,7 +121,7 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" class="underline-title">
-          <h1 class="left-titles">LATEST VIDEO</h1>
+          <h1 class="left-titles">LATEST VIDEO (scroll down for more)</h1>
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
@@ -134,62 +134,55 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.06935"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14237"
                    target="_blank">
-                  Neural Bellman-Ford Networks: A General Graph Neural Network Framework for Link Prediction (2021)
+                  Learning Graph Cellular Automata (2021)
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                4th of January 2022
+                11th of January 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Zhaocheng Zhu, Zuobai Zhang, Louis-Pascal Xhonneux, Jian Tang
+                  Daniele Grattarola, Lorenzo Livi, Cesare Alippi
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLNBFNets' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLGCA' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Zhaocheng's <a class="item-subtitle link-style-black"
-                               href="https://hannes-stark.com/assets/NBFNetLoGaG.pdf"
-                               target="_blank">slides </a>. (77 participants)
+                Daniele's <a class="item-subtitle link-style-black"
+                             href="https://hannes-stark.com/assets/NBFNetLoGaG.pdf"
+                             target="_blank">slides </a> are coming soon. (90 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First author <a class="item-subtitle link-style-black"
-                                href="https://kiddozhu.github.io/"
-                                target="_blank">Zhaocheng Zhu</a>, who is a third-year Ph.D.
-                candidate at Mila - Quebec AI Institute, University of Montreal, advised by Prof. Jian Tang. He works on
-                graph representation learning, machine learning systems, and drug discovery.
+                First author of the paper Dr. <a class="item-subtitle link-style-black"
+                                                 href="https://danielegrattarola.github.io/"
+                                                 target="_blank">Daniele Grattarola</a> who is a post-doc researcher at
+                EPFL, working in collaboration with A. Loukas, B. Correia, P. Vandergheynst and M. Bronstein. He
+                obtained
+                his PhD working in
+                Graph Machine Learning Group at the Università della Svizzera Italiana in 2021. His research is on graph
+                neural networks and their applications to dynamical systems and computational biology, specifically for
+                protein design.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Link prediction is a very fundamental task on graphs. Inspired by traditional path-based methods, in
-                this
-                paper we propose a general and flexible representation learning framework based on paths for link
-                prediction. Specifically, we define the representation of a pair of nodes as the generalized sum of all
-                path representations, with each path representation as the generalized product of the edge
-                representations
-                in the path. Motivated by the Bellman-Ford algorithm for solving the shortest path problem, we show that
-                the proposed path formulation can be efficiently solved by the generalized Bellman-Ford algorithm. To
-                further improve the capacity of the path formulation, we propose the Neural Bellman-Ford Network
-                (NBFNet),
-                a general graph neural network framework that solves the path formulation with learned operators in the
-                generalized Bellman-Ford algorithm. The NBFNet parameterizes the generalized Bellman-Ford algorithm with
-                3
-                neural components, namely INDICATOR, MESSAGE and AGGREGATE functions, which corresponds to the boundary
-                condition, multiplication operator, and summation operator respectively. The NBFNet is very general,
-                covers many traditional path-based methods, and can be applied to both homogeneous graphs and
-                multi-relational graphs (e.g., knowledge graphs) in both transductive and inductive settings.
-                Experiments
-                on both homogeneous graphs and knowledge graphs show that the proposed NBFNet outperforms existing
-                methods
-                by a large margin in both transductive and inductive settings, achieving new state-of-the-art results.
+                Cellular automata (CA) are a class of computational models that exhibit rich dynamics emerging from the
+                local interaction of cells arranged in a regular lattice. In this work we focus on a generalised version
+                of typical CA, called graph cellular automata (GCA), in which the lattice structure is replaced by an
+                arbitrary graph. In particular, we extend previous work that used convolutional neural networks to learn
+                the transition rule of conventional CA and we use graph neural networks to learn a variety of transition
+                rules for GCA. First, we present a general-purpose architecture for learning GCA, and we show that it
+                can
+                represent any arbitrary GCA with finite and discrete state space. Then, we test our approach on three
+                different tasks: 1) learning the transition rule of a GCA on a Voronoi tessellation; 2) imitating the
+                behaviour of a group of flocking agents; 3) learning a rule that converges to a desired target state.
               </p>
             </div>
           </div>
@@ -213,53 +206,6 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
-
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14237"
-                   target="_blank">
-                  Learning Graph Cellular Automata (2021)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                11th of January 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Daniele Grattarola, Lorenzo Livi, Cesare Alippi
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author of the paper Dr. <a class="item-subtitle link-style-black"
-                                               href="https://danielegrattarola.github.io/"
-                                               target="_blank">Daniele Grattarola</a> who is a post-doc researcher at
-              EPFL, working in collaboration with A. Loukas, B. Correia, P. Vandergheynst and M. Bronstein. He obtained
-              his PhD working in
-              Graph Machine Learning Group at the Università della Svizzera Italiana in 2021. His research is on graph
-              neural networks and their applications to dynamical systems and computational biology, specifically for
-              protein design.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Cellular automata (CA) are a class of computational models that exhibit rich dynamics emerging from the
-              local interaction of cells arranged in a regular lattice. In this work we focus on a generalised version
-              of typical CA, called graph cellular automata (GCA), in which the lattice structure is replaced by an
-              arbitrary graph. In particular, we extend previous work that used convolutional neural networks to learn
-              the transition rule of conventional CA and we use graph neural networks to learn a variety of transition
-              rules for GCA. First, we present a general-purpose architecture for learning GCA, and we show that it can
-              represent any arbitrary GCA with finite and discrete state space. Then, we test our approach on three
-              different tasks: 1) learning the transition rule of a GCA on a Voronoi tessellation; 2) imitating the
-              behaviour of a group of flocking agents; 3) learning a rule that converges to a desired target state.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
@@ -343,20 +289,57 @@
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2101.10050"
+                   target="_blank">
+                  Learning Parametrised Graph Shift Operators (2021)
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                25th of January 2022
+                25t of January 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  George Dasoulas, Johannes Lutzeyer, Michalis Vazirgiannis
+                </a>
               </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or via email!
+              <a class="item-subtitle link-style-black"
+                                   href="https://gdasoulas.github.io/"
+                 target="_blank">George Dasoulas</a>, who is a final year PhD
+              student in both the Data Science and Mining group at the Ecole Polytechnique and Noah’s Ark Lab of Huawei
+              Technologies France. Under the supervision of Prof. Michalis Vazirgiannis, he works in the field of Graph
+              Representation Learning, studying the expressive power of Graph Neural Networks (GNNs). Using the gained
+              theoretical understanding of GNN architectures, his goal is to make impactful contributions to real-world
+              problems that are characterized by an inherent graph structure ranging from communication graphs to
+              molecular networks. Dr. <a class="item-subtitle link-style-black"
+                                   href="https://scholar.google.com/citations?user=OfT4ns8AAAAJ&hl=en"
+                                         target="_blank">Johannes Lutzeyer</a> is currently a postdoctoral researcher in the Data Science and
+              Mining group at the Ecole Polytechnique. He works in the field of Graph Representation Learning with a
+              focus on Graph Neural Networks and their theoretical analysis. He completed his PhD thesis at Imperial
+              College London, where he studied the spectral properties of different graph representation matrices such
+              as the adjacency and Laplacian matrices.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              In many domains data is currently represented as graphs and therefore, the graph representation of this
+              data becomes increasingly important in machine learning. Network data is, implicitly or explicitly, always
+              represented using a graph shift operator (GSO) with the most common choices being the adjacency, Laplacian
+              matrices and their normalisations. In this paper, a novel parametrised GSO (PGSO) is proposed, where
+              specific parameter values result in the most commonly used GSOs and message-passing operators in graph
+              neural network (GNN) frameworks. The PGSO is suggested as a replacement of the standard GSOs that are used
+              in state-of-the-art GNN architectures and the optimisation of the PGSO parameters is seamlessly included
+              in the model training. It is proved that the PGSO has real eigenvalues and a set of real eigenvectors
+              independent of the parameter values and spectral bounds on the PGSO are derived. PGSO parameters are shown
+              to adapt to the sparsity of the graph structure in a study on stochastic blockmodel networks, where they
+              are found to automatically replicate the GSO regularisation found in the literature. On several real-world
+              datasets the accuracy of state-of-the-art GNN architectures is improved by the inclusion of the PGSO in
+              both node- and graph-classification tasks.
             </p>
           </div>
 
@@ -495,6 +478,64 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14237"
+                   target="_blank">
+                  Learning Graph Cellular Automata (2021)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                11th of January 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Daniele Grattarola, Lorenzo Livi, Cesare Alippi
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLGCA' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Daniele's <a class="item-subtitle link-style-black"
+                             href="https://hannes-stark.com/assets/NBFNetLoGaG.pdf"
+                             target="_blank">slides </a> are coming soon. (90 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author of the paper Dr. <a class="item-subtitle link-style-black"
+                                                 href="https://danielegrattarola.github.io/"
+                                                 target="_blank">Daniele Grattarola</a> who is a post-doc researcher at
+                EPFL, working in collaboration with A. Loukas, B. Correia, P. Vandergheynst and M. Bronstein. He
+                obtained
+                his PhD working in
+                Graph Machine Learning Group at the Università della Svizzera Italiana in 2021. His research is on graph
+                neural networks and their applications to dynamical systems and computational biology, specifically for
+                protein design.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Cellular automata (CA) are a class of computational models that exhibit rich dynamics emerging from the
+                local interaction of cells arranged in a regular lattice. In this work we focus on a generalised version
+                of typical CA, called graph cellular automata (GCA), in which the lattice structure is replaced by an
+                arbitrary graph. In particular, we extend previous work that used convolutional neural networks to learn
+                the transition rule of conventional CA and we use graph neural networks to learn a variety of transition
+                rules for GCA. First, we present a general-purpose architecture for learning GCA, and we show that it
+                can
+                represent any arbitrary GCA with finite and discrete state space. Then, we test our approach on three
+                different tasks: 1) learning the transition rule of a GCA on a Voronoi tessellation; 2) imitating the
+                behaviour of a group of flocking agents; 3) learning a rule that converges to a desired target state.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
