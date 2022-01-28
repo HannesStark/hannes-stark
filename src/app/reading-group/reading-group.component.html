@@ -134,82 +134,6 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14237"
-                   target="_blank">
-                  Learning Graph Cellular Automata (2021)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                11th of January 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Daniele Grattarola, Lorenzo Livi, Cesare Alippi
-                </a>
-              </div>
-            </div>
-            <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLGCA' allowfullscreen></iframe>
-              <p class="paragraph">
-                <a class="slight-bold">Resources:</a>
-                Daniele's <a class="item-subtitle link-style-black"
-                             href="https://hannes-stark.com/assets/NBFNetLoGaG.pdf"
-                             target="_blank">slides </a> are coming soon. (90 participants)
-              </p>
-              <p class="paragraph">
-                <a class="slight-bold">Speaker:</a>
-                First author of the paper Dr. <a class="item-subtitle link-style-black"
-                                                 href="https://danielegrattarola.github.io/"
-                                                 target="_blank">Daniele Grattarola</a> who is a post-doc researcher at
-                EPFL, working in collaboration with A. Loukas, B. Correia, P. Vandergheynst and M. Bronstein. He
-                obtained
-                his PhD working in
-                Graph Machine Learning Group at the Università della Svizzera Italiana in 2021. His research is on graph
-                neural networks and their applications to dynamical systems and computational biology, specifically for
-                protein design.
-              </p>
-              <p class="no-margin">
-                <a class="slight-bold">Abstract:</a>
-                Cellular automata (CA) are a class of computational models that exhibit rich dynamics emerging from the
-                local interaction of cells arranged in a regular lattice. In this work we focus on a generalised version
-                of typical CA, called graph cellular automata (GCA), in which the lattice structure is replaced by an
-                arbitrary graph. In particular, we extend previous work that used convolutional neural networks to learn
-                the transition rule of conventional CA and we use graph neural networks to learn a variety of transition
-                rules for GCA. First, we present a general-purpose architecture for learning GCA, and we show that it
-                can
-                represent any arbitrary GCA with finite and discrete state space. Then, we test our approach on three
-                different tasks: 1) learning the transition rule of a GCA on a Voronoi tessellation; 2) imitating the
-                behaviour of a group of flocking agents; 3) learning a rule that converges to a desired target state.
-              </p>
-            </div>
-          </div>
-
-        </div>
-        <div fxFlex="10" fxFlex.xs="2"></div>
-      </div>
-    </div>
-
-    <div id="Schedule">
-      <div>
-        <div fxFlex="10" fxFlex.xs="2"></div>
-        <div fxFlex="80" fxFlex.xs="96" class="underline-title">
-          <h1 class="left-titles">SCHEDULE</h1>
-        </div>
-        <div fxFlex="10" fxFlex.xs="2"></div>
-      </div>
-
-
-      <div>
-        <div fxFlex="10" fxFlex.xs="2"></div>
-        <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
-
-
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14056" target="_blank">
                   How to transfer algorithmic reasoning knowledge to learn new algorithms?</a> + <a
                 class="item-subtitle link-style-black"
@@ -234,6 +158,13 @@
               </div>
             </div>
             <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLNAR' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Their <a class="item-subtitle link-style-black"
+                         href="https://hannes-stark.com/assets/2021-NeurIPS-graph-neural-cellular-automata-long.pdf"
+                         target="_blank">slides </a> are coming soon. (85 participants)
+              </p>
               <p class="paragraph">
                 <a class="slight-bold">Speakers:</a>
 
@@ -285,7 +216,25 @@
             </div>
           </div>
 
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+        </div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+      </div>
+    </div>
+
+    <div id="Schedule">
+      <div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+        <div fxFlex="80" fxFlex.xs="96" class="underline-title">
+          <h1 class="left-titles">SCHEDULE</h1>
+        </div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+      </div>
+
+
+      <div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+        <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
@@ -310,8 +259,8 @@
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
               Paper author <a class="item-subtitle link-style-black"
-                 href="https://gdasoulas.github.io/"
-                 target="_blank">George Dasoulas</a>, who is a final year PhD
+                              href="https://gdasoulas.github.io/"
+                              target="_blank">George Dasoulas</a>, who is a final year PhD
               student in both the Data Science and Mining group at the Ecole Polytechnique and Noah’s Ark Lab of Huawei
               Technologies France. Under the supervision of Prof. Michalis Vazirgiannis, he works in the field of Graph
               Representation Learning, studying the expressive power of Graph Neural Networks (GNNs). Using the gained
@@ -442,7 +391,7 @@
               href="https://www.in.tum.de/en/daml/team/bertrand-charpentier/"
               target="_blank">Bertrand Charpentier</a>. Maximilian received his M.Sc.
               with high distinction from the Technical University of Munich. He wrote his thesis in the group of Prof.
-              Günnemann. In this group, Bertrand is a PhD candidate working on uncertainty estimation and ML for graphs.
+              Günnemann. In this group, Bertrand is a PhD candidate working on uncertainty estimation and ML for graphs in this group.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
@@ -462,20 +411,42 @@
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.04941"
+                   target="_blank">
+                  Symmetric Spaces for Graph Embeddings: A Finsler-Riemannian Approach (2021)
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 22nd of February 2022
               </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Federico López, Beatrice Pozzetti, Steve Trettel, Michael Strube, Anna Wienhard
+                </a>
+              </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or via email!
+              First author of the paper <a
+              class="item-subtitle link-style-black"
+              href="https://fedelopez77.github.io/"
+              target="_blank">Federico López</a>, who is a Ph.D candidate in HITS at Heidelberg University. Prior to this, he studied Software Engineering at the University of Buenos Aires.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Learning faithful graph representations as sets of vertex embeddings has become a fundamental intermediary
+              step in a wide range of machine learning applications. We propose the systematic use of symmetric spaces
+              in representation learning, a class encompassing many of the previously used embedding targets. This
+              enables us to introduce a new method, the use of Finsler metrics integrated in a Riemannian optimization
+              scheme, that better adapts to dissimilar structures in the graph. We develop a tool to analyze the
+              embeddings and infer structural properties of the data sets. For implementation, we choose Siegel spaces,
+              a versatile family of symmetric spaces. Our approach outperforms competitive baselines for graph
+              reconstruction tasks on various synthetic and real-world datasets. We further demonstrate its
+              applicability on two downstream tasks, recommender systems and node classification.
             </p>
           </div>
 
@@ -534,11 +505,65 @@
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2010.16103"
+                   target="_blank">
+                  Labeling Trick: A Theory of Using Graph Neural Networks for Multi-Node Representation Learning (2021)
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 8th of March 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Muhan Zhang, Pan Li, Yinglong Xia, Kai Wang, Long Jin
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Professor <a
+              class="item-subtitle link-style-black"
+              href="https://sites.google.com/view/panli-purdue/home?authuser=0"
+              target="_blank">Pan Li</a> from Purdue University. He obtained his Ph.D. in Electrical and
+              Computer
+              Engineering at the University of Illinois Urbana - Champaign before completing a one-year postdoc in the
+              SNAP group at Stanford with Prof. Jure Leskovec. He works on principled GraphML and its mathematical
+              foundations.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              In this paper, we provide a theory of using graph neural networks (GNNs) for multi-node representation
+              learning (where we are interested in learning a representation for a set of more than one node). We know
+              that GNN is designed to learn single-node representations. When we want to learn a node set representation
+              involving multiple nodes, a common practice in previous works is to directly aggregate the multiple node
+              representations learned by a GNN into a joint representation of the node set. In this paper, we show a
+              fundamental constraint of such an approach, namely the inability to capture the dependence between nodes
+              in the node set, and argue that directly aggregating individual node representations does not lead to an
+              effective joint representation for multiple nodes. Then, we notice that a few previous successful works
+              for multi-node representation learning, including SEAL, Distance Encoding, and ID-GNN, all used node
+              labeling. These methods first label nodes in the graph according to their relationships with the target
+              node set before applying a GNN. Then, the node representations obtained in the labeled graph are
+              aggregated into a node set representation. By investigating their inner mechanisms, we unify these node
+              labeling techniques into a single and most basic form, namely labeling trick. We prove that with labeling
+              trick a sufficiently expressive GNN learns the most expressive node set representations, thus in principle
+              can solve any joint learning tasks over node sets. Experiments on one important two-node representation
+              learning task, link prediction, verified our theory. Our work establishes a theoretical foundation of
+              using GNNs for joint prediction tasks over node sets.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                15th of March 2022
               </div>
             </div>
             <p class="paragraph">
@@ -548,6 +573,55 @@
               <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
                  class="link-style-green">Slack</a>
               or via email!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="http://vladlen.info/papers/neural-fields.pdf"
+                   target="_blank">
+                  Geometry Processing with Neural Fields (2021)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                22nd of March 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Guandao Yang, Serge Belongie, Bharath Hariharan, Vladlen Koltun
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author <a
+              class="item-subtitle link-style-black"
+              href="https://www.guandaoyang.com/"
+              target="_blank">Guandao Yang</a>, who is a a Computer Science PhD student at Cornell University, advised
+              by Serge Belongie and Bharath Hariharan. His research interests include computer vision for augmented
+              reality and 3D generation.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Most existing geometry processing algorithms use meshes as the default shape representation. Manipulating
+              meshes, however, requires one to maintain high quality in the surface discretization. For example,
+              changing the topology of a mesh usually requires additional procedures such as remeshing. This paper
+              instead proposes the use of neural fields for geometry processing. Neural fields can compactly store
+              complicated shapes without spatial discretization. Moreover, neural fields are infinitely differentiable,
+              which allows them to be optimized for objectives that involve higher-order derivatives. This raises the
+              question: can geometry processing be done entirely using neural fields? We introduce loss functions and
+              architectures to show that some of the most challenging geometry processing tasks, such as deformation and
+              filtering, can be done with neural fields. Experimental results show that our methods are on par with the
+              well-established mesh-based methods without committing to a particular surface discretization. Code is
+              available at <a
+              class="item-subtitle link-style-black"
+              href="https://github.com/stevenygd/NFGP"
+              target="_blank">https://github.com/stevenygd/NFGP</a>.
             </p>
           </div>
 
@@ -571,6 +645,94 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14056" target="_blank">
+                  How to transfer algorithmic reasoning knowledge to learn new algorithms?</a> + <a
+                class="item-subtitle link-style-black"
+                href="https://arxiv.org/abs/2110.05442" target="_blank">
+                Neural Algorithmic Reasoners are Implicit Planners (2021)</a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                18th of January 2021
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  First paper: Louis-Pascal A. C. Xhonneux, Andreea Deac, Petar Velickovic, Jian Tang
+                </a>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Second paper: Andreea Deac, Petar Veličković, Ognjen Milinković, Pierre-Luc Bacon, Jian Tang, Mladen
+                  Nikolić
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLNAR' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Their <a class="item-subtitle link-style-black"
+                         href="https://hannes-stark.com/assets/2021-NeurIPS-graph-neural-cellular-automata-long.pdf"
+                         target="_blank">slides </a> are coming soon. (85 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speakers:</a>
+
+                First authors of the papers <a href="https://www.linkedin.com/in/louis-pascal-xhonneux-3a85a2141/"
+                                               target="_blank"
+                                               class="link-style-green">Luis-Pascal Xhonneux</a> and <a
+                href="https://andreeadeac22.github.io/" target="_blank"
+                class="link-style-green">Andreea-Ioana Deac</a>.
+                Luis-Pascal did his master's at Cambridge and is now a PhD student at Mila. Andreea is a PhD student
+                in Machine Learning at Mila, with Prof Jian Tang. She is broadly interested in how learning can be
+                improved through the use of graph representations, having previously worked on algorithmic alignment
+                for implicit planning and applications to biotechnology (drug discovery and drug combinations).
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract Paper 1:</a>
+                Learning to execute algorithms is a fundamental problem that has been widely studied. Prior work has
+                shown that to enable systematic generalisation on graph algorithms it is critical to have access to the
+                intermediate steps of the program/algorithm. In many reasoning tasks, where algorithmic-style reasoning
+                is important, we only have access to the input and output examples. Thus, inspired by the success of
+                pre-training on similar tasks or data in Natural Language Processing (NLP) and Computer Vision, we set
+                out to study how we can transfer algorithmic reasoning knowledge. Specifically, we investigate how we
+                can use algorithms for which we have access to the execution trace to learn to solve similar tasks for
+                which we do not. We investigate two major classes of graph algorithms, parallel algorithms such as
+                breadth-first search and Bellman-Ford and sequential greedy algorithms such as Prim and Dijkstra. Due to
+                the fundamental differences between algorithmic reasoning knowledge and feature extractors such as used
+                in Computer Vision or NLP, we hypothesise that standard transfer techniques will not be sufficient to
+                achieve systematic generalisation. To investigate this empirically we create a dataset including 9
+                algorithms and 3 different graph types. We validate this empirically and show how instead multi-task
+                learning can be used to achieve the transfer of algorithmic reasoning knowledge.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract Paper 2:</a>
+                Implicit planning has emerged as an elegant technique for combining learned models of the world with
+                end-to-end model-free reinforcement learning. We study the class of implicit planners inspired by value
+                iteration, an algorithm that is guaranteed to yield perfect policies in fully-specified tabular
+                environments. We find that prior approaches either assume that the environment is provided in such a
+                tabular form -- which is highly restrictive -- or infer "local neighbourhoods" of states to run value
+                iteration over -- for which we discover an algorithmic bottleneck effect. This effect is caused by
+                explicitly running the planning algorithm based on scalar predictions in every state, which can be
+                harmful to data efficiency if such scalars are improperly predicted. We propose eXecuted Latent Value
+                Iteration Networks (XLVINs), which alleviate the above limitations. Our method performs all planning
+                computations in a high-dimensional latent space, breaking the algorithmic bottleneck. It maintains
+                alignment with value iteration by carefully leveraging neural graph-algorithmic reasoning and
+                contrastive self-supervised learning. Across eight low-data settings -- including classical control,
+                navigation and Atari -- XLVINs provide significant improvements to data efficiency against value
+                iteration-based implicit planners, as well as relevant model-free baselines. Lastly, we empirically
+                verify that XLVINs can closely align with value iteration.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
