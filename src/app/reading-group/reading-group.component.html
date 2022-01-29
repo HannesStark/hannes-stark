@@ -134,84 +134,74 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14056" target="_blank">
-                  How to transfer algorithmic reasoning knowledge to learn new algorithms?</a> + <a
-                class="item-subtitle link-style-black"
-                href="https://arxiv.org/abs/2110.05442" target="_blank">
-                Neural Algorithmic Reasoners are Implicit Planners (2021)</a></h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2101.10050"
+                   target="_blank">
+                  Learning Parametrised Graph Shift Operators (2021)
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                18th of January 2021
+                25t of January 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  First paper: Louis-Pascal A. C. Xhonneux, Andreea Deac, Petar Velickovic, Jian Tang
-                </a>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Second paper: Andreea Deac, Petar Veličković, Ognjen Milinković, Pierre-Luc Bacon, Jian Tang, Mladen
-                  Nikolić
+                  George Dasoulas, Johannes Lutzeyer, Michalis Vazirgiannis
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLNAR' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLPGSO' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
                 Their <a class="item-subtitle link-style-black"
-                         href="https://hannes-stark.com/assets/2021-NeurIPS-graph-neural-cellular-automata-long.pdf"
-                         target="_blank">slides </a> are coming soon. (85 participants)
+                         href="https://hannes-stark.com/assets/LoGaG_PGSO_slides.pdf"
+                         target="_blank">slides</a>. (51 participants)
               </p>
               <p class="paragraph">
-                <a class="slight-bold">Speakers:</a>
-
-                First authors of the papers <a href="https://www.linkedin.com/in/louis-pascal-xhonneux-3a85a2141/"
-                                               target="_blank"
-                                               class="link-style-green">Luis-Pascal Xhonneux</a> and <a
-                href="https://andreeadeac22.github.io/" target="_blank"
-                class="link-style-green">Andreea-Ioana Deac</a>.
-                Luis-Pascal did his master's at Cambridge and is now a PhD student at Mila. Andreea is a PhD student
-                in Machine Learning at Mila, with Prof Jian Tang. She is broadly interested in how learning can be
-                improved through the use of graph representations, having previously worked on algorithmic alignment
-                for implicit planning and applications to biotechnology (drug discovery and drug combinations).
+                <a class="slight-bold">Speaker:</a>
+                Paper author <a class="item-subtitle link-style-black"
+                                href="https://gdasoulas.github.io/"
+                                target="_blank">George Dasoulas</a>, who is a final year PhD
+                student in both the Data Science and Mining group at the Ecole Polytechnique and Noah’s Ark Lab of
+                Huawei
+                Technologies France. Under the supervision of Prof. Michalis Vazirgiannis, he works in the field of
+                Graph
+                Representation Learning, studying the expressive power of Graph Neural Networks (GNNs). Using the gained
+                theoretical understanding of GNN architectures, his goal is to make impactful contributions to
+                real-world
+                problems that are characterized by an inherent graph structure ranging from communication graphs to
+                molecular networks. Dr. <a class="item-subtitle link-style-black"
+                                           href="https://scholar.google.com/citations?user=OfT4ns8AAAAJ&hl=en"
+                                           target="_blank">Johannes Lutzeyer</a> is currently a postdoctoral researcher
+                in
+                the Data Science and
+                Mining group at the Ecole Polytechnique. He works in the field of Graph Representation Learning with a
+                focus on Graph Neural Networks and their theoretical analysis. He completed his PhD thesis at Imperial
+                College London, where he studied the spectral properties of different graph representation matrices such
+                as the adjacency and Laplacian matrices.
               </p>
               <p class="no-margin">
-                <a class="slight-bold">Abstract Paper 1:</a>
-                Learning to execute algorithms is a fundamental problem that has been widely studied. Prior work has
-                shown that to enable systematic generalisation on graph algorithms it is critical to have access to the
-                intermediate steps of the program/algorithm. In many reasoning tasks, where algorithmic-style reasoning
-                is important, we only have access to the input and output examples. Thus, inspired by the success of
-                pre-training on similar tasks or data in Natural Language Processing (NLP) and Computer Vision, we set
-                out to study how we can transfer algorithmic reasoning knowledge. Specifically, we investigate how we
-                can use algorithms for which we have access to the execution trace to learn to solve similar tasks for
-                which we do not. We investigate two major classes of graph algorithms, parallel algorithms such as
-                breadth-first search and Bellman-Ford and sequential greedy algorithms such as Prim and Dijkstra. Due to
-                the fundamental differences between algorithmic reasoning knowledge and feature extractors such as used
-                in Computer Vision or NLP, we hypothesise that standard transfer techniques will not be sufficient to
-                achieve systematic generalisation. To investigate this empirically we create a dataset including 9
-                algorithms and 3 different graph types. We validate this empirically and show how instead multi-task
-                learning can be used to achieve the transfer of algorithmic reasoning knowledge.
-              </p>
-              <p class="no-margin">
-                <a class="slight-bold">Abstract Paper 2:</a>
-                Implicit planning has emerged as an elegant technique for combining learned models of the world with
-                end-to-end model-free reinforcement learning. We study the class of implicit planners inspired by value
-                iteration, an algorithm that is guaranteed to yield perfect policies in fully-specified tabular
-                environments. We find that prior approaches either assume that the environment is provided in such a
-                tabular form -- which is highly restrictive -- or infer "local neighbourhoods" of states to run value
-                iteration over -- for which we discover an algorithmic bottleneck effect. This effect is caused by
-                explicitly running the planning algorithm based on scalar predictions in every state, which can be
-                harmful to data efficiency if such scalars are improperly predicted. We propose eXecuted Latent Value
-                Iteration Networks (XLVINs), which alleviate the above limitations. Our method performs all planning
-                computations in a high-dimensional latent space, breaking the algorithmic bottleneck. It maintains
-                alignment with value iteration by carefully leveraging neural graph-algorithmic reasoning and
-                contrastive self-supervised learning. Across eight low-data settings -- including classical control,
-                navigation and Atari -- XLVINs provide significant improvements to data efficiency against value
-                iteration-based implicit planners, as well as relevant model-free baselines. Lastly, we empirically
-                verify that XLVINs can closely align with value iteration.
+                <a class="slight-bold">Abstract:</a>
+                In many domains data is currently represented as graphs and therefore, the graph representation of this
+                data becomes increasingly important in machine learning. Network data is, implicitly or explicitly,
+                always
+                represented using a graph shift operator (GSO) with the most common choices being the adjacency,
+                Laplacian
+                matrices and their normalisations. In this paper, a novel parametrised GSO (PGSO) is proposed, where
+                specific parameter values result in the most commonly used GSOs and message-passing operators in graph
+                neural network (GNN) frameworks. The PGSO is suggested as a replacement of the standard GSOs that are
+                used
+                in state-of-the-art GNN architectures and the optimisation of the PGSO parameters is seamlessly included
+                in the model training. It is proved that the PGSO has real eigenvalues and a set of real eigenvectors
+                independent of the parameter values and spectral bounds on the PGSO are derived. PGSO parameters are
+                shown
+                to adapt to the sparsity of the graph structure in a study on stochastic blockmodel networks, where they
+                are found to automatically replicate the GSO regularisation found in the literature. On several
+                real-world
+                datasets the accuracy of state-of-the-art GNN architectures is improved by the inclusion of the PGSO in
+                both node- and graph-classification tasks.
               </p>
             </div>
           </div>
@@ -236,60 +226,23 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
+
           <div class="item" fxLayout="column">
             <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2101.10050"
-                   target="_blank">
-                  Learning Parametrised Graph Shift Operators (2021)
-                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                25t of January 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  George Dasoulas, Johannes Lutzeyer, Michalis Vazirgiannis
-                </a>
+                1st of February 2022
               </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Paper author <a class="item-subtitle link-style-black"
-                              href="https://gdasoulas.github.io/"
-                              target="_blank">George Dasoulas</a>, who is a final year PhD
-              student in both the Data Science and Mining group at the Ecole Polytechnique and Noah’s Ark Lab of Huawei
-              Technologies France. Under the supervision of Prof. Michalis Vazirgiannis, he works in the field of Graph
-              Representation Learning, studying the expressive power of Graph Neural Networks (GNNs). Using the gained
-              theoretical understanding of GNN architectures, his goal is to make impactful contributions to real-world
-              problems that are characterized by an inherent graph structure ranging from communication graphs to
-              molecular networks. Dr. <a class="item-subtitle link-style-black"
-                                         href="https://scholar.google.com/citations?user=OfT4ns8AAAAJ&hl=en"
-                                         target="_blank">Johannes Lutzeyer</a> is currently a postdoctoral researcher in
-              the Data Science and
-              Mining group at the Ecole Polytechnique. He works in the field of Graph Representation Learning with a
-              focus on Graph Neural Networks and their theoretical analysis. He completed his PhD thesis at Imperial
-              College London, where he studied the spectral properties of different graph representation matrices such
-              as the adjacency and Laplacian matrices.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              In many domains data is currently represented as graphs and therefore, the graph representation of this
-              data becomes increasingly important in machine learning. Network data is, implicitly or explicitly, always
-              represented using a graph shift operator (GSO) with the most common choices being the adjacency, Laplacian
-              matrices and their normalisations. In this paper, a novel parametrised GSO (PGSO) is proposed, where
-              specific parameter values result in the most commonly used GSOs and message-passing operators in graph
-              neural network (GNN) frameworks. The PGSO is suggested as a replacement of the standard GSOs that are used
-              in state-of-the-art GNN architectures and the optimisation of the PGSO parameters is seamlessly included
-              in the model training. It is proved that the PGSO has real eigenvalues and a set of real eigenvectors
-              independent of the parameter values and spectral bounds on the PGSO are derived. PGSO parameters are shown
-              to adapt to the sparsity of the graph structure in a study on stochastic blockmodel networks, where they
-              are found to automatically replicate the GSO regularisation found in the literature. On several real-world
-              datasets the accuracy of state-of-the-art GNN architectures is improved by the inclusion of the PGSO in
-              both node- and graph-classification tasks.
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or via email!
             </p>
           </div>
 
@@ -305,7 +258,7 @@
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                1st of February 2022
+                8th of February 2022
               </div>
               <div>
                 <a>
@@ -341,26 +294,7 @@
           </div>
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                8th of February 2022
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or via email!
-            </p>
-          </div>
 
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -391,7 +325,8 @@
               href="https://www.in.tum.de/en/daml/team/bertrand-charpentier/"
               target="_blank">Bertrand Charpentier</a>. Maximilian received his M.Sc.
               with high distinction from the Technical University of Munich. He wrote his thesis in the group of Prof.
-              Günnemann. In this group, Bertrand is a PhD candidate working on uncertainty estimation and ML for graphs in this group.
+              Günnemann. In this group, Bertrand is a PhD candidate working on uncertainty estimation and ML for graphs
+              in this group.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
@@ -434,7 +369,8 @@
               First author of the paper <a
               class="item-subtitle link-style-black"
               href="https://fedelopez77.github.io/"
-              target="_blank">Federico López</a>, who is a Ph.D candidate in HITS at Heidelberg University. Prior to this, he studied Software Engineering at the University of Buenos Aires.
+              target="_blank">Federico López</a>, who is a Ph.D candidate in HITS at Heidelberg University. Prior to
+              this, he studied Software Engineering at the University of Buenos Aires.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
@@ -502,59 +438,6 @@
             </p>
           </div>
 
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2010.16103"
-                   target="_blank">
-                  Labeling Trick: A Theory of Using Graph Neural Networks for Multi-Node Representation Learning (2021)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                8th of March 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Muhan Zhang, Pan Li, Yinglong Xia, Kai Wang, Long Jin
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Professor <a
-              class="item-subtitle link-style-black"
-              href="https://sites.google.com/view/panli-purdue/home?authuser=0"
-              target="_blank">Pan Li</a> from Purdue University. He obtained his Ph.D. in Electrical and
-              Computer
-              Engineering at the University of Illinois Urbana - Champaign before completing a one-year postdoc in the
-              SNAP group at Stanford with Prof. Jure Leskovec. He works on principled GraphML and its mathematical
-              foundations.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              In this paper, we provide a theory of using graph neural networks (GNNs) for multi-node representation
-              learning (where we are interested in learning a representation for a set of more than one node). We know
-              that GNN is designed to learn single-node representations. When we want to learn a node set representation
-              involving multiple nodes, a common practice in previous works is to directly aggregate the multiple node
-              representations learned by a GNN into a joint representation of the node set. In this paper, we show a
-              fundamental constraint of such an approach, namely the inability to capture the dependence between nodes
-              in the node set, and argue that directly aggregating individual node representations does not lead to an
-              effective joint representation for multiple nodes. Then, we notice that a few previous successful works
-              for multi-node representation learning, including SEAL, Distance Encoding, and ID-GNN, all used node
-              labeling. These methods first label nodes in the graph according to their relationships with the target
-              node set before applying a GNN. Then, the node representations obtained in the labeled graph are
-              aggregated into a node set representation. By investigating their inner mechanisms, we unify these node
-              labeling techniques into a single and most basic form, namely labeling trick. We prove that with labeling
-              trick a sufficiently expressive GNN learns the most expressive node set representations, thus in principle
-              can solve any joint learning tasks over node sets. Experiments on one important two-node representation
-              learning task, link prediction, verified our theory. Our work establishes a theoretical foundation of
-              using GNNs for joint prediction tasks over node sets.
-            </p>
-          </div>
 
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
@@ -563,7 +446,7 @@
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                15th of March 2022
+                8th of March 2022
               </div>
             </div>
             <p class="paragraph">
@@ -573,6 +456,57 @@
               <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
                  class="link-style-green">Slack</a>
               or via email!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.02905"
+                   target="_blank">
+                  Geometric and Physical Quantities Improve E(3) Equivariant Message Passing (2022)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                15th of March 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Johannes Brandstetter, Rob Hesselink, Elise van der Pol, Erik J Bekkers, Max Welling
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author of the paper professor <a
+              class="item-subtitle link-style-black"
+              href="https://www.jku.at/institut-fuer-machine-learning/ueber-uns/team/ass-prof-dr-johannes-brandstetter/"
+              target="_blank">Johannes Brandstetter</a> who holds his
+              professorship at JKU Linz, where he previously worked with Prof. Sepp Hochreiter. He is a guest researcher
+              at the University of Amsterdam in Prof. Max Wellings's group and started working with Microsoft's
+              molecular ML group. He has a physics and data science background and was one of the main researchers at
+              CERN who made the first direct observation of the Higgs boson decayinginto pairs of fermions! Next to his
+              impressive work on physics-informed ML he also works on RL, NLP, Few-Shot Learning, and Generative
+              Modeling.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Including covariant information, such as position, force, velocity or spin is important in many tasks in
+              computational physics and chemistry. We introduce Steerable E(3) Equivariant Graph Neural Networks
+              (SEGNNs) that generalise equivariant graph networks, such that node and edge attributes are not restricted
+              to invariant scalars, but can contain covariant information, such as vectors or tensors. This model,
+              composed of steerable MLPs, is able to incorporate geometric and physical information in both the message
+              and update functions. Through the definition of steerable node attributes, the MLPs provide a new class of
+              activation functions for general use with steerable feature fields. We discuss ours and related work
+              through the lens of equivariant non-linear convolutions, which further allows us to pin-point the
+              successful components of SEGNNs: non-linear message aggregation improves upon classic linear (steerable)
+              point convolutions; steerable messages improve upon recent equivariant graph networks that send invariant
+              messages. We demonstrate the effectiveness of our method on several tasks in computational physics and
+              chemistry and provide extensive ablation studies.
             </p>
           </div>
 
@@ -626,6 +560,61 @@
           </div>
 
 
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2010.16103"
+                   target="_blank">
+                  Labeling Trick: A Theory of Using Graph Neural Networks for Multi-Node Representation Learning (2021)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                29th of March 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Muhan Zhang, Pan Li, Yinglong Xia, Kai Wang, Long Jin
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Professor <a
+              class="item-subtitle link-style-black"
+              href="https://sites.google.com/view/panli-purdue/home?authuser=0"
+              target="_blank">Pan Li</a> from Purdue University. He obtained his Ph.D. in Electrical and
+              Computer
+              Engineering at the University of Illinois Urbana - Champaign before completing a one-year postdoc in the
+              SNAP group at Stanford with Prof. Jure Leskovec. He works on principled GraphML and its mathematical
+              foundations.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              In this paper, we provide a theory of using graph neural networks (GNNs) for multi-node representation
+              learning (where we are interested in learning a representation for a set of more than one node). We know
+              that GNN is designed to learn single-node representations. When we want to learn a node set representation
+              involving multiple nodes, a common practice in previous works is to directly aggregate the multiple node
+              representations learned by a GNN into a joint representation of the node set. In this paper, we show a
+              fundamental constraint of such an approach, namely the inability to capture the dependence between nodes
+              in the node set, and argue that directly aggregating individual node representations does not lead to an
+              effective joint representation for multiple nodes. Then, we notice that a few previous successful works
+              for multi-node representation learning, including SEAL, Distance Encoding, and ID-GNN, all used node
+              labeling. These methods first label nodes in the graph according to their relationships with the target
+              node set before applying a GNN. Then, the node representations obtained in the labeled graph are
+              aggregated into a node set representation. By investigating their inner mechanisms, we unify these node
+              labeling techniques into a single and most basic form, namely labeling trick. We prove that with labeling
+              trick a sufficiently expressive GNN learns the most expressive node set representations, thus in principle
+              can solve any joint learning tasks over node sets. Experiments on one important two-node representation
+              learning task, link prediction, verified our theory. Our work establishes a theoretical foundation of
+              using GNNs for joint prediction tasks over node sets.
+            </p>
+          </div>
+
+
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
@@ -646,6 +635,83 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2101.10050"
+                   target="_blank">
+                  Learning Parametrised Graph Shift Operators (2021)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                25t of January 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  George Dasoulas, Johannes Lutzeyer, Michalis Vazirgiannis
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLPGSO' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Their <a class="item-subtitle link-style-black"
+                         href="https://hannes-stark.com/assets/LoGaG_PGSO_slides.pdf"
+                         target="_blank">slides</a>. (51 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                Paper author <a class="item-subtitle link-style-black"
+                                href="https://gdasoulas.github.io/"
+                                target="_blank">George Dasoulas</a>, who is a final year PhD
+                student in both the Data Science and Mining group at the Ecole Polytechnique and Noah’s Ark Lab of
+                Huawei
+                Technologies France. Under the supervision of Prof. Michalis Vazirgiannis, he works in the field of
+                Graph
+                Representation Learning, studying the expressive power of Graph Neural Networks (GNNs). Using the gained
+                theoretical understanding of GNN architectures, his goal is to make impactful contributions to
+                real-world
+                problems that are characterized by an inherent graph structure ranging from communication graphs to
+                molecular networks. Dr. <a class="item-subtitle link-style-black"
+                                           href="https://scholar.google.com/citations?user=OfT4ns8AAAAJ&hl=en"
+                                           target="_blank">Johannes Lutzeyer</a> is currently a postdoctoral researcher
+                in
+                the Data Science and
+                Mining group at the Ecole Polytechnique. He works in the field of Graph Representation Learning with a
+                focus on Graph Neural Networks and their theoretical analysis. He completed his PhD thesis at Imperial
+                College London, where he studied the spectral properties of different graph representation matrices such
+                as the adjacency and Laplacian matrices.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                In many domains data is currently represented as graphs and therefore, the graph representation of this
+                data becomes increasingly important in machine learning. Network data is, implicitly or explicitly,
+                always
+                represented using a graph shift operator (GSO) with the most common choices being the adjacency,
+                Laplacian
+                matrices and their normalisations. In this paper, a novel parametrised GSO (PGSO) is proposed, where
+                specific parameter values result in the most commonly used GSOs and message-passing operators in graph
+                neural network (GNN) frameworks. The PGSO is suggested as a replacement of the standard GSOs that are
+                used
+                in state-of-the-art GNN architectures and the optimisation of the PGSO parameters is seamlessly included
+                in the model training. It is proved that the PGSO has real eigenvalues and a set of real eigenvectors
+                independent of the parameter values and spectral bounds on the PGSO are derived. PGSO parameters are
+                shown
+                to adapt to the sparsity of the graph structure in a study on stochastic blockmodel networks, where they
+                are found to automatically replicate the GSO regularisation found in the literature. On several
+                real-world
+                datasets the accuracy of state-of-the-art GNN architectures is improved by the inclusion of the PGSO in
+                both node- and graph-classification tasks.
+              </p>
+            </div>
+          </div>
+
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
@@ -1420,9 +1486,9 @@
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
                 Ben's and James's
-                <a href="https://hannes-stark.com/assets/.pdf"
+                <a href="https://hannes-stark.com/assets/Graph_Neural_Networks_and_Diffusion_PDEs.pdf"
                    target="_blank"
-                   class="link-style-green">slides</a> come soon.
+                   class="link-style-green">slides</a>.
                 (75 participants)
               </p>
               <p class="paragraph">
