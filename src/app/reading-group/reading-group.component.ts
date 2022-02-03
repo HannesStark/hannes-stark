@@ -46,6 +46,7 @@ export class ReadingGroupComponent implements OnInit {
   safeURLGCA: any;
   safeURLNAR: any;
   safeURLPGSO: any;
+  safeURLLoCS: any;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -68,6 +69,7 @@ export class ReadingGroupComponent implements OnInit {
     this.safeURLGCA = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/ilrl_opwpEw');
     this.safeURLNAR = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/Lhe72m4VtMQ');
     this.safeURLPGSO = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/72bchdfzTMY');
+    this.safeURLLoCS = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/7f3VaYYE5mU');
 
   }
 

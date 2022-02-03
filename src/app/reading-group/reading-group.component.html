@@ -134,74 +134,54 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2101.10050"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14961"
                    target="_blank">
-                  Learning Parametrised Graph Shift Operators (2021)
+                  Roto-translated Local Coordinate Frames For Interacting Dynamical Systems (NeurIPS 2021)
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                25t of January 2022
+                1st of February 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  George Dasoulas, Johannes Lutzeyer, Michalis Vazirgiannis
+                  Miltiadis Kofinas, Naveen Shankar Nagaraja, Efstratios Gavves
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLPGSO' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLLoCS' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Their <a class="item-subtitle link-style-black"
-                         href="https://hannes-stark.com/assets/LoGaG_PGSO_slides.pdf"
-                         target="_blank">slides</a>. (51 participants)
+                Miltiadis's <a class="item-subtitle link-style-black"
+                               href="https://hannes-stark.com/assets/Kofinas_LoCS_LoGaG_presentation_1_February_2022.pdf"
+                               target="_blank">slides</a>. (50 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                Paper author <a class="item-subtitle link-style-black"
-                                href="https://gdasoulas.github.io/"
-                                target="_blank">George Dasoulas</a>, who is a final year PhD
-                student in both the Data Science and Mining group at the Ecole Polytechnique and Noah’s Ark Lab of
-                Huawei
-                Technologies France. Under the supervision of Prof. Michalis Vazirgiannis, he works in the field of
-                Graph
-                Representation Learning, studying the expressive power of Graph Neural Networks (GNNs). Using the gained
-                theoretical understanding of GNN architectures, his goal is to make impactful contributions to
-                real-world
-                problems that are characterized by an inherent graph structure ranging from communication graphs to
-                molecular networks. Dr. <a class="item-subtitle link-style-black"
-                                           href="https://scholar.google.com/citations?user=OfT4ns8AAAAJ&hl=en"
-                                           target="_blank">Johannes Lutzeyer</a> is currently a postdoctoral researcher
-                in
-                the Data Science and
-                Mining group at the Ecole Polytechnique. He works in the field of Graph Representation Learning with a
-                focus on Graph Neural Networks and their theoretical analysis. He completed his PhD thesis at Imperial
-                College London, where he studied the spectral properties of different graph representation matrices such
-                as the adjacency and Laplacian matrices.
+                First author of the paper <a class="item-subtitle link-style-black"
+                                             href="https://www.linkedin.com/in/miltiadiskofinas/"
+                                             target="_blank">Miltiadis Kofinas</a> who is a PhD student at the
+                University of Amsterdam.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                In many domains data is currently represented as graphs and therefore, the graph representation of this
-                data becomes increasingly important in machine learning. Network data is, implicitly or explicitly,
-                always
-                represented using a graph shift operator (GSO) with the most common choices being the adjacency,
-                Laplacian
-                matrices and their normalisations. In this paper, a novel parametrised GSO (PGSO) is proposed, where
-                specific parameter values result in the most commonly used GSOs and message-passing operators in graph
-                neural network (GNN) frameworks. The PGSO is suggested as a replacement of the standard GSOs that are
-                used
-                in state-of-the-art GNN architectures and the optimisation of the PGSO parameters is seamlessly included
-                in the model training. It is proved that the PGSO has real eigenvalues and a set of real eigenvectors
-                independent of the parameter values and spectral bounds on the PGSO are derived. PGSO parameters are
-                shown
-                to adapt to the sparsity of the graph structure in a study on stochastic blockmodel networks, where they
-                are found to automatically replicate the GSO regularisation found in the literature. On several
-                real-world
-                datasets the accuracy of state-of-the-art GNN architectures is improved by the inclusion of the PGSO in
-                both node- and graph-classification tasks.
+                Modelling interactions is critical in learning complex dynamical systems, namely systems of interacting
+                objects with highly non-linear and time-dependent behaviour. A large class of such systems can be
+                formalized as geometric graphs, i.e., graphs with nodes positioned in the Euclidean space given an
+                arbitrarily chosen global coordinate system, for instance vehicles in a traffic scene. Notwithstanding
+                the
+                arbitrary global coordinate system, the governing dynamics of the respective dynamical systems are
+                invariant to rotations and translations, also known as Galilean invariance. As ignoring these
+                invariances
+                leads to worse generalization, in this work we propose local coordinate frames per node-object to induce
+                roto-translation invariance to the geometric graph of the interacting dynamical system. Further, the
+                local
+                coordinate frames allow for a natural definition of anisotropic filtering in graph neural networks.
+                Experiments in traffic scenes, 3D motion capture, and colliding particles demonstrate that the proposed
+                approach comfortably outperforms the recent state-of-the-art.
               </p>
             </div>
           </div>
@@ -226,47 +206,7 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14961"
-                   target="_blank">
-                  Roto-translated Local Coordinate Frames For Interacting Dynamical Systems (NeurIPS 2021)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                1st of February 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Miltiadis Kofinas, Naveen Shankar Nagaraja, Efstratios Gavves
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Not author of the paper: Hannes Stärk. Hey, that's me :D
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Modelling interactions is critical in learning complex dynamical systems, namely systems of interacting
-              objects with highly non-linear and time-dependent behaviour. A large class of such systems can be
-              formalized as geometric graphs, i.e., graphs with nodes positioned in the Euclidean space given an
-              arbitrarily chosen global coordinate system, for instance vehicles in a traffic scene. Notwithstanding the
-              arbitrary global coordinate system, the governing dynamics of the respective dynamical systems are
-              invariant to rotations and translations, also known as Galilean invariance. As ignoring these invariances
-              leads to worse generalization, in this work we propose local coordinate frames per node-object to induce
-              roto-translation invariance to the geometric graph of the interacting dynamical system. Further, the local
-              coordinate frames allow for a natural definition of anisotropic filtering in graph neural networks.
-              Experiments in traffic scenes, 3D motion capture, and colliding particles demonstrate that the proposed
-              approach comfortably outperforms the recent state-of-the-art.
-            </p>
-          </div>
 
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -654,6 +594,62 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.14961"
+                   target="_blank">
+                  Roto-translated Local Coordinate Frames For Interacting Dynamical Systems (NeurIPS 2021)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                1st of February 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Miltiadis Kofinas, Naveen Shankar Nagaraja, Efstratios Gavves
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLLoCS' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Miltiadis's <a class="item-subtitle link-style-black"
+                               href="https://hannes-stark.com/assets/Kofinas_LoCS_LoGaG_presentation_1_February_2022.pdf"
+                               target="_blank">slides</a>. (50 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author of the paper <a class="item-subtitle link-style-black"
+                                             href="https://www.linkedin.com/in/miltiadiskofinas/"
+                                             target="_blank">Miltiadis Kofinas</a> who is a PhD student at the
+                University of Amsterdam.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Modelling interactions is critical in learning complex dynamical systems, namely systems of interacting
+                objects with highly non-linear and time-dependent behaviour. A large class of such systems can be
+                formalized as geometric graphs, i.e., graphs with nodes positioned in the Euclidean space given an
+                arbitrarily chosen global coordinate system, for instance vehicles in a traffic scene. Notwithstanding
+                the
+                arbitrary global coordinate system, the governing dynamics of the respective dynamical systems are
+                invariant to rotations and translations, also known as Galilean invariance. As ignoring these
+                invariances
+                leads to worse generalization, in this work we propose local coordinate frames per node-object to induce
+                roto-translation invariance to the geometric graph of the interacting dynamical system. Further, the
+                local
+                coordinate frames allow for a natural definition of anisotropic filtering in graph neural networks.
+                Experiments in traffic scenes, 3D motion capture, and colliding particles demonstrate that the proposed
+                approach comfortably outperforms the recent state-of-the-art.
+              </p>
+            </div>
+          </div>
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
