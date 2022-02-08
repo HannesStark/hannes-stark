@@ -73,7 +73,7 @@
           <div fxFlex="30" fxLayoutAlign="end start" fxLayoutAlign.lt-md="center center">
             <div fxFlex.gt-sm="200px" fxFlex.lt-md="100" ngClass.gt-sm="underline-title" ngClass.lt-md=""
                  fxLayoutAlign.lt-md="center center">
-              <h1 class="left-titles">PUBLICATIONS</h1>
+              <h1 class="left-titles">PAPERS</h1>
             </div>
           </div>
           <div fxFlex="60">
@@ -87,7 +87,7 @@
 
       <div fxHide.gt-sm ngClass.sm="small-margin" ngClass.xs="small-margin--xs" class="underline-title"
            fxLayoutAlign="center center">
-        <h1 class="left-titles">PUBLICATIONS</h1>
+        <h1 class="left-titles">PAPERS</h1>
       </div>
 
       <div ngClass.sm="small-margin" ngClass.xs="small-margin--xs" fxLayout="row" fxLayout.lt-md="column"
@@ -98,7 +98,33 @@
         <div fxFlex="60">
           <div class="text-area" fxFlex.lt-md="" fxFlex="70" fxLayout="column" fxLayoutAlign.lt-md="center center">
 
+
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black"
+                     href="https://hannes-stark.com/assets/EquiBind.pdf"
+                     target="_blank">EquiBind: Geometric Deep Learning for Drug Binding Structure Prediction</a></h3>
+              </div>
+
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
+                Hannes Stärk, Octavian-Eugen Ganea, Lagnajit Pattanaik, Regina Barzilay, Tommi Jaakkola
+
+                    <fa-icon class="icon-right-margin--left" [icon]="book"></fa-icon>
+                    <i>Under review.</i>
+              </p>
+              <div fxLayout="column" fxLayoutGap="5px">
+                <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+
+                  <img class="previewable-image" fxFlex="100" (click)="openEquiBindImage()"
+                       src="assets/fig_intro.png"
+                       alt="image at full size">
+
+                </div>
+              </div>
+              <hr ngClass.gt-sm="separator-slim" ngClass.lt-md="separator-slim--small">
+
               <div fxLayout="row">
                 <h3>
                   <a class="item-subtitle link-style-black"
@@ -114,13 +140,14 @@
               </p>
               <p class="item-content">
                 <i>Under review. Also accepted at <a href="https://ai4sciencecommunity.github.io/" target="_blank"
-                                                          class="link-style-green">NeurIPS'21 AI4S</a>, <a
+                                                     class="link-style-green">NeurIPS'21 AI4S</a>, <a
                   href="https://ml4physicalsciences.github.io/2021/" target="_blank"
                   class="link-style-green">NeurIPS'21 ML4PH</a> and <a class="item-subtitle link-style-black"
                                                                        href="https://sslneurips21.github.io/"
-                                                                       target="_blank">NeurIPS'21 SSL</a> workshops and  <a class="item-subtitle link-style-black"
-                                                                       href="https://moleculediscovery.github.io/workshop2021/"
-                                                                                                                                 target="_blank">ELLIS ML4Molecules.</a></i>
+                                                                       target="_blank">NeurIPS'21 SSL</a> workshops and
+                  <a class="item-subtitle link-style-black"
+                     href="https://moleculediscovery.github.io/workshop2021/"
+                     target="_blank">ELLIS ML4Molecules.</a></i>
               </p>
               <div fxLayout="column" fxLayoutGap="5px">
                 <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
@@ -151,8 +178,8 @@
 
                     <fa-icon class="icon-right-margin--left" [icon]="book"></fa-icon>
                     <i>Under review. Also accepted at <a class="item-subtitle link-style-black"
-                                                                   href="https://sslneurips21.github.io/"
-                                                                   target="_blank">NeurIPS'21 SSL workshop.</a></i>
+                                                         href="https://sslneurips21.github.io/"
+                                                         target="_blank">NeurIPS'21 SSL workshop.</a></i>
                   </p>
 
                 </div>
@@ -168,7 +195,7 @@
                 </div>
                 <p class="item-date-loc">
                   <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
-                  H. Stärk, C. Dallago, M. Heinzinger, B. Rost
+                  Hannes Stärk, Christian Dallago, Michael Heinzinger, Burkhard Rost
                 </p>
                 <p class="item-content">
                   <i>In:
@@ -839,7 +866,8 @@
                     </a>
                   </p>
                   <p class="item-content">
-                    A german private education institution where I taught undergraduate level analysis, linear algebra, and statistics for 4 hours per week.
+                    A german private education institution where I taught undergraduate level analysis, linear algebra,
+                    and statistics for 4 hours per week.
                   </p>
                 </div>
                 <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
@@ -885,7 +913,8 @@
                       Munich, Germany
                     </a>
                   </p>
-                  <p class="item-content">10h workweek. I implemented and evaluated different methods for time series analysis like SARIMA, ARIMAX, and LSTMs for the Bundeswehr's supply chain management.
+                  <p class="item-content">10h workweek. I implemented and evaluated different methods for time series
+                    analysis like SARIMA, ARIMAX, and LSTMs for the Bundeswehr's supply chain management.
                     After that project was done I worked on causal inference for train traffic data.</p>
                 </div>
                 <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
@@ -905,8 +934,10 @@
                       Munich, Germany
                     </a>
                   </p>
-                  <p class="item-content">38h workweek during my bachelor's, which I completed in 2 years instead of the usual 3. <br>
-                    Web-development and digital infrastructure maintenance in an agile development team, technical training in computer science.<br>
+                  <p class="item-content">38h workweek during my bachelor's, which I completed in 2 years instead of the
+                    usual 3. <br>
+                    Web-development and digital infrastructure maintenance in an agile development team, technical
+                    training in computer science.<br>
                     Developed a currently used app for organizing large software releases (in a team of students).
                 </div>
               </div>
@@ -1027,7 +1058,8 @@
                   </p>
                   <p class="item-content">Investigated the theory of different graph centrality measures
                     in the context of computer networks. Implemented graph centrality measures in a tool
-                    with a web interface where you can upload graphs and calculate the centralities. You can check it out on
+                    with a web interface where you can upload graphs and calculate the centralities. You can check it
+                    out on
                     <a href="https://github.com/HannesStark/dependencyNodeRanking" target="_blank"
                        class="link-style-green">GitHub
                       <fa-icon class="link-icon-style-green" [icon]="github"></fa-icon>
@@ -1137,7 +1169,9 @@
                       Remote
                     </a>
                   </p>
-                  <p class="item-content">Publicity Chair: advertising and running the workshop's <a href="https://twitter.com/MLoG_Workshop" target="_blank" class="link-style-green">Twitter account</a>
+                  <p class="item-content">Publicity Chair: advertising and running the workshop's <a
+                    href="https://twitter.com/MLoG_Workshop" target="_blank" class="link-style-green">Twitter
+                    account</a>
                   </p>
                 </div>
                 <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">

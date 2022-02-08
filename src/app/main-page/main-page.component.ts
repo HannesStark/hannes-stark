@@ -21,6 +21,7 @@ import {PreTrainImageComponent} from "../3Dpretrainimage/3dpretrainimage.compone
 import {LAArchImageComponent} from "../laarchimage/laarchimage.component";
 import {MultiConfImageComponent} from "../multiconfimage/multiconfimage.component";
 import {BYOLImageComponent} from "../byolimage/byolimage.component";
+import {EquiBindImageComponent} from "../equibindimage/equibindimage.component";
 
 @Component({
   selector: 'app-main-page',
@@ -129,6 +130,13 @@ export class MainPageComponent implements OnInit {
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
     this.dialog.open(BYOLImageComponent, dialogConfig);
+  }
+
+  openEquiBindImage() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    this.dialog.open(EquiBindImageComponent, dialogConfig);
   }
 }
 

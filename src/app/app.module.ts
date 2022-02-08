@@ -33,6 +33,7 @@ import {PreTrainImageComponent} from "./3Dpretrainimage/3dpretrainimage.componen
 import {LAArchImageComponent} from "./laarchimage/laarchimage.component";
 import {MultiConfImageComponent} from "./multiconfimage/multiconfimage.component";
 import {BYOLImageComponent} from "./byolimage/byolimage.component";
+import {EquiBindImageComponent} from "./equibindimage/equibindimage.component";
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import {BYOLImageComponent} from "./byolimage/byolimage.component";
     PreTrainImageComponent,
     LAArchImageComponent,
     MultiConfImageComponent,
-    BYOLImageComponent
+    BYOLImageComponent,
+    EquiBindImageComponent
   ],
   imports: [
     BrowserModule,
