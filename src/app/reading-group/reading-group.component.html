@@ -134,56 +134,62 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2111.14522"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2111.12128"
                    target="_blank">
-                  Understanding over-squashing and bottlenecks on graphs via curvature (2021)
+                  On the Unreasonable Effectiveness of Feature propagation in Learning on Graphs with Missing Node
+                  Features (2021)
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                8th of February 2022
+                1st of March 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Jake Topping, Francesco Di Giovanni, Benjamin Paul Chamberlain, Xiaowen Dong, Michael M. Bronstein
+                  Emanuele Rossi, Henry Kenlay, Maria I. Gorinova, Benjamin Paul Chamberlain, Xiaowen Dong, Michael
+                  Bronstein
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLUnderstandingOversquashing' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLUnreasonableEffect' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Their <a class="item-subtitle link-style-black"
-                         href="https://hannes-stark.com/assets/understanding_oversquashing_slides_feb22.pdf"
-                         target="_blank">slides</a>. (95 participants)
+                Ema's <a class="item-subtitle link-style-black"
+                         href="https://docs.google.com/presentation/d/11dAeJRalTI7K1YAxMNz_yElZ0lVO5Bw7n0LBqSd-OUY/edit?usp=sharing"
+                         target="_blank">slides</a>. (69 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                Jake Topping and Dr. <a class="item-subtitle link-style-black"
-                                        href="https://scholar.google.com/citations?user=yzjjeqsAAAAJ&hl=en"
-                                        target="_blank">Francesco Di Giovanni</a>. Jake is a PhD student at Oxford
-                working with Prof. Xiaowen Dong and Prof. Michael
-                Bronstein. Francesco obtained his PhD from University College London and is working together with Ben at
-                Twitter Research.
+                First author <a
+                class="item-subtitle link-style-black"
+                href="https://www.emanuelerossi.co.uk/"
+                target="_blank">Emanuele Rossi</a> who is a Machine Learning Researcher at Twitter and a Ph.D.
+                student at Imperial College London, working on Graph Neural Networks and supervised by Prof. Michael
+                Bronstein. His research interests span a wide array of topics around graph neural networks, including
+                scalability, dynamic graphs, and learning with missing node features. Before his current position,
+                Emanuele was working at Fabula AI, which was then acquired by Twitter in June 2019. Previously, he
+                completed an MPhil at the University of Cambridge and a BEng at Imperial College London, both in
+                Computer
+                Science.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Most graph neural networks (GNNs) use the message passing paradigm, in which node features are
-                propagated
-                on the input graph. Recent works pointed to the distortion of information flowing from distant nodes as
-                a
-                factor limiting the efficiency of message passing for tasks relying on long-distance interactions. This
-                phenomenon, referred to as 'over-squashing', has been heuristically attributed to graph bottlenecks
-                where
-                the number of k-hop neighbors grows rapidly with k. We provide a precise description of the
-                over-squashing
-                phenomenon in GNNs and analyze how it arises from bottlenecks in the graph. For this purpose, we
-                introduce
-                a new edge-based combinatorial curvature and prove that negatively curved edges are responsible for the
-                over-squashing issue. We also propose and experimentally test a curvature-based graph rewiring method to
-                alleviate the over-squashing.
+                While Graph Neural Networks (GNNs) have recently become the de facto standard for modeling relational
+                data, they impose a strong assumption on the availability of the node or edge features of the graph. In
+                many real-world applications, however, features are only partially available; for example, in social
+                networks, age and gender are available only for a small subset of users. We present a general approach
+                for
+                handling missing features in graph machine learning applications that is based on minimization of the
+                Dirichlet energy and leads to a diffusion-type differential equation on the graph. The discretization of
+                this equation produces a simple, fast and scalable algorithm which we call Feature Propagation. We
+                experimentally show that the proposed approach outperforms previous methods on seven common
+                node-classification benchmarks and can withstand surprisingly high rates of missing features: on average
+                we observe only around 4% relative accuracy drop when 99% of the features are missing. Moreover, it
+                takes
+                only 10 seconds to run on a graph with ∼2.5M nodes and ∼123M edges on a single GPU.
               </p>
             </div>
           </div>
