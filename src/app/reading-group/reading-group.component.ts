@@ -48,6 +48,9 @@ export class ReadingGroupComponent implements OnInit {
   safeURLPGSO: any;
   safeURLLoCS: any;
   safeURLUnderstandingOversquashing: any;
+  safeURLUnreasonableEffect: any;
+  safeURLSymSpaces: any;
+  safeURLGraphPostNet: any;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -72,6 +75,9 @@ export class ReadingGroupComponent implements OnInit {
     this.safeURLPGSO = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/72bchdfzTMY');
     this.safeURLLoCS = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/7f3VaYYE5mU');
     this.safeURLUnderstandingOversquashing = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/T5J3JzeTC2Y');
+    this.safeURLUnreasonableEffect = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/xe5A-xQTBdM');
+    this.safeURLSymSpaces = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/-q5yu24EgeE');
+    this.safeURLGraphPostNet = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/O8aRsjcutSY');
 
   }
 
