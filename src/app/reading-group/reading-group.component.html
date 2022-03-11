@@ -134,22 +134,21 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2111.12128"
+                <a class="item-subtitle link-style-black"
+                   href="https://www.chaitjo.com/post/deep-learning-for-routing-problems"
                    target="_blank">
-                  On the Unreasonable Effectiveness of Feature propagation in Learning on Graphs with Missing Node
-                  Features (2021)
+                  Recent Advances in Deep Learning for Routing Problems (2022)
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                1st of March 2022
+                8th of March 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Emanuele Rossi, Henry Kenlay, Maria I. Gorinova, Benjamin Paul Chamberlain, Xiaowen Dong, Michael
-                  Bronstein
+                  Chaitanya K. Joshi, Rishabh Anand
                 </a>
               </div>
             </div>
@@ -157,39 +156,33 @@
               <iframe ngClass.gt-sm="float-right" [src]='safeURLUnreasonableEffect' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Ema's <a class="item-subtitle link-style-black"
-                         href="https://docs.google.com/presentation/d/11dAeJRalTI7K1YAxMNz_yElZ0lVO5Bw7n0LBqSd-OUY/edit?usp=sharing"
-                         target="_blank">slides</a>. (69 participants)
+                Chaitanya's <a class="item-subtitle link-style-black"
+                               href="https://www.chaitjo.com/post/deep-learning-for-routing-problems/recent-advances-in-deep-learning-for-routing-problems.pdf"
+                               target="_blank">slides</a>. (70 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First author <a
+                Author of the blog post and associated paper <a
                 class="item-subtitle link-style-black"
-                href="https://www.emanuelerossi.co.uk/"
-                target="_blank">Emanuele Rossi</a> who is a Machine Learning Researcher at Twitter and a Ph.D.
-                student at Imperial College London, working on Graph Neural Networks and supervised by Prof. Michael
-                Bronstein. His research interests span a wide array of topics around graph neural networks, including
-                scalability, dynamic graphs, and learning with missing node features. Before his current position,
-                Emanuele was working at Fabula AI, which was then acquired by Twitter in June 2019. Previously, he
-                completed an MPhil at the University of Cambridge and a BEng at Imperial College London, both in
-                Computer
-                Science.
+                href="https://www.chaitjo.com/"
+                target="_blank">Chaitanya K. Joshi</a>, who is an incoming PhD student at the University
+                of Cambridge, supervised by Prof. Pietro Liò. His research explores the intersection of Graph and
+                Geometric Deep Learning with applications in biomedicine and drug discovery. He previously worked on
+                Graph
+                Neural Network architectures and applications in Combinatorial Optimization at the NTU Graph Deep
+                Learning
+                Lab and A*STAR, Singapore.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                While Graph Neural Networks (GNNs) have recently become the de facto standard for modeling relational
-                data, they impose a strong assumption on the availability of the node or edge features of the graph. In
-                many real-world applications, however, features are only partially available; for example, in social
-                networks, age and gender are available only for a small subset of users. We present a general approach
-                for
-                handling missing features in graph machine learning applications that is based on minimization of the
-                Dirichlet energy and leads to a diffusion-type differential equation on the graph. The discretization of
-                this equation produces a simple, fast and scalable algorithm which we call Feature Propagation. We
-                experimentally show that the proposed approach outperforms previous methods on seven common
-                node-classification benchmarks and can withstand surprisingly high rates of missing features: on average
-                we observe only around 4% relative accuracy drop when 99% of the features are missing. Moreover, it
-                takes
-                only 10 seconds to run on a graph with ∼2.5M nodes and ∼123M edges on a single GPU.
+                Developing Graph Neural Network-driven solvers for combinatorial optimization problems such as the
+                Travelling Salesperson Problem have seen a surge of academic interest recently. This talk aims to serve
+                as
+                a whirlwind tour of this research area. We first presents a Neural Combinatorial Optimization pipeline
+                that unifies several recently proposed models into one single framework. Through the lens of the
+                pipeline,
+                we analyze recent advances in deep learning for routing problems and provide new directions to stimulate
+                future research.
               </p>
             </div>
           </div>
@@ -214,50 +207,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black"
-                   href="https://www.chaitjo.com/post/deep-learning-for-routing-problems"
-                   target="_blank">
-                  Recent Advances in Deep Learning for Routing Problems (2022)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                8th of March 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Chaitanya K. Joshi, Rishabh Anand
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Author of the blog post and associated paper <a
-              class="item-subtitle link-style-black"
-              href="https://www.chaitjo.com/"
-              target="_blank">Chaitanya K. Joshi</a>, who is an incoming PhD student at the University
-              of Cambridge, supervised by Prof. Pietro Liò. His research explores the intersection of Graph and
-              Geometric Deep Learning with applications in biomedicine and drug discovery. He previously worked on Graph
-              Neural Network architectures and applications in Combinatorial Optimization at the NTU Graph Deep Learning
-              Lab and A*STAR, Singapore.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Developing Graph Neural Network-driven solvers for combinatorial optimization problems such as the
-              Travelling Salesperson Problem have seen a surge of academic interest recently. This talk aims to serve as
-              a whirlwind tour of this research area. We first presents a Neural Combinatorial Optimization pipeline
-              that unifies several recently proposed models into one single framework. Through the lens of the pipeline,
-              we analyze recent advances in deep learning for routing problems and provide new directions to stimulate
-              future research.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -433,6 +382,55 @@
             </p>
           </div>
 
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.13013"
+                   target="_blank">
+                  Sign and Basis Invariant Networks for Spectral Graph Representation Learning (2022)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                12th of April 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Derek Lim, Joshua Robinson, Lingxiao Zhao, Tess Smidt, Suvrit Sra, Haggai Maron, Stefanie Jegelka
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First authors <a
+              class="item-subtitle link-style-black"
+              href="https://cptq.github.io/"
+              target="_blank">Derek Lim</a> and <a
+              class="item-subtitle link-style-black"
+              href="https://joshrobinson.mit.edu/"
+              target="_blank">Joshua Robinson</a>, who both are PhD students in the group of Prof. Stefanie Jegelka at MIT. Josh is also co-advised by Prof. Suvrit Sra and Derek previously presented ESAN in the reading group!
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Many machine learning tasks involve processing eigenvectors derived from data. Especially valuable are
+              Laplacian eigenvectors, which capture useful structural information about graphs and other geometric
+              objects. However, ambiguities arise when computing eigenvectors: for each eigenvector v, the sign flipped
+              −v is also an eigenvector. More generally, higher dimensional eigenspaces contain infinitely many choices
+              of basis eigenvectors. These ambiguities make it a challenge to process eigenvectors and eigenspaces in a
+              consistent way. In this work we introduce SignNet and BasisNet -- new neural architectures that are
+              invariant to all requisite symmetries and hence process collections of eigenspaces in a principled manner.
+              Our networks are universal, i.e., they can approximate any continuous function of eigenvectors with the
+              proper invariances. They are also theoretically strong for graph representation learning -- they can
+              approximate any spectral graph convolution, can compute spectral invariants that go beyond message passing
+              neural networks, and can provably simulate previously proposed graph positional encodings. Experiments
+              show the strength of our networks for learning spectral graph filters and learning graph positional
+              encodings.
+            </p>
+          </div>
+
 
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
@@ -453,6 +451,64 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black"
+                   href="https://www.chaitjo.com/post/deep-learning-for-routing-problems"
+                   target="_blank">
+                  Recent Advances in Deep Learning for Routing Problems (2022)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                8th of March 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Chaitanya K. Joshi, Rishabh Anand
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLUnreasonableEffect' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Chaitanya's <a class="item-subtitle link-style-black"
+                               href="https://www.chaitjo.com/post/deep-learning-for-routing-problems/recent-advances-in-deep-learning-for-routing-problems.pdf"
+                               target="_blank">slides</a>. (70 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                Author of the blog post and associated paper <a
+                class="item-subtitle link-style-black"
+                href="https://www.chaitjo.com/"
+                target="_blank">Chaitanya K. Joshi</a>, who is an incoming PhD student at the University
+                of Cambridge, supervised by Prof. Pietro Liò. His research explores the intersection of Graph and
+                Geometric Deep Learning with applications in biomedicine and drug discovery. He previously worked on
+                Graph
+                Neural Network architectures and applications in Combinatorial Optimization at the NTU Graph Deep
+                Learning
+                Lab and A*STAR, Singapore.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Developing Graph Neural Network-driven solvers for combinatorial optimization problems such as the
+                Travelling Salesperson Problem have seen a surge of academic interest recently. This talk aims to serve
+                as
+                a whirlwind tour of this research area. We first presents a Neural Combinatorial Optimization pipeline
+                that unifies several recently proposed models into one single framework. Through the lens of the
+                pipeline,
+                we analyze recent advances in deep learning for routing problems and provide new directions to stimulate
+                future research.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
 
           <div class="item" fxLayout="column">
