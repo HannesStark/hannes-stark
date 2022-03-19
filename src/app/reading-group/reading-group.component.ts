@@ -51,6 +51,8 @@ export class ReadingGroupComponent implements OnInit {
   safeURLUnreasonableEffect: any;
   safeURLSymSpaces: any;
   safeURLGraphPostNet: any;
+  safeURLRouting: any;
+  safeURLSEGNN: any;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -59,6 +61,7 @@ export class ReadingGroupComponent implements OnInit {
       message: this.message,
       honeypot: this.honeypot
     });
+    this.safeURLSEGNN = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/jKXMgaC1oHE');
     this.safeURLCWNetworks = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/MTQGNVTn9lQ');
     this.safeURLSAN = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/51_K8RDVlXY');
     this.safeURLoversquashing = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/XQHfkHTAo0s');
@@ -78,6 +81,7 @@ export class ReadingGroupComponent implements OnInit {
     this.safeURLUnreasonableEffect = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/xe5A-xQTBdM');
     this.safeURLSymSpaces = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/-q5yu24EgeE');
     this.safeURLGraphPostNet = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/O8aRsjcutSY');
+    this.safeURLRouting = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/KkUL0UETN0w');
 
   }
 
