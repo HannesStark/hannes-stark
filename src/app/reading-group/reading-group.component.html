@@ -134,64 +134,60 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2010.16103"
+                <a class="item-subtitle link-style-black" href="http://vladlen.info/papers/neural-fields.pdf"
                    target="_blank">
-                  Labeling Trick: A Theory of Using Graph Neural Networks for Multi-Node Representation Learning (2021)
+                  Geometry Processing with Neural Fields (2021)
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                29th of March 2022
+                22nd of March 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Muhan Zhang, Pan Li, Yinglong Xia, Kai Wang, Long Jin
+                  Guandao Yang, Serge Belongie, Bharath Hariharan, Vladlen Koltun
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLlabelTrick' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLGeomProc' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Prof. Li's <a class="item-subtitle link-style-black"
-                              href="https://hannes-stark.com/assets/DF-LT.pdf"
-                              target="_blank">slides</a>. (not sure, but many :D)
+                Guandao's <a class="item-subtitle link-style-black"
+                             href="https://hannes-stark.com/assets/NeurIPS2021-GPwithNIF-Mar22.pdf"
+                             target="_blank">slides</a>. (67 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                Professor <a
+                First author <a
                 class="item-subtitle link-style-black"
-                href="https://sites.google.com/view/panli-purdue/home?authuser=0"
-                target="_blank">Pan Li</a> from Purdue University. He obtained his Ph.D. in Electrical and
-                Computer
-                Engineering at the University of Illinois Urbana - Champaign before completing a one-year postdoc in the
-                SNAP group at Stanford with Prof. Jure Leskovec. He works on principled GraphML and its mathematical
-                foundations.
+                href="https://www.guandaoyang.com/"
+                target="_blank">Guandao Yang</a>, who is a a Computer Science PhD student at Cornell University, advised
+                by Serge Belongie and Bharath Hariharan. His research interests include computer vision for augmented
+                reality and 3D generation.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                In this paper, we provide a theory of using graph neural networks (GNNs) for multi-node representation
-                learning (where we are interested in learning a representation for a set of more than one node). We know
-                that GNN is designed to learn single-node representations. When we want to learn a node set
-                representation
-                involving multiple nodes, a common practice in previous works is to directly aggregate the multiple node
-                representations learned by a GNN into a joint representation of the node set. In this paper, we show a
-                fundamental constraint of such an approach, namely the inability to capture the dependence between nodes
-                in the node set, and argue that directly aggregating individual node representations does not lead to an
-                effective joint representation for multiple nodes. Then, we notice that a few previous successful works
-                for multi-node representation learning, including SEAL, Distance Encoding, and ID-GNN, all used node
-                labeling. These methods first label nodes in the graph according to their relationships with the target
-                node set before applying a GNN. Then, the node representations obtained in the labeled graph are
-                aggregated into a node set representation. By investigating their inner mechanisms, we unify these node
-                labeling techniques into a single and most basic form, namely labeling trick. We prove that with
-                labeling
-                trick a sufficiently expressive GNN learns the most expressive node set representations, thus in
-                principle
-                can solve any joint learning tasks over node sets. Experiments on one important two-node representation
-                learning task, link prediction, verified our theory. Our work establishes a theoretical foundation of
-                using GNNs for joint prediction tasks over node sets.
+                Most existing geometry processing algorithms use meshes as the default shape representation.
+                Manipulating
+                meshes, however, requires one to maintain high quality in the surface discretization. For example,
+                changing the topology of a mesh usually requires additional procedures such as remeshing. This paper
+                instead proposes the use of neural fields for geometry processing. Neural fields can compactly store
+                complicated shapes without spatial discretization. Moreover, neural fields are infinitely
+                differentiable,
+                which allows them to be optimized for objectives that involve higher-order derivatives. This raises the
+                question: can geometry processing be done entirely using neural fields? We introduce loss functions and
+                architectures to show that some of the most challenging geometry processing tasks, such as deformation
+                and
+                filtering, can be done with neural fields. Experimental results show that our methods are on par with
+                the
+                well-established mesh-based methods without committing to a particular surface discretization. Code is
+                available at <a
+                class="item-subtitle link-style-black"
+                href="https://github.com/stevenygd/NFGP"
+                target="_blank">https://github.com/stevenygd/NFGP</a>.
               </p>
             </div>
           </div>
@@ -516,7 +512,7 @@
                 <a class="slight-bold">Resources:</a>
                 Prof. Li's <a class="item-subtitle link-style-black"
                               href="https://hannes-stark.com/assets/DF-LT.pdf"
-                              target="_blank">slides</a>. (not sure, but many :D)
+                              target="_blank">slides</a>. (45 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
