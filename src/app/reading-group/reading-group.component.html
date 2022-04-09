@@ -134,60 +134,56 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="http://vladlen.info/papers/neural-fields.pdf"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2109.07103"
                    target="_blank">
-                  Geometry Processing with Neural Fields (2021)
+                  Automatic Symmetry Discovery with Lie Algebra Convolutional Network (2021)
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                22nd of March 2022
+                5th of April 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Guandao Yang, Serge Belongie, Bharath Hariharan, Vladlen Koltun
+                  Nima Dehmamy, Robin Walters, Yanchen Liu, Dashun Wang, Rose Yu
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLGeomProc' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLLConv' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Guandao's <a class="item-subtitle link-style-black"
-                             href="https://hannes-stark.com/assets/NeurIPS2021-GPwithNIF-Mar22.pdf"
-                             target="_blank">slides</a>. (67 participants)
+                Prof. Dehmamy's <a class="item-subtitle link-style-black"
+                                   href="https://hannes-stark.com/assets/DF-LT.pdf"
+                                   target="_blank">slides</a> are coming soon. (81 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First author <a
+                First author Professor <a
                 class="item-subtitle link-style-black"
-                href="https://www.guandaoyang.com/"
-                target="_blank">Guandao Yang</a>, who is a a Computer Science PhD student at Cornell University, advised
-                by Serge Belongie and Bharath Hariharan. His research interests include computer vision for augmented
-                reality and 3D generation.
+                href="http://nimadehmamy.com/"
+                target="_blank">Nima Dehmamy</a> who works at Northwestern University and earned his PhD in Physics at
+                Boston University. His research involves AI in graph learning, using physics to understand optimization
+                landscapes, and neuroscience.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Most existing geometry processing algorithms use meshes as the default shape representation.
-                Manipulating
-                meshes, however, requires one to maintain high quality in the surface discretization. For example,
-                changing the topology of a mesh usually requires additional procedures such as remeshing. This paper
-                instead proposes the use of neural fields for geometry processing. Neural fields can compactly store
-                complicated shapes without spatial discretization. Moreover, neural fields are infinitely
-                differentiable,
-                which allows them to be optimized for objectives that involve higher-order derivatives. This raises the
-                question: can geometry processing be done entirely using neural fields? We introduce loss functions and
-                architectures to show that some of the most challenging geometry processing tasks, such as deformation
+                Existing equivariant neural networks require prior knowledge of the symmetry group and discretization
+                for
+                continuous groups. We propose to work with Lie algebras (infinitesimal generators) instead of Lie
+                groups.
+                Our model, the Lie algebra convolutional network (L-conv) can automatically discover symmetries and does
+                not require discretization of the group. We show that L-conv can serve as a building block to construct
+                any group equivariant feedforward architecture. Both CNNs and Graph Convolutional Networks can be
+                expressed as L-conv with appropriate groups. We discover direct connections between L-conv and physics:
+                (1) group invariant loss generalizes field theory (2) Euler-Lagrange equation measures the robustness,
                 and
-                filtering, can be done with neural fields. Experimental results show that our methods are on par with
-                the
-                well-established mesh-based methods without committing to a particular surface discretization. Code is
-                available at <a
-                class="item-subtitle link-style-black"
-                href="https://github.com/stevenygd/NFGP"
-                target="_blank">https://github.com/stevenygd/NFGP</a>.
+                (3) equivariance leads to conservation laws and Noether current.These connections open up new avenues
+                for
+                designing more general equivariant networks and applying them to important problems in physical
+                sciences.
               </p>
             </div>
           </div>
@@ -212,50 +208,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2109.07103"
-                   target="_blank">
-                  Automatic Symmetry Discovery with Lie Algebra Convolutional Network (2021)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                5th of April 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Nima Dehmamy, Robin Walters, Yanchen Liu, Dashun Wang, Rose Yu
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author Professor <a
-              class="item-subtitle link-style-black"
-              href="http://nimadehmamy.com/"
-              target="_blank">Nima Dehmamy</a> who works at Northwestern University and earned his PhD in Physics at
-              Boston University. His research involves AI in graph learning, using physics to understand optimization
-              landscapes, and neuroscience.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Existing equivariant neural networks require prior knowledge of the symmetry group and discretization for
-              continuous groups. We propose to work with Lie algebras (infinitesimal generators) instead of Lie groups.
-              Our model, the Lie algebra convolutional network (L-conv) can automatically discover symmetries and does
-              not require discretization of the group. We show that L-conv can serve as a building block to construct
-              any group equivariant feedforward architecture. Both CNNs and Graph Convolutional Networks can be
-              expressed as L-conv with appropriate groups. We discover direct connections between L-conv and physics:
-              (1) group invariant loss generalizes field theory (2) Euler-Lagrange equation measures the robustness, and
-              (3) equivariance leads to conservation laws and Noether current.These connections open up new avenues for
-              designing more general equivariant networks and applying them to important problems in physical sciences.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -403,6 +355,101 @@
           </div>
 
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                3rd of May 2022
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or via email!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.03376"
+                   target="_blank">
+                  Message Passing Neural PDE Solvers (ICLR 2022)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                10th of May 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Johannes Brandstetter, Daniel Worrall, Max Welling
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              The two first authors: Professor <a
+              class="item-subtitle link-style-black"
+              href="https://www.jku.at/institut-fuer-machine-learning/ueber-uns/team/ass-prof-dr-johannes-brandstetter/"
+              target="_blank">Johannes Brandstetter</a> who holds his professorship at JKU
+              Linz, where he previously worked with Prof. Sepp Hochreiter. He is a guest researcher at the University of
+              Amsterdam in Prof. Max Wellings's group and started working with Microsoft's molecular ML group. Also
+              joining us is Dr <a
+              class="item-subtitle link-style-black"
+              href="https://danielewworrall.github.io/"
+              target="_blank">Daniel Worrall</a> who is an ML researcher at UvA and a Sidney Sussex scholar at the
+              University of Cambridge. Previously he was a PostDoc in Prof. Max Wellings group.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              The numerical solution of partial differential equations (PDEs) is difficult, having led to a century of
+              research so far. Recently, there have been pushes to build neural--numerical hybrid solvers, which
+              piggy-backs the modern trend towards fully end-to-end learned systems. Most works so far can only
+              generalize over a subset of properties to which a generic solver would be faced, including: resolution,
+              topology, geometry, boundary conditions, domain discretization regularity, dimensionality, etc. In this
+              work, we build a solver, satisfying these properties, where all the components are based on neural message
+              passing, replacing all heuristically designed components in the computation graph with backprop-optimized
+              neural function approximators. We show that neural message passing solvers representationally contain some
+              classical methods, such as finite differences, finite volumes, and WENO schemes. In order to encourage
+              stability in training autoregressive models, we put forward a method that is based on the principle of
+              zero-stability, posing stability as a domain adaptation problem. We validate our method on various
+              fluid-like flow problems, demonstrating fast, stable, and accurate performance across different domain
+              topologies, discretization, etc. in 1D and 2D. Our model outperforms state-of-the-art numerical solvers in
+              the low resolution regime in terms of speed and accuracy.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                17th of May 2022
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or via email!
+            </p>
+          </div>
+
+          <!--
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -445,26 +492,7 @@
               code to reproduce our experiments is available at this https URL
             </p>
           </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                10th of May 2022
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or via email!
-            </p>
-          </div>
+          -->
 
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
@@ -485,6 +513,66 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2109.07103"
+                   target="_blank">
+                  Automatic Symmetry Discovery with Lie Algebra Convolutional Network (2021)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                5th of April 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Nima Dehmamy, Robin Walters, Yanchen Liu, Dashun Wang, Rose Yu
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLLConv' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Prof. Dehmamy's <a class="item-subtitle link-style-black"
+                                   href="https://hannes-stark.com/assets/DF-LT.pdf"
+                                   target="_blank">slides</a> are coming soon. (81 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author Professor <a
+                class="item-subtitle link-style-black"
+                href="http://nimadehmamy.com/"
+                target="_blank">Nima Dehmamy</a> who works at Northwestern University and earned his PhD in Physics at
+                Boston University. His research involves AI in graph learning, using physics to understand optimization
+                landscapes, and neuroscience.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Existing equivariant neural networks require prior knowledge of the symmetry group and discretization
+                for
+                continuous groups. We propose to work with Lie algebras (infinitesimal generators) instead of Lie
+                groups.
+                Our model, the Lie algebra convolutional network (L-conv) can automatically discover symmetries and does
+                not require discretization of the group. We show that L-conv can serve as a building block to construct
+                any group equivariant feedforward architecture. Both CNNs and Graph Convolutional Networks can be
+                expressed as L-conv with appropriate groups. We discover direct connections between L-conv and physics:
+                (1) group invariant loss generalizes field theory (2) Euler-Lagrange equation measures the robustness,
+                and
+                (3) equivariance leads to conservation laws and Noether current.These connections open up new avenues
+                for
+                designing more general equivariant networks and applying them to important problems in physical
+                sciences.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
