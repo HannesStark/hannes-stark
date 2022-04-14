@@ -134,56 +134,63 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2109.07103"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.13013"
                    target="_blank">
-                  Automatic Symmetry Discovery with Lie Algebra Convolutional Network (2021)
+                  Sign and Basis Invariant Networks for Spectral Graph Representation Learning (2022)
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                5th of April 2022
+                12th of April 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Nima Dehmamy, Robin Walters, Yanchen Liu, Dashun Wang, Rose Yu
+                  Derek Lim, Joshua Robinson, Lingxiao Zhao, Tess Smidt, Suvrit Sra, Haggai Maron, Stefanie Jegelka
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLLConv' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLSignNet' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Prof. Dehmamy's <a class="item-subtitle link-style-black"
-                                   href="https://hannes-stark.com/assets/DF-LT.pdf"
-                                   target="_blank">slides</a> are coming soon. (81 participants)
+                Their <a class="item-subtitle link-style-black"
+                                   href="https://hannes-stark.com/assets/.pdf"
+                                   target="_blank">slides</a> are coming soon. (96 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First author Professor <a
+                First authors <a
                 class="item-subtitle link-style-black"
-                href="http://nimadehmamy.com/"
-                target="_blank">Nima Dehmamy</a> who works at Northwestern University and earned his PhD in Physics at
-                Boston University. His research involves AI in graph learning, using physics to understand optimization
-                landscapes, and neuroscience.
+                href="https://cptq.github.io/"
+                target="_blank">Derek Lim</a> and <a
+                class="item-subtitle link-style-black"
+                href="https://joshrobinson.mit.edu/"
+                target="_blank">Joshua Robinson</a>, who both are PhD students in the group of Prof. Stefanie Jegelka at
+                MIT. Josh is also co-advised by Prof. Suvrit Sra and Derek previously presented ESAN in the reading
+                group!
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Existing equivariant neural networks require prior knowledge of the symmetry group and discretization
-                for
-                continuous groups. We propose to work with Lie algebras (infinitesimal generators) instead of Lie
-                groups.
-                Our model, the Lie algebra convolutional network (L-conv) can automatically discover symmetries and does
-                not require discretization of the group. We show that L-conv can serve as a building block to construct
-                any group equivariant feedforward architecture. Both CNNs and Graph Convolutional Networks can be
-                expressed as L-conv with appropriate groups. We discover direct connections between L-conv and physics:
-                (1) group invariant loss generalizes field theory (2) Euler-Lagrange equation measures the robustness,
-                and
-                (3) equivariance leads to conservation laws and Noether current.These connections open up new avenues
-                for
-                designing more general equivariant networks and applying them to important problems in physical
-                sciences.
+                Many machine learning tasks involve processing eigenvectors derived from data. Especially valuable are
+                Laplacian eigenvectors, which capture useful structural information about graphs and other geometric
+                objects. However, ambiguities arise when computing eigenvectors: for each eigenvector v, the sign
+                flipped
+                −v is also an eigenvector. More generally, higher dimensional eigenspaces contain infinitely many
+                choices
+                of basis eigenvectors. These ambiguities make it a challenge to process eigenvectors and eigenspaces in
+                a
+                consistent way. In this work we introduce SignNet and BasisNet -- new neural architectures that are
+                invariant to all requisite symmetries and hence process collections of eigenspaces in a principled
+                manner.
+                Our networks are universal, i.e., they can approximate any continuous function of eigenvectors with the
+                proper invariances. They are also theoretically strong for graph representation learning -- they can
+                approximate any spectral graph convolution, can compute spectral invariants that go beyond message
+                passing
+                neural networks, and can provably simulate previously proposed graph positional encodings. Experiments
+                show the strength of our networks for learning spectral graph filters and learning graph positional
+                encodings.
               </p>
             </div>
           </div>
@@ -208,56 +215,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.13013"
-                   target="_blank">
-                  Sign and Basis Invariant Networks for Spectral Graph Representation Learning (2022)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                12th of April 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Derek Lim, Joshua Robinson, Lingxiao Zhao, Tess Smidt, Suvrit Sra, Haggai Maron, Stefanie Jegelka
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First authors <a
-              class="item-subtitle link-style-black"
-              href="https://cptq.github.io/"
-              target="_blank">Derek Lim</a> and <a
-              class="item-subtitle link-style-black"
-              href="https://joshrobinson.mit.edu/"
-              target="_blank">Joshua Robinson</a>, who both are PhD students in the group of Prof. Stefanie Jegelka at
-              MIT. Josh is also co-advised by Prof. Suvrit Sra and Derek previously presented ESAN in the reading group!
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Many machine learning tasks involve processing eigenvectors derived from data. Especially valuable are
-              Laplacian eigenvectors, which capture useful structural information about graphs and other geometric
-              objects. However, ambiguities arise when computing eigenvectors: for each eigenvector v, the sign flipped
-              −v is also an eigenvector. More generally, higher dimensional eigenspaces contain infinitely many choices
-              of basis eigenvectors. These ambiguities make it a challenge to process eigenvectors and eigenspaces in a
-              consistent way. In this work we introduce SignNet and BasisNet -- new neural architectures that are
-              invariant to all requisite symmetries and hence process collections of eigenspaces in a principled manner.
-              Our networks are universal, i.e., they can approximate any continuous function of eigenvectors with the
-              proper invariances. They are also theoretically strong for graph representation learning -- they can
-              approximate any spectral graph convolution, can compute spectral invariants that go beyond message passing
-              neural networks, and can provably simulate previously proposed graph positional encodings. Experiments
-              show the strength of our networks for learning spectral graph filters and learning graph positional
-              encodings.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -513,6 +470,73 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.13013"
+                   target="_blank">
+                  Sign and Basis Invariant Networks for Spectral Graph Representation Learning (2022)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                12th of April 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Derek Lim, Joshua Robinson, Lingxiao Zhao, Tess Smidt, Suvrit Sra, Haggai Maron, Stefanie Jegelka
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLSignNet' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Their <a class="item-subtitle link-style-black"
+                                   href="https://hannes-stark.com/assets/.pdf"
+                                   target="_blank">slides</a> are coming soon. (96 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First authors <a
+                class="item-subtitle link-style-black"
+                href="https://cptq.github.io/"
+                target="_blank">Derek Lim</a> and <a
+                class="item-subtitle link-style-black"
+                href="https://joshrobinson.mit.edu/"
+                target="_blank">Joshua Robinson</a>, who both are PhD students in the group of Prof. Stefanie Jegelka at
+                MIT. Josh is also co-advised by Prof. Suvrit Sra and Derek previously presented ESAN in the reading
+                group!
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Many machine learning tasks involve processing eigenvectors derived from data. Especially valuable are
+                Laplacian eigenvectors, which capture useful structural information about graphs and other geometric
+                objects. However, ambiguities arise when computing eigenvectors: for each eigenvector v, the sign
+                flipped
+                −v is also an eigenvector. More generally, higher dimensional eigenspaces contain infinitely many
+                choices
+                of basis eigenvectors. These ambiguities make it a challenge to process eigenvectors and eigenspaces in
+                a
+                consistent way. In this work we introduce SignNet and BasisNet -- new neural architectures that are
+                invariant to all requisite symmetries and hence process collections of eigenspaces in a principled
+                manner.
+                Our networks are universal, i.e., they can approximate any continuous function of eigenvectors with the
+                proper invariances. They are also theoretically strong for graph representation learning -- they can
+                approximate any spectral graph convolution, can compute spectral invariants that go beyond message
+                passing
+                neural networks, and can provably simulate previously proposed graph positional encodings. Experiments
+                show the strength of our networks for learning spectral graph filters and learning graph positional
+                encodings.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
