@@ -232,6 +232,15 @@ h3 {
   }
 }
 
+.icon-right-margin-color {
+  margin-right: 5px;
+  color: var(--color-accent);
+  &--left {
+    @extend .icon-right-margin-color;
+    margin-left: 40px;
+  }
+}
+
 .separator {
   border: 0;
   border-top: 2px dashed var(--color-light-grey);

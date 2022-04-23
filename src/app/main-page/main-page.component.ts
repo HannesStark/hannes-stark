@@ -8,7 +8,8 @@ import {
   faPhone,
   faUser,
   faGraduationCap,
-  faBook
+  faBook,
+  faFireAlt
 } from '@fortawesome/free-solid-svg-icons';
 import {faCalendar} from '@fortawesome/free-solid-svg-icons/faCalendar';
 import {HttpClient} from '@angular/common/http';
@@ -40,6 +41,7 @@ export class MainPageComponent implements OnInit {
   Gscholar = faGraduationCap;
   location = faMapMarker;
   paper = faCopy;
+  handPointLeft = faFireAlt;
   mobile = faMobile;
   sections: any[];
   safeURLNerf;
