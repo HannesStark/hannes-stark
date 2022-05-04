@@ -215,7 +215,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -232,7 +231,8 @@
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Albert Musaelian, Simon Batzner, Anders Johansson, Lixin Sun, Cameron J. Owen, Mordechai Kornbluth, Boris Kozinsky
+                  Albert Musaelian, Simon Batzner, Anders Johansson, Lixin Sun, Cameron J. Owen, Mordechai Kornbluth,
+                  Boris Kozinsky
                 </a>
               </div>
             </div>
@@ -300,10 +300,11 @@
               class="item-subtitle link-style-black"
               href="https://www.jku.at/institut-fuer-machine-learning/ueber-uns/team/ass-prof-dr-johannes-brandstetter/"
               target="_blank">Johannes Brandstetter</a> who is working with Microsoft's molecular ML group. Also
-              joining us is  <a
+              joining us is <a
               class="item-subtitle link-style-black"
               href="https://danielewworrall.github.io/"
-              target="_blank">Daniel Worrall</a> who is working at DeepMind. Previously he was a PostDoc in Prof. Max Welling's group.
+              target="_blank">Daniel Worrall</a> who is working at DeepMind. Previously he was a PostDoc in Prof. Max
+              Welling's group.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
@@ -341,6 +342,50 @@
               <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
                  class="link-style-green">Slack</a>
               or via email!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.07835"
+                   target="_blank">
+                  Topological Graph Neural Networks (ICLR 2022)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                31st of May 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Max Horn, Edward De Brouwer, Michael Moor, Yves Moreau, Bastian Rieck, Karsten Borgwardt
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author <a
+              class="item-subtitle link-style-black"
+              href="https://scholar.google.com/citations?user=-Pm4XtAAAAAJ&hl"
+              target="_blank">Edward De Brouwer</a> who is a last year PhD student at KU Leuven, Belgium on machine learning for
+              healthcare. His research focuses on developing robust and trustworthy methods for the clinical domain,
+              using neural differential equations, topological data analysis and causal inference, among others. In
+              2020-2021, he was a visiting researcher at ETH Zürich, where he worked on topological methods for graph
+              neural networks.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Graph neural networks (GNNs) are a powerful architecture for tackling graph learning tasks, yet have been
+              shown to be oblivious to eminent substructures such as cycles. We present TOGL, a novel layer that
+              incorporates global topological information of a graph using persistent homology. TOGL can be easily
+              integrated into any type of GNN and is strictly more expressive (in terms the Weisfeiler--Lehman graph
+              isomorphism test) than message-passing GNNs. Augmenting GNNs with TOGL leads to improved predictive
+              performance for graph and node classification tasks, both on synthetic data sets, which can be classified
+              by humans using their topology but not by ordinary GNNs, and on real-world data.
             </p>
           </div>
 
@@ -435,31 +480,34 @@
                 <a class="slight-bold">Resources:</a>
                 (63 participants)
               </p>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author <a
-              class="item-subtitle link-style-black"
-              href="https://cvignac.github.io/"
-              target="_blank">Clément Vignac</a> who is a PhD student at EPFL in the lab of Prof. Pascal Frossard. He
-              works on ML for sets and graphs, incorporating symmetry priors of these data modalities, and graph
-              generation.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              This work addresses one-shot set and graph generation, and, more specifically, the parametrization of
-              probabilistic decoders that map a vector-shaped prior to a distribution over sets or graphs. Sets and
-              graphs are most commonly generated by first sampling points i.i.d. from a normal distribution, and then
-              processing these points along with the prior vector using Transformer layers or Graph Neural Networks.
-              This architecture is designed to generate exchangeable distributions, i.e., all permutations of the
-              generated outputs are equally likely. We however show that it only optimizes a proxy to the evidence lower
-              bound, which makes it hard to train. We then study equivariance in generative settings and show that
-              non-exchangeable methods can still achieve permutation equivariance. Using this result, we introduce Top-n
-              creation, a differentiable generation mechanism that uses the latent vector to select the most relevant
-              points from a trainable reference set. Top-n can replace i.i.d. generation in any Variational Autoencoder
-              or Generative Adversarial Network. Experimentally, our method outperforms i.i.d. generation by 15% at
-              SetMNIST reconstruction, by 33% at object detection on CLEVR, generates sets that are 74% closer to the
-              true distribution on a synthetic molecule-like dataset, and generates more valid molecules on QM9.
-            </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author <a
+                class="item-subtitle link-style-black"
+                href="https://cvignac.github.io/"
+                target="_blank">Clément Vignac</a> who is a PhD student at EPFL in the lab of Prof. Pascal Frossard. He
+                works on ML for sets and graphs, incorporating symmetry priors of these data modalities, and graph
+                generation.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                This work addresses one-shot set and graph generation, and, more specifically, the parametrization of
+                probabilistic decoders that map a vector-shaped prior to a distribution over sets or graphs. Sets and
+                graphs are most commonly generated by first sampling points i.i.d. from a normal distribution, and then
+                processing these points along with the prior vector using Transformer layers or Graph Neural Networks.
+                This architecture is designed to generate exchangeable distributions, i.e., all permutations of the
+                generated outputs are equally likely. We however show that it only optimizes a proxy to the evidence
+                lower
+                bound, which makes it hard to train. We then study equivariance in generative settings and show that
+                non-exchangeable methods can still achieve permutation equivariance. Using this result, we introduce
+                Top-n
+                creation, a differentiable generation mechanism that uses the latent vector to select the most relevant
+                points from a trainable reference set. Top-n can replace i.i.d. generation in any Variational
+                Autoencoder
+                or Generative Adversarial Network. Experimentally, our method outperforms i.i.d. generation by 15% at
+                SetMNIST reconstruction, by 33% at object detection on CLEVR, generates sets that are 74% closer to the
+                true distribution on a synthetic molecule-like dataset, and generates more valid molecules on QM9.
+              </p>
             </div>
           </div>
 
@@ -490,8 +538,8 @@
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
                 Kimon's <a class="item-subtitle link-style-black"
-                         href="https://hannes-stark.com/assets/kimon.pdf"
-                         target="_blank">slides</a>. (86 participants)
+                           href="https://hannes-stark.com/assets/kimon.pdf"
+                           target="_blank">slides</a>. (86 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
