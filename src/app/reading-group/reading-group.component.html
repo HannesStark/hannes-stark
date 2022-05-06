@@ -134,63 +134,68 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.13013"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.05249"
                    target="_blank">
-                  Sign and Basis Invariant Networks for Spectral Graph Representation Learning (2022)
+                  Learning Local Equivariant Representations for Large-Scale Atomistic Dynamics
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                12th of April 2022
+                3rd of May 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Derek Lim, Joshua Robinson, Lingxiao Zhao, Tess Smidt, Suvrit Sra, Haggai Maron, Stefanie Jegelka
+                  Albert Musaelian, Simon Batzner, Anders Johansson, Lixin Sun, Cameron J. Owen, Mordechai Kornbluth,
+                  Boris Kozinsky
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLSignNet' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLAllegro' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
                 Their <a class="item-subtitle link-style-black"
-                         href="https://hannes-stark.com/assets/final_reading_group_slides.pdf"
-                         target="_blank">slides</a> (96 participants)
+                           href="https://hannes-stark.com/assets/2022_05_03_logag.pdf"
+                           target="_blank">slides</a>. (69 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First authors <a
+                The authors <a
                 class="item-subtitle link-style-black"
-                href="https://cptq.github.io/"
-                target="_blank">Derek Lim</a> and <a
+                href="https://simonbatzner.github.io/"
+                target="_blank">Simon Batzner</a> and <a
                 class="item-subtitle link-style-black"
-                href="https://joshrobinson.mit.edu/"
-                target="_blank">Joshua Robinson</a>, who both are PhD students in the group of Prof. Stefanie Jegelka at
-                MIT. Josh is also co-advised by Prof. Suvrit Sra and Derek previously presented ESAN in the reading
-                group!
+                href="https://bkoz.seas.harvard.edu/news/doe-csgf-albert-musaelian"
+                target="_blank">Albert Musaelian</a>. Simon is 3rd year PhD student at Harvard interested in how
+                to leverage Deep Learning to advance Molecular Simulation. Prior to joining Harvard, he obtained a
+                Master’s Degree from MIT and spent a year conducting research at the NASA Armstrong Research Center.
+                Albert Musaelian is a second-year PhD student in the MIR group at Harvard and a Department of Energy
+                Computational Science Graduate Fellow. He works on the design of machine learning techniques for
+                atomic-scale modeling.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Many machine learning tasks involve processing eigenvectors derived from data. Especially valuable are
-                Laplacian eigenvectors, which capture useful structural information about graphs and other geometric
-                objects. However, ambiguities arise when computing eigenvectors: for each eigenvector v, the sign
-                flipped
-                −v is also an eigenvector. More generally, higher dimensional eigenspaces contain infinitely many
-                choices
-                of basis eigenvectors. These ambiguities make it a challenge to process eigenvectors and eigenspaces in
-                a
-                consistent way. In this work we introduce SignNet and BasisNet -- new neural architectures that are
-                invariant to all requisite symmetries and hence process collections of eigenspaces in a principled
-                manner.
-                Our networks are universal, i.e., they can approximate any continuous function of eigenvectors with the
-                proper invariances. They are also theoretically strong for graph representation learning -- they can
-                approximate any spectral graph convolution, can compute spectral invariants that go beyond message
-                passing
-                neural networks, and can provably simulate previously proposed graph positional encodings. Experiments
-                show the strength of our networks for learning spectral graph filters and learning graph positional
-                encodings.
+                A simultaneously accurate and computationally efficient parametrization of the energy and atomic forces
+                of
+                molecules and materials is a long-standing goal in the natural sciences. In pursuit of this goal, neural
+                message passing has lead to a paradigm shift by describing many-body correlations of atoms through
+                iteratively passing messages along an atomistic graph. This propagation of information, however, makes
+                parallel computation difficult and limits the length scales that can be studied. Strictly local
+                descriptor-based methods, on the other hand, can scale to large systems but do not currently match the
+                high accuracy observed with message passing approaches. This work introduces Allegro, a strictly local
+                equivariant deep learning interatomic potential that simultaneously exhibits excellent accuracy and
+                scalability of parallel computation. Allegro learns many-body functions of atomic coordinates using a
+                series of tensor products of learned equivariant representations, but without relying on message
+                passing.
+                Allegro obtains improvements over state-of-the-art methods on the QM9 and revised MD-17 data sets. A
+                single tensor product layer is shown to outperform existing deep message passing neural networks and
+                transformers on the QM9 benchmark. Furthermore, Allegro displays remarkable generalization to
+                out-of-distribution data. Molecular dynamics simulations based on Allegro recover structural and kinetic
+                properties of an amorphous phosphate electrolyte in excellent agreement with first principles
+                calculations. Finally, we demonstrate the parallel scaling of Allegro with a dynamics simulation of 100
+                million atoms.
               </p>
             </div>
           </div>
@@ -215,65 +220,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.05249"
-                   target="_blank">
-                  Learning Local Equivariant Representations for Large-Scale Atomistic Dynamics
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                3rd of May 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Albert Musaelian, Simon Batzner, Anders Johansson, Lixin Sun, Cameron J. Owen, Mordechai Kornbluth,
-                  Boris Kozinsky
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              The authors <a
-              class="item-subtitle link-style-black"
-              href="https://simonbatzner.github.io/"
-              target="_blank">Simon Batzner</a> and <a
-              class="item-subtitle link-style-black"
-              href="https://bkoz.seas.harvard.edu/news/doe-csgf-albert-musaelian"
-              target="_blank">Albert Musaelian</a>. Simon is 3rd year PhD student at Harvard interested in how
-              to leverage Deep Learning to advance Molecular Simulation. Prior to joining Harvard, he obtained a
-              Master’s Degree from MIT and spent a year conducting research at the NASA Armstrong Research Center.
-              Albert Musaelian is a second-year PhD student in the MIR group at Harvard and a Department of Energy
-              Computational Science Graduate Fellow. He works on the design of machine learning techniques for
-              atomic-scale modeling.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              A simultaneously accurate and computationally efficient parametrization of the energy and atomic forces of
-              molecules and materials is a long-standing goal in the natural sciences. In pursuit of this goal, neural
-              message passing has lead to a paradigm shift by describing many-body correlations of atoms through
-              iteratively passing messages along an atomistic graph. This propagation of information, however, makes
-              parallel computation difficult and limits the length scales that can be studied. Strictly local
-              descriptor-based methods, on the other hand, can scale to large systems but do not currently match the
-              high accuracy observed with message passing approaches. This work introduces Allegro, a strictly local
-              equivariant deep learning interatomic potential that simultaneously exhibits excellent accuracy and
-              scalability of parallel computation. Allegro learns many-body functions of atomic coordinates using a
-              series of tensor products of learned equivariant representations, but without relying on message passing.
-              Allegro obtains improvements over state-of-the-art methods on the QM9 and revised MD-17 data sets. A
-              single tensor product layer is shown to outperform existing deep message passing neural networks and
-              transformers on the QM9 benchmark. Furthermore, Allegro displays remarkable generalization to
-              out-of-distribution data. Molecular dynamics simulations based on Allegro recover structural and kinetic
-              properties of an amorphous phosphate electrolyte in excellent agreement with first principles
-              calculations. Finally, we demonstrate the parallel scaling of Allegro with a dynamics simulation of 100
-              million atoms.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -371,7 +317,8 @@
               First author <a
               class="item-subtitle link-style-black"
               href="https://scholar.google.com/citations?user=-Pm4XtAAAAAJ&hl"
-              target="_blank">Edward De Brouwer</a> who is a last year PhD student at KU Leuven, Belgium on machine learning for
+              target="_blank">Edward De Brouwer</a> who is a last year PhD student at KU Leuven, Belgium on machine
+              learning for
               healthcare. His research focuses on developing robust and trustworthy methods for the clinical domain,
               using neural differential equations, topological data analysis and causal inference, among others. In
               2020-2021, he was a visiting researcher at ETH Zürich, where he worked on topological methods for graph
@@ -453,6 +400,78 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.05249"
+                   target="_blank">
+                  Learning Local Equivariant Representations for Large-Scale Atomistic Dynamics
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                3rd of May 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Albert Musaelian, Simon Batzner, Anders Johansson, Lixin Sun, Cameron J. Owen, Mordechai Kornbluth,
+                  Boris Kozinsky
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLAllegro' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Their <a class="item-subtitle link-style-black"
+                           href="https://hannes-stark.com/assets/2022_05_03_logag.pdf"
+                           target="_blank">slides</a>. (69 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                The authors <a
+                class="item-subtitle link-style-black"
+                href="https://simonbatzner.github.io/"
+                target="_blank">Simon Batzner</a> and <a
+                class="item-subtitle link-style-black"
+                href="https://bkoz.seas.harvard.edu/news/doe-csgf-albert-musaelian"
+                target="_blank">Albert Musaelian</a>. Simon is 3rd year PhD student at Harvard interested in how
+                to leverage Deep Learning to advance Molecular Simulation. Prior to joining Harvard, he obtained a
+                Master’s Degree from MIT and spent a year conducting research at the NASA Armstrong Research Center.
+                Albert Musaelian is a second-year PhD student in the MIR group at Harvard and a Department of Energy
+                Computational Science Graduate Fellow. He works on the design of machine learning techniques for
+                atomic-scale modeling.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                A simultaneously accurate and computationally efficient parametrization of the energy and atomic forces
+                of
+                molecules and materials is a long-standing goal in the natural sciences. In pursuit of this goal, neural
+                message passing has lead to a paradigm shift by describing many-body correlations of atoms through
+                iteratively passing messages along an atomistic graph. This propagation of information, however, makes
+                parallel computation difficult and limits the length scales that can be studied. Strictly local
+                descriptor-based methods, on the other hand, can scale to large systems but do not currently match the
+                high accuracy observed with message passing approaches. This work introduces Allegro, a strictly local
+                equivariant deep learning interatomic potential that simultaneously exhibits excellent accuracy and
+                scalability of parallel computation. Allegro learns many-body functions of atomic coordinates using a
+                series of tensor products of learned equivariant representations, but without relying on message
+                passing.
+                Allegro obtains improvements over state-of-the-art methods on the QM9 and revised MD-17 data sets. A
+                single tensor product layer is shown to outperform existing deep message passing neural networks and
+                transformers on the QM9 benchmark. Furthermore, Allegro displays remarkable generalization to
+                out-of-distribution data. Molecular dynamics simulations based on Allegro recover structural and kinetic
+                properties of an amorphous phosphate electrolyte in excellent agreement with first principles
+                calculations. Finally, we demonstrate the parallel scaling of Allegro with a dynamics simulation of 100
+                million atoms.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
