@@ -157,8 +157,8 @@
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
                 Their <a class="item-subtitle link-style-black"
-                           href="https://hannes-stark.com/assets/2022_05_03_logag.pdf"
-                           target="_blank">slides</a>. (69 participants)
+                         href="https://hannes-stark.com/assets/2022_05_03_logag.pdf"
+                         target="_blank">slides</a>. (69 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
@@ -220,58 +220,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.03376"
-                   target="_blank">
-                  Message Passing Neural PDE Solvers (ICLR 2022)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                10th of May 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Johannes Brandstetter, Daniel Worrall, Max Welling
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              The two first authors: <a
-              class="item-subtitle link-style-black"
-              href="https://www.jku.at/institut-fuer-machine-learning/ueber-uns/team/ass-prof-dr-johannes-brandstetter/"
-              target="_blank">Johannes Brandstetter</a> who is working with Microsoft's molecular ML group. Also
-              joining us is <a
-              class="item-subtitle link-style-black"
-              href="https://danielewworrall.github.io/"
-              target="_blank">Daniel Worrall</a> who is working at DeepMind. Previously he was a PostDoc in Prof. Max
-              Welling's group.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              The numerical solution of partial differential equations (PDEs) is difficult, having led to a century of
-              research so far. Recently, there have been pushes to build neural--numerical hybrid solvers, which
-              piggy-backs the modern trend towards fully end-to-end learned systems. Most works so far can only
-              generalize over a subset of properties to which a generic solver would be faced, including: resolution,
-              topology, geometry, boundary conditions, domain discretization regularity, dimensionality, etc. In this
-              work, we build a solver, satisfying these properties, where all the components are based on neural message
-              passing, replacing all heuristically designed components in the computation graph with backprop-optimized
-              neural function approximators. We show that neural message passing solvers representationally contain some
-              classical methods, such as finite differences, finite volumes, and WENO schemes. In order to encourage
-              stability in training autoregressive models, we put forward a method that is based on the principle of
-              zero-stability, posing stability as a domain adaptation problem. We validate our method on various
-              fluid-like flow problems, demonstrating fast, stable, and accurate performance across different domain
-              topologies, discretization, etc. in 1D and 2D. Our model outperforms state-of-the-art numerical solvers in
-              the low resolution regime in terms of speed and accuracy.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
             </div>
@@ -401,6 +349,72 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.03376"
+                   target="_blank">
+                  Message Passing Neural PDE Solvers (ICLR 2022)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                10th of May 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Johannes Brandstetter, Daniel Worrall, Max Welling
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLNeuralPDE' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                Johannes's <a class="item-subtitle link-style-black"
+                         href="https://hannes-stark.com/assets/.pdf"
+                         target="_blank">slides</a> are coming soon! (87 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                The two first authors: <a
+                class="item-subtitle link-style-black"
+                href="https://www.jku.at/institut-fuer-machine-learning/ueber-uns/team/ass-prof-dr-johannes-brandstetter/"
+                target="_blank">Johannes Brandstetter</a> who is working with Microsoft's molecular ML group. Also
+                joining us is <a
+                class="item-subtitle link-style-black"
+                href="https://danielewworrall.github.io/"
+                target="_blank">Daniel Worrall</a> who is working at DeepMind. Previously he was a PostDoc in Prof. Max
+                Welling's group.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                The numerical solution of partial differential equations (PDEs) is difficult, having led to a century of
+                research so far. Recently, there have been pushes to build neural--numerical hybrid solvers, which
+                piggy-backs the modern trend towards fully end-to-end learned systems. Most works so far can only
+                generalize over a subset of properties to which a generic solver would be faced, including: resolution,
+                topology, geometry, boundary conditions, domain discretization regularity, dimensionality, etc. In this
+                work, we build a solver, satisfying these properties, where all the components are based on neural
+                message
+                passing, replacing all heuristically designed components in the computation graph with
+                backprop-optimized
+                neural function approximators. We show that neural message passing solvers representationally contain
+                some
+                classical methods, such as finite differences, finite volumes, and WENO schemes. In order to encourage
+                stability in training autoregressive models, we put forward a method that is based on the principle of
+                zero-stability, posing stability as a domain adaptation problem. We validate our method on various
+                fluid-like flow problems, demonstrating fast, stable, and accurate performance across different domain
+                topologies, discretization, etc. in 1D and 2D. Our model outperforms state-of-the-art numerical solvers
+                in
+                the low resolution regime in terms of speed and accuracy.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
@@ -428,8 +442,8 @@
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
                 Their <a class="item-subtitle link-style-black"
-                           href="https://hannes-stark.com/assets/2022_05_03_logag.pdf"
-                           target="_blank">slides</a>. (69 participants)
+                         href="https://hannes-stark.com/assets/2022_05_03_logag.pdf"
+                         target="_blank">slides</a>. (69 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>

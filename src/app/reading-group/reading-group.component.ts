@@ -60,6 +60,7 @@ export class ReadingGroupComponent implements OnInit {
   safeURLGATRetro: any;
   safeURLTopN: any;
   safeURLAllegro: any;
+  safeURLNeuralPDE: any;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -68,6 +69,7 @@ export class ReadingGroupComponent implements OnInit {
       message: this.message,
       honeypot: this.honeypot
     });
+    this.safeURLNeuralPDE = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/rmQ9TvI-gRk');
     this.safeURLAllegro = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/ZR1NTBPBDOo');
     this.safeURLTopN = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/TPCPKB6sPvw');
     this.safeURLGATRetro = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/duWVNO8_sDM');
@@ -75,7 +77,6 @@ export class ReadingGroupComponent implements OnInit {
     this.safeURLLConv = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/pvu9auw071A');
     this.safeURLlabelTrick = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/ysgxI6wFjy8');
     this.safeURLGeomProc = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/P2IeDSKP7W0');
-
     this.safeURLSEGNN = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/jKXMgaC1oHE');
     this.safeURLCWNetworks = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/MTQGNVTn9lQ');
     this.safeURLSAN = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/51_K8RDVlXY');
