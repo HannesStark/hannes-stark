@@ -121,7 +121,7 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" class="underline-title">
-          <h1 class="left-titles">LATEST VIDEO (scroll down for more)</h1>
+          <h1 class="left-titles">RECENT VIDEO (scroll down for more)</h1>
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
@@ -134,68 +134,63 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.05249"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.03376"
                    target="_blank">
-                  Learning Local Equivariant Representations for Large-Scale Atomistic Dynamics
+                  Message Passing Neural PDE Solvers (ICLR 2022)
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                3rd of May 2022
+                10th of May 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Albert Musaelian, Simon Batzner, Anders Johansson, Lixin Sun, Cameron J. Owen, Mordechai Kornbluth,
-                  Boris Kozinsky
+                  Johannes Brandstetter, Daniel Worrall, Max Welling
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLAllegro' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLNeuralPDE' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Their <a class="item-subtitle link-style-black"
-                         href="https://hannes-stark.com/assets/2022_05_03_logag.pdf"
-                         target="_blank">slides</a>. (69 participants)
+                Johannes's <a class="item-subtitle link-style-black"
+                              href="https://hannes-stark.com/assets/.pdf"
+                              target="_blank">slides</a> are coming soon! (87 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                The authors <a
+                The two first authors: <a
                 class="item-subtitle link-style-black"
-                href="https://simonbatzner.github.io/"
-                target="_blank">Simon Batzner</a> and <a
+                href="https://www.jku.at/institut-fuer-machine-learning/ueber-uns/team/ass-prof-dr-johannes-brandstetter/"
+                target="_blank">Johannes Brandstetter</a> who is working with Microsoft's molecular ML group. Also
+                joining us is <a
                 class="item-subtitle link-style-black"
-                href="https://bkoz.seas.harvard.edu/news/doe-csgf-albert-musaelian"
-                target="_blank">Albert Musaelian</a>. Simon is 3rd year PhD student at Harvard interested in how
-                to leverage Deep Learning to advance Molecular Simulation. Prior to joining Harvard, he obtained a
-                Master’s Degree from MIT and spent a year conducting research at the NASA Armstrong Research Center.
-                Albert Musaelian is a second-year PhD student in the MIR group at Harvard and a Department of Energy
-                Computational Science Graduate Fellow. He works on the design of machine learning techniques for
-                atomic-scale modeling.
+                href="https://danielewworrall.github.io/"
+                target="_blank">Daniel Worrall</a> who is working at DeepMind. Previously he was a PostDoc in Prof. Max
+                Welling's group.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                A simultaneously accurate and computationally efficient parametrization of the energy and atomic forces
-                of
-                molecules and materials is a long-standing goal in the natural sciences. In pursuit of this goal, neural
-                message passing has lead to a paradigm shift by describing many-body correlations of atoms through
-                iteratively passing messages along an atomistic graph. This propagation of information, however, makes
-                parallel computation difficult and limits the length scales that can be studied. Strictly local
-                descriptor-based methods, on the other hand, can scale to large systems but do not currently match the
-                high accuracy observed with message passing approaches. This work introduces Allegro, a strictly local
-                equivariant deep learning interatomic potential that simultaneously exhibits excellent accuracy and
-                scalability of parallel computation. Allegro learns many-body functions of atomic coordinates using a
-                series of tensor products of learned equivariant representations, but without relying on message
-                passing.
-                Allegro obtains improvements over state-of-the-art methods on the QM9 and revised MD-17 data sets. A
-                single tensor product layer is shown to outperform existing deep message passing neural networks and
-                transformers on the QM9 benchmark. Furthermore, Allegro displays remarkable generalization to
-                out-of-distribution data. Molecular dynamics simulations based on Allegro recover structural and kinetic
-                properties of an amorphous phosphate electrolyte in excellent agreement with first principles
-                calculations. Finally, we demonstrate the parallel scaling of Allegro with a dynamics simulation of 100
-                million atoms.
+                The numerical solution of partial differential equations (PDEs) is difficult, having led to a century of
+                research so far. Recently, there have been pushes to build neural--numerical hybrid solvers, which
+                piggy-backs the modern trend towards fully end-to-end learned systems. Most works so far can only
+                generalize over a subset of properties to which a generic solver would be faced, including: resolution,
+                topology, geometry, boundary conditions, domain discretization regularity, dimensionality, etc. In this
+                work, we build a solver, satisfying these properties, where all the components are based on neural
+                message
+                passing, replacing all heuristically designed components in the computation graph with
+                backprop-optimized
+                neural function approximators. We show that neural message passing solvers representationally contain
+                some
+                classical methods, such as finite differences, finite volumes, and WENO schemes. In order to encourage
+                stability in training autoregressive models, we put forward a method that is based on the principle of
+                zero-stability, posing stability as a domain adaptation problem. We validate our method on various
+                fluid-like flow problems, demonstrating fast, stable, and accurate performance across different domain
+                topologies, discretization, etc. in 1D and 2D. Our model outperforms state-of-the-art numerical solvers
+                in
+                the low resolution regime in terms of speed and accuracy.
               </p>
             </div>
           </div>
@@ -219,6 +214,45 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.07697"
+                   target="_blank">
+                  Theory of Graph Neural Networks: Representation and Learning (ICLR 2022)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                17th of May 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Stefanie Jegelka
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              <a
+                class="item-subtitle link-style-black"
+                href="https://cptq.github.io/"
+                target="_blank">Derek Lim</a>, who is a PhD students in the group of Prof. Stefanie Jegelka
+              at MIT. Derek previously presented ESAN and Sign/Basis Nets in the reading group!
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Graph Neural Networks (GNNs), neural network architectures targeted to learning representations of graphs,
+              have become a popular learning model for prediction tasks on nodes, graphs and configurations of points,
+              with wide success in practice. This article summarizes a selection of the emerging theoretical results on
+              approximation and learning properties of widely used message passing GNNs and higher-order GNNs, focusing
+              on representation, generalization and extrapolation. Along the way, it summarizes mathematical
+              connections.
+            </p>
+          </div>
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
@@ -226,7 +260,7 @@
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                17th of May 2022
+                24th of May 2022
               </div>
             </div>
             <p class="paragraph">
@@ -281,6 +315,54 @@
               isomorphism test) than message-passing GNNs. Augmenting GNNs with TOGL leads to improved predictive
               performance for graph and node classification tasks, both on synthetic data sets, which can be classified
               by humans using their topology but not by ordinary GNNs, and on real-world data.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.01613"
+                   target="_blank">
+                  SPECTRE : Spectral Conditioning Helps to Overcome the Expressivity Limits of One-shot Graph Generators
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                14th of June 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Karolis Martinkus, Andreas Loukas, Nathanaël Perraudin, Roger Wattenhofer
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First authors <a
+              class="item-subtitle link-style-black"
+              href="https://disco.ethz.ch/members/mkarolis"
+              target="_blank">Karolis Martinkus</a> and Dr <a
+              class="item-subtitle link-style-black"
+              href="https://andreasloukas.blog/"
+              target="_blank">Andreas Loukas</a>. Karolis is a PhD student at ETH Zurich working with Prof. Roger
+              Wattenhofer. He has a lot of work on graph generation and GNNs in general.
+              Andreas received his PhD from TU Delft and did PostDocs at TU Berlin and EPFL before starting as Principal
+              Scientist at Genentech.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              We approach the graph generation problem from a spectral perspective by first generating the dominant
+              parts of the graph Laplacian spectrum and then building a graph matching these eigenvalues and
+              eigenvectors. Spectral conditioning allows for direct modeling of the global and local graph structure and
+              helps to overcome the expressivity and mode collapse issues of one-shot graph generators. Our novel GAN,
+              called SPECTRE, enables the one-shot generation of much larger graphs than previously possible with
+              one-shot models. SPECTRE outperforms state-of-the-art deep autoregressive generators in terms of modeling
+              fidelity, while also avoiding expensive sequential generation and dependence on node ordering. A case in
+              point, in sizable synthetic and real-world graphs SPECTRE achieves a 4-to-170 fold improvement over the
+              best competitor that does not overfit and is 23-to-30 times faster than autoregressive generators.
             </p>
           </div>
 
@@ -374,8 +456,8 @@
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
                 Johannes's <a class="item-subtitle link-style-black"
-                         href="https://hannes-stark.com/assets/.pdf"
-                         target="_blank">slides</a> are coming soon! (87 participants)
+                              href="https://hannes-stark.com/assets/.pdf"
+                              target="_blank">slides</a> are coming soon! (87 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
