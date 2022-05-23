@@ -432,6 +432,45 @@
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.05351"
+                   target="_blank">
+                  Graph Ordering Attention Networks
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                28th of June 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Michail Chatzianastasis, Johannes F. Lutzeyer, George Dasoulas, Michalis Vazirgiannis
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author <a
+              class="item-subtitle link-style-black"
+              href="https://michailchatzianastasis.github.io/"
+              target="_blank">Michail Chatzianastasis</a> is a first year PhD student at Ecole Polytechnique in the Data Science and Mining group lead by Prof. Michalis Vazirgiannis.
+              He works on machine learning for graph-structured data; in particular, on Graph Neural Networks and AutoML as well as Neural Architecture Search methods. Also joining us is Dr. <a
+              class="item-subtitle link-style-black"
+              href="https://johanneslutzeyer.com/"
+              target="_blank">Johannes Lutzeyer</a> is a postdoctoral researcher in the Data Science and Mining group at the Ecole Polytechnique. He works in the field of Graph Representation Learning with a focus on Graph Neural Networks and the spectral analysis of Graph Shift Operator matrices.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Graph Neural Networks (GNNs) have been successfully used in many problems involving graph-structured data, achieving state-of-the-art performance. GNNs typically employ a message-passing scheme, in which every node aggregates information from its neighbors using a permutation-invariant aggregation function. Standard well-examined choices such as the mean or sum aggregation functions have limited capabilities, as they are not able to capture interactions among neighbors. In this work, we formalize these interactions using an information-theoretic framework that notably includes synergistic information. Driven by this definition, we introduce the Graph Ordering Attention (GOAT) layer, a novel GNN component that captures interactions between nodes in a neighborhood. This is achieved by learning local node orderings via an attention mechanism and processing the ordered representations using a recurrent neural network aggregator. This design allows us to make use of a permutation-sensitive aggregator while maintaining the permutation-equivariance of the proposed GOAT layer. The GOAT model demonstrates its increased performance in modeling graph metrics that capture complex information, such as the betweenness centrality and the effective size of a node. In practical use-cases, its superior modeling capability is confirmed through its success in several real-world node classification benchmarks.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
