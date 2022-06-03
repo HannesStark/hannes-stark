@@ -134,63 +134,52 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.03376"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.07835"
                    target="_blank">
-                  Message Passing Neural PDE Solvers (ICLR 2022)
+                  Topological Graph Neural Networks (ICLR 2022)
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                10th of May 2022
+                31st of May 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Johannes Brandstetter, Daniel Worrall, Max Welling
+                  Max Horn, Edward De Brouwer, Michael Moor, Yves Moreau, Bastian Rieck, Karsten Borgwardt
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLNeuralPDE' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLTOGL' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
-                Johannes's <a class="item-subtitle link-style-black"
-                              href="https://hannes-stark.com/assets/.pdf"
-                              target="_blank">slides</a> are coming soon! (87 participants)
+                (67 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                The two first authors: <a
+                First author <a
                 class="item-subtitle link-style-black"
-                href="https://www.jku.at/institut-fuer-machine-learning/ueber-uns/team/ass-prof-dr-johannes-brandstetter/"
-                target="_blank">Johannes Brandstetter</a> who is working with Microsoft's molecular ML group. Also
-                joining us is <a
-                class="item-subtitle link-style-black"
-                href="https://danielewworrall.github.io/"
-                target="_blank">Daniel Worrall</a> who is working at DeepMind. Previously he was a PostDoc in Prof. Max
-                Welling's group.
+                href="https://scholar.google.com/citations?user=-Pm4XtAAAAAJ&hl"
+                target="_blank">Edward De Brouwer</a> who is a last year PhD student at KU Leuven, Belgium on machine
+                learning for
+                healthcare. His research focuses on developing robust and trustworthy methods for the clinical domain,
+                using neural differential equations, topological data analysis and causal inference, among others. In
+                2020-2021, he was a visiting researcher at ETH Zürich, where he worked on topological methods for graph
+                neural networks.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                The numerical solution of partial differential equations (PDEs) is difficult, having led to a century of
-                research so far. Recently, there have been pushes to build neural--numerical hybrid solvers, which
-                piggy-backs the modern trend towards fully end-to-end learned systems. Most works so far can only
-                generalize over a subset of properties to which a generic solver would be faced, including: resolution,
-                topology, geometry, boundary conditions, domain discretization regularity, dimensionality, etc. In this
-                work, we build a solver, satisfying these properties, where all the components are based on neural
-                message
-                passing, replacing all heuristically designed components in the computation graph with
-                backprop-optimized
-                neural function approximators. We show that neural message passing solvers representationally contain
-                some
-                classical methods, such as finite differences, finite volumes, and WENO schemes. In order to encourage
-                stability in training autoregressive models, we put forward a method that is based on the principle of
-                zero-stability, posing stability as a domain adaptation problem. We validate our method on various
-                fluid-like flow problems, demonstrating fast, stable, and accurate performance across different domain
-                topologies, discretization, etc. in 1D and 2D. Our model outperforms state-of-the-art numerical solvers
-                in
-                the low resolution regime in terms of speed and accuracy.
+                Graph neural networks (GNNs) are a powerful architecture for tackling graph learning tasks, yet have
+                been
+                shown to be oblivious to eminent substructures such as cycles. We present TOGL, a novel layer that
+                incorporates global topological information of a graph using persistent homology. TOGL can be easily
+                integrated into any type of GNN and is strictly more expressive (in terms the Weisfeiler--Lehman graph
+                isomorphism test) than message-passing GNNs. Augmenting GNNs with TOGL leads to improved predictive
+                performance for graph and node classification tasks, both on synthetic data sets, which can be
+                classified
+                by humans using their topology but not by ordinary GNNs, and on real-world data.
               </p>
             </div>
           </div>
@@ -215,100 +204,6 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2201.12176"
-                   target="_blank">
-                  Generative Coarse-Graining of Molecular Conformations (2022)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                24th of May 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Wujie Wang, Minkai Xu, Chen Cai, Benjamin Kurt Miller, Tess Smidt, Yusu Wang, Jian Tang, Rafael
-                  Gómez-Bombarelli
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author of the paper <a
-              class="item-subtitle link-style-black"
-              href="https://wwj.mit.edu/wujie-wangs-website"
-              target="_blank">Wujie Wang</a> who is a 4th year graduate student at MIT in
-              Materials Sc. & Eng. He holds a B.A. in Physics from Wesleyan and B.S in Engineering and Applied Sciences
-              from Caltech. Also joining us is <a
-              class="item-subtitle link-style-black"
-              href="https://minkaixu.com/"
-              target="_blank">Minkai Xu</a> who was working at MILA with Jian Tang and now received a
-              Standford Graduate Fellowship with which he will pursue his PhD at Stanford.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Coarse-graining (CG) of molecular simulations simplifies the particle representation by grouping selected
-              atoms into pseudo-beads and therefore drastically accelerates simulation. However, such CG procedure
-              induces information losses, which makes accurate backmapping, i.e., restoring fine-grained (FG)
-              coordinates from CG coordinates, a long-standing challenge. Inspired by the recent progress in generative
-              models and equivariant networks, we propose a novel model that rigorously embeds the vital probabilistic
-              nature and geometric consistency requirements of the backmapping transformation. Our model encodes the FG
-              uncertainties into an invariant latent space and decodes them back to FG geometries via equivariant
-              convolutions. To standardize the evaluation of this domain, we further provide three comprehensive
-              benchmarks based on molecular dynamics trajectories. Extensive experiments show that our approach always
-              recovers more realistic structures and outperforms existing data-driven methods with a significant margin.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.07835"
-                   target="_blank">
-                  Topological Graph Neural Networks (ICLR 2022)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                31st of May 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Max Horn, Edward De Brouwer, Michael Moor, Yves Moreau, Bastian Rieck, Karsten Borgwardt
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author <a
-              class="item-subtitle link-style-black"
-              href="https://scholar.google.com/citations?user=-Pm4XtAAAAAJ&hl"
-              target="_blank">Edward De Brouwer</a> who is a last year PhD student at KU Leuven, Belgium on machine
-              learning for
-              healthcare. His research focuses on developing robust and trustworthy methods for the clinical domain,
-              using neural differential equations, topological data analysis and causal inference, among others. In
-              2020-2021, he was a visiting researcher at ETH Zürich, where he worked on topological methods for graph
-              neural networks.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Graph neural networks (GNNs) are a powerful architecture for tackling graph learning tasks, yet have been
-              shown to be oblivious to eminent substructures such as cycles. We present TOGL, a novel layer that
-              incorporates global topological information of a graph using persistent homology. TOGL can be easily
-              integrated into any type of GNN and is strictly more expressive (in terms the Weisfeiler--Lehman graph
-              isomorphism test) than message-passing GNNs. Augmenting GNNs with TOGL leads to improved predictive
-              performance for graph and node classification tasks, both on synthetic data sets, which can be classified
-              by humans using their topology but not by ordinary GNNs, and on real-world data.
-            </p>
-          </div>
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -337,11 +232,22 @@
               target="_blank">Gabriele Corso</a> and <a
               class="item-subtitle link-style-black"
               href="https://people.csail.mit.edu/bjing/"
-              target="_blank">Bowen Jing</a> who both are PhD students at MIT. Bowen is co-supervised by Prof. Tommi Jaakkola and Prof. Bonnie Berger. Gabriele by Prof Jaakkola and Prof. Regina Barzilay.
+              target="_blank">Bowen Jing</a> who both are PhD students at MIT. Bowen is co-supervised by Prof. Tommi
+              Jaakkola and Prof. Bonnie Berger. Gabriele by Prof Jaakkola and Prof. Regina Barzilay.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
-              Diffusion-based generative models generate samples by mapping noise to data via the reversal of a diffusion process that typically consists of independent Gaussian noise in every data coordinate. This diffusion process is, however, not well suited to the fundamental task of molecular conformer generation where the degrees of freedom differentiating conformers lie mostly in torsion angles. We, therefore, propose Torsional Diffusion that generates conformers by leveraging the definition of a diffusion process over the space T^m, a high dimensional torus representing torsion angles, and a SE(3)-equivariant model capable of accurately predicting the score over this process. Empirically, we demonstrate that our model outperforms state-of-the-art methods in terms of both diversity and precision of generated conformers, reducing the mean minimum RMSD by respectively 31% and 17%. When compared to Gaussian diffusion models, torsional diffusion enables significantly more accurate generation while performing two orders of magnitude fewer inference time-steps.
+              Diffusion-based generative models generate samples by mapping noise to data via the reversal of a
+              diffusion process that typically consists of independent Gaussian noise in every data coordinate. This
+              diffusion process is, however, not well suited to the fundamental task of molecular conformer generation
+              where the degrees of freedom differentiating conformers lie mostly in torsion angles. We, therefore,
+              propose Torsional Diffusion that generates conformers by leveraging the definition of a diffusion process
+              over the space T^m, a high dimensional torus representing torsion angles, and a SE(3)-equivariant model
+              capable of accurately predicting the score over this process. Empirically, we demonstrate that our model
+              outperforms state-of-the-art methods in terms of both diversity and precision of generated conformers,
+              reducing the mean minimum RMSD by respectively 31% and 17%. When compared to Gaussian diffusion models,
+              torsional diffusion enables significantly more accurate generation while performing two orders of
+              magnitude fewer inference time-steps.
 
             </p>
           </div>
@@ -420,11 +326,22 @@
               First author of the paper <a
               class="item-subtitle link-style-black"
               href="https://konstantinrusch.com/"
-              target="_blank">Konstantin Rusch</a> who is an applied math PhD student at ETH Zurich supervised by Siddhartha Mishra. His research is focused on physics-based ML for developing new methods and tackling scientific problems.
+              target="_blank">Konstantin Rusch</a> who is an applied math PhD student at ETH Zurich supervised by
+              Siddhartha Mishra. His research is focused on physics-based ML for developing new methods and tackling
+              scientific problems.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
-              We propose Graph-Coupled Oscillator Networks (GraphCON), a novel framework for deep learning on graphs. It is based on discretizations of a second-order system of ordinary differential equations (ODEs), which model a network of nonlinear forced and damped oscillators, coupled via the adjacency structure of the underlying graph. The flexibility of our framework permits any basic GNN layer (e.g. convolutional or attentional) as the coupling function, from which a multi-layer deep neural network is built up via the dynamics of the proposed ODEs. We relate the oversmoothing problem, commonly encountered in GNNs, to the stability of steady states of the underlying ODE and show that zero-Dirichlet energy steady states are not stable for our proposed ODEs. This demonstrates that the proposed framework mitigates the oversmoothing problem. Finally, we show that our approach offers competitive performance with respect to the state-of-the-art on a variety of graph-based learning tasks.
+              We propose Graph-Coupled Oscillator Networks (GraphCON), a novel framework for deep learning on graphs. It
+              is based on discretizations of a second-order system of ordinary differential equations (ODEs), which
+              model a network of nonlinear forced and damped oscillators, coupled via the adjacency structure of the
+              underlying graph. The flexibility of our framework permits any basic GNN layer (e.g. convolutional or
+              attentional) as the coupling function, from which a multi-layer deep neural network is built up via the
+              dynamics of the proposed ODEs. We relate the oversmoothing problem, commonly encountered in GNNs, to the
+              stability of steady states of the underlying ODE and show that zero-Dirichlet energy steady states are not
+              stable for our proposed ODEs. This demonstrates that the proposed framework mitigates the oversmoothing
+              problem. Finally, we show that our approach offers competitive performance with respect to the
+              state-of-the-art on a variety of graph-based learning tasks.
             </p>
           </div>
 
@@ -455,15 +372,32 @@
               First author <a
               class="item-subtitle link-style-black"
               href="https://michailchatzianastasis.github.io/"
-              target="_blank">Michail Chatzianastasis</a> is a first year PhD student at Ecole Polytechnique in the Data Science and Mining group lead by Prof. Michalis Vazirgiannis.
-              He works on machine learning for graph-structured data; in particular, on Graph Neural Networks and AutoML as well as Neural Architecture Search methods. Also joining us is Dr. <a
+              target="_blank">Michail Chatzianastasis</a> is a first year PhD student at Ecole Polytechnique in the Data
+              Science and Mining group lead by Prof. Michalis Vazirgiannis.
+              He works on machine learning for graph-structured data; in particular, on Graph Neural Networks and AutoML
+              as well as Neural Architecture Search methods. Also joining us is Dr. <a
               class="item-subtitle link-style-black"
               href="https://johanneslutzeyer.com/"
-              target="_blank">Johannes Lutzeyer</a> is a postdoctoral researcher in the Data Science and Mining group at the Ecole Polytechnique. He works in the field of Graph Representation Learning with a focus on Graph Neural Networks and the spectral analysis of Graph Shift Operator matrices.
+              target="_blank">Johannes Lutzeyer</a> is a postdoctoral researcher in the Data Science and Mining group at
+              the Ecole Polytechnique. He works in the field of Graph Representation Learning with a focus on Graph
+              Neural Networks and the spectral analysis of Graph Shift Operator matrices.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
-              Graph Neural Networks (GNNs) have been successfully used in many problems involving graph-structured data, achieving state-of-the-art performance. GNNs typically employ a message-passing scheme, in which every node aggregates information from its neighbors using a permutation-invariant aggregation function. Standard well-examined choices such as the mean or sum aggregation functions have limited capabilities, as they are not able to capture interactions among neighbors. In this work, we formalize these interactions using an information-theoretic framework that notably includes synergistic information. Driven by this definition, we introduce the Graph Ordering Attention (GOAT) layer, a novel GNN component that captures interactions between nodes in a neighborhood. This is achieved by learning local node orderings via an attention mechanism and processing the ordered representations using a recurrent neural network aggregator. This design allows us to make use of a permutation-sensitive aggregator while maintaining the permutation-equivariance of the proposed GOAT layer. The GOAT model demonstrates its increased performance in modeling graph metrics that capture complex information, such as the betweenness centrality and the effective size of a node. In practical use-cases, its superior modeling capability is confirmed through its success in several real-world node classification benchmarks.
+              Graph Neural Networks (GNNs) have been successfully used in many problems involving graph-structured data,
+              achieving state-of-the-art performance. GNNs typically employ a message-passing scheme, in which every
+              node aggregates information from its neighbors using a permutation-invariant aggregation function.
+              Standard well-examined choices such as the mean or sum aggregation functions have limited capabilities, as
+              they are not able to capture interactions among neighbors. In this work, we formalize these interactions
+              using an information-theoretic framework that notably includes synergistic information. Driven by this
+              definition, we introduce the Graph Ordering Attention (GOAT) layer, a novel GNN component that captures
+              interactions between nodes in a neighborhood. This is achieved by learning local node orderings via an
+              attention mechanism and processing the ordered representations using a recurrent neural network
+              aggregator. This design allows us to make use of a permutation-sensitive aggregator while maintaining the
+              permutation-equivariance of the proposed GOAT layer. The GOAT model demonstrates its increased performance
+              in modeling graph metrics that capture complex information, such as the betweenness centrality and the
+              effective size of a node. In practical use-cases, its superior modeling capability is confirmed through
+              its success in several real-world node classification benchmarks.
             </p>
           </div>
 
@@ -471,24 +405,49 @@
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.10348"
+                   target="_blank">
+                  Simulate Time-integrated Coarse-grained Molecular Dynamics with Geometric Machine Learning
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                5th of July 2022
+                28th of June 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Xiang Fu, Tian Xie, Nathan J. Rebello, Bradley D. Olsen, Tommi Jaakkola
+                </a>
               </div>
             </div>
             <p class="paragraph">
               <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or via email!
+              First author of the paper <a
+              class="item-subtitle link-style-black"
+              href="https://xiangfu.co/"
+              target="_blank">Xiang Fu</a> who is a PhD student at MIT in the groups of Tommi Jaakkola and Pulkit Agrawal. Currently, he works on molecular dynamics and coarse-graining or other abstraction-related approaches.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Molecular dynamics (MD) simulation is the workhorse of various scientific domains but is limited by high
+              computational cost. Learning-based force fields have made major progress in accelerating ab-initio MD
+              simulation but are still not fast enough for many real-world applications that require long-time MD
+              simulation. In this paper, we adopt a different machine learning approach where we coarse-grain a physical
+              system using graph clustering, and model the system evolution with a very large time-integration step
+              using graph neural networks. A novel score-based GNN refinement module resolves the long-standing
+              challenge of long-time simulation instability. Despite only trained with short MD trajectory data, our
+              learned simulator can generalize to unseen novel systems and simulate for much longer than the training
+              trajectories. Properties requiring 10-100 ns level long-time dynamics can be accurately recovered at
+              several-orders-of-magnitude higher speed than classical force fields. We demonstrate the effectiveness of
+              our method on two realistic complex systems: (1) single-chain coarse-grained polymers in implicit solvent;
+              (2) multi-component Li-ion polymer electrolyte systems.
             </p>
           </div>
 
-          <!--
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -500,7 +459,7 @@
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                3rd of May 2022
+                12th of July 2022
               </div>
               <div>
                 <a>
@@ -531,7 +490,43 @@
               code to reproduce our experiments is available at this https URL
             </p>
           </div>
-          -->
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                24th of July 2022
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Probably an ICML break!
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                24th of July 2022
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or via email!
+            </p>
+          </div>
+
 
         </div>
         <div fxFlex="10" fxFlex.xs="2"></div>
@@ -552,6 +547,123 @@
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.07835"
+                   target="_blank">
+                  Topological Graph Neural Networks (ICLR 2022)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                31st of May 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Max Horn, Edward De Brouwer, Michael Moor, Yves Moreau, Bastian Rieck, Karsten Borgwardt
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLTOGL' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                (67 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author <a
+                class="item-subtitle link-style-black"
+                href="https://scholar.google.com/citations?user=-Pm4XtAAAAAJ&hl"
+                target="_blank">Edward De Brouwer</a> who is a last year PhD student at KU Leuven, Belgium on machine
+                learning for
+                healthcare. His research focuses on developing robust and trustworthy methods for the clinical domain,
+                using neural differential equations, topological data analysis and causal inference, among others. In
+                2020-2021, he was a visiting researcher at ETH Zürich, where he worked on topological methods for graph
+                neural networks.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Graph neural networks (GNNs) are a powerful architecture for tackling graph learning tasks, yet have
+                been
+                shown to be oblivious to eminent substructures such as cycles. We present TOGL, a novel layer that
+                incorporates global topological information of a graph using persistent homology. TOGL can be easily
+                integrated into any type of GNN and is strictly more expressive (in terms the Weisfeiler--Lehman graph
+                isomorphism test) than message-passing GNNs. Augmenting GNNs with TOGL leads to improved predictive
+                performance for graph and node classification tasks, both on synthetic data sets, which can be
+                classified
+                by humans using their topology but not by ordinary GNNs, and on real-world data.
+              </p>
+            </div>
+          </div>
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2201.12176"
+                   target="_blank">
+                  Generative Coarse-Graining of Molecular Conformations (2022)
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                24th of May 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Wujie Wang, Minkai Xu, Chen Cai, Benjamin Kurt Miller, Tess Smidt, Yusu Wang, Jian Tang, Rafael
+                  Gómez-Bombarelli
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLCoarseGrain' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                (61 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author of the paper <a
+                class="item-subtitle link-style-black"
+                href="https://wwj.mit.edu/wujie-wangs-website"
+                target="_blank">Wujie Wang</a> who is a 4th year graduate student at MIT in
+                Materials Sc. & Eng. He holds a B.A. in Physics from Wesleyan and B.S in Engineering and Applied
+                Sciences
+                from Caltech. Also joining us is <a
+                class="item-subtitle link-style-black"
+                href="https://minkaixu.com/"
+                target="_blank">Minkai Xu</a> who was working at MILA with Jian Tang and now received a
+                Standford Graduate Fellowship with which he will pursue his PhD at Stanford.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Coarse-graining (CG) of molecular simulations simplifies the particle representation by grouping
+                selected
+                atoms into pseudo-beads and therefore drastically accelerates simulation. However, such CG procedure
+                induces information losses, which makes accurate backmapping, i.e., restoring fine-grained (FG)
+                coordinates from CG coordinates, a long-standing challenge. Inspired by the recent progress in
+                generative
+                models and equivariant networks, we propose a novel model that rigorously embeds the vital probabilistic
+                nature and geometric consistency requirements of the backmapping transformation. Our model encodes the
+                FG
+                uncertainties into an invariant latent space and decodes them back to FG geometries via equivariant
+                convolutions. To standardize the evaluation of this domain, we further provide three comprehensive
+                benchmarks based on molecular dynamics trajectories. Extensive experiments show that our approach always
+                recovers more realistic structures and outperforms existing data-driven methods with a significant
+                margin.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
 
           <div class="item" fxLayout="column">
