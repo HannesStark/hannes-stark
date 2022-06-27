@@ -157,32 +157,33 @@
                 <a class="slight-bold">Resources:</a>
                 (86 participants)
               </p>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First authors <a
-              class="item-subtitle link-style-black"
-              href="https://gcorso.github.io/"
-              target="_blank">Gabriele Corso</a> and <a
-              class="item-subtitle link-style-black"
-              href="https://people.csail.mit.edu/bjing/"
-              target="_blank">Bowen Jing</a> who both are PhD students at MIT. Bowen is co-supervised by Prof. Tommi
-              Jaakkola and Prof. Bonnie Berger. Gabriele by Prof Jaakkola and Prof. Regina Barzilay.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Diffusion-based generative models generate samples by mapping noise to data via the reversal of a
-              diffusion process that typically consists of independent Gaussian noise in every data coordinate. This
-              diffusion process is, however, not well suited to the fundamental task of molecular conformer generation
-              where the degrees of freedom differentiating conformers lie mostly in torsion angles. We, therefore,
-              propose Torsional Diffusion that generates conformers by leveraging the definition of a diffusion process
-              over the space T^m, a high dimensional torus representing torsion angles, and a SE(3)-equivariant model
-              capable of accurately predicting the score over this process. Empirically, we demonstrate that our model
-              outperforms state-of-the-art methods in terms of both diversity and precision of generated conformers,
-              reducing the mean minimum RMSD by respectively 31% and 17%. When compared to Gaussian diffusion models,
-              torsional diffusion enables significantly more accurate generation while performing two orders of
-              magnitude fewer inference time-steps.
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First authors <a
+                class="item-subtitle link-style-black"
+                href="https://gcorso.github.io/"
+                target="_blank">Gabriele Corso</a> and <a
+                class="item-subtitle link-style-black"
+                href="https://people.csail.mit.edu/bjing/"
+                target="_blank">Bowen Jing</a> who both are PhD students at MIT. Bowen is co-supervised by Prof. Tommi
+                Jaakkola and Prof. Bonnie Berger. Gabriele by Prof Jaakkola and Prof. Regina Barzilay.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Diffusion-based generative models generate samples by mapping noise to data via the reversal of a
+                diffusion process that typically consists of independent Gaussian noise in every data coordinate. This
+                diffusion process is, however, not well suited to the fundamental task of molecular conformer generation
+                where the degrees of freedom differentiating conformers lie mostly in torsion angles. We, therefore,
+                propose Torsional Diffusion that generates conformers by leveraging the definition of a diffusion
+                process
+                over the space T^m, a high dimensional torus representing torsion angles, and a SE(3)-equivariant model
+                capable of accurately predicting the score over this process. Empirically, we demonstrate that our model
+                outperforms state-of-the-art methods in terms of both diversity and precision of generated conformers,
+                reducing the mean minimum RMSD by respectively 31% and 17%. When compared to Gaussian diffusion models,
+                torsional diffusion enables significantly more accurate generation while performing two orders of
+                magnitude fewer inference time-steps.
 
-            </p>
+              </p>
             </div>
           </div>
 
@@ -205,101 +206,6 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
-
-
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.01613"
-                   target="_blank">
-                  SPECTRE : Spectral Conditioning Helps to Overcome the Expressivity Limits of One-shot Graph Generators
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                14th of June 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Karolis Martinkus, Andreas Loukas, Nathanaël Perraudin, Roger Wattenhofer
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First authors <a
-              class="item-subtitle link-style-black"
-              href="https://disco.ethz.ch/members/mkarolis"
-              target="_blank">Karolis Martinkus</a> and Dr <a
-              class="item-subtitle link-style-black"
-              href="https://andreasloukas.blog/"
-              target="_blank">Andreas Loukas</a>. Karolis is a PhD student at ETH Zurich working with Prof. Roger
-              Wattenhofer. He has a lot of work on graph generation and GNNs in general.
-              Andreas received his PhD from TU Delft and did PostDocs at TU Berlin and EPFL before starting as Principal
-              Scientist at Genentech.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              We approach the graph generation problem from a spectral perspective by first generating the dominant
-              parts of the graph Laplacian spectrum and then building a graph matching these eigenvalues and
-              eigenvectors. Spectral conditioning allows for direct modeling of the global and local graph structure and
-              helps to overcome the expressivity and mode collapse issues of one-shot graph generators. Our novel GAN,
-              called SPECTRE, enables the one-shot generation of much larger graphs than previously possible with
-              one-shot models. SPECTRE outperforms state-of-the-art deep autoregressive generators in terms of modeling
-              fidelity, while also avoiding expensive sequential generation and dependence on node ordering. A case in
-              point, in sizable synthetic and real-world graphs SPECTRE achieves a 4-to-170 fold improvement over the
-              best competitor that does not overfit and is 23-to-30 times faster than autoregressive generators.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.02296"
-                   target="_blank">
-                  Graph-Coupled Oscillator Networks (ICML 2022)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                21st of June 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  T. Konstantin Rusch, Benjamin P. Chamberlain, James Rowbottom, Siddhartha Mishra, Michael M. Bronstein
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author of the paper <a
-              class="item-subtitle link-style-black"
-              href="https://konstantinrusch.com/"
-              target="_blank">Konstantin Rusch</a> who is an applied math PhD student at ETH Zurich supervised by
-              Siddhartha Mishra. His research is focused on physics-based ML for developing new methods and tackling
-              scientific problems.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              We propose Graph-Coupled Oscillator Networks (GraphCON), a novel framework for deep learning on graphs. It
-              is based on discretizations of a second-order system of ordinary differential equations (ODEs), which
-              model a network of nonlinear forced and damped oscillators, coupled via the adjacency structure of the
-              underlying graph. The flexibility of our framework permits any basic GNN layer (e.g. convolutional or
-              attentional) as the coupling function, from which a multi-layer deep neural network is built up via the
-              dynamics of the proposed ODEs. We relate the oversmoothing problem, commonly encountered in GNNs, to the
-              stability of steady states of the underlying ODE and show that zero-Dirichlet energy steady states are not
-              stable for our proposed ODEs. This demonstrates that the proposed framework mitigates the oversmoothing
-              problem. Finally, we show that our approach offers competitive performance with respect to the
-              state-of-the-art on a variety of graph-based learning tasks.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
@@ -382,7 +288,9 @@
               First author of the paper <a
               class="item-subtitle link-style-black"
               href="https://xiangfu.co/"
-              target="_blank">Xiang Fu</a> who is a PhD student at MIT in the groups of Tommi Jaakkola and Pulkit Agrawal. Currently, he works on molecular dynamics and coarse-graining or other abstraction-related approaches.
+              target="_blank">Xiang Fu</a> who is a PhD student at MIT in the groups of Tommi Jaakkola and Pulkit
+              Agrawal. Currently, he works on molecular dynamics and coarse-graining or other abstraction-related
+              approaches.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
@@ -517,10 +425,121 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
       </div>
 
+      <div class="item" fxLayout="column">
+        <div fxLayout="row">
+          <h3>
+            <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.02296"
+               target="_blank">
+              Graph-Coupled Oscillator Networks (ICML 2022)
+            </a></h3>
+        </div>
+        <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+          <div>
+            <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+            21st of June 2022
+          </div>
+          <div>
+            <a>
+              <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+              T. Konstantin Rusch, Benjamin P. Chamberlain, James Rowbottom, Siddhartha Mishra, Michael M. Bronstein
+            </a>
+          </div>
+        </div>
+        <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLGraphCon' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                (~60 participants)
+              </p>
+        <p class="paragraph">
+          <a class="slight-bold">Speaker:</a>
+          First author of the paper <a
+          class="item-subtitle link-style-black"
+          href="https://konstantinrusch.com/"
+          target="_blank">Konstantin Rusch</a> who is an applied math PhD student at ETH Zurich supervised by
+          Siddhartha Mishra. His research is focused on physics-based ML for developing new methods and tackling
+          scientific problems.
+        </p>
+        <p class="no-margin">
+          <a class="slight-bold">Abstract:</a>
+          We propose Graph-Coupled Oscillator Networks (GraphCON), a novel framework for deep learning on graphs. It
+          is based on discretizations of a second-order system of ordinary differential equations (ODEs), which
+          model a network of nonlinear forced and damped oscillators, coupled via the adjacency structure of the
+          underlying graph. The flexibility of our framework permits any basic GNN layer (e.g. convolutional or
+          attentional) as the coupling function, from which a multi-layer deep neural network is built up via the
+          dynamics of the proposed ODEs. We relate the oversmoothing problem, commonly encountered in GNNs, to the
+          stability of steady states of the underlying ODE and show that zero-Dirichlet energy steady states are not
+          stable for our proposed ODEs. This demonstrates that the proposed framework mitigates the oversmoothing
+          problem. Finally, we show that our approach offers competitive performance with respect to the
+          state-of-the-art on a variety of graph-based learning tasks.
+        </p>
+        </div>
+      </div>
+
+      <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.01613"
+                   target="_blank">
+                  SPECTRE : Spectral Conditioning Helps to Overcome the Expressivity Limits of One-shot Graph Generators
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                14th of June 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Karolis Martinkus, Andreas Loukas, Nathanaël Perraudin, Roger Wattenhofer
+                </a>
+              </div>
+            </div>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLSpectre' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                (64 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First authors <a
+                class="item-subtitle link-style-black"
+                href="https://disco.ethz.ch/members/mkarolis"
+                target="_blank">Karolis Martinkus</a> and Dr <a
+                class="item-subtitle link-style-black"
+                href="https://andreasloukas.blog/"
+                target="_blank">Andreas Loukas</a>. Karolis is a PhD student at ETH Zurich working with Prof. Roger
+                Wattenhofer. He has a lot of work on graph generation and GNNs in general.
+                Andreas received his PhD from TU Delft and did PostDocs at TU Berlin and EPFL before starting as
+                Principal
+                Scientist at Genentech.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                We approach the graph generation problem from a spectral perspective by first generating the dominant
+                parts of the graph Laplacian spectrum and then building a graph matching these eigenvalues and
+                eigenvectors. Spectral conditioning allows for direct modeling of the global and local graph structure
+                and
+                helps to overcome the expressivity and mode collapse issues of one-shot graph generators. Our novel GAN,
+                called SPECTRE, enables the one-shot generation of much larger graphs than previously possible with
+                one-shot models. SPECTRE outperforms state-of-the-art deep autoregressive generators in terms of
+                modeling
+                fidelity, while also avoiding expensive sequential generation and dependence on node ordering. A case in
+                point, in sizable synthetic and real-world graphs SPECTRE achieves a 4-to-170 fold improvement over the
+                best competitor that does not overfit and is 23-to-30 times faster than autoregressive generators.
+              </p>
+            </div>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
@@ -548,32 +567,33 @@
                 <a class="slight-bold">Resources:</a>
                 (86 participants)
               </p>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First authors <a
-              class="item-subtitle link-style-black"
-              href="https://gcorso.github.io/"
-              target="_blank">Gabriele Corso</a> and <a
-              class="item-subtitle link-style-black"
-              href="https://people.csail.mit.edu/bjing/"
-              target="_blank">Bowen Jing</a> who both are PhD students at MIT. Bowen is co-supervised by Prof. Tommi
-              Jaakkola and Prof. Bonnie Berger. Gabriele by Prof Jaakkola and Prof. Regina Barzilay.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Diffusion-based generative models generate samples by mapping noise to data via the reversal of a
-              diffusion process that typically consists of independent Gaussian noise in every data coordinate. This
-              diffusion process is, however, not well suited to the fundamental task of molecular conformer generation
-              where the degrees of freedom differentiating conformers lie mostly in torsion angles. We, therefore,
-              propose Torsional Diffusion that generates conformers by leveraging the definition of a diffusion process
-              over the space T^m, a high dimensional torus representing torsion angles, and a SE(3)-equivariant model
-              capable of accurately predicting the score over this process. Empirically, we demonstrate that our model
-              outperforms state-of-the-art methods in terms of both diversity and precision of generated conformers,
-              reducing the mean minimum RMSD by respectively 31% and 17%. When compared to Gaussian diffusion models,
-              torsional diffusion enables significantly more accurate generation while performing two orders of
-              magnitude fewer inference time-steps.
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First authors <a
+                class="item-subtitle link-style-black"
+                href="https://gcorso.github.io/"
+                target="_blank">Gabriele Corso</a> and <a
+                class="item-subtitle link-style-black"
+                href="https://people.csail.mit.edu/bjing/"
+                target="_blank">Bowen Jing</a> who both are PhD students at MIT. Bowen is co-supervised by Prof. Tommi
+                Jaakkola and Prof. Bonnie Berger. Gabriele by Prof Jaakkola and Prof. Regina Barzilay.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Diffusion-based generative models generate samples by mapping noise to data via the reversal of a
+                diffusion process that typically consists of independent Gaussian noise in every data coordinate. This
+                diffusion process is, however, not well suited to the fundamental task of molecular conformer generation
+                where the degrees of freedom differentiating conformers lie mostly in torsion angles. We, therefore,
+                propose Torsional Diffusion that generates conformers by leveraging the definition of a diffusion
+                process
+                over the space T^m, a high dimensional torus representing torsion angles, and a SE(3)-equivariant model
+                capable of accurately predicting the score over this process. Empirically, we demonstrate that our model
+                outperforms state-of-the-art methods in terms of both diversity and precision of generated conformers,
+                reducing the mean minimum RMSD by respectively 31% and 17%. When compared to Gaussian diffusion models,
+                torsional diffusion enables significantly more accurate generation while performing two orders of
+                magnitude fewer inference time-steps.
 
-            </p>
+              </p>
             </div>
           </div>
 
