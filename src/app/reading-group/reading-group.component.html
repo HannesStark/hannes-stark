@@ -134,55 +134,55 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2206.01729"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.10348"
                    target="_blank">
-                  Torsional Diffusion for Molecular Conformer Generation
+                  Simulate Time-integrated Coarse-grained Molecular Dynamics with Geometric Machine Learning
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                7th of June 2022
+                5th of July 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Bowen Jing, Gabriele Corso, Jeffrey Chang, Regina Barzilay, Tommi S. Jaakkola
+                  Xiang Fu, Tian Xie, Nathan J. Rebello, Bradley D. Olsen, Tommi Jaakkola
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLtordiff' allowfullscreen></iframe>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLCoarseMD' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
                 (86 participants)
               </p>
               <p class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First authors <a
+                First author of the paper <a
                 class="item-subtitle link-style-black"
-                href="https://gcorso.github.io/"
-                target="_blank">Gabriele Corso</a> and <a
-                class="item-subtitle link-style-black"
-                href="https://people.csail.mit.edu/bjing/"
-                target="_blank">Bowen Jing</a> who both are PhD students at MIT. Bowen is co-supervised by Prof. Tommi
-                Jaakkola and Prof. Bonnie Berger. Gabriele by Prof Jaakkola and Prof. Regina Barzilay.
+                href="https://xiangfu.co/"
+                target="_blank">Xiang Fu</a> who is a PhD student at MIT in the groups of Tommi Jaakkola and Pulkit
+                Agrawal. Currently, he works on molecular dynamics and coarse-graining or other abstraction-related
+                approaches.
               </p>
               <p class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Diffusion-based generative models generate samples by mapping noise to data via the reversal of a
-                diffusion process that typically consists of independent Gaussian noise in every data coordinate. This
-                diffusion process is, however, not well suited to the fundamental task of molecular conformer generation
-                where the degrees of freedom differentiating conformers lie mostly in torsion angles. We, therefore,
-                propose Torsional Diffusion that generates conformers by leveraging the definition of a diffusion
-                process
-                over the space T^m, a high dimensional torus representing torsion angles, and a SE(3)-equivariant model
-                capable of accurately predicting the score over this process. Empirically, we demonstrate that our model
-                outperforms state-of-the-art methods in terms of both diversity and precision of generated conformers,
-                reducing the mean minimum RMSD by respectively 31% and 17%. When compared to Gaussian diffusion models,
-                torsional diffusion enables significantly more accurate generation while performing two orders of
-                magnitude fewer inference time-steps.
-
+                Molecular dynamics (MD) simulation is the workhorse of various scientific domains but is limited by high
+                computational cost. Learning-based force fields have made major progress in accelerating ab-initio MD
+                simulation but are still not fast enough for many real-world applications that require long-time MD
+                simulation. In this paper, we adopt a different machine learning approach where we coarse-grain a
+                physical
+                system using graph clustering, and model the system evolution with a very large time-integration step
+                using graph neural networks. A novel score-based GNN refinement module resolves the long-standing
+                challenge of long-time simulation instability. Despite only trained with short MD trajectory data, our
+                learned simulator can generalize to unseen novel systems and simulate for much longer than the training
+                trajectories. Properties requiring 10-100 ns level long-time dynamics can be accurately recovered at
+                several-orders-of-magnitude higher speed than classical force fields. We demonstrate the effectiveness
+                of
+                our method on two realistic complex systems: (1) single-chain coarse-grained polymers in implicit
+                solvent;
+                (2) multi-component Li-ion polymer electrolyte systems.
               </p>
             </div>
           </div>
@@ -210,20 +210,20 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.05351"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.05064"
                    target="_blank">
-                  Graph Ordering Attention Networks
+                  Ab-Initio Potential Energy Surfaces by Pairing GNNs with Neural Wave Functions
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                28th of June 2022
+                2nd of August 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Michail Chatzianastasis, Johannes F. Lutzeyer, George Dasoulas, Michalis Vazirgiannis
+                  Nicholas Gao, Stephan Günnemann
                 </a>
               </div>
             </div>
@@ -231,33 +231,22 @@
               <a class="slight-bold">Speaker:</a>
               First author <a
               class="item-subtitle link-style-black"
-              href="https://michailchatzianastasis.github.io/"
-              target="_blank">Michail Chatzianastasis</a> is a first year PhD student at Ecole Polytechnique in the Data
-              Science and Mining group lead by Prof. Michalis Vazirgiannis.
-              He works on machine learning for graph-structured data; in particular, on Graph Neural Networks and AutoML
-              as well as Neural Architecture Search methods. Also joining us is Dr. <a
-              class="item-subtitle link-style-black"
-              href="https://johanneslutzeyer.com/"
-              target="_blank">Johannes Lutzeyer</a> is a postdoctoral researcher in the Data Science and Mining group at
-              the Ecole Polytechnique. He works in the field of Graph Representation Learning with a focus on Graph
-              Neural Networks and the spectral analysis of Graph Shift Operator matrices.
+              href="https://scholar.google.com/citations?user=3GIKgWoAAAAJ&hl=en"
+              target="_blank">Nicholas Gao</a> who is a PhD student in the group of Stephan Günnemann at TU Munich.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
-              Graph Neural Networks (GNNs) have been successfully used in many problems involving graph-structured data,
-              achieving state-of-the-art performance. GNNs typically employ a message-passing scheme, in which every
-              node aggregates information from its neighbors using a permutation-invariant aggregation function.
-              Standard well-examined choices such as the mean or sum aggregation functions have limited capabilities, as
-              they are not able to capture interactions among neighbors. In this work, we formalize these interactions
-              using an information-theoretic framework that notably includes synergistic information. Driven by this
-              definition, we introduce the Graph Ordering Attention (GOAT) layer, a novel GNN component that captures
-              interactions between nodes in a neighborhood. This is achieved by learning local node orderings via an
-              attention mechanism and processing the ordered representations using a recurrent neural network
-              aggregator. This design allows us to make use of a permutation-sensitive aggregator while maintaining the
-              permutation-equivariance of the proposed GOAT layer. The GOAT model demonstrates its increased performance
-              in modeling graph metrics that capture complex information, such as the betweenness centrality and the
-              effective size of a node. In practical use-cases, its superior modeling capability is confirmed through
-              its success in several real-world node classification benchmarks.
+              Solving the Schrödinger equation is key to many quantum mechanical properties. However, an analytical
+              solution is only tractable for single-electron systems. Recently, neural networks succeeded at modeling
+              wave functions of many-electron systems. Together with the variational Monte-Carlo (VMC) framework, this
+              led to solutions on par with the best known classical methods. Still, these neural methods require
+              tremendous amounts of computational resources as one has to train a separate model for each molecular
+              geometry. In this work, we combine a Graph Neural Network (GNN) with a neural wave function to
+              simultaneously solve the Schrödinger equation for multiple geometries via VMC. This enables us to model
+              continuous subsets of the potential energy surface with a single training pass. Compared to existing
+              state-of-the-art networks, our Potential Energy Surface Network PESNet speeds up training for multiple
+              geometries by up to 40 times while matching or surpassing their accuracy. This may open the path to
+              accurate and orders of magnitude cheaper quantum mechanical calculations.
             </p>
           </div>
 
@@ -266,20 +255,121 @@
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.10348"
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2205.12454"
                    target="_blank">
-                  Simulate Time-integrated Coarse-grained Molecular Dynamics with Geometric Machine Learning
+                  Recipe for a General, Powerful, Scalable Graph Transformer
                 </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                28th of June 2022
+                26th of July 2022
               </div>
               <div>
                 <a>
                   <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Xiang Fu, Tian Xie, Nathan J. Rebello, Bradley D. Olsen, Tommi Jaakkola
+                  Ladislav Rampášek, Mikhail Galkin, Vijay Prakash Dwivedi, Anh Tuan Luu, Guy Wolf, Dominique Beaini
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author <a
+              class="item-subtitle link-style-black"
+              href="https://rampasek.github.io/"
+              target="_blank">Ladislav Rampášek</a> who is a postdoctoral fellow at Mila and Université de Montréal working on
+              GRL. He obtained his PhD at the University of Toronto. <a
+              class="item-subtitle link-style-black"
+              href="https://mila.quebec/en/person/mikhail-galkin/"
+              target="_blank">Mikhail Galkin</a> is a Postdoctoral Fellow at McGill
+              University. He completed his PhD at the University of Bonn, specializing in knowledge graphs (KGs). <a
+              class="item-subtitle link-style-black"
+              href="https://vijaydwivedi.com.np/"
+              target="_blank">Vijay
+                  Prakash Dwivedi</a>
+                is an ML PhD student at Nanyang Technological University, Singapore working with Prof. Luu
+              Anh Tuan (NTU) and Prof. Xavier Bresson (NUS).
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Solving the Schrödinger equation is key to many quantum mechanical properties. However, an analytical
+              solution is only tractable for single-electron systems. Recently, neural networks succeeded at modeling
+              wave functions of many-electron systems. Together with the variational Monte-Carlo (VMC) framework, this
+              led to solutions on par with the best known classical methods. Still, these neural methods require
+              tremendous amounts of computational resources as one has to train a separate model for each molecular
+              geometry. In this work, we combine a Graph Neural Network (GNN) with a neural wave function to
+              simultaneously solve the Schrödinger equation for multiple geometries via VMC. This enables us to model
+              continuous subsets of the potential energy surface with a single training pass. Compared to existing
+              state-of-the-art networks, our Potential Energy Surface Network PESNet speeds up training for multiple
+              geometries by up to 40 times while matching or surpassing their accuracy. This may open the path to
+              accurate and orders of magnitude cheaper quantum mechanical calculations.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.05064"
+                   target="_blank">
+                  Ab-Initio Potential Energy Surfaces by Pairing GNNs with Neural Wave Functions
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                2nd of August 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Nicholas Gao, Stephan Günnemann
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author <a
+              class="item-subtitle link-style-black"
+              href="https://scholar.google.com/citations?user=3GIKgWoAAAAJ&hl=en"
+              target="_blank">Nicholas Gao</a> who is a PhD student in the group of Stephan Günnemann at TU Munich.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Solving the Schrödinger equation is key to many quantum mechanical properties. However, an analytical
+              solution is only tractable for single-electron systems. Recently, neural networks succeeded at modeling
+              wave functions of many-electron systems. Together with the variational Monte-Carlo (VMC) framework, this
+              led to solutions on par with the best known classical methods. Still, these neural methods require
+              tremendous amounts of computational resources as one has to train a separate model for each molecular
+              geometry. In this work, we combine a Graph Neural Network (GNN) with a neural wave function to
+              simultaneously solve the Schrödinger equation for multiple geometries via VMC. This enables us to model
+              continuous subsets of the potential energy surface with a single training pass. Compared to existing
+              state-of-the-art networks, our Potential Energy Surface Network PESNet speeds up training for multiple
+              geometries by up to 40 times while matching or surpassing their accuracy. This may open the path to
+              accurate and orders of magnitude cheaper quantum mechanical calculations.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2207.02505"
+                   target="_blank">
+                  Pure Transformers are Powerful Graph Learners
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                9th of August 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Jinwoo Kim, Tien Dat Nguyen, Seonwoo Min, Sungjun Cho, Moontae Lee, Honglak Lee, Seunghoon Hong
                 </a>
               </div>
             </div>
@@ -287,29 +377,168 @@
               <a class="slight-bold">Speaker:</a>
               First author of the paper <a
               class="item-subtitle link-style-black"
-              href="https://xiangfu.co/"
-              target="_blank">Xiang Fu</a> who is a PhD student at MIT in the groups of Tommi Jaakkola and Pulkit
-              Agrawal. Currently, he works on molecular dynamics and coarse-graining or other abstraction-related
-              approaches.
+              href="https://jw9730.notion.site/jw9730/Jinwoo-Kim-0560795427964cafa7481dc448baa4aa"
+              target="_blank">Jinwoo Kim</a> who is a Ph.D. student at Vision and Learning Laboratory at KAIST, advised
+              by Prof. Seunghoon Hong.
             </p>
             <p class="no-margin">
               <a class="slight-bold">Abstract:</a>
-              Molecular dynamics (MD) simulation is the workhorse of various scientific domains but is limited by high
-              computational cost. Learning-based force fields have made major progress in accelerating ab-initio MD
-              simulation but are still not fast enough for many real-world applications that require long-time MD
-              simulation. In this paper, we adopt a different machine learning approach where we coarse-grain a physical
-              system using graph clustering, and model the system evolution with a very large time-integration step
-              using graph neural networks. A novel score-based GNN refinement module resolves the long-standing
-              challenge of long-time simulation instability. Despite only trained with short MD trajectory data, our
-              learned simulator can generalize to unseen novel systems and simulate for much longer than the training
-              trajectories. Properties requiring 10-100 ns level long-time dynamics can be accurately recovered at
-              several-orders-of-magnitude higher speed than classical force fields. We demonstrate the effectiveness of
-              our method on two realistic complex systems: (1) single-chain coarse-grained polymers in implicit solvent;
-              (2) multi-component Li-ion polymer electrolyte systems.
+              We show that standard Transformers without graph-specific modifications can lead to promising results in
+              graph learning both in theory and practice. Given a graph, we simply treat all nodes and edges as
+              independent tokens, augment them with token embeddings, and feed them to a Transformer. With an
+              appropriate choice of token embeddings, we prove that this approach is theoretically at least as
+              expressive as an invariant graph network (2-IGN) composed of equivariant linear layers, which is already
+              more expressive than all message-passing Graph Neural Networks (GNN). When trained on a large-scale graph
+              dataset (PCQM4Mv2), our method coined Tokenized Graph Transformer (TokenGT) achieves significantly better
+              results compared to GNN baselines and competitive results compared to Transformer variants with
+              sophisticated graph-specific inductive bias. Our implementation is available at this https URL.
             </p>
           </div>
 
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                16th of August 2022
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
+              interested in presenting his work then just write me a message on
+              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
+                 class="link-style-green">Slack</a>
+              or via email!
+            </p>
+          </div>
+
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2110.03336"
+                   target="_blank">
+                  Frame Averaging for Invariant and Equivariant Network Design
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                23rd of August 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Omri Puny, Matan Atzmon, Heli Ben-Hamu, Ishan Misra, Aditya Grover, Edward J. Smith, Yaron Lipman
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              First author <a
+              class="item-subtitle link-style-black"
+              href="https://omri1348.github.io/"
+              target="_blank">Omri Puny</a> who is a PhD student in the Department of Computer Science and Applied
+              Mathematics at the Weizmann Institute of Science under the supervision of Prof. Yaron Lipman. My research
+              focuses on developing deep learning models for iregular data, mainly graphs and point clouds.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Many machine learning tasks involve learning functions that are known to be invariant or equivariant to
+              certain symmetries of the input data. However, it is often challenging to design neural network
+              architectures that respect these symmetries while being expressive and computationally efficient. For
+              example, Euclidean motion invariant/equivariant graph or point cloud neural networks. We introduce Frame
+              Averaging (FA), a general purpose and systematic framework for adapting known (backbone) architectures to
+              become invariant or equivariant to new symmetry types. Our framework builds on the well known group
+              averaging operator that guarantees invariance or equivariance but is intractable. In contrast, we observe
+              that for many important classes of symmetries, this operator can be replaced with an averaging operator
+              over a small subset of the group elements, called a frame. We show that averaging over a frame guarantees
+              exact invariance or equivariance while often being much simpler to compute than averaging over the entire
+              group. Furthermore, we prove that FA-based models have maximal expressive power in a broad setting and in
+              general preserve the expressive power of their backbone architectures. Using frame averaging, we propose a
+              new class of universal Graph Neural Networks (GNNs), universal Euclidean motion invariant point cloud
+              networks, and Euclidean motion invariant Message Passing (MP) GNNs. We demonstrate the practical
+              effectiveness of FA on several applications including point cloud normal estimation, beyond 2-WL graph
+              separation, and n-body dynamics prediction, achieving state-of-the-art results in all of these benchmarks.
+            </p>
+          </div>
+
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+          <div class="item" fxLayout="column">
+            <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2206.10991"
+                   target="_blank">
+                  Graph Neural Networks as Gradient Flows
+                </a></h3>
+            </div>
+            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div>
+                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                30th of August 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Francesco Di Giovanni, James Rowbottom, Benjamin P. Chamberlain, Thomas Markovich, Michael M.
+                  Bronstein
+                </a>
+              </div>
+            </div>
+            <p class="paragraph">
+              <a class="slight-bold">Speaker:</a>
+              Dr. <a
+              class="item-subtitle link-style-black"
+              href="https://scholar.google.com/citations?user=64X0hCAAAAAJ&hl=en"
+              target="_blank">Francesco Di Giovanni</a> obtained his PhD from University College London and is working
+              together with at Twitter Research. <a
+              class="item-subtitle link-style-black"
+              href="https://www.linkedin.com/in/jamesrowbottom/"
+              target="_blank">James Rowbottom</a> received his master in AI with distinction from Imperial College
+              London and is also at Twitter.
+            </p>
+            <p class="no-margin">
+              <a class="slight-bold">Abstract:</a>
+              Dynamical systems minimizing an energy are ubiquitous in geometry and physics. We propose a gradient flow
+              framework for GNNs where the equations follow the direction of steepest descent of a learnable energy.
+              This approach allows to explain the GNN evolution from a multi-particle perspective as learning attractive
+              and repulsive forces in feature space via the positive and negative eigenvalues of a symmetric
+              "channel-mixing" matrix. We perform spectral analysis of the solutions and conclude that gradient flow
+              graph convolutional models can induce a dynamics dominated by the graph high frequencies which is
+              desirable for heterophilic datasets. We also describe structural constraints on common GNN architectures
+              allowing to interpret them as gradient flows. We perform thorough ablation studies corroborating our
+              theoretical analysis and show competitive performance of simple and lightweight models on real-world
+              homophilic and heterophilic datasets.
+            </p>
+          </div>
+
+        </div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+      </div>
+    </div>
+
+
+    <div class="top-margin" id="previous">
+      <div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+        <div fxFlex="80" fxFlex.xs="96" class="underline-title">
+          <h1 class="left-titles">PREVIOUS PAPERS AND RECORDINGS</h1>
+        </div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+      </div>
+
+      <div>
+        <div fxFlex="10" fxFlex.xs="2"></div>
+        <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+
+
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -330,157 +559,225 @@
                 </a>
               </div>
             </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              First author of the paper Maxim Fishman who is an MSc student in the Electrical and Computer Engineering
-              Department of Technion, advised by Dr. Chaim Baskin and Prof. Avi Mendelson. Previously, he did his BSc in
-              Computer Science and BSc in Physics at Technion. As an applied mathematician and engineer he works as a
-              researcher and developer at Intel.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Despite their growing popularity, graph neural networks (GNNs) still have multiple unsolved problems,
-              including finding more expressive aggregation methods, propagation of information to distant nodes, and
-              training on large-scale graphs. Understanding and solving such problems require developing analytic tools
-              and techniques. In this work, we propose the notion of recoverability, which is tightly related to
-              information aggregation in GNNs, and based on this concept, develop the method for GNN embedding analysis.
-              We define recoverability theoretically and propose a method for its efficient empirical estimation. We
-              demonstrate, through extensive experimental results on various datasets and different GNN architectures,
-              that estimated recoverability correlates with aggregation method expressivity and graph sparsification
-              quality. Therefore, we believe that the proposed method could provide an essential tool for understanding
-              the roots of the aforementioned problems, and potentially lead to a GNN design that overcomes them. The
-              code to reproduce our experiments is available at this https URL
-            </p>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLRecoverable' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                (45 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author of the paper Maxim Fishman who is an MSc student in the Electrical and Computer Engineering
+                Department of Technion, advised by Dr. Chaim Baskin and Prof. Avi Mendelson. Previously, he did his BSc
+                in
+                Computer Science and BSc in Physics at Technion. As an applied mathematician and engineer he works as a
+                researcher and developer at Intel.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Despite their growing popularity, graph neural networks (GNNs) still have multiple unsolved problems,
+                including finding more expressive aggregation methods, propagation of information to distant nodes, and
+                training on large-scale graphs. Understanding and solving such problems require developing analytic
+                tools
+                and techniques. In this work, we propose the notion of recoverability, which is tightly related to
+                information aggregation in GNNs, and based on this concept, develop the method for GNN embedding
+                analysis.
+                We define recoverability theoretically and propose a method for its efficient empirical estimation. We
+                demonstrate, through extensive experimental results on various datasets and different GNN architectures,
+                that estimated recoverability correlates with aggregation method expressivity and graph sparsification
+                quality. Therefore, we believe that the proposed method could provide an essential tool for
+                understanding
+                the roots of the aforementioned problems, and potentially lead to a GNN design that overcomes them. The
+                code to reproduce our experiments is available at this https URL
+              </p>
+            </div>
           </div>
 
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
+
           <div class="item" fxLayout="column">
             <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.10348"
+                   target="_blank">
+                  Simulate Time-integrated Coarse-grained Molecular Dynamics with Geometric Machine Learning
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 5th of July 2022
               </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Xiang Fu, Tian Xie, Nathan J. Rebello, Bradley D. Olsen, Tommi Jaakkola
+                </a>
+              </div>
             </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or via email!
-            </p>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLCoarseMD' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                (86 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author of the paper <a
+                class="item-subtitle link-style-black"
+                href="https://xiangfu.co/"
+                target="_blank">Xiang Fu</a> who is a PhD student at MIT in the groups of Tommi Jaakkola and Pulkit
+                Agrawal. Currently, he works on molecular dynamics and coarse-graining or other abstraction-related
+                approaches.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Molecular dynamics (MD) simulation is the workhorse of various scientific domains but is limited by high
+                computational cost. Learning-based force fields have made major progress in accelerating ab-initio MD
+                simulation but are still not fast enough for many real-world applications that require long-time MD
+                simulation. In this paper, we adopt a different machine learning approach where we coarse-grain a
+                physical
+                system using graph clustering, and model the system evolution with a very large time-integration step
+                using graph neural networks. A novel score-based GNN refinement module resolves the long-standing
+                challenge of long-time simulation instability. Despite only trained with short MD trajectory data, our
+                learned simulator can generalize to unseen novel systems and simulate for much longer than the training
+                trajectories. Properties requiring 10-100 ns level long-time dynamics can be accurately recovered at
+                several-orders-of-magnitude higher speed than classical force fields. We demonstrate the effectiveness
+                of
+                our method on two realistic complex systems: (1) single-chain coarse-grained polymers in implicit
+                solvent;
+                (2) multi-component Li-ion polymer electrolyte systems.
+              </p>
+            </div>
           </div>
 
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
           <div class="item" fxLayout="column">
             <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.05351"
+                   target="_blank">
+                  Graph Ordering Attention Networks
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                19th of July 2022
+                28th of June 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  Michail Chatzianastasis, Johannes F. Lutzeyer, George Dasoulas, Michalis Vazirgiannis
+                </a>
               </div>
             </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Probably an ICML break!
-            </p>
+            <div>
+              <iframe ngClass.gt-sm="float-right" [src]='safeURLGOAT' allowfullscreen></iframe>
+              <p class="paragraph">
+                <a class="slight-bold">Resources:</a>
+                (~70 participants)
+              </p>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author <a
+                class="item-subtitle link-style-black"
+                href="https://michailchatzianastasis.github.io/"
+                target="_blank">Michail Chatzianastasis</a> is a first year PhD student at Ecole Polytechnique in the
+                Data
+                Science and Mining group lead by Prof. Michalis Vazirgiannis.
+                He works on machine learning for graph-structured data; in particular, on Graph Neural Networks and
+                AutoML
+                as well as Neural Architecture Search methods. Also joining us is Dr. <a
+                class="item-subtitle link-style-black"
+                href="https://johanneslutzeyer.com/"
+                target="_blank">Johannes Lutzeyer</a> is a postdoctoral researcher in the Data Science and Mining group
+                at
+                the Ecole Polytechnique. He works in the field of Graph Representation Learning with a focus on Graph
+                Neural Networks and the spectral analysis of Graph Shift Operator matrices.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                Graph Neural Networks (GNNs) have been successfully used in many problems involving graph-structured
+                data,
+                achieving state-of-the-art performance. GNNs typically employ a message-passing scheme, in which every
+                node aggregates information from its neighbors using a permutation-invariant aggregation function.
+                Standard well-examined choices such as the mean or sum aggregation functions have limited capabilities,
+                as
+                they are not able to capture interactions among neighbors. In this work, we formalize these interactions
+                using an information-theoretic framework that notably includes synergistic information. Driven by this
+                definition, we introduce the Graph Ordering Attention (GOAT) layer, a novel GNN component that captures
+                interactions between nodes in a neighborhood. This is achieved by learning local node orderings via an
+                attention mechanism and processing the ordered representations using a recurrent neural network
+                aggregator. This design allows us to make use of a permutation-sensitive aggregator while maintaining
+                the
+                permutation-equivariance of the proposed GOAT layer. The GOAT model demonstrates its increased
+                performance
+                in modeling graph metrics that capture complex information, such as the betweenness centrality and the
+                effective size of a node. In practical use-cases, its superior modeling capability is confirmed through
+                its success in several real-world node classification benchmarks.
+              </p>
+            </div>
           </div>
 
           <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+
           <div class="item" fxLayout="column">
             <div fxLayout="row">
+              <h3>
+                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.02296"
+                   target="_blank">
+                  Graph-Coupled Oscillator Networks (ICML 2022)
+                </a></h3>
             </div>
             <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                26th of July 2022
+                21st of June 2022
+              </div>
+              <div>
+                <a>
+                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  T. Konstantin Rusch, Benjamin P. Chamberlain, James Rowbottom, Siddhartha Mishra, Michael M. Bronstein
+                </a>
               </div>
             </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Maybe you? If you want to present a paper (doesn't have to be yours) or you have someone who might be
-              interested in presenting his work then just write me a message on
-              <a href="https://join.slack.com/t/logag/shared_invite/zt-u0mbo1ec-zElmvd1oSCXGjXvxLSokvg" target="_blank"
-                 class="link-style-green">Slack</a>
-              or via email!
-            </p>
-          </div>
-
-
-        </div>
-        <div fxFlex="10" fxFlex.xs="2"></div>
-      </div>
-    </div>
-
-
-    <div class="top-margin" id="previous">
-      <div>
-        <div fxFlex="10" fxFlex.xs="2"></div>
-        <div fxFlex="80" fxFlex.xs="96" class="underline-title">
-          <h1 class="left-titles">PREVIOUS PAPERS AND RECORDINGS</h1>
-        </div>
-        <div fxFlex="10" fxFlex.xs="2"></div>
-      </div>
-
-      <div class="item" fxLayout="column">
-        <div fxLayout="row">
-          <h3>
-            <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2202.02296"
-               target="_blank">
-              Graph-Coupled Oscillator Networks (ICML 2022)
-            </a></h3>
-        </div>
-        <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-          <div>
-            <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-            21st of June 2022
-          </div>
-          <div>
-            <a>
-              <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-              T. Konstantin Rusch, Benjamin P. Chamberlain, James Rowbottom, Siddhartha Mishra, Michael M. Bronstein
-            </a>
-          </div>
-        </div>
-        <div>
+            <div>
               <iframe ngClass.gt-sm="float-right" [src]='safeURLGraphCon' allowfullscreen></iframe>
               <p class="paragraph">
                 <a class="slight-bold">Resources:</a>
                 (~60 participants)
               </p>
-        <p class="paragraph">
-          <a class="slight-bold">Speaker:</a>
-          First author of the paper <a
-          class="item-subtitle link-style-black"
-          href="https://konstantinrusch.com/"
-          target="_blank">Konstantin Rusch</a> who is an applied math PhD student at ETH Zurich supervised by
-          Siddhartha Mishra. His research is focused on physics-based ML for developing new methods and tackling
-          scientific problems.
-        </p>
-        <p class="no-margin">
-          <a class="slight-bold">Abstract:</a>
-          We propose Graph-Coupled Oscillator Networks (GraphCON), a novel framework for deep learning on graphs. It
-          is based on discretizations of a second-order system of ordinary differential equations (ODEs), which
-          model a network of nonlinear forced and damped oscillators, coupled via the adjacency structure of the
-          underlying graph. The flexibility of our framework permits any basic GNN layer (e.g. convolutional or
-          attentional) as the coupling function, from which a multi-layer deep neural network is built up via the
-          dynamics of the proposed ODEs. We relate the oversmoothing problem, commonly encountered in GNNs, to the
-          stability of steady states of the underlying ODE and show that zero-Dirichlet energy steady states are not
-          stable for our proposed ODEs. This demonstrates that the proposed framework mitigates the oversmoothing
-          problem. Finally, we show that our approach offers competitive performance with respect to the
-          state-of-the-art on a variety of graph-based learning tasks.
-        </p>
-        </div>
-      </div>
+              <p class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                First author of the paper <a
+                class="item-subtitle link-style-black"
+                href="https://konstantinrusch.com/"
+                target="_blank">Konstantin Rusch</a> who is an applied math PhD student at ETH Zurich supervised by
+                Siddhartha Mishra. His research is focused on physics-based ML for developing new methods and tackling
+                scientific problems.
+              </p>
+              <p class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                We propose Graph-Coupled Oscillator Networks (GraphCON), a novel framework for deep learning on graphs.
+                It
+                is based on discretizations of a second-order system of ordinary differential equations (ODEs), which
+                model a network of nonlinear forced and damped oscillators, coupled via the adjacency structure of the
+                underlying graph. The flexibility of our framework permits any basic GNN layer (e.g. convolutional or
+                attentional) as the coupling function, from which a multi-layer deep neural network is built up via the
+                dynamics of the proposed ODEs. We relate the oversmoothing problem, commonly encountered in GNNs, to the
+                stability of steady states of the underlying ODE and show that zero-Dirichlet energy steady states are
+                not
+                stable for our proposed ODEs. This demonstrates that the proposed framework mitigates the oversmoothing
+                problem. Finally, we show that our approach offers competitive performance with respect to the
+                state-of-the-art on a variety of graph-based learning tasks.
+              </p>
+            </div>
+          </div>
 
-      <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-
-      <div>
-        <div fxFlex="10" fxFlex.xs="2"></div>
-        <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
+          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
 
           <div class="item" fxLayout="column">
             <div fxLayout="row">
