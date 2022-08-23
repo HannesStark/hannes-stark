@@ -70,6 +70,10 @@ export class ReadingGroupComponent implements OnInit {
   safeURLGOAT: any;
   safeURLCoarseMD: any;
   safeURLRecoverable: any;
+  safeURLGPS: any;
+  safeURLAbInitioPotential: any;
+  safeURLTokenGT: any;
+  safeURLe3nn: any;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -78,10 +82,13 @@ export class ReadingGroupComponent implements OnInit {
       message: this.message,
       honeypot: this.honeypot
     });
+    this.safeURLe3nn = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/fexvV-RndUc');
+    this.safeURLTokenGT = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/TAKyjYoimd0');
+    this.safeURLAbInitioPotential = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/dNnFFhWhSJQ');
+    this.safeURLGPS = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/DiLSCReBaTg');
     this.safeURLRecoverable = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/5Yw7m9tot84');
     this.safeURLCoarseMD = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/https://youtu.be/r_ZTOoGxFC0');
     this.safeURLGOAT = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/9CJs5TL-CSs');
-
     this.safeURLGraphCon = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/YIhNLmbUBp4');
     this.safeURLSpectre = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/uVRj0E5GbQg');
     this.safeURLtordiff = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/29veWh5Ls5s');
