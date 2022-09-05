@@ -74,6 +74,8 @@ export class ReadingGroupComponent implements OnInit {
   safeURLAbInitioPotential: any;
   safeURLTokenGT: any;
   safeURLe3nn: any;
+  safeURLFrameAveraging: any;
+  safeURLGRAFF: any;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -82,6 +84,8 @@ export class ReadingGroupComponent implements OnInit {
       message: this.message,
       honeypot: this.honeypot
     });
+    this.safeURLGRAFF = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/sgTTtmwOMgE');
+    this.safeURLFrameAveraging = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/ZGtcvRaSmMk');
     this.safeURLe3nn = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/fexvV-RndUc');
     this.safeURLTokenGT = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/TAKyjYoimd0');
     this.safeURLAbInitioPotential = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/dNnFFhWhSJQ');
