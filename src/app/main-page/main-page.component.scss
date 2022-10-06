@@ -143,6 +143,17 @@ h3 {
   -moz-transform: scale(1.01);
 }
 
+.previewable-image2:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+.previewable-image2:hover {
+  cursor:pointer;
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+}
+
 .link-style-orange:hover {
   cursor:pointer;
 }
@@ -276,6 +287,11 @@ h3 {
 .text-align-left {
   text-align: left;
 }
+
+.large-br {
+  height: 300pt;
+}
+
 
 .item-date-loc {
   margin: 0;
