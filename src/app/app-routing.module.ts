@@ -18,8 +18,15 @@ export class LowerCaseUrlSerializer extends DefaultUrlSerializer {
 }
 
 const routes: Routes = [
+  {
+    path: "logag-reading-group",
+    canActivate: [RedirectGuard],
+    component: ReadingGroupComponent,
+    data: {
+      externalUrl: "https://m2d2.io/talks/log2/about/"
+    }
+  },
   {path: 'reviews', component: ReviewsComponent},
-  {path: 'logag-reading-group', component: ReadingGroupComponent},
   {path: '', component: MainPageComponent},
   {
     path: 'assets/Light_Attention_Predicts_Protein_Location_from_the_Language_of_Life.pdf',
