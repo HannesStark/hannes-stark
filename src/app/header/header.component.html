@@ -12,12 +12,13 @@
        class="mat-button">
       CV as PDF
     </a>
-    <button #tooltip="matTooltip" mat-button
-            matTooltip="The Learning on Graphs and Geometry Reading Group"
-            [routerLink]="['logag-reading-group']" class="mat-button"
-            (mousedown)="home($event)">
-      Reading Group
-    </button>
+
+    <a href="https://m2d2.io/talks/logg/about/" target="_blank" #tooltip="matTooltip"
+       mat-button
+       matTooltip="My Learning on Graphs and Geometry Reading Group"
+       class="mat-button">
+      My Reading Group
+    </a>
   </div>
   <div fxHide.lt-md fxFlex="60">
     <div fxFlex="70" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
