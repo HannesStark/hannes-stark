@@ -13,21 +13,20 @@
         -->
         <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
           <p class="text-align-left">
-            I am a second-year PhD student at MIT in the CS and AI Laboratory (CSAIL) co-advised by <a href="http://people.csail.mit.edu/tommi/" target="_blank"
+            I am a <b>second-year PhD student at MIT</b> in CSAIL co-advised by <a href="http://people.csail.mit.edu/tommi/" target="_blank"
                      class="link-style-green">Tommi Jaakkola</a> and <a
             href="https://www.regina.csail.mit.edu/" target="_blank" class="link-style-green">Regina Barzilay</a>.
             <br>
-            I work on <b>generative models</b> and physics-inspired ML applied to <b>molecular biology</b>. E.g. Diffusion Models, Flow matching, molecular docking, Boltzmann sampling, ...
+            I work on ML for <b>molecules and biology</b> (docking, protein design and search, DNA design, molecular dynamics, and we all like enzymes... :)) using stuff like diffusion/flow models, protein language models, other generative models, equivariant architectures, ... - whatever we need I suppose.
             <br>
             <br>
-            Previously, I obtained my M.Sc. Informatics from Technical University of Munich where I wrote my thesis with <a class="item-subtitle link-style-black"
+            Previously, I was at Technical University of Munich where I wrote my thesis with <a class="item-subtitle link-style-black"
                                                                       href="https://www.professoren.tum.de/en/guennemann-stephan"
-                                                                      target="_blank">Stephan Günnemann</a> and <a class="item-subtitle link-style-black" href="https://www.cl.cam.ac.uk/~pl219/" target="_blank">Pietro Liò</a>.
+                                                                      target="_blank">Stephan Günnemann</a> and <a class="item-subtitle link-style-black" href="https://www.cl.cam.ac.uk/~pl219/" target="_blank">Pietro Liò</a> <3.
             <br>
             <br>
-            Consider joining my weekly <a [routerLink]="['logag-reading-group']" class="link-style-green">reading
-            group</a>
-            about learning on graphs and geometry!
+            Consider joining my weekly <a href="https://portal.valencelabs.com/logg" target="_blank" class="link-style-green">reading
+            group</a>. Together with the paper authors, we cover a paper every Monday about whatever I am interested in at the moment. So something like  ML for bio, molecular dynamics, diffusion/flows, other generative models, protein design, ...
           </p>
 
           <div fxLayout="row" fxLayout.xs="column">
@@ -103,6 +102,37 @@
 
             <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
 
+              <div fxLayout="row">
+                <h3>
+                  <a class="item-subtitle link-style-black"
+                     href="https://arxiv.org/abs/2402.05841"
+                     target="_blank">Dirichlet Flow Matching with Applications to DNA Sequence Design</a></h3>
+              </div>
+
+              <p class="item-date-loc">
+                <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
+                <b>Hannes Stärk*</b>, Bowen Jing*, Chenyu Wang, Gabriele Corso, Bonnie Berger, Regina Barzilay, Tommi Jaakkola
+              </p>
+              <p class="item-content">
+                <i>ICML 2024; also Spotlight at ICLR 2024 MLGenX workshop.</i>
+              </p>
+              <div fxLayout="column" fxLayoutGap="5px">
+                <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+
+                  <img class="previewable-image2" fxFlex="65"
+                       src="assets/dirichlet_fig1.png"
+                       alt="image at full size">
+                  <img class="previewable-image2" fxFlex="35"
+                       src="assets/dirichlet_table.png"
+                       alt="image at full size">
+
+                </div>
+              </div>
+              <hr ngClass.gt-sm="separator-slim" ngClass.lt-md="separator-slim--small">
+
+
+
+
 
               <div fxLayout="row">
                 <h3>
@@ -116,7 +146,7 @@
                 <b>Hannes Stärk*</b>, Bowen Jing, Regina Barzilay, Tommi Jaakkola
               </p>
               <p class="item-content">
-                <i>Under review.</i>
+                <i>ICML 2024; also Spotlight at NeurIPS 2023 AI4Science Workshop.</i>
               </p>
               <div fxLayout="column" fxLayoutGap="5px">
                 <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
@@ -1378,9 +1408,17 @@
                 <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
                   <p class="item-content">
                     <a class="item-subtitle link-style-black"
+                                                    href="https://icml.cc/Conferences/2024"
+                                                    target="_blank">
+                    ICML 2024</a> 5 papers
+                  </p>
+                </div>
+                <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
+                  <p class="item-content">
+                    <a class="item-subtitle link-style-black"
                                                     href="https://neurips.cc/"
                                                     target="_blank">
-                    NeurIPS 2023</a> 3-4 papers
+                    NeurIPS 2023</a> 6 papers
                   </p>
                 </div>
 
