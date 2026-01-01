@@ -102,7 +102,7 @@
               <div fxLayout="row">
                 <h3>
                   <a class="item-subtitle link-style-black"
-                     href="https://hannes-stark.com/assets/boltzgen.pdf"
+                     href="https://www.biorxiv.org/content/10.1101/2025.11.20.689494v1"
                      target="_blank">BoltzGen: Toward Universal Binder Design
 </a></h3>
               </div>
@@ -117,10 +117,12 @@
               <div fxLayout="column" fxLayoutGap="5px">
                 <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
 
-                  <img class="previewable-image2" fxFlex="40"
-                       src="assets/boltzgen_results.png"
-                       alt="image at full size">
-                  <img class="previewable-image2" fxFlex="60"
+                  <div fxFlex="57" class="video-container">
+                    <div class="responsive video">
+                      <iframe [src]='safeURLboltzgen' allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <img class="previewable-image2" fxFlex="43"
                        src="assets/boltzgen.gif"
                        alt="image at full size">
 

@@ -46,12 +46,14 @@ export class MainPageComponent implements OnInit {
   sections: any[];
   safeURLNerf;
   safeURL3DPretrain;
+  safeURLboltzgen;
   safeURLLightAttention;
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer, private dialog: MatDialog) {
     this.safeURLNerf = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/8MCWE7R0xN8');
     this.safeURLLightAttention = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/6gDy8-yOJqY');
     this.safeURL3DPretrain = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/wF4RG171OR0');
+    this.safeURLboltzgen = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/9d_QWUUI1Qo?si=MnvN-aY_omcCHXil');
   }
 
   ngOnInit(): void {
