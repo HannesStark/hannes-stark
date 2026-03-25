@@ -13,12 +13,12 @@
       CV as PDF
     </a>
 
-    <a href="https://portal.valencelabs.com/starklyspeaking" target="_blank" #tooltip="matTooltip"
-       mat-button
-       matTooltip="The Starkly Speaking reading group."
-       class="mat-button">
+    <button #tooltip="matTooltip" mat-button
+            matTooltip="The Starkly Speaking reading group."
+            [routerLink]="['starkly-speaking']" class="mat-button"
+            (mousedown)="home($event)">
       My Reading Group
-    </a>
+    </button>
   </div>
   <div fxHide.lt-md fxFlex="60">
     <div fxFlex="70" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
@@ -61,7 +61,7 @@
     </a>
     <button #tooltip="matTooltip" mat-button
             matTooltip="The Learning on Graphs and Geometry Reading Group"
-            [routerLink]="['logag-reading-group']" class="mat-button"
+            [routerLink]="['starkly-speaking']" class="mat-button"
             (mousedown)="home($event)">
       Reading Group
     </button>
@@ -108,7 +108,7 @@
   </a>
   <button #tooltip="matTooltip" mat-button
           matTooltip="The Learning on Graphs and Geometry Reading Group"
-          [routerLink]="['logag-reading-group']" class="mat-button"
+          [routerLink]="['starkly-speaking']" class="mat-button"
           (mousedown)="home($event)">
     Reading Group
   </button>

@@ -76,6 +76,10 @@ export class ReadingGroupComponent implements OnInit {
   safeURLe3nn: any;
   safeURLFrameAveraging: any;
   safeURLGRAFF: any;
+  talks: any[] = [];
+  pastTalks: any[] = [];
+  futureTalks: any[] = [];
+  recentTalk: any = null;
 
   constructor(private formBuilder: FormBuilder, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.form = this.formBuilder.group({
@@ -132,6 +136,26 @@ export class ReadingGroupComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const today = new Date().toISOString().split('T')[0];
+    const cutoff = '2022-08-31';
+    this.http.get<any>('assets/starkly-speaking-talks.json').subscribe(data => {
+      this.talks = data.videos
+        .filter(v => (v.talk_date || v.published_at?.substring(0, 10)) > cutoff)
+        .sort((a, b) => (b.talk_date || b.published_at || '').localeCompare(a.talk_date || a.published_at || ''))
+        .map(v => {
+          const d = v.talk_date || v.published_at?.substring(0, 10);
+          return {
+            ...v,
+            date: new Date(d + 'T12:00:00').toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'}),
+            safeUrl: v.video_id ? this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${v.video_id}`) : null,
+          };
+        });
+      this.futureTalks = this.talks
+        .filter(t => (t.talk_date || '') > today)
+        .sort((a, b) => (a.talk_date || '').localeCompare(b.talk_date || ''));
+      this.pastTalks = this.talks.filter(t => (t.talk_date || '') <= today);
+      this.recentTalk = this.pastTalks.find(t => t.video_id) || null;
+    });
   }
 
   onSubmit() {

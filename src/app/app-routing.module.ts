@@ -19,12 +19,8 @@ export class LowerCaseUrlSerializer extends DefaultUrlSerializer {
 
 const routes: Routes = [
   {
-    path: "logag-reading-group",
-    canActivate: [RedirectGuard],
+    path: "starkly-speaking",
     component: ReadingGroupComponent,
-    data: {
-      externalUrl: "https://m2d2.io/talks/log2/about/"
-    }
   },
   {path: 'reviews', component: ReviewsComponent},
   {path: '', component: MainPageComponent},

@@ -2,10 +2,12 @@
 
   <div class="width100" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center">
     <div fxFlex="35" fxLayoutAlign="end center" fxLayoutAlign.lt-md="center center">
-      <img class="profile-image" src="assets/randomEuclidean.png" alt="Euclid Elements">
+      <a href="https://www.rcsb.org/structure/9BW5" target="_blank">
+        <img class="profile-image" src="assets/starkly-speaking.jpeg" alt="Starkly Speaking">
+      </a>
     </div>
     <div fxFlex="55" fxFlex.xs="65" ngClass.sm="small-margin" ngClass.xs="small-margin--xs">
-      <h1 class="Title" ngClass.lt-md="text-align-center">LoGaG: Learning on Graphs and Geometry Reading Group!</h1>
+      <h1 class="Title" ngClass.lt-md="text-align-center">Starkly Speaking Reading Group</h1>
       <!--
       <div class="underline-title--top" fxLayoutAlign.lt-md="center center">
         <h1 class="left-titles">M. Sc. Computer Science Student</h1>
@@ -13,14 +15,9 @@
       -->
       <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
         <p class="text-align-left">
-          Welcome to the LoGaG reading group where GraphML researchers present and discuss their papers every week! <br>
-          Below
-          are the <a (click)="scroll('Schedule')" class="link-style-green">Schedule</a> and <a
-          (click)="scroll('previous')" class="link-style-green">previously</a> covered papers. I organize this reading
-          group with the awesome help of <a
-          href="https://www.valencediscovery.com/"
-          target="_blank"
-          class="link-style-green">Valence Discovery</a>!
+          Welcome to the Starkly Speaking reading group where paper authors present and discuss their work every week! <br>
+          Below are the <a (click)="scroll('Schedule')" class="link-style-green">Schedule</a> and <a
+          (click)="scroll('previous')" class="link-style-green">previously</a> covered papers.
         </p>
 
         <div fxLayout="row" fxLayoutAlign="left center">
@@ -30,14 +27,14 @@
                target="_blank">Zoom Link</a>
           </p>
           <div class="next-to-button">
-            Just hop on! We meet every Monday at 11am EDT / 3pm UTC / 5pm CEST / 8am PDT.
+            Just hop on! We meet every Monday at 9am PT / 12pm ET / 6pm CE(S)T.
           </div>
         </div>
 
         <div fxLayout="row" fxLayoutAlign="left center">
           <p>
             <a mat-button class="group-button item-title"
-               href="https://join.slack.com/t/logag/shared_invite/zt-1hcqybjyd-ty5Pbj~BQy~W4B4mQQVxDQ"
+               href="https://join.slack.com/t/starkspeak/shared_invite/zt-3tg9a0f0i-zEcb44fwr0lQpQr7EOxhBA"
                target="_blank">Join Slack!</a>
           </p>
           <div class="next-to-button">
@@ -48,7 +45,7 @@
         <div fxLayout="row" fxLayoutAlign="left center">
           <p>
             <a mat-button class="group-button item-title"
-               href="https://groups.google.com/g/logag"
+               href="https://groups.google.com/g/starkspeak"
                target="_blank">Join Mailing List!</a>
           </p>
           <div class="next-to-button">
@@ -71,7 +68,7 @@
         <!--div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
           <div fxLayout="row">
             <p>
-              <a mat-button class="group-button item-title" href="https://groups.google.com/g/logag"
+              <a mat-button class="group-button item-title" href="https://groups.google.com/g/starkspeak"
                  target="_blank">Sign up for email updates!</a>
             </p>
           </div>
@@ -117,7 +114,7 @@
 
   <div fxLayout="column" class="width100">
     <!-- section 0 -->
-    <div>
+    <div class="top-margin">
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" class="underline-title">
@@ -131,58 +128,36 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
-          <div class="item" fxLayout="column">
+          <div *ngIf="recentTalk" class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2204.10348"
-                   target="_blank">
-                  Simulate Time-integrated Coarse-grained Molecular Dynamics with Geometric Machine Learning
-                </a></h3>
+                <a *ngIf="recentTalk.paper_url" class="item-subtitle link-style-black" [href]="recentTalk.paper_url" target="_blank">
+                  {{recentTalk.talk_title}}
+                </a>
+                <span *ngIf="!recentTalk.paper_url">{{recentTalk.talk_title}}</span>
+              </h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                5th of July 2022
+                {{recentTalk.date}}
               </div>
-              <div>
+              <div *ngIf="recentTalk.authors">
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Xiang Fu, Tian Xie, Nathan J. Rebello, Bradley D. Olsen, Tommi Jaakkola
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
+                  {{recentTalk.authors}}
                 </a>
               </div>
             </div>
             <div>
-              <iframe ngClass.gt-sm="float-right" [src]='safeURLCoarseMD' allowfullscreen></iframe>
-              <p class="paragraph">
-                <a class="slight-bold">Resources:</a>
-                (86 participants)
-              </p>
-              <p class="paragraph">
+              <iframe ngClass.gt-sm="float-right" [src]="recentTalk.safeUrl" allowfullscreen></iframe>
+              <p *ngIf="recentTalk.speaker" class="paragraph">
                 <a class="slight-bold">Speaker:</a>
-                First author of the paper <a
-                class="item-subtitle link-style-black"
-                href="https://xiangfu.co/"
-                target="_blank">Xiang Fu</a> who is a PhD student at MIT in the groups of Tommi Jaakkola and Pulkit
-                Agrawal. Currently, he works on molecular dynamics and coarse-graining or other abstraction-related
-                approaches.
+                {{recentTalk.speaker}}
               </p>
-              <p class="no-margin">
+              <p *ngIf="recentTalk.abstract" class="no-margin">
                 <a class="slight-bold">Abstract:</a>
-                Molecular dynamics (MD) simulation is the workhorse of various scientific domains but is limited by high
-                computational cost. Learning-based force fields have made major progress in accelerating ab-initio MD
-                simulation but are still not fast enough for many real-world applications that require long-time MD
-                simulation. In this paper, we adopt a different machine learning approach where we coarse-grain a
-                physical
-                system using graph clustering, and model the system evolution with a very large time-integration step
-                using graph neural networks. A novel score-based GNN refinement module resolves the long-standing
-                challenge of long-time simulation instability. Despite only trained with short MD trajectory data, our
-                learned simulator can generalize to unseen novel systems and simulate for much longer than the training
-                trajectories. Properties requiring 10-100 ns level long-time dynamics can be accurately recovered at
-                several-orders-of-magnitude higher speed than classical force fields. We demonstrate the effectiveness
-                of
-                our method on two realistic complex systems: (1) single-chain coarse-grained polymers in implicit
-                solvent;
-                (2) multi-component Li-ion polymer electrolyte systems.
+                {{recentTalk.abstract}}
               </p>
             </div>
           </div>
@@ -192,7 +167,7 @@
       </div>
     </div>
 
-    <div id="Schedule">
+    <div class="top-margin" id="Schedule">
       <div>
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" class="underline-title">
@@ -207,265 +182,40 @@
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
 
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2104.11225"
-                   target="_blank">
-                  Pri3D: Can 3D Priors Help 2D Representation Learning?
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                6th of September 2022
+          <ng-container *ngFor="let talk of futureTalks; let last = last">
+            <div class="item" fxLayout="column">
+              <div fxLayout="row">
+                <h3>
+                  <a *ngIf="talk.paper_url" class="item-subtitle link-style-black" [href]="talk.paper_url" target="_blank">
+                    {{talk.talk_title}}
+                  </a>
+                  <span *ngIf="!talk.paper_url">{{talk.talk_title}}</span>
+                </h3>
               </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Ji Hou, Saining Xie, Benjamin Graham, Angela Dai, Matthias Nießner
-                </a>
+              <div fxLayout="column" class="paragraph">
+                <div>
+                  <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                  {{talk.date}}
+                </div>
+                <div *ngIf="talk.authors">
+                  <a>
+                    <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
+                    {{talk.authors}}
+                  </a>
+                </div>
               </div>
+              <p *ngIf="talk.speaker" class="paragraph">
+                <a class="slight-bold">Speaker:</a>
+                {{talk.speaker}}
+              </p>
+              <p *ngIf="talk.abstract" class="no-margin">
+                <a class="slight-bold">Abstract:</a>
+                {{talk.abstract}}
+              </p>
             </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Dr <a
-              class="item-subtitle link-style-black"
-              href="https://sekunde.github.io/"
-              target="_blank">Ji Hou</a> who is a Research Scientist at Meta Reality Labs. Previously, he did his Ph.D.
-              at the TUM Visual Computing Group headed by Prof. Matthias Niessner, where he worked on Computer Vision
-              and 3D Scene Understanding.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Recent advances in 3D perception have shown impressive progress in understanding geometric structures of
-              3Dshapes and even scenes. Inspired by these advances in geometric understanding, we aim to imbue
-              image-based perception with representations learned under geometric constraints. We introduce an approach
-              to learn view-invariant,geometry-aware representations for network pre-training, based on multi-view RGB-D
-              data, that can then be effectively transferred to downstream 2D tasks. We propose to employ contrastive
-              learning under both multi-view im-age constraints and image-geometry constraints to encode3D priors into
-              learned 2D representations. This results not only in improvement over 2D-only representation learning on
-              the image-based tasks of semantic segmentation, instance segmentation, and object detection on real-world
-              in-door datasets, but moreover, provides significant improvement in the low data regime. We show a
-              significant improvement of 6.0% on semantic segmentation on full data as well as 11.9% on 20% data against
-              baselines on ScanNet.
-            </p>
-          </div>
+            <hr *ngIf="!last" ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          </ng-container>
 
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2201.11969"
-                   target="_blank">
-                  Approximately Equivariant Networks for Imperfectly Symmetric Dynamics
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                13th of September 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Rui Wang, Robin Walters, Rose Yu
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              The authors <a
-              class="item-subtitle link-style-black"
-              href="https://rui1521.github.io/online-cv/"
-              target="_blank">Rui Wang</a>, Prof. <a
-              class="item-subtitle link-style-black"
-              href="https://scholar.google.com/citations?user=fnprJmUAAAAJ&hl=en"
-              target="_blank">Robin Walters</a>, and maybe Prof. <a
-              class="item-subtitle link-style-black"
-              href="https://roseyu.com/"
-              target="_blank">Rose Yu</a>: Rui is a PhD student in the group of Prof. Yu at UC San Diego, and Prof.
-              Walters is at North Eastern University. All have lots of interesting work on symmetries in ML.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Incorporating symmetry as an inductive bias into neural network architecture has led to improvements in
-              generalization, data efficiency, and physical consistency in dynamics modeling. Methods such as CNNs or
-              equivariant neural networks use weight tying to enforce symmetries such as shift invariance or rotational
-              equivariance. However, despite the fact that physical laws obey many symmetries, real-world dynamical data
-              rarely conforms to strict mathematical symmetry either due to noisy or incomplete data or to symmetry
-              breaking features in the underlying dynamical system. We explore approximately equivariant networks which
-              are biased towards preserving symmetry but are not strictly constrained to do so. By relaxing equivariance
-              constraints, we find that our models can outperform both baselines with no symmetry bias and baselines
-              with overly strict symmetry in both simulated turbulence domains and real-world multi-stream jet flow.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://www.pnas.org/doi/10.1073/pnas.0500334102"
-                   target="_blank">
-                  Geometric diffusions as a tool for harmonic analysis and structure definition of data: Diffusion maps
-                  (2005)
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                Monday 19th of September 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Ronald Coifman, S. LAFON, A. B. LEE, M. MAGGIONI, B.NADLER, F. WARNER, AND S. ZUCKER
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Professor <a
-              class="item-subtitle link-style-black"
-              href="https://cpsc.yale.edu/people/ronald-coifman"
-              target="_blank">Ronald Coifman</a> who is Sterling Professor of Mathematics at Yale University. He
-              is also a member of the American Academy of Arts and Sciences, the Connecticut Academy of Science and
-              Engineering, and the National Academy of Sciences. He is a recipient of the 1996 DARPA Sustained
-              Excellence Award, the 1996 Connecticut Science Medal, the 1999 Pioneer Award of the International Society
-              for Industrial and Applied Science, and the 1999 National Medal of Science.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              We provide a framework for structural multiscale geometric organization of graphs and subsets of ℝ𝑛. We
-              use diffusion semigroups to generate multiscale geometries in order to organize and represent complex
-              structures. We show that appropriately selected eigenfunctions or scaling functions of Markov matrices,
-              which describe local transitions, lead to macroscopic descriptions at different scales. The process of
-              iterating or diffusing the Markov matrix is seen as a generalization of some aspects of the Newtonian
-              paradigm, in which local infinitesimal transitions of a system lead to global macroscopic descriptions by
-              integration. We provide a unified view of ideas from data analysis, machine learning, and numerical
-              analysis.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2206.10991"
-                   target="_blank">
-                  No paper due to ICLR submission deadline!
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                26th of September 2022
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              No one.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2206.07697"
-                   target="_blank">
-                  MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                3rd of October 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Ilyes Batatia, Dávid Péter Kovács, Gregor N. C. Simm, Christoph Ortner, Gábor Csányi
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              <a
-                class="item-subtitle link-style-black"
-                href="https://scholar.google.com/citations?user=fTVuWFMAAAAJ&hl=en"
-                target="_blank">Ilyes Batatia</a> who is a research intern at the University of Cambridge and <a
-              class="item-subtitle link-style-black"
-              href="https://www.linkedin.com/in/d%C3%A1vid-p%C3%A9ter-kov%C3%A1cs-9b8465104/"
-              target="_blank">Dávid Péter Kovács</a> who is a PhD student there.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              Creating fast and accurate force fields is a long-standing challenge in computational chemistry and
-              materials science. Recently, several equivariant message passing neural networks (MPNNs) have been shown
-              to outperform models built using other approaches in terms of accuracy. However, most MPNNs suffer from
-              high computational cost and poor scalability. We propose that these limitations arise because MPNNs only
-              pass two-body messages leading to a direct relationship between the number of layers and the expressivity
-              of the network. In this work, we introduce MACE, a new equivariant MPNN model that uses higher body order
-              messages. In particular, we show that using four-body messages reduces the required number of message
-              passing iterations to just two, resulting in a fast and highly parallelizable model, reaching or
-              exceeding state-of-the-art accuracy on the rMD17, 3BPA, and AcAc benchmark tasks. We also demonstrate that
-              using higher order messages leads to an improved steepness of the learning curves.
-            </p>
-          </div>
-
-          <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
-
-          <div class="item" fxLayout="column">
-            <div fxLayout="row">
-              <h3>
-                <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.07832"
-                   target="_blank">
-                  Learning Equivariant Energy Based Models with Equivariant Stein Variational Gradient Descent
-                </a></h3>
-            </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
-              <div>
-                <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
-                10th of October 2022
-              </div>
-              <div>
-                <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
-                  Priyank Jaini, Lars Holdijk, Max Welling
-                </a>
-              </div>
-            </div>
-            <p class="paragraph">
-              <a class="slight-bold">Speaker:</a>
-              Authors <a
-              class="item-subtitle link-style-black"
-              href="https://www.larsholdijk.com/"
-              target="_blank">Lars Holdijk</a> and Dr. <a
-              class="item-subtitle link-style-black"
-              href="https://priyankjaini.github.io/"
-              target="_blank">Priyank Jaini</a>. Lars is an ELLIS Program MSc student of Prof. Max Welling at
-              University of Amsterdam and Prof. Yarin Gal at University of Oxford. Dr Jaini is a Research Scientist in
-              the Brain team at Google Research in Toronto and before that he was a PostDoc of Prof. Welling.
-            </p>
-            <p class="no-margin">
-              <a class="slight-bold">Abstract:</a>
-              We focus on the problem of efficient sampling and learning of probability densities by incorporating
-              symmetries in probabilistic models. We first introduce Equivariant Stein Variational Gradient Descent
-              algorithm -- an equivariant sampling method based on Stein's identity for sampling from densities with
-              symmetries. Equivariant SVGD explicitly incorporates symmetry information in a density through equivariant
-              kernels which makes the resultant sampler efficient both in terms of sample complexity and the quality of
-              generated samples. Subsequently, we define equivariant energy based models to model invariant densities
-              that are learned using contrastive divergence. By utilizing our equivariant SVGD for training equivariant
-              EBMs, we propose new ways of improving and scaling up training of energy based models. We apply these
-              equivariant energy models for modelling joint densities in regression and classification tasks for image
-              datasets, many-body particle systems and molecular structure generation.
-            </p>
-          </div>
 
 
         </div>
@@ -487,6 +237,43 @@
         <div fxFlex="10" fxFlex.xs="2"></div>
         <div fxFlex="80" fxFlex.xs="96" fxLayout="column">
 
+          <ng-container *ngFor="let talk of pastTalks">
+            <div class="item" fxLayout="column">
+              <div fxLayout="row">
+                <h3>
+                  <a *ngIf="talk.paper_url" class="item-subtitle link-style-black" [href]="talk.paper_url" target="_blank">
+                    {{talk.talk_title}}
+                  </a>
+                  <span *ngIf="!talk.paper_url">{{talk.talk_title}}</span>
+                </h3>
+              </div>
+              <div fxLayout="column" class="paragraph">
+                <div>
+                  <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
+                  {{talk.date}}
+                </div>
+                <div *ngIf="talk.authors">
+                  <a>
+                    <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
+                    {{talk.authors}}
+                  </a>
+                </div>
+              </div>
+              <div>
+                <iframe *ngIf="talk.safeUrl" ngClass.gt-sm="float-right" [src]="talk.safeUrl" allowfullscreen></iframe>
+                <p *ngIf="talk.speaker" class="paragraph">
+                  <a class="slight-bold">Speaker:</a>
+                  {{talk.speaker}}
+                </p>
+                <p *ngIf="talk.abstract" class="no-margin">
+                  <a class="slight-bold">Abstract:</a>
+                  {{talk.abstract}}
+                </p>
+              </div>
+            </div>
+            <hr ngClass.gt-sm="separator" ngClass.lt-md="separator--small">
+          </ng-container>
+
           <div class="item" fxLayout="column">
             <div fxLayout="row">
               <h3>
@@ -495,14 +282,14 @@
                   Graph Neural Networks as Gradient Flows
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 30th of August 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Francesco Di Giovanni, James Rowbottom, Benjamin P. Chamberlain, Thomas Markovich, Michael M.
                   Bronstein
                 </a>
@@ -550,14 +337,14 @@
                   Frame Averaging for Invariant and Equivariant Network Design
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 23rd of August 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Omri Puny, Matan Atzmon, Heli Ben-Hamu, Ishan Misra, Aditya Grover, Edward J. Smith, Yaron Lipman
                 </a>
               </div>
@@ -613,14 +400,14 @@
                   e3nn: Euclidean Neural Networks
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 16th of August 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Mario Geiger, Tess Smidt
                 </a>
               </div>
@@ -659,14 +446,14 @@
                   Pure Transformers are Powerful Graph Learners
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 9th of August 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Jinwoo Kim, Tien Dat Nguyen, Seonwoo Min, Sungjun Cho, Moontae Lee, Honglak Lee, Seunghoon Hong
                 </a>
               </div>
@@ -709,14 +496,14 @@
                   Ab-Initio Potential Energy Surfaces by Pairing GNNs with Neural Wave Functions
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 2nd of August 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Nicholas Gao, Stephan Günnemann
                 </a>
               </div>
@@ -757,14 +544,14 @@
                   Recipe for a General, Powerful, Scalable Graph Transformer
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 26th of July 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Ladislav Rampášek, Mikhail Galkin, Vijay Prakash Dwivedi, Anh Tuan Luu, Guy Wolf, Dominique Beaini
                 </a>
               </div>
@@ -817,14 +604,14 @@
                   On Recoverability of Graph Neural Network Representations (2022)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 12th of July 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Maxim Fishman, Chaim Baskin, Evgenii Zheltonozhskii, Ron Banner, Avi Mendelson
                 </a>
               </div>
@@ -874,14 +661,14 @@
                   Simulate Time-integrated Coarse-grained Molecular Dynamics with Geometric Machine Learning
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 5th of July 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Xiang Fu, Tian Xie, Nathan J. Rebello, Bradley D. Olsen, Tommi Jaakkola
                 </a>
               </div>
@@ -932,14 +719,14 @@
                   Graph Ordering Attention Networks
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 28th of June 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Michail Chatzianastasis, Johannes F. Lutzeyer, George Dasoulas, Michalis Vazirgiannis
                 </a>
               </div>
@@ -1002,14 +789,14 @@
                   Graph-Coupled Oscillator Networks (ICML 2022)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 21st of June 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   T. Konstantin Rusch, Benjamin P. Chamberlain, James Rowbottom, Siddhartha Mishra, Michael M. Bronstein
                 </a>
               </div>
@@ -1057,14 +844,14 @@
                   SPECTRE : Spectral Conditioning Helps to Overcome the Expressivity Limits of One-shot Graph Generators
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 14th of June 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Karolis Martinkus, Andreas Loukas, Nathanaël Perraudin, Roger Wattenhofer
                 </a>
               </div>
@@ -1116,14 +903,14 @@
                   Torsional Diffusion for Molecular Conformer Generation
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 7th of June 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Bowen Jing, Gabriele Corso, Jeffrey Chang, Regina Barzilay, Tommi S. Jaakkola
                 </a>
               </div>
@@ -1174,14 +961,14 @@
                   Topological Graph Neural Networks (ICLR 2022)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 31st of May 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Max Horn, Edward De Brouwer, Michael Moor, Yves Moreau, Bastian Rieck, Karsten Borgwardt
                 </a>
               </div>
@@ -1228,14 +1015,14 @@
                   Generative Coarse-Graining of Molecular Conformations (2022)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 24th of May 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Wujie Wang, Minkai Xu, Chen Cai, Benjamin Kurt Miller, Tess Smidt, Yusu Wang, Jian Tang, Rafael
                   Gómez-Bombarelli
                 </a>
@@ -1292,14 +1079,14 @@
                   Theory of Graph Neural Networks: Representation and Learning (ICLR 2022)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 17th of May 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Stefanie Jegelka
                 </a>
               </div>
@@ -1342,14 +1129,14 @@
                   Message Passing Neural PDE Solvers (ICLR 2022)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 10th of May 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Johannes Brandstetter, Daniel Worrall, Max Welling
                 </a>
               </div>
@@ -1409,14 +1196,14 @@
                   Learning Local Equivariant Representations for Large-Scale Atomistic Dynamics
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 3rd of May 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Albert Musaelian, Simon Batzner, Anders Johansson, Lixin Sun, Cameron J. Owen, Mordechai Kornbluth,
                   Boris Kozinsky
                 </a>
@@ -1480,14 +1267,14 @@
                   Top-N: Equivariant set and graph generation without exchangeability (ICLR 2022)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 26th of April 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Clément Vignac, Pascal Frossard
                 </a>
               </div>
@@ -1539,14 +1326,14 @@
                   Graph Attention Retrospective (2022)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 19th of April 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Kimon Fountoulakis, Amit Levi, Shenghao Yang, Aseem Baranwal, Aukosh Jagannath
                 </a>
               </div>
@@ -1602,14 +1389,14 @@
                     Sign and Basis Invariant Networks for Spectral Graph Representation Learning (2022)
                   </a></h3>
               </div>
-              <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+              <div fxLayout="column" class="paragraph">
                 <div>
                   <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                   12th of April 2022
                 </div>
                 <div>
                   <a>
-                    <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                    <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                     Derek Lim, Joshua Robinson, Lingxiao Zhao, Tess Smidt, Suvrit Sra, Haggai Maron, Stefanie Jegelka
                   </a>
                 </div>
@@ -1672,14 +1459,14 @@
                   Automatic Symmetry Discovery with Lie Algebra Convolutional Network (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 5th of April 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Nima Dehmamy, Robin Walters, Yanchen Liu, Dashun Wang, Rose Yu
                 </a>
               </div>
@@ -1732,14 +1519,14 @@
                   Labeling Trick: A Theory of Using Graph Neural Networks for Multi-Node Representation Learning (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 29th of March 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Muhan Zhang, Pan Li, Yinglong Xia, Kai Wang, Long Jin
                 </a>
               </div>
@@ -1800,14 +1587,14 @@
                   Geometry Processing with Neural Fields (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 22nd of March 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Guandao Yang, Serge Belongie, Bharath Hariharan, Vladlen Koltun
                 </a>
               </div>
@@ -1864,14 +1651,14 @@
                   Geometric and Physical Quantities Improve E(3) Equivariant Message Passing (2022)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 15th of March 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Johannes Brandstetter, Rob Hesselink, Elise van der Pol, Erik J Bekkers, Max Welling
                 </a>
               </div>
@@ -1935,14 +1722,14 @@
                   Recent Advances in Deep Learning for Routing Problems (2022)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 8th of March 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Chaitanya K. Joshi, Rishabh Anand
                 </a>
               </div>
@@ -1994,14 +1781,14 @@
                   Features (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 1st of March 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Emanuele Rossi, Henry Kenlay, Maria I. Gorinova, Benjamin Paul Chamberlain, Xiaowen Dong, Michael
                   Bronstein
                 </a>
@@ -2058,14 +1845,14 @@
                   Symmetric Spaces for Graph Embeddings: A Finsler-Riemannian Approach (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 22nd of February 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Federico López, Beatrice Pozzetti, Steve Trettel, Michael Strube, Anna Wienhard
                 </a>
               </div>
@@ -2107,14 +1894,14 @@
                   Graph Posterior Network: Bayesian Predictive Uncertainty for Node Classification (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 15th of February 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Maximilian Stadler, Bertrand Charpentier, Simon Geisler, Daniel Zügner, Stephan Günnemann
                 </a>
               </div>
@@ -2169,14 +1956,14 @@
                   Understanding over-squashing and bottlenecks on graphs via curvature (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 8th of February 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Jake Topping, Francesco Di Giovanni, Benjamin Paul Chamberlain, Xiaowen Dong, Michael M. Bronstein
                 </a>
               </div>
@@ -2227,14 +2014,14 @@
                   Roto-translated Local Coordinate Frames For Interacting Dynamical Systems (NeurIPS 2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 1st of February 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Miltiadis Kofinas, Naveen Shankar Nagaraja, Efstratios Gavves
                 </a>
               </div>
@@ -2283,14 +2070,14 @@
                   Learning Parametrised Graph Shift Operators (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 25t of January 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   George Dasoulas, Johannes Lutzeyer, Michalis Vazirgiannis
                 </a>
               </div>
@@ -2362,18 +2149,18 @@
                 href="https://arxiv.org/abs/2110.05442" target="_blank">
                 Neural Algorithmic Reasoners are Implicit Planners (2021)</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 18th of January 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   First paper: Louis-Pascal A. C. Xhonneux, Andreea Deac, Petar Velickovic, Jian Tang
                 </a>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Second paper: Andreea Deac, Petar Veličković, Ognjen Milinković, Pierre-Luc Bacon, Jian Tang, Mladen
                   Nikolić
                 </a>
@@ -2448,14 +2235,14 @@
                   Learning Graph Cellular Automata (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 11th of January 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Daniele Grattarola, Lorenzo Livi, Cesare Alippi
                 </a>
               </div>
@@ -2506,14 +2293,14 @@
                   Neural Bellman-Ford Networks: A General Graph Neural Network Framework for Link Prediction (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 4th of January 2022
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Zhaocheng Zhu, Zuobai Zhang, Louis-Pascal Xhonneux, Jian Tang
                 </a>
               </div>
@@ -2572,14 +2359,14 @@
                   Learning Graph Search Heuristics (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 28th of December 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Michal Pándy, Rex Ying, Gabriele Corso, Petar Veličković, Jure Leskovec, Pietro Liò
                 </a>
               </div>
@@ -2633,14 +2420,14 @@
                   Iterative Refinement Graph Neural Network for Antibody Sequence-Structure Co-design (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 21st of December 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Wengong Jin, Jeremy Wohlwend, Regina Barzilay, Tommi Jaakkola
                 </a>
               </div>
@@ -2699,14 +2486,14 @@
                   Equivariant Subgraph Aggregation Networks (2021)
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 14th of December 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Beatrice Bevilacqua, Fabrizio Frasca, Derek Lim, Balasubramaniam Srinivasan, Chen Cai, Gopinath
                   Balamurugan, Michael M. Bronstein, Haggai Maron
                 </a>
@@ -2777,14 +2564,14 @@
                    target="_blank">
                   Graph Neural Networks with Learnable Structural and Positional Representations</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 30th of November 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Vijay Prakash Dwivedi, Anh Tuan Luu, Thomas Laurent, Yoshua Bengio, Xavier Bresson
                 </a>
               </div>
@@ -2842,14 +2629,14 @@
                    target="_blank">
                   How to Find Your Friendly Neighborhood: Graph Attention Design with Self-Supervision</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 23rd of November 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Dongkwan Kim, Alice Oh
                 </a>
               </div>
@@ -2903,14 +2690,14 @@
                   On the equivalence between graph isomorphism testing and function approximation with GNNs
                 </a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 16th of November 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Zhengdao Chen, Soledad Villar, Lei Chen, Joan Bruna
                 </a>
               </div>
@@ -2962,14 +2749,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2109.04173" target="_blank">
                   Relating Graph Neural Networks to Structural Causal Model</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 9th of November 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Matej Zečević, Devendra Singh Dhami, Petar Veličković, Kristian Kersting
                 </a>
               </div>
@@ -3028,14 +2815,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.06790" target="_blank">
                   A Unified Lottery Ticket Hypothesis for Graph Neural Networks</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 2nd of November 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Tianlong Chen, Yongduo Sui, Xuxi Chen, Aston Zhang, Zhangyang Wang
                 </a>
               </div>
@@ -3102,20 +2889,20 @@
                                                          href="https://arxiv.org/abs/2110.09443" target="_blank">
                 Beltrami Flow and Neural Diffusion on Graphs</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 26th of October 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   First paper: Benjamin Paul Chamberlain, James Rowbottom, Maria Gorinova, Stefan Webb, Emanuele Rossi,
                   Michael M.
                   Bronstein
                 </a>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Second paper: Benjamin Paul Chamberlain, James Rowbottom, Davide Eynard, Francesco Di Giovanni,
                   Xiaowen Dong, Michael M Bronstein
                 </a>
@@ -3178,14 +2965,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2006.05205" target="_blank">
                   On the Bottleneck of Graph Neural Networks and its Practical Implications</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 19th of October 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Uri Alon, Eran Yahav
                 </a>
               </div>
@@ -3251,14 +3038,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2102.05152" target="_blank">
                   On Explainability of Graph Neural Networks via Subgraph Explorations</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 12th of October 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Hao Yuan, Haiyang Yu, Jie Wang, Kang Li, Shuiwang Ji
                 </a>
               </div>
@@ -3303,14 +3090,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2010.09891" target="_blank">
                   FLAG: Adversarial Data Augmentation for Graph Neural Networks</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 28th of September 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Kezhi Kong, Guohao Li, Mucong Ding, Zuxuan Wu, Chen Zhu, Bernard Ghanem, Gavin Taylor, Tom Goldstein
                 </a>
               </div>
@@ -3358,14 +3145,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.03893" target="_blank">
                   Rethinking Graph Transformers with Spectral Attention</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 21st of September 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Devin Kreuzer, Dominique Beaini, William L. Hamilton, Vincent Létourneau, Prudencio Tossou
                 </a>
               </div>
@@ -3385,7 +3172,7 @@
                 <a href="https://www.linkedin.com/in/dbeaini/" target="_blank"
                    class="link-style-green">Dominique Beaini</a> who obtained his PhD at École Polytechnique de
                 Montréal
-                and is now working as ML Researcher at Valence Discovery on using GNNs for molecules.
+                and is now working as ML Researcher at Valence Labs on using GNNs for molecules.
                 And <a href="https://www.linkedin.com/in/devin-kreuzer-847b52b5/" target="_blank"
                        class="link-style-green">Devin Kreuzer</a> who is doing his masters at McGill University
                 supervised
@@ -3427,14 +3214,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2107.01952" target="_blank">
                   Partition and Code: learning how to compress graphs</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 14th of September 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Giorgos Bouritsas, Andreas Loukas, Nikolaos Karalias, Michael M. Bronstein
                 </a>
               </div>
@@ -3494,14 +3281,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.12575" target="_blank">
                   Weisfeiler and Lehman Go Cellular: CW Networks</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 7th of September 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Cristian Bodnar, Fabrizio Frasca, Nina Otter, Yu Guang Wang, Pietro Liò, Guido Montúfar, Michael
                   Bronstein
                 </a>
@@ -3579,14 +3366,14 @@
                    target="_blank">
                   Analyzing the Expressive Power of Graph Neural Networks in a Spectral Perspective</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 31st of August 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Muhammet Balcilar, Guillaume Renton, Pierre Héroux, Benoit Gaüzère, Sébastien Adam, Paul Honeine
                 </a>
               </div>
@@ -3642,14 +3429,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2103.06857" target="_blank">
                   Should Graph Neural Networks Use Features, Edges, Or Both?</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 24th of August 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Lukas Faber, Yifan Lu, Roger Wattenhofer
                 </a>
               </div>
@@ -3692,14 +3479,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.07594" target="_blank">
                   Graph Contrastive Learning Automated</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 17th of August 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Yuning You, Tianlong Chen, Yang Shen, Zhangyang Wang
                 </a>
               </div>
@@ -3754,14 +3541,14 @@
                   Optimization of Graph Neural Networks: Implicit Acceleration by Skip Connections and More Depth</a>
               </h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 10th of August 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Keyulu Xu, Mozhi Zhang, Stefanie Jegelka, Kenji Kawaguchi
                 </a>
               </div>
@@ -3814,14 +3601,14 @@
                 <a class="item-subtitle link-style-black" href="https://arxiv.org/abs/2106.05234" target="_blank">
                   Do Transformers Really Perform Bad for Graph Representation?</a></h3>
             </div>
-            <div fxLayout.gt-md="row" fxLayout="column" class="paragraph">
+            <div fxLayout="column" class="paragraph">
               <div>
                 <fa-icon class="icon-right-margin" [icon]="calendar"></fa-icon>
                 3rd of August 2021
               </div>
               <div>
                 <a>
-                  <fa-icon ngClass.gt-md="icon-right-margin--left" [icon]="authors"></fa-icon>
+                  <fa-icon class="icon-right-margin" [icon]="authors"></fa-icon>
                   Chengxuan Ying, Tianle Cai, Shengjie Luo, Shuxin Zheng, Guolin Ke, Di He, Yanming Shen, Tie-Yan Liu
                 </a>
               </div>
