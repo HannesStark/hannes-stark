@@ -33,6 +33,15 @@
       "logo": "https://hannes-stark.com/assets/L2.png"
     }
   </script>
+  <script>
+    (function() {
+      var path = sessionStorage.getItem('redirectPath');
+      if (path) {
+        sessionStorage.removeItem('redirectPath');
+        window.history.replaceState(null, null, path);
+      }
+    })();
+  </script>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/L2.png">
