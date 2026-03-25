@@ -71,19 +71,6 @@
       "speaker": "Andrei Rekesh and Miruna Cretu"
     },
     {
-      "video_id": "ub4faRs20TI",
-      "video_url": "https://www.youtube.com/watch?v=ub4faRs20TI",
-      "thumbnail_url": "https://i.ytimg.com/vi/ub4faRs20TI/maxresdefault.jpg",
-      "talk_title": "Detection of viral sequences at single-cell resolution",
-      "speakers": "Laura Luebbert",
-      "abstract": "The increasing use of high-throughput sequencing methods in research, agriculture and healthcare provides an opportunity for the cost-effective surveillance of viral diversity and investigation of virus–disease correlation. However, existing methods for identifying viruses in sequencing data rely on and are limited to reference genomes or cannot retain single-cell resolution through cell barcode tracking. We introduce a method that accurately and rapidly detects viral sequences in bulk and single-cell transcriptomics data based on the highly conserved RdRP protein, enabling the detection of over 100,000 RNA virus species. The analysis of viral presence and host gene expression in parallel at single-cell resolution allows for the characterization of host viromes and the identification of viral tropism and host responses. We apply our method to peripheral blood mononuclear cell data from rhesus macaques with Ebola virus disease and describe previously unknown putative viruses. Moreover, we are able to accurately predict viral presence in individual cells based on macaque gene expression.",
-      "paper_url": "https://www.nature.com/articles/s41587-025-02614-y",
-      "published_at": "2026-02-24T16:19:34Z",
-      "talk_date": "2026-02-24",
-      "authors": "Laura Luebbert",
-      "speaker": null
-    },
-    {
       "video_id": "4eHnlbnrf4w",
       "video_url": "https://www.youtube.com/watch?v=4eHnlbnrf4w",
       "thumbnail_url": "https://i.ytimg.com/vi/4eHnlbnrf4w/maxresdefault.jpg",
@@ -110,16 +97,16 @@
       "speaker": "Peter Potaptchik who is a DPhil student in the Department of Statistics at the University of Oxford, advised by George Deligiannidis, Saifuddin Syed, and Yee Whye Teh. Currently he is visiting Michael Albergo at Harvard University."
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
+      "video_id": "ub4faRs20TI",
+      "video_url": "https://www.youtube.com/watch?v=ub4faRs20TI",
+      "thumbnail_url": "https://i.ytimg.com/vi/ub4faRs20TI/maxresdefault.jpg",
       "talk_title": "Detection of viral sequences at single-cell resolution identifies novel viruses associated with host gene expression changes",
-      "speakers": "Laura Luebbert, Delaney K. Sullivan, Maria Carilli, Kristján Eldjárn Hjörleifsson, Alexander Viloria Winnett, Tara Chari &amp; Lior Pachter",
+      "speakers": "Laura Luebbert",
       "abstract": "The increasing use of high-throughput sequencing methods in research, agriculture and healthcare provides an opportunity for the cost-effective surveillance of viral diversity and investigation of virus–disease correlation. However, existing methods for identifying viruses in sequencing data rely on and are limited to reference genomes or cannot retain single-cell resolution through cell barcode tracking. We introduce a method that accurately and rapidly detects viral sequences in bulk and single-cell transcriptomics data based on the highly conserved RdRP protein, enabling the detection of over 100,000 RNA virus species. The analysis of viral presence and host gene expression in parallel at single-cell resolution allows for the characterization of host viromes and the identification of viral tropism and host responses. We apply our method to peripheral blood mononuclear cell data from rhesus macaques with Ebola virus disease and describe previously unknown putative viruses. Moreover, we are able to accurately predict viral presence in individual cells based on macaque gene expression.",
       "paper_url": "https://www.nature.com/articles/s41587-025-02614-y",
-      "published_at": "2026-02-09T00:00:00Z",
+      "published_at": "2026-02-24T16:19:34Z",
       "talk_date": "2026-02-09",
-      "authors": "Laura Luebbert, Delaney K. Sullivan, Maria Carilli, Kristján Eldjárn Hjörleifsson, Alexander Viloria Winnett, Tara Chari &amp; Lior Pachter",
+      "authors": "Laura Luebbert, Delaney K. Sullivan, Maria Carilli, Kristján Eldjárn Hjörleifsson, Alexander Viloria Winnett, Tara Chari & Lior Pachter",
       "speaker": "Laura Luebbert, who is a biologist and ML researcher developing methods for real-time infectious disease detection, pandemic prevention, biosecurity, and novel virus discovery. She holds both the Eric and Wendy Schmidt and FutureHouse AI-for-Science Postdoctoral Fellowships and works with Prof. Pardis Sabeti at the Broad Institute of MIT and Harvard, where she co-leads the AI branch of the $100 million MacArthur-award Sentinel Project."
     },
     {
@@ -503,26 +490,13 @@
       "video_id": "TZbpxlLWO_Q",
       "video_url": "https://www.youtube.com/watch?v=TZbpxlLWO_Q",
       "thumbnail_url": "https://i.ytimg.com/vi/TZbpxlLWO_Q/maxresdefault.jpg",
-      "talk_title": "Distilling Foundation Models via Energy Hessians",
+      "talk_title": "Towards Fast, Specialized Machine Learning Force Fields: Distilling Foundation Models via Energy Hessians",
       "speakers": "Ishan Amin & Sanjeev Raja",
       "abstract": "The foundation model (FM) paradigm is transforming Machine Learning Force Fields (MLFFs), leveraging general-purpose representations and scalable training to perform a variety of computational chemistry tasks. Although MLFF FMs have begun to close the accuracy gap relative to first-principles methods, there is still a strong need for faster inference speed. Additionally, while research is increasingly focused on general-purpose models which transfer across chemical space, practitioners typically only study a small subset of systems at a given time. At test time, MLFFs must also obey physical constraints unique to the downstream use case, such as energy conservation for molecular dynamics simulations. This underscores the need for fast, specialized MLFFs relevant to specific downstream applications, which preserve test-time physical soundness while maintaining train-time scalability. In this work, we introduce a method for transferring general-purpose representations from MLFF foundation models to smaller, faster MLFFs specialized to specific regions of chemical space. We formulate our approach as a knowledge distillation procedure, where the smaller “student” MLFF is trained to match the Hessians of the energy predictions of the “teacher” foundation model. We demonstrate our approach across multiple recent foundation models, large-scale datasets, chemical subsets, and downstream tasks. Our specialized MLFFs can be up to 20 × faster than the original foundation model, while retaining, and in some cases exceeding, its performance and that of undistilled models. We also show that distilling from a teacher model with a direct force parameterization into a student model trained with conservative forces (i.e., computed as derivatives of the potential energy) successfully leverages the representations from the large-scale teacher for improved accuracy, while maintaining energy conservation during test-time molecular dynamics simulations. More broadly, our work suggests a new paradigm for MLFF development, in which foundation models are released along with smaller, specialized simulation “engines” for common chemical subsets. The implementation of our method is available at https://github.com/ASK-Berkeley/MLFF-distill.",
       "paper_url": "https://arxiv.org/abs/2501.09009",
       "published_at": "2025-04-06T23:25:36Z",
-      "talk_date": "2025-04-06",
-      "authors": "Ishan Amin & Sanjeev Raja",
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "Towards Fast, Specialized Machine Learning Force Fields: Distilling Foundation Models via Energy Hessians",
-      "speakers": "Ishan Amin, Sanjeev Raja, Aditi Krishnapriyan",
-      "abstract": "The foundation model (FM) paradigm is transforming Machine Learning Force Fields (MLFFs), leveraging general-purpose representations and scalable training to perform a variety of computational chemistry tasks. Although MLFF FMs have begun to close the accuracy gap relative to first-principles methods, there is still a strong need for faster inference speed. Additionally, while research is increasingly focused on general-purpose models which transfer across chemical space, practitioners typically only study a small subset of systems at a given time. This underscores the need for fast, specialized MLFFs relevant to specific downstream applications, which preserve test-time physical soundness while maintaining train-time scalability. In this work, we introduce a method for transferring general-purpose representations from MLFF foundation models to smaller, faster MLFFs specialized to specific regions of chemical space. We formulate our approach as a knowledge distillation procedure, where the smaller \"student\" MLFF is trained to match the Hessians of the energy predictions of the \"teacher\" foundation model. Our specialized MLFFs can be up to 20 × faster than the original foundation model, while retaining, and in some cases exceeding, its performance and that of undistilled models. We also show that distilling from a teacher model with a direct force parameterization into a student model trained with conservative forces (i.e., computed as derivatives of the potential energy) successfully leverages the representations from the large-scale teacher for improved accuracy, while maintaining energy conservation during test-time molecular dynamics simulations. More broadly, our work suggests a new paradigm for MLFF development, in which foundation models are released along with smaller, specialized simulation \"engines\" for common chemical subsets.",
-      "paper_url": "https://arxiv.org/abs/2501.09009",
-      "published_at": "2025-03-31T00:00:00Z",
       "talk_date": "2025-03-31",
-      "authors": "Ishan Amin, Sanjeev Raja, Aditi Krishnapriyan",
+      "authors": "Ishan Amin & Sanjeev Raja",
       "speaker": "The authors Ishan Amin, Sanjeev Raja from UC Berkeley."
     },
     {
@@ -815,26 +789,13 @@
       "video_id": "UjCEIkBZZfQ",
       "video_url": "https://www.youtube.com/watch?v=UjCEIkBZZfQ",
       "thumbnail_url": "https://i.ytimg.com/vi/UjCEIkBZZfQ/maxresdefault.jpg",
-      "talk_title": "Fine-tuning Flow and Diffusion Generative Models",
+      "talk_title": "Adjoint Matching: Fine-tuning Flow and Diffusion Generative Models with Memoryless Stochastic Optimal Control",
       "speakers": "Carles Domingo-Enrich",
       "abstract": null,
       "paper_url": "https://arxiv.org/abs/2409.08861",
       "published_at": "2024-09-27T16:51:14Z",
-      "talk_date": "2024-09-27",
-      "authors": "Carles Domingo-Enrich",
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "Adjoint Matching: Fine-tuning Flow and Diffusion Generative Models with Memoryless Stochastic Optimal Control",
-      "speakers": "Carles Domingo-Enrich, Michal Drozdzal, Brian Karrer, Ricky T. Q. Chen",
-      "abstract": "Dynamical generative models that produce samples through an iterative process, such as Flow Matching and denoising diffusion models, have seen widespread use, but there has not been many theoretically-sound methods for improving these models with reward fine-tuning. In this work, we cast reward fine-tuning as stochastic optimal control (SOC). Critically, we prove that a very specific memoryless noise schedule must be enforced during fine-tuning, in order to account for the dependency between the noise variable and the generated samples. We also propose a new algorithm named Adjoint Matching which outperforms existing SOC algorithms, by casting SOC problems as a regression problem. We find that our approach significantly improves over existing methods for reward fine-tuning, achieving better consistency, realism, and generalization to unseen human preference reward models, while retaining sample diversity.",
-      "paper_url": "https://arxiv.org/abs/2409.08861",
-      "published_at": "2024-09-23T00:00:00Z",
       "talk_date": "2024-09-23",
-      "authors": "Carles Domingo-Enrich, Michal Drozdzal, Brian Karrer, Ricky T. Q. Chen",
+      "authors": "Carles Domingo-Enrich",
       "speaker": "Carles Domingo-Enrich works at Meta's FAIR team. In May 2024 he graduated from his PhD in Computer Science from NYU, where his advisor was Joan Bruna. He works on generative AI models (diffusion models, normalizing flows) and related topics at the intersection of machine learning, statistics and optimization."
     },
     {
@@ -991,19 +952,6 @@
       "published_at": "2024-06-17T18:23:02Z",
       "talk_date": "2024-06-17",
       "authors": "Matan Atzmon",
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "Approximately Piecewise E",
-      "speakers": "3",
-      "abstract": "Equivariant Point Networks https://arxiv.org/abs/2402.08529 (Matan Atzmon, Jiahui Huang, Francis Williams, Or Litany)\nIntegrating a notion of symmetry into point cloud neural networks is a provably effective way to improve their generalization capability. Of particular interest are E(3) equivariant point cloud networks where Euclidean transformations applied to the inputs are preserved in the outputs. Recent efforts aim to extend networks that are E(3) equivariant, to accommodate inputs made of multiple parts, each of which exhibits local E(3) symmetry. In practical settings, however, the partitioning into individually transforming regions is unknown a priori. Errors in the partition prediction would unavoidably map to errors in respecting the true input symmetry. Past works have proposed different ways to predict the partition, which may exhibit uncontrolled errors in their ability to maintain equivariance to the actual partition. To this end, we introduce APEN: a general framework for constructing approximate piecewise-E(3) equivariant point networks. Our primary insight is that functions that are equivariant with respect to a finer partition will also maintain equivariance in relation to the true partition. Leveraging this observation, we propose a design where the equivariance approximation error at each layers can be bounded solely in terms of (i) uncertainty quantification of the partition prediction, and (ii) bounds on the probability of failing to suggest a proper subpartition of the ground truth one. We demonstrate the effectiveness of APEN using two data types exemplifying part-based symmetry: (i) real-world scans of room scenes containing multiple furniture-type objects; and, (ii) human motions, characterized by articulated parts exhibiting rigid movement. Our empirical results demonstrate the advantage of integrating piecewise E(3) symmetry into network design, showing a distinct improvement in generalization compared to prior works for both classification and segmentation tasks.",
-      "paper_url": null,
-      "published_at": "2024-06-17T00:00:00Z",
-      "talk_date": "2024-06-17",
-      "authors": "3",
       "speaker": "Matan Atzmon from NVIDIA."
     },
     {
@@ -1114,26 +1062,13 @@
       "video_id": "hCVXXdJZJFo",
       "video_url": "https://www.youtube.com/watch?v=hCVXXdJZJFo",
       "thumbnail_url": "https://i.ytimg.com/vi/hCVXXdJZJFo/maxresdefault.jpg",
-      "talk_title": "Stability-Aware Boltzmann Estimator (StABlE) Training of NN Interatomic Potentials",
+      "talk_title": "Stability-Aware Training of Neural Network Interatomic Potentials with Differentiable Boltzmann Estimators",
       "speakers": "Sanjeev Raja",
       "abstract": "Neural network interatomic potentials (NNIPs) are an attractive alternative to ab-initio methods for molecular dynamics (MD) simulations. However, they can produce unstable simulations which sample unphysical states, limiting their usefulness for modeling phenomena occurring over longer timescales. To address these challenges, we present Stability-Aware Boltzmann Estimator (StABlE) Training, a multi-modal training procedure which combines conventional supervised training from quantum-mechanical energies and forces with reference system observables, to produce stable and accurate NNIPs. StABlE Training iteratively runs MD simulations to seek out unstable regions, and corrects the instabilities via supervision with a reference observable. The training procedure is enabled by the Boltzmann Estimator, which allows efficient computation of gradients required to train neural networks to system observables, and can detect both global and local instabilities. We demonstrate our methodology across organic molecules, tetrapeptides, and condensed phase systems, along with using three modern NNIP architectures. In all three cases, StABlE-trained models achieve significant improvements in simulation stability and recovery of structural and dynamic observables. In some cases, StABlE-trained models outperform conventional models trained on datasets 50 times larger. As a general framework applicable across NNIP architectures and systems, StABlE Training is a powerful tool for training stable and accurate NNIPs, particularly in the absence of large reference datasets.",
       "paper_url": null,
       "published_at": "2024-04-11T13:18:58Z",
-      "talk_date": "2024-04-11",
-      "authors": "Sanjeev Raja",
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "Stability-Aware Training of Neural Network Interatomic Potentials with Differentiable Boltzmann Estimators",
-      "speakers": "Sanjeev Raja, Ishan Amin, Fabian Pedregosa, Aditi S. Krishnapriyan",
-      "abstract": "Neural network interatomic potentials (NNIPs) are an attractive alternative to ab-initio methods for molecular dynamics (MD) simulations. However, they can produce unstable simulations which sample unphysical states, limiting their usefulness for modeling phenomena occurring over longer timescales. To address these challenges, we present Stability-Aware Boltzmann Estimator (StABlE) Training, a multi-modal training procedure which combines conventional supervised training from quantum-mechanical energies and forces with reference system observables, to produce stable and accurate NNIPs. StABlE Training iteratively runs MD simulations to seek out unstable regions, and corrects the instabilities via supervision with a reference observable. The training procedure is enabled by the Boltzmann Estimator, which allows efficient computation of gradients required to train neural networks to system observables, and can detect both global and local instabilities. We demonstrate our methodology across organic molecules, tetrapeptides, and condensed phase systems, along with using three modern NNIP architectures. In all three cases, StABlE-trained models achieve significant improvements in simulation stability and recovery of structural and dynamic observables. In some cases, StABlE-trained models outperform conventional models trained on datasets 50 times larger. As a general framework applicable across NNIP architectures and systems, StABlE Training is a powerful tool for training stable and accurate NNIPs, particularly in the absence of large reference datasets.",
-      "paper_url": "https://arxiv.org/abs/2402.13984",
-      "published_at": "2024-04-08T00:00:00Z",
       "talk_date": "2024-04-08",
-      "authors": "Sanjeev Raja, Ishan Amin, Fabian Pedregosa, Aditi S. Krishnapriyan",
+      "authors": "Sanjeev Raja",
       "speaker": "Sanjeev who is a CS PhD student at UC Berkeley advised by Aditi Krishnapriyan."
     },
     {
@@ -1348,26 +1283,13 @@
       "video_id": "tHWCUYNuros",
       "video_url": "https://www.youtube.com/watch?v=tHWCUYNuros",
       "thumbnail_url": "https://i.ytimg.com/vi/tHWCUYNuros/maxresdefault.jpg",
-      "talk_title": "Transport, Variational Inference and Diffusions",
+      "talk_title": "Transport, Variational Inference and Diffusions: with Applications to Annealed Flows and Schrödinger Bridges",
       "speakers": "Francisco Vargas",
       "abstract": "This paper explores the connections between optimal transport and variational inference, with a focus on forward and reverse time stochastic differential equations and Girsanov transformations.We present a principled and systematic framework for sampling and generative modelling centred around divergences on path space. Our work culminates in the development of a novel score-based annealed flow technique (with connections to Jarzynski and Crooks identities from statistical physics) and a regularised iterative proportional fitting (IPF)-type objective, departing from the sequential nature of standard IPF. Through a series of generative modelling examples and a double-well-based rare event task, we showcase the potential of the proposed methods.",
       "paper_url": null,
       "published_at": "2023-12-07T17:38:32Z",
-      "talk_date": "2023-12-07",
-      "authors": "Francisco Vargas",
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "Transport, Variational Inference and Diffusions: with Applications to Annealed Flows and Schrödinger Bridges",
-      "speakers": "Francisco Vargas, Nikolas Nüsken",
-      "abstract": "This paper explores the connections between optimal transport and variational inference, with a focus on forward and reverse time stochastic differential equations and Girsanov transformations.We present a principled and systematic framework for sampling and generative modelling centred around divergences on path space. Our work culminates in the development of a novel score-based annealed flow technique (with connections to Jarzynski and Crooks identities from statistical physics) and a regularised iterative proportional fitting (IPF)-type objective, departing from the sequential nature of standard IPF. Through a series of generative modelling examples and a double-well-based rare event task, we showcase the potential of the proposed methods.",
-      "paper_url": "https://arxiv.org/abs/2307.01050",
-      "published_at": "2023-12-04T00:00:00Z",
       "talk_date": "2023-12-04",
-      "authors": "Francisco Vargas, Nikolas Nüsken",
+      "authors": "Francisco Vargas",
       "speaker": "Francisco Vargas"
     },
     {
@@ -1821,21 +1743,8 @@
       "abstract": "~ 00:00 Intro & Outline 01:39 - What is DGL 04:03 - Advantages of DGL 16:15 - DGL Release History and Architecture Overview 39:20 - GNN Research at ASAIL - On Scalability 53:34 - Improving GNN with Energy Unfolding Perspective 58:31 - A Series of Works in This Direction 59:31 - Looking Forward 01:01:48 - Q+A",
       "paper_url": null,
       "published_at": "2023-03-22T02:59:14Z",
-      "talk_date": "2023-03-22",
-      "authors": "Minjie Wang",
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "not really a paper!\nDGL 1.0: Empowering Graph Machine Learning for Everyone \nThe rapid growth of new Graph Machine Learning technology such as Graph Neural Networks",
-      "speakers": "GNNs",
-      "abstract": "has propelled the development of new open source tools. In this talk, we will introduce Deep Graph Library (DGL) 1.0, a significant milestone of its 3+ year of development. DGL 1.0 provides a comprehensive and user-friendly support for both academic research on state-of-the-art models and industrial demands for scaling GNNs to large, real-world graphs. We will highlight one of the key new features -- DGL Sparse, a new sparse matrix programming abstraction designed for trending Graph Machine Learning models such as diffusion-based GNNs, Hypergraph Neural Networks and Graph Transformers. Lastly, we will illustrate some of the research efforts by the team behind in terms of of GNN scalability and graph data pipeline.",
-      "paper_url": null,
-      "published_at": "2023-03-20T00:00:00Z",
       "talk_date": "2023-03-20",
-      "authors": "GNNs",
+      "authors": "Minjie Wang",
       "speaker": "Dr. Minjie Wang is a Senior Applied Scientist at Amazon AI Shanghai Lab, where he leads the research and development in the interdisciplinary area of machine learning and systems. He received his Ph.D. from New York University and has since been dedicated to building deep learning systems with high usability and performance, as well as applying machine learning to optimize systems. Dr. Wang is also a passionate open-source enthusiast and has founded and contributed to several well-known open-source projects, including Minerva, Apache MXNet, MinPy, and Deep Graph Library (DGL). Notably, NVIDIA recognized Minerva as one of the \"Modern AI Engines,\" while AWS has adopted Apache MXNet as their deep learning framework of choice. Furthermore, DGL has become one of the most popular frameworks for developing and applying Graph Neural Networks technology."
     },
     {
@@ -1920,26 +1829,13 @@
       "video_id": "xvYMqNAxTEA",
       "video_url": "https://www.youtube.com/watch?v=xvYMqNAxTEA",
       "thumbnail_url": "https://i.ytimg.com/vi/xvYMqNAxTEA/maxresdefault.jpg",
-      "talk_title": "Examining GNNs for Crystal Structures: Limitations and Opportunities for Capturing Periodicity",
+      "talk_title": "Examining graph neural networks for crystal structures: limitations and opportunities for capturing periodicity",
       "speakers": "Sheng Gong, Tian Xie, Yang Shao-Horn, Rafael Gomez-Bombarelli, Jeffrey C. Grossman",
       "abstract": "Historically, materials informatics has relied on human-designed descriptors of materials structures. In recent years, graph neural networks (GNNs) have been proposed for learning representations of crystal structures from data end-to-end producing vectorial embeddings that are optimized for downstream prediction tasks. However, a systematic scheme is lacking to analyze and understand the limits of GNNs for capturing crystal structures. In this work, we propose to use human-designed descriptors as a bank of human knowledge to test whether black-box GNNs can capture knowledge of crystal structures. We find that current state-of-the-art GNNs cannot capture periodicity of crystal structures well, and we analyze the limitations of the GNN models that result in this failure from three aspects: local expressive power, long-range information, and readout function. We propose an initial solution, hybridizing descriptors with GNNs, to improve the prediction of GNNs for materials properties, especially phonon internal energy and heat capacity with 90% lower errors, and we analyze the mechanisms for the improved prediction. All the analysis can be easily extended to other deep representation learning models, human-designed descriptors, and systems such as molecules and amorphous materials.",
       "paper_url": "https://arxiv.org/abs/2208.05039",
       "published_at": "2023-01-25T05:56:32Z",
-      "talk_date": "2023-01-25",
-      "authors": "Sheng Gong, Tian Xie, Yang Shao-Horn, Rafael Gomez-Bombarelli, Jeffrey C. Grossman",
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "Examining graph neural networks for crystal structures: limitations and opportunities for capturing periodicity&nbsp; Gong,&nbsp;Tian Xie,&nbsp;Yang Shao-Horn,&nbsp;Rafael Gomez-Bombarelli,&nbsp;Jeffrey C. Grossman)",
-      "speakers": "Sheng Gong is a postdoc and recent graduate from Prof. Jeffrey C. Grossman’s group at Department of Materials Science and Engineering, Massachusetts Institute of Technology. He is interested in application of machine learning for accelerating the development of materials science. His past and ongoing research projects include study and design of graph neural networks for prediction of scalar and volumetric materials properties, application of information transfer strategy to improve prediction of materials properties with limited amount of data, optimization of experimental conditions by Bayesian Optimization, and study and design of energy materials by machine learning and atomistic modeling.",
-      "abstract": "Historically, materials informatics has relied on human-designed descriptors of materials structures. In recent years, graph neural networks (GNNs) have been proposed for learning representations of crystal structures from data end-to-end producing vectorial embeddings that are optimized for downstream prediction tasks. However, a systematic scheme is lacking to analyze and understand the limits of GNNs for capturing crystal structures. In this work, we propose to use human-designed descriptors as a bank of human knowledge to test whether black-box GNNs can capture knowledge of crystal structures. We find that current state-of-the-art GNNs cannot capture periodicity of crystal structures well, and we analyze the limitations of the GNN models that result in this failure from three aspects: local expressive power, long-range information, and readout function. We propose an initial solution, hybridizing descriptors with GNNs, to improve the prediction of GNNs for materials properties, especially phonon internal energy and heat capacity with 90% lower errors, and we analyze the mechanisms for the improved prediction. All the analysis can be easily extended to other deep representation learning models, human-designed descriptors, and systems such as molecules and amorphous materials.",
-      "paper_url": "https://arxiv.org/abs/2208.05039&nbsp;(Sheng",
-      "published_at": "2023-01-23T00:00:00Z",
       "talk_date": "2023-01-23",
-      "authors": null,
+      "authors": "Sheng Gong, Tian Xie, Yang Shao-Horn, Rafael Gomez-Bombarelli, Jeffrey C. Grossman",
       "speaker": "Sheng Gong is a postdoc and recent graduate from Prof. Jeffrey C. Grossman’s group at Department of Materials Science and Engineering, Massachusetts Institute of Technology. He is interested in application of machine learning for accelerating the development of materials science. His past and ongoing research projects include study and design of graph neural networks for prediction of scalar and volumetric materials properties, application of information transfer strategy to improve prediction of materials properties with limited amount of data, optimization of experimental conditions by Bayesian Optimization, and study and design of energy materials by machine learning and atomistic modeling."
     },
     {
@@ -2042,21 +1938,8 @@
       "abstract": "Despite the prevalence of recent success in learning from static graphs, learning from time-evolving graphs remains an open challenge. In this work, we design new, more stringent evaluation procedures for link prediction specific to dynamic graphs, which reflect real-world considerations, to better compare the strengths and weaknesses of methods. First, we create two visualization techniques to understand the reoccurring patterns of edges over time and show that many edges reoccur at later time steps. Based on this observation, we propose a pure memorization-based baseline called EdgeBank. EdgeBank achieves surprisingly strong performance across multiple settings which highlights that the negative edges used in the current evaluation are easy. To sample more challenging negative edges, we introduce two novel negative sampling strategies that improve robustness and better match real-world applications. Lastly, we introduce six new dynamic graph datasets from a diverse set of domains missing from current benchmarks, providing new challenges and opportunities for future research.",
       "paper_url": "https://openreview.net/forum?id=1GVpwr2Tfdg",
       "published_at": "2022-11-08T18:53:45Z",
-      "talk_date": "2022-11-08",
-      "authors": "Andy Huang and Farimah Poursafaei",
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "Towards Better Evaluation for Dynamic Link Prediction&nbsp; Poursafaei, Andy Huang, Kellin Pelrine, Reihaneh Rabbany)",
-      "speakers": "The authors Farimah Poursafaei and Andy Huang! Andy Huang is a PhD student at Mila and McGill university.",
-      "abstract": "Despite the prevalence of recent success in learning from static graphs, learning from time-evolving graphs remains an open challenge. In this work, we design new, more stringent evaluation procedures for link prediction specific to dynamic graphs, which reflect real-world considerations, to better compare the strengths and weaknesses of methods. First, we create two visualization techniques to understand the reoccurring patterns of edges over time and show that many edges reoccur at later time steps. Based on this observation, we propose a pure memorization baseline called EdgeBank. EdgeBank achieves surprisingly strong performance across multiple settings because easy negative edges are often used in the current evaluation setting. To evaluate against more difficult negative edges, we introduce two more challenging negative sampling strategies that improve robustness and better match real-world applications. Lastly, we introduce six new dynamic graph datasets from a diverse set of domains missing from current benchmarks, providing new challenges and opportunities for future research. Our code repository is accessible at https://github.com/fpour/DGB.git.",
-      "paper_url": "https://openreview.net/forum?id=1GVpwr2Tfdg&nbsp;(Farimah",
-      "published_at": "2022-11-07T00:00:00Z",
       "talk_date": "2022-11-07",
-      "authors": null,
+      "authors": "Andy Huang and Farimah Poursafaei",
       "speaker": "The authors Farimah Poursafaei and Andy Huang! Andy Huang is a PhD student at Mila and McGill university."
     },
     {
@@ -2083,19 +1966,6 @@
       "published_at": "2022-10-31T22:26:06Z",
       "talk_date": "2022-10-31",
       "authors": "Clément Vignac",
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "DiGress: Discrete Denoising diffusion for graph generation&nbsp; Vignac,&nbsp;Igor Krawczuk,&nbsp;Antoine Siraudin,&nbsp;Bohan Wang,&nbsp;Volkan Cevher,&nbsp;Pascal Frossard)",
-      "speakers": "First author&nbsp;Clément Vignac&nbsp;who is a PhD student at EPFL in the lab of Prof. Pascal Frossard. He works on ML for sets and graphs, incorporating symmetry priors of these data modalities, and graph generation.",
-      "abstract": "2022\nThis work introduces DiGress, a discrete denoising diffusion model for generating graphs with categorical node and edge attributes. Our model defines a diffusion process that progressively edits a graph with noise (adding or removing edges, changing the categories), and a graph transformer network that learns to revert this process. With these two ingredients in place, we reduce distribution learning over graphs to a simple sequence of classification tasks. We further improve sample quality by proposing a new Markovian noise model that preserves the marginal distribution of node and edge types during diffusion, and by adding auxiliary graph-theoretic features derived from the noisy graph at each diffusion step. Finally, we propose a guidance procedure for conditioning the generation on graph-level features. Overall, DiGress achieves state-of-the-art performance on both molecular and non-molecular datasets, with up to 3x validity improvement on a dataset of planar graphs. In particular, it is the first model that scales to the large GuacaMol dataset containing 1.3M drug-like molecules without using a molecule-specific representation such as SMILES or fragments.",
-      "paper_url": "https://arxiv.org/abs/2209.14734&nbsp;(Clement",
-      "published_at": "2022-10-31T00:00:00Z",
-      "talk_date": "2022-10-31",
-      "authors": null,
       "speaker": "First author&nbsp;Clément Vignac&nbsp;who is a PhD student at EPFL in the lab of Prof. Pascal Frossard. He works on ML for sets and graphs, incorporating symmetry priors of these data modalities, and graph generation."
     },
     {
@@ -2107,21 +1977,8 @@
       "abstract": "Equivariant neural networks, whose hidden features transform according to representations of a group G acting on the data, exhibit training efficiency and an improved generalisation performance. In this work, we extend group invariant and equivariant representation learning to the field of unsupervised deep learning. We propose a general learning strategy based on an encoder-decoder framework in which the latent representation is separated in an invariant term and an equivariant group action component. The key idea is that the network learns to encode and decode data to and from a group-invariant representation by additionally learning to predict the appropriate group action to align input and output pose to solve the reconstruction task. We derive the necessary conditions on the equivariant encoder, and we present a construction valid for any G, both discrete and continuous. We describe explicitly our construction for rotations, translations and permutations. We test the validity and the robustness of our approach in a variety of experiments with diverse data types employing different network architectures.",
       "paper_url": "https://arxiv.org/abs/2202.07559",
       "published_at": "2022-10-25T17:41:09Z",
-      "talk_date": "2022-10-25",
-      "authors": "Robin Winter, Marco Bertolini, Tuan Le, Frank Noé, Djork-Arné Clevert",
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "Unsupervised Learning of Group Invariant and Equivariant Representations&nbsp; Winter,&nbsp;Marco Bertolini,&nbsp;Tuan Le,&nbsp;Frank Noé,&nbsp;Djork-Arné Clevert)",
-      "speakers": "The authors Robin Winter&nbsp;and Marco Bertolini. They both work at Bayer AG.",
-      "abstract": "Equivariant neural networks, whose hidden features transform according to representations of a group G acting on the data, exhibit training efficiency and an improved generalisation performance. In this work, we extend group invariant and equivariant representation learning to the field of unsupervised deep learning. We propose a general learning strategy based on an encoder-decoder framework in which the latent representation is separated in an invariant term and an equivariant group action component. The key idea is that the network learns to encode and decode data to and from a group-invariant representation by additionally learning to predict the appropriate group action to align input and output pose to solve the reconstruction task. We derive the necessary conditions on the equivariant encoder, and we present a construction valid for any G, both discrete and continuous. We describe explicitly our construction for rotations, translations and permutations. We test the validity and the robustness of our approach in a variety of experiments with diverse data types employing different network architectures.",
-      "paper_url": "https://arxiv.org/abs/2202.07559&nbsp;(Robin",
-      "published_at": "2022-10-24T00:00:00Z",
       "talk_date": "2022-10-24",
-      "authors": null,
+      "authors": "Robin Winter, Marco Bertolini, Tuan Le, Frank Noé, Djork-Arné Clevert",
       "speaker": "The authors Robin Winter&nbsp;and Marco Bertolini. They both work at Bayer AG."
     },
     {
