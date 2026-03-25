@@ -45,6 +45,19 @@
       "speaker": "Nicholas Boffi who is an assistant professor at CMU."
     },
     {
+      "video_id": "-XNMSnFUPjk",
+      "video_url": "https://www.youtube.com/watch?v=-XNMSnFUPjk",
+      "thumbnail_url": "https://i.ytimg.com/vi/-XNMSnFUPjk/maxresdefault.jpg",
+      "talk_title": "Scaling Atomistic Protein Binder Design with Generative Pretraining and Test-Time Compute",
+      "speakers": "Kieran Didi, Karsten Kreis",
+      "abstract": "Presented alongside 'Latent Generative Search unlocks de novo Design of Untapped Biomolecular Interactions at Scale'. Scaling atomistic protein binder design using generative pretraining and test-time compute for high-accuracy de novo protein binder design.",
+      "paper_url": "https://openreview.net/forum?id=qmCpJtFZra",
+      "published_at": "2026-03-23T00:00:00Z",
+      "talk_date": "2026-03-23",
+      "authors": "Kieran Didi, Karsten Kreis",
+      "speaker": "Kieran Didi and Karsten Kreis from NVIDIA. Karsten leads protein efforts at NVIDIA. Kieran is a PhD student at University of Oxford with Michael Bronstein."
+    },
+    {
       "video_id": null,
       "video_url": null,
       "thumbnail_url": null,
@@ -344,19 +357,6 @@
       "speaker": "Abhinav Adduri and team from the Arc Institute!"
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "ICML! No reading group",
-      "speakers": "ICML! No reading group",
-      "abstract": null,
-      "paper_url": null,
-      "published_at": "2025-07-14T00:00:00Z",
-      "talk_date": "2025-07-14",
-      "authors": null,
-      "speaker": "ICML! No reading group"
-    },
-    {
       "video_id": "5EsZrhLk0zg",
       "video_url": "https://www.youtube.com/watch?v=5EsZrhLk0zg",
       "thumbnail_url": "https://i.ytimg.com/vi/5EsZrhLk0zg/maxresdefault.jpg",
@@ -430,22 +430,9 @@
       "abstract": "We introduce Orb-v3, the next generation of the Orb family of universal interatomic potentials. Models in this family expand the performance-speed-memory Pareto frontier, offering near SoTA performance across a range of evaluations with a greater than 10x reduction in latency and greater than 8x reduction in memory. Our experiments systematically traverse this frontier, charting the trade-off induced by roto-equivariance, conservatism and graph sparsity. Contrary to recent literature, we find that non-equivariant, non-conservative architectures can accurately model physical properties, including those which require higher-order derivatives of the potential energy surface. This model release is guided by the principle that the most valuable foundation models for atomic simulation will excel on all fronts: accuracy, latency and system size scalability. The reward for doing so is a new era of computational chemistry driven by high-throughput and mesoscale all-atom simulations.",
       "paper_url": "https://arxiv.org/abs/2504.06231",
       "published_at": "2025-06-01T18:06:23Z",
-      "talk_date": "2025-06-01",
+      "talk_date": "2025-05-26",
       "authors": "Tim Duignan & Sander Vandenhaute",
       "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "Orbv3 and other models in that class. What is the state of NN potentials and similar questions. This is the Orb-v3 paper:",
-      "speakers": "Benjamin Rhodes, Sander Vandenhaute, Vaidotas Šimkus, James Gin, Jonathan Godwin, Tim Duignan, Mark Neumann",
-      "abstract": "We introduce Orb-v3, the next generation of the Orb family of universal interatomic potentials. Models in this family expand the performance-speed-memory Pareto frontier, offering near SoTA performance across a range of evaluations with a &gt;10x reduction in latency and &gt; 8x reduction in memory. Our experiments systematically traverse this frontier, charting the trade-off induced by roto-equivariance, conservatism and graph sparsity. Contrary to recent literature, we find that non-equivariant, non-conservative architectures can accurately model physical properties, including those which require higher-order derivatives of the potential energy surface.\nThis model release is guided by the principle that the most valuable foundation models for atomic simulation will excel on all fronts: accuracy, latency and system size scalability. The reward for doing so is a new era of computational chemistry driven by high-throughput and mesoscale all-atom simulations.",
-      "paper_url": "https://arxiv.org/abs/2504.06231",
-      "published_at": "2025-05-26T00:00:00Z",
-      "talk_date": "2025-05-26",
-      "authors": "Benjamin Rhodes, Sander Vandenhaute, Vaidotas Šimkus, James Gin, Jonathan Godwin, Tim Duignan, Mark Neumann",
-      "speaker": "Tim Duignan."
     },
     {
       "video_id": "D-VriormkRM",
@@ -654,19 +641,6 @@
       "talk_date": "2025-01-06",
       "authors": "Johann Brehmer, Sönke Behrends, Pim de Haan, Taco Cohen",
       "speaker": "Johann Brehmer whos is a physicist turned machine learner and a research scientist at CuspAI in Amsterdam. There he works on machine learning–driven discovery of materials for carbon capture."
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "No reading group today!",
-      "speakers": "No reading group today!",
-      "abstract": null,
-      "paper_url": null,
-      "published_at": "2024-12-16T00:00:00Z",
-      "talk_date": "2024-12-16",
-      "authors": null,
-      "speaker": "No reading group today!"
     },
     {
       "video_id": "voMue3G-_vk",
@@ -981,19 +955,6 @@
       "speaker": "Snir Hordan who started his PhD in the Technion (Israel) about 6 months ago, supervised by Dr. Nadav Dym. He mainly looks at the expressivity of WL tests applied to point clouds."
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "No Paper! NeurIPS panic paper finishing time :7",
-      "speakers": "No Paper! NeurIPS panic paper finishing time :7",
-      "abstract": null,
-      "paper_url": null,
-      "published_at": "2024-05-20T00:00:00Z",
-      "talk_date": "2024-05-20",
-      "authors": null,
-      "speaker": "No Paper! NeurIPS panic paper finishing time :7"
-    },
-    {
       "video_id": "AUDHb-tnlB0",
       "video_url": "https://www.youtube.com/watch?v=AUDHb-tnlB0",
       "thumbnail_url": "https://i.ytimg.com/vi/AUDHb-tnlB0/maxresdefault.jpg",
@@ -1267,19 +1228,6 @@
       "speaker": null
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "SE",
-      "speakers": "3",
-      "abstract": "-Stochastic Flow Matching for Protein Backbone Generation https://arxiv.org/abs/2310.02391 (Avishek Joey Bose, Tara Akhound-Sadegh, Kilian Fatras, Guillaume Huguet, Jarrid Rector-Brooks, Cheng-Hao Liu, Andrei Cristian Nica, Maksym Korablyov, Michael Bronstein, Alexander Tong)\nThe computational design of novel protein structures has the potential to impact numerous scientific disciplines greatly. Toward this goal, we introduce FoldFlow a series of novel generative models of increasing modeling power based on the flow-matching paradigm over 3D rigid motions -- i.e. the group SE(3) -- enabling accurate modeling of protein backbones. We first introduce FoldFlow-Base, a simulation-free approach to learning deterministic continuous-time dynamics and matching invariant target distributions on SE(3). We next accelerate training by incorporating Riemannian optimal transport to create FoldFlow-OT, leading to the construction of both more simple and stable flows. Finally, we design FoldFlow-SFM coupling both Riemannian OT and simulation-free training to learn stochastic continuous-time dynamics over SE(3). Our family of FoldFlow generative models offer several key advantages over previous approaches to the generative modeling of proteins: they are more stable and faster to train than diffusion-based approaches, and our models enjoy the ability to map any invariant source distribution to any invariant target distribution over SE(3). Empirically, we validate our FoldFlow models on protein backbone generation of up to 300 amino acids leading to high-quality designable, diverse, and novel samples.",
-      "paper_url": null,
-      "published_at": "2023-12-18T00:00:00Z",
-      "talk_date": "2023-12-18",
-      "authors": "3",
-      "speaker": "Joey Bose and hopefully also Alex Tong."
-    },
-    {
       "video_id": "tHWCUYNuros",
       "video_url": "https://www.youtube.com/watch?v=tHWCUYNuros",
       "thumbnail_url": "https://i.ytimg.com/vi/tHWCUYNuros/maxresdefault.jpg",
@@ -1525,19 +1473,6 @@
       "talk_date": "2023-08-07",
       "authors": "Osama Abdin, Philip M. Kim",
       "speaker": "First author Osama Abdin from University of Toronto."
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "ICML Break! Enjoy the conference everyone!",
-      "speakers": "ICML Break! Enjoy the conference everyone!",
-      "abstract": null,
-      "paper_url": null,
-      "published_at": "2023-07-24T00:00:00Z",
-      "talk_date": "2023-07-24",
-      "authors": null,
-      "speaker": "ICML Break! Enjoy the conference everyone!"
     },
     {
       "video_id": "yVdFYyYwcUA",
@@ -1881,33 +1816,7 @@
       "video_id": null,
       "video_url": null,
       "thumbnail_url": null,
-      "talk_title": "No meeting due to the Learning on Graphs conference - go attend the completely free and virtual conference yourself!",
-      "speakers": null,
-      "abstract": "All information about the conference and registration information:&nbsp;https://logconference.org/",
-      "paper_url": null,
-      "published_at": "2022-12-05T00:00:00Z",
-      "talk_date": "2022-12-05",
-      "authors": null,
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "We will have a&nbsp;\"NeurIPS orientation\" session!",
-      "speakers": null,
-      "abstract": "Here is the schedule:&nbsp;https://neurips.cc/virtual/2022/calendar\n\nWe share with each other what GraphML/GeometricDL papers to look out for and share recommendations for what poster presentations to visit!\nI hope that will help us get the most out of NeurIPS and I am curious to hear what your favorite NeurIPS&nbsp;GraphML paper is, so come with a recommendation next week!",
-      "paper_url": null,
-      "published_at": "2022-11-28T00:00:00Z",
-      "talk_date": "2022-11-28",
-      "authors": null,
-      "speaker": null
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "Fine-Tuning Graph Neural Networks via Graph Topology induced Optimal Transport&nbsp; Zhang,&nbsp;Xi Xiao,&nbsp;Long-Kai Huang,&nbsp;Yu Rong,&nbsp;Yatao Bian)",
+      "talk_title": "Fine-Tuning Graph Neural Networks via Graph Topology induced Optimal Transport",
       "speakers": "The first author of the paper&nbsp;Jiying Zhang who is an MS student at Tsinghua University&nbsp;co-advised by Xi Xiao and Shu-Tao Xia.&nbsp;He previously did an internship at Tencent AI Lab.",
       "abstract": "Recently, the pretrain-finetuning paradigm has attracted tons of attention in graph learning community due to its power of alleviating the lack of labels problem in many real-world applications. Current studies use existing techniques, such as weight constraint, representation constraint, which are derived from images or text data, to transfer the invariant knowledge from the pre-train stage to fine-tuning stage. However, these methods failed to preserve invariances from graph structure and Graph Neural Network (GNN) style models. In this paper, we present a novel optimal transport-based fine-tuning framework called GTOT-Tuning, namely, Graph Topology induced Optimal Transport fine-Tuning, for GNN style backbones. GTOT-Tuning is required to utilize the property of graph data to enhance the preservation of representation produced by fine-tuned networks. Toward this goal, we formulate graph local knowledge transfer as an Optimal Transport (OT) problem with a structural prior and construct the GTOT regularizer to constrain the fine-tuned model behaviors. By using the adjacency relationship amongst nodes, the GTOT regularizer achieves node-level optimal transport procedures and reduces redundant transport procedures, resulting in efficient knowledge transfer from the pre-trained models. We evaluate GTOT-Tuning on eight downstream tasks with various GNN backbones and demonstrate that it achieves state-of-the-art fine-tuning performance for GNNs.",
       "paper_url": "https://arxiv.org/abs/2203.10453&nbsp;(Jiying",
@@ -1941,19 +1850,6 @@
       "talk_date": "2022-11-07",
       "authors": "Andy Huang and Farimah Poursafaei",
       "speaker": "The authors Farimah Poursafaei and Andy Huang! Andy Huang is a PhD student at Mila and McGill university."
-    },
-    {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
-      "talk_title": "TBD",
-      "speakers": "TBD",
-      "abstract": null,
-      "paper_url": null,
-      "published_at": "2022-11-07T00:00:00Z",
-      "talk_date": "2022-11-07",
-      "authors": null,
-      "speaker": "TBD"
     },
     {
       "video_id": "k2saMtP-Fn8",
