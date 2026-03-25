@@ -29,7 +29,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/sitemap.xml"
+              "src/sitemap.xml",
+              { "glob": "**/*", "input": "src/starkly-speaking", "output": "/starkly-speaking" }
             ],
             "styles": [
               "theme.scss",
@@ -97,7 +98,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/sitemap.xml"
+              "src/sitemap.xml",
+              { "glob": "**/*", "input": "src/starkly-speaking", "output": "/starkly-speaking" }
             ],
             "styles": [
               "theme.scss",

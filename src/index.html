@@ -16,11 +16,11 @@
   </script>
   <meta charset="utf-8">
   <meta name="Description"
-        content="Hi! I am an MIT PhD student working on Graph/Geometric machine learning and applications to molecules + proteins. Feel free to reach out!">
+        content="Hi! I am an MIT PhD student working on machine learning for biomolecules. Feel free to reach out!">
   <title>Hannes Stärk</title>
-  <meta property="og:title" content="Hannes Stärk: research on Graph and Geometric ML"/>
+  <meta property="og:title" content="Hannes Stärk: ML for Biomolecules"/>
   <meta property="og:url" content="https://hannes-stark.com/"/>
-  <meta property="og:description" content="Hi! I am an MIT PhD student working on Graph/Geometric machine learning and applications to molecules + proteins. Feel free to reach out!"/>
+  <meta property="og:description" content="Hi! I am an MIT PhD student working on machine learning for biomolecules. Feel free to reach out!"/>
   <meta property="og:image" content="https://hannes-stark.com/assets/Allianz_vor_hecke_OpenGraph_compressed.jpg"/>
   <meta property="og:type" content="website"/>
   <meta name="twitter:card" content="summary_large_image">
@@ -32,6 +32,15 @@
       "url": "https://hannes-stark.com",
       "logo": "https://hannes-stark.com/assets/L2.png"
     }
+  </script>
+  <script>
+    (function() {
+      var path = sessionStorage.getItem('redirectPath');
+      if (path) {
+        sessionStorage.removeItem('redirectPath');
+        window.history.replaceState(null, null, path);
+      }
+    })();
   </script>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">

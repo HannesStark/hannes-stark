@@ -6,64 +6,33 @@
         <img class="profile-image" src="assets/starkly-speaking.jpeg" alt="Starkly Speaking">
       </a>
     </div>
-    <div fxFlex="55" fxFlex.xs="65" ngClass.sm="small-margin" ngClass.xs="small-margin--xs">
+    <div fxFlex="55" fxFlex.xs="90" ngClass.sm="small-margin" ngClass.xs="small-margin--xs">
       <h1 class="Title" ngClass.lt-md="text-align-center">Starkly Speaking Reading Group</h1>
-      <!--
-      <div class="underline-title--top" fxLayoutAlign.lt-md="center center">
-        <h1 class="left-titles">M. Sc. Computer Science Student</h1>
-      </div>
-      -->
       <div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
-        <p class="text-align-left">
-          Welcome to the Starkly Speaking reading group where paper authors present and discuss their work every week! <br>
-          Below are the <a (click)="scroll('Schedule')" class="link-style-green">Schedule</a> and <a
-          (click)="scroll('previous')" class="link-style-green">previously</a> covered papers.
+        <p class="text-align-left intro-text">
+          Paper authors present and discuss their work every week — every Monday at <strong>9am PT / 12pm ET / 6pm CE(S)T</strong>.
+          Browse the <a (click)="scroll('Schedule')" class="link-style-green">upcoming schedule</a> and <a
+          (click)="scroll('previous')" class="link-style-green">past talks</a> below.
         </p>
 
-        <div fxLayout="row" fxLayoutAlign="left center">
-          <p>
-            <a mat-button class="group-button item-title"
-               href="https://zoom.us/j/5775722530?pwd=ZzlGTXlDNThhUDZOdU4vN2JRMm5pQT09"
-               target="_blank">Zoom Link</a>
-          </p>
-          <div class="next-to-button">
-            Just hop on! We meet every Monday at 9am PT / 12pm ET / 6pm CE(S)T.
+        <div class="action-rows">
+          <div class="action-row">
+            <a mat-button class="group-button" href="https://zoom.us/j/5775722530?pwd=ZzlGTXlDNThhUDZOdU4vN2JRMm5pQT09" target="_blank">Zoom Link</a>
+            <span class="action-label">Just hop on — no sign-up needed.</span>
+          </div>
+          <div class="action-row">
+            <a mat-button class="group-button" href="https://join.slack.com/t/starkspeak/shared_invite/zt-3tg9a0f0i-zEcb44fwr0lQpQr7EOxhBA" target="_blank">Join Slack</a>
+            <span class="action-label">Discuss papers and vote for upcoming talks.</span>
+          </div>
+          <div class="action-row">
+            <a mat-button class="group-button" href="https://groups.google.com/g/starkspeak" target="_blank">Mailing List</a>
+            <span class="action-label">Weekly email updates about the next paper.</span>
           </div>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="left center">
-          <p>
-            <a mat-button class="group-button item-title"
-               href="https://join.slack.com/t/starkspeak/shared_invite/zt-3tg9a0f0i-zEcb44fwr0lQpQr7EOxhBA"
-               target="_blank">Join Slack!</a>
-          </p>
-          <div class="next-to-button">
-            For discussions outside of our meetings and to vote for papers.
-          </div>
-        </div>
-
-        <div fxLayout="row" fxLayoutAlign="left center">
-          <p>
-            <a mat-button class="group-button item-title"
-               href="https://groups.google.com/g/starkspeak"
-               target="_blank">Join Mailing List!</a>
-          </p>
-          <div class="next-to-button">
-            For weekly updates about the next paper (via Google groups).
-          </div>
-        </div>
-
-        <p>
-          You can also subscribe to the meetings via <a
-          href="https://calendar.google.com/calendar/u/0?cid=dmR1am4ycGJwa2hncjVmNTVjbTM5cWJtdThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
-          target="_blank"
-          class="link-style-green">Google Calendar</a>, or <a
-          href="https://calendar.google.com/calendar/ical/vdujn2pbpkhgr5f55cm39qbmu8%40group.calendar.google.com/public/basic.ics"
-          target="_blank"
-          class="link-style-green">via iCal</a>. Alternatively, <a
-          href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MWhmZDJzMnI0aG10YTlvZzZpZGVsYnJmaWNfMjAyMTA4MDNUMTUwMDAwWiB2ZHVqbjJwYnBraGdyNWY1NWNtMzlxYm11OEBn&tmsrc=vdujn2pbpkhgr5f55cm39qbmu8%40group.calendar.google.com&scp=ALL"
-          target="_blank"
-          class="link-style-green">add the events</a>.
+        <p class="calendar-links">
+          Subscribe via <a href="https://calendar.google.com/calendar/u/0?cid=dmR1am4ycGJwa2hncjVmNTVjbTM5cWJtdThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ" target="_blank" class="link-style-green">Google Calendar</a>
+          or <a href="https://calendar.google.com/calendar/ical/vdujn2pbpkhgr5f55cm39qbmu8%40group.calendar.google.com/public/basic.ics" target="_blank" class="link-style-green">iCal</a>.
         </p>
         <!--div class="item" fxLayout="column" fxLayoutAlign.lt-md="center center">
           <div fxLayout="row">

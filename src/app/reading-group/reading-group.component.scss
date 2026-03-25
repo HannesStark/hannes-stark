@@ -1,7 +1,16 @@
 
 .profile-image {
-  max-width: 300px;
+  max-width: 360px;
+  width: 100%;
   margin: 32px;
+  border-radius: 50%;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.24);
+  }
 }
 
 .responsive {
@@ -27,6 +36,36 @@
   margin-bottom: 12px;
 }
 
+.intro-text {
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.action-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.action-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.calendar-links {
+  font-size: 13px;
+  color: #777;
+  margin-top: 0;
+}
+
 .responsive iframe {
   position: absolute;
   top: 0;
@@ -38,7 +77,8 @@
 }
 
 .slight-bold {
-  font-weight: 580;
+  font-weight: 650;
+  color: #222;
 }
 
 .video {
@@ -55,6 +95,7 @@
 
 fa-icon {
   color: var(--color-grey);
+  font-size: 13px;
 }
 
 .Title {
@@ -71,7 +112,10 @@ fa-icon {
 }
 
 h3 {
-  margin: 0
+  margin: 0;
+  font-size: 16px;
+  font-weight: 560;
+  line-height: 1.4;
 }
 
 
@@ -205,7 +249,9 @@ h3 {
 .left-titles {
   margin-bottom: 0;
   color: var(--color-primary);
-  font-weight: 520;
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: 1.5px;
 
   &--hidden {
     @extend .left-titles;
@@ -233,7 +279,7 @@ h3 {
 
 .item-subtitle {
   color: var(--color-primary);
-  font-weight: 520;
+  font-weight: 580;
   margin: 0;
 }
 
@@ -248,8 +294,9 @@ h3 {
 
 .separator {
   border: 0;
-  border-top: 2px dashed var(--color-light-grey);
+  border-top: 1px solid #e8e8e8;
   width: 100%;
+  margin: 12px 0;
 
   &--small {
     @extend .separator;
@@ -280,11 +327,16 @@ h3 {
 }
 
 .paragraph {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
 }
 
 .underline-title {
-  border-bottom: 3px solid var(--color-primary);;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 6px;
+  margin-bottom: 18px;
 
   &--top {
     @extend .underline-title;
@@ -293,7 +345,7 @@ h3 {
 }
 
 .item {
-  margin: 5px 0px;
+  margin: 6px 0;
 }
 
 .small-margin {
@@ -348,6 +400,9 @@ form.contact {
   background-color: white;
   border: 2px solid var(--color-primary);
   transition: 0.4s;
+  min-width: 148px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .group-button:hover:enabled {

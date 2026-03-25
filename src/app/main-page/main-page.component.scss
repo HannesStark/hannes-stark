@@ -1,8 +1,16 @@
 
 .profile-image {
   border-radius: 50%;
-  max-width: 300px;
+  max-width: 320px;
+  width: 100%;
   margin: 32px;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.22);
+  }
 }
 
 .responsive {
@@ -40,20 +48,26 @@ fa-icon {
 }
 
 .Name {
-  font-size: 40px;
-  font-weight: 480;
+  font-size: 44px;
+  font-weight: 500;
   color: var(--color-primary);
-  padding: 20px 0px;
+  padding: 20px 0px 12px 0px;
+  letter-spacing: 0.5px;
 }
 
 
 .socials-links {
   position: relative;
-  padding: 5px 10px;
+  padding: 6px 12px 6px 0;
+  font-size: 14px;
+  color: #444;
 }
 
 h3 {
-  margin: 0
+  margin: 0;
+  font-size: 16px;
+  font-weight: 560;
+  line-height: 1.4;
 }
 
 
@@ -192,7 +206,9 @@ h3 {
 .left-titles {
   margin-bottom: 0;
   color: var(--color-primary);
-  font-weight: 520;
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: 1.5px;
 
   &--hidden {
     @extend .left-titles;
@@ -254,8 +270,9 @@ h3 {
 
 .separator {
   border: 0;
-  border-top: 2px dashed var(--color-light-grey);
+  border-top: 1px solid #e8e8e8;
   width: 100%;
+  margin: 10px 0;
 
   &--small {
     @extend .separator;
@@ -265,8 +282,8 @@ h3 {
 
 .separator-slim {
   border: 0;
-  margin: 0;
-  border-top: 2px dashed var(--color-light-grey);
+  margin: 10px 0;
+  border-top: 1px solid #e8e8e8;
   width: 100%;
 
   &--small {
@@ -307,7 +324,7 @@ h3 {
 }
 
 .item {
-  margin: 5px 0px;
+  margin: 6px 0;
 }
 
 .small-margin {
