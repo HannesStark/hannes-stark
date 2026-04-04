@@ -67,6 +67,32 @@
             var resolutionMode = getParam('resolution-mode', '[^&]+').trim().toLowerCase();
             var viewportShowToggleFullscreen = getParam('show-toggle-fullscreen', '[^&]+').trim() === '1';
 
+            // First two colors are blue and yellow; rest retained from the default many-distinct palette
+            var customPaletteColors = [
+                0x009CE0, // Blue (0, 156, 224)
+                0xFCC400, // Yellow (252, 196, 0)
+                0x1b9e77, 0xd95f02, 0x7570b3, 0xe7298a, 0x66a61e, 0xe6ab02, 0xa6761d, 0x666666,
+                0xe41a1c, 0x377eb8, 0x4daf4a, 0x984ea3, 0xff7f00, 0xffff33, 0xa65628, 0xf781bf, 0x999999,
+                0x66c2a5, 0xfc8d62, 0x8da0cb, 0xe78ac3, 0xa6d854, 0xffd92f, 0xe5c494, 0xb3b3b3
+            ];
+
+            var illustrativeColorParams = {
+                style: {
+                    name: 'entity-id',
+                    params: {
+                        overrideWater: true,
+                        waterColor: 0xFF0D0D,
+                        palette: {
+                            name: 'colors',
+                            params: {
+                                list: { kind: 'set', colors: customPaletteColors }
+                            }
+                        }
+                    }
+                },
+                carbonLightness: 0
+            };
+
             molstar.Viewer.create('app', {
                 disabledExtensions: [],
                 layoutShowControls: !hideControls,
@@ -90,6 +116,62 @@
             }).then(viewer => {
                 // Set white background
                 viewer.plugin.canvas3d?.setProps({ renderer: { backgroundColor: 0xffffff } });
+
+                // Set illustrative as the default representation preset
+                var PluginConfig = molstar?.lib?.plugin?.PluginConfig;
+                if (PluginConfig) {
+                    viewer.plugin.config.set(
+                        PluginConfig.Structure.DefaultRepresentationPreset,
+                        'preset-structure-representation-illustrative'
+                    );
+                }
+
+                // Apply illustrative style globally: ignoreLight + outline + occlusion
+                viewer.plugin.managers.structure.component.setOptions({
+                    ...viewer.plugin.managers.structure.component.state.options,
+                    ignoreLight: true
+                });
+                var pp = viewer.plugin.canvas3d?.props.postprocessing;
+                if (pp && viewer.plugin.canvas3d) {
+                    viewer.plugin.canvas3d.setProps({
+                        postprocessing: {
+                            outline: {
+                                name: 'on',
+                                params: pp.outline.name === 'on' ? pp.outline.params : {
+                                    scale: 1, color: 0x000000, threshold: 0.33, includeTransparent: true
+                                }
+                            },
+                            occlusion: {
+                                name: 'on',
+                                params: pp.occlusion.name === 'on' ? pp.occlusion.params : {
+                                    multiScale: { name: 'off', params: {} },
+                                    radius: 5, bias: 0.8, blurKernelSize: 15, blurDepthBias: 0.5,
+                                    samples: 32, resolutionScale: 1, color: 0x000000, transparentThreshold: 0.4
+                                }
+                            },
+                            shadow: { name: 'off', params: {} }
+                        }
+                    });
+                }
+
+                // Override buildRepresentation so every representation — whether created by a
+                // preset, manually added via the UI, or added programmatically — always uses
+                // the illustrative color theme with our custom blue/yellow palette.
+                //
+                // When props.type is a string, createStructureRepresentationParams takes the
+                // createParamsByName branch and expects color as a string too.
+                // When props.type is already a provider object (e.g. from the Add Component UI),
+                // it takes the createParamsProvider branch and expects color as a provider object.
+                var _reprBuilder = viewer.plugin.builders.structure.representation;
+                var _origBuildRepr = _reprBuilder.buildRepresentation.bind(_reprBuilder);
+                var _illustrativeColorProvider = viewer.plugin.representation.structure.themes.colorThemeRegistry.get('illustrative');
+                _reprBuilder.buildRepresentation = function (builder, structure, props, options) {
+                    var color = (typeof (props && props.type) === 'string') ? 'illustrative' : _illustrativeColorProvider;
+                    return _origBuildRepr(builder, structure, Object.assign({}, props, {
+                        color: color,
+                        colorParams: illustrativeColorParams
+                    }), options);
+                };
 
                 var snapshotId = getParam('snapshot-id', '[^&]+').trim();
                 if (snapshotId) viewer.setRemoteSnapshot(snapshotId);
