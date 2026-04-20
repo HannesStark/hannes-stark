@@ -38,7 +38,7 @@
     </head>
     <body>
         <div id="app"></div>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/molstar@5.8.0/build/viewer/molstar.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/molstar@5.8.0/build/viewer/molstar.js"></script>
         <script type="text/javascript">
             function getParam(name, regex) {
                 var r = new RegExp(name + '=' + '(' + regex + ')[&]?', 'i');
@@ -117,16 +117,9 @@
                 // Set white background
                 viewer.plugin.canvas3d?.setProps({ renderer: { backgroundColor: 0xffffff } });
 
-                // Set illustrative as the default representation preset
-                var PluginConfig = molstar?.lib?.plugin?.PluginConfig;
-                if (PluginConfig) {
-                    viewer.plugin.config.set(
-                        PluginConfig.Structure.DefaultRepresentationPreset,
-                        'preset-structure-representation-illustrative'
-                    );
-                }
-
                 // Apply illustrative style globally: ignoreLight + outline + occlusion
+                // (Do NOT override DefaultRepresentationPreset — that switches to spacefill.
+                //  We keep the default cartoon and apply illustrative colors + style on top.)
                 viewer.plugin.managers.structure.component.setOptions({
                     ...viewer.plugin.managers.structure.component.state.options,
                     ignoreLight: true
@@ -212,6 +205,80 @@
                 window.addEventListener('unload', () => {
                     viewer.dispose();
                 });
+
+                // Add Surface for selection — injected into Quick Styles panel next to "Illustrative"
+                async function addSurfaceForSelection() {
+                    var plugin = viewer.plugin;
+                    var allStructures = plugin.managers.structure.hierarchy.current.structures;
+                    console.log('[Add Surface] structures:', allStructures.length);
+
+                    for (var si = 0; si < allStructures.length; si++) {
+                        var s = allStructures[si];
+                        var structureData = s.cell && s.cell.obj && s.cell.obj.data;
+                        if (!structureData) { console.warn('[Add Surface] no structureData'); continue; }
+
+                        var hasSelection = plugin.managers.structure.selection.structureHasSelection(s);
+                        console.log('[Add Surface] hasSelection:', hasSelection);
+                        if (!hasSelection) continue;
+
+                        // getStructure returns the selected sub-structure
+                        var subStructure = plugin.managers.structure.selection.getStructure(structureData);
+                        console.log('[Add Surface] subStructure:', subStructure, 'elementCount:', subStructure && subStructure.elementCount);
+                        if (!subStructure || subStructure.elementCount === 0) continue;
+
+                        // Build bundle using StructureElement.Bundle.fromSubStructure
+                        var SE = molstar && molstar.lib && molstar.lib.StructureElement;
+                        console.log('[Add Surface] StructureElement:', SE);
+                        if (!SE || !SE.Bundle) { console.error('[Add Surface] No StructureElement.Bundle'); continue; }
+
+                        var bundle = SE.Bundle.fromSubStructure(structureData, subStructure);
+                        console.log('[Add Surface] bundle:', bundle);
+
+                        var key = 'sel-surface-' + Date.now();
+                        var component = await plugin.builders.structure.tryCreateComponent(
+                            s.cell,
+                            { type: { name: 'bundle', params: bundle }, nullIfEmpty: true, label: 'Selection Surface' },
+                            key
+                        );
+                        console.log('[Add Surface] component:', component);
+
+                        if (component) {
+                            // Use the registry to get the molecular-surface provider
+                            var reprProvider = plugin.representation.structure.registry.get('molecular-surface');
+                            console.log('[Add Surface] reprProvider:', reprProvider);
+                            await plugin.builders.structure.representation.addRepresentation(component, {
+                                type: reprProvider || 'molecular-surface',
+                                typeParams: { quality: 'medium' }
+                            });
+                        }
+                    }
+                }
+
+                // Inject "Add Surface" button next to "Illustrative" in the Quick Styles panel.
+                // Uses MutationObserver to re-inject after React re-renders.
+                function injectAddSurfaceButton() {
+                    var allBtns = document.querySelectorAll('button');
+                    var illustrativeBtn = null;
+                    for (var i = 0; i < allBtns.length; i++) {
+                        if (allBtns[i].textContent.trim() === 'Illustrative') {
+                            illustrativeBtn = allBtns[i];
+                            break;
+                        }
+                    }
+                    if (!illustrativeBtn) return;
+                    var row = illustrativeBtn.parentNode;
+                    if (!row || row.querySelector('[data-custom="add-surface"]')) return;
+
+                    var btn = document.createElement('button');
+                    btn.setAttribute('data-custom', 'add-surface');
+                    btn.className = illustrativeBtn.className;
+                    btn.textContent = 'Add Surface';
+                    btn.addEventListener('click', addSurfaceForSelection);
+                    row.appendChild(btn);
+                }
+
+                var _uiObserver = new MutationObserver(injectAddSurfaceButton);
+                _uiObserver.observe(document.getElementById('app'), { childList: true, subtree: true });
 
                 const event = new CustomEvent("molstarViewerCreated", { detail: { viewer } });
                 window.dispatchEvent(event);
