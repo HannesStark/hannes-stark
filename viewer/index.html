@@ -209,45 +209,33 @@
                 // Add Surface for selection — injected into Quick Styles panel next to "Illustrative"
                 async function addSurfaceForSelection() {
                     var plugin = viewer.plugin;
-                    var allStructures = plugin.managers.structure.hierarchy.current.structures;
-                    console.log('[Add Surface] structures:', allStructures.length);
+                    var structures = plugin.managers.structure.hierarchy.current.structures;
 
-                    for (var si = 0; si < allStructures.length; si++) {
-                        var s = allStructures[si];
-                        var structureData = s.cell && s.cell.obj && s.cell.obj.data;
-                        if (!structureData) { console.warn('[Add Surface] no structureData'); continue; }
+                    for (var si = 0; si < structures.length; si++) {
+                        var s = structures[si];
+                        if (!plugin.managers.structure.selection.structureHasSelection(s)) continue;
 
-                        var hasSelection = plugin.managers.structure.selection.structureHasSelection(s);
-                        console.log('[Add Surface] hasSelection:', hasSelection);
-                        if (!hasSelection) continue;
-
-                        // getStructure returns the selected sub-structure
-                        var subStructure = plugin.managers.structure.selection.getStructure(structureData);
-                        console.log('[Add Surface] subStructure:', subStructure, 'elementCount:', subStructure && subStructure.elementCount);
-                        if (!subStructure || subStructure.elementCount === 0) continue;
-
-                        // Build bundle using StructureElement.Bundle.fromSubStructure
-                        var SE = molstar && molstar.lib && molstar.lib.StructureElement;
-                        console.log('[Add Surface] StructureElement:', SE);
-                        if (!SE || !SE.Bundle) { console.error('[Add Surface] No StructureElement.Bundle'); continue; }
-
-                        var bundle = SE.Bundle.fromSubStructure(structureData, subStructure);
-                        console.log('[Add Surface] bundle:', bundle);
+                        // Build a selection query whose getSelection returns a plain { kind:'sequence', structures:[sub] }
+                        // object. tryCreateComponentFromSelection passes this to Bundle.fromSelection internally,
+                        // which only needs .kind and .structures — no StructureSelection import required.
+                        var selQuery = {
+                            referencesCurrent: true,
+                            label: 'Selection Surface',
+                            getSelection: function(p, _task, structure) {
+                                var sub = p.managers.structure.selection.getStructure(structure);
+                                if (!sub || sub.elementCount === 0) return { kind: 'sequence', structures: [] };
+                                return { kind: 'sequence', structures: [sub] };
+                            }
+                        };
 
                         var key = 'sel-surface-' + Date.now();
-                        var component = await plugin.builders.structure.tryCreateComponent(
-                            s.cell,
-                            { type: { name: 'bundle', params: bundle }, nullIfEmpty: true, label: 'Selection Surface' },
-                            key
+                        var component = await plugin.builders.structure.tryCreateComponentFromSelection(
+                            s.cell, selQuery, key, { label: 'Selection Surface' }
                         );
-                        console.log('[Add Surface] component:', component);
 
                         if (component) {
-                            // Use the registry to get the molecular-surface provider
-                            var reprProvider = plugin.representation.structure.registry.get('molecular-surface');
-                            console.log('[Add Surface] reprProvider:', reprProvider);
                             await plugin.builders.structure.representation.addRepresentation(component, {
-                                type: reprProvider || 'molecular-surface',
+                                type: 'molecular-surface',
                                 typeParams: { quality: 'medium' }
                             });
                         }
