@@ -2,13 +2,65 @@
   "metadata": {
     "total_videos": 167,
     "source_playlist_id": "PLoVkjhDgBOt2UwOm70DAuxHf1Jc9ijmzl",
-    "extracted_at": "2026-03-24T19:07:37.024686Z"
+    "extracted_at": "2026-04-20T00:00:00.000000Z"
   },
   "videos": [
     {
       "video_id": null,
       "video_url": null,
       "thumbnail_url": null,
+      "talk_title": "Adaptive Protein Tokenization",
+      "speakers": "Rohit Dilip, Ayush Varshney, David Van Valen",
+      "abstract": "We present a novel method for global tokenization of protein structures where successive tokens contribute increasing levels of detail to a global representation. Unlike existing local tokenization approaches, our method addresses key challenges in generative models by reducing error accumulation, eliminating sequence-reduction operations during embedding generation, and enabling task-specific customization of tokenized sequence information. We demonstrate competitive performance across reconstruction, generative, and representation tasks, validating on protein classification benchmarks and showcasing practical applications including zero-shot protein modification and affinity optimization.",
+      "paper_url": "https://arxiv.org/abs/2602.06418",
+      "published_at": "2026-05-18T00:00:00Z",
+      "talk_date": "2026-05-18",
+      "authors": "Rohit Dilip, Ayush Varshney, David Van Valen",
+      "speaker": "Rohit Dilip"
+    },
+    {
+      "video_id": null,
+      "video_url": null,
+      "thumbnail_url": null,
+      "talk_title": "General Multimodal Protein Design Enables DNA-Encoding of Chemistry",
+      "speakers": "Jarrid Rector-Brooks, Théophile Lambert, Marta Skreta, Daniel Roth, Yueming Long, Zi-Qi Li, Xi Zhang, Miruna Cretu, Francesca-Zhoufan Li, Tanvi Ganapathy, Emily Jin, Avishek Joey Bose, Jason Yang, Kirill Neklyudov, Yoshua Bengio, Alexander Tong, Frances H. Arnold, Cheng-Hao Liu",
+      "abstract": "We present DISCO (DIffusion for Sequence-structure CO-design), a multimodal model that co-designs protein sequence and 3D structure around arbitrary biomolecules. Using only reactive intermediates as input, the system designs novel heme enzymes capable of catalyzing new chemical reactions including cyclopropanation and C-H insertions, with activities exceeding those of engineered enzymes. The work demonstrates how deep learning can create evolvable enzymes beyond nature's explored chemistry.",
+      "paper_url": "https://arxiv.org/abs/2604.05181",
+      "published_at": "2026-05-11T00:00:00Z",
+      "talk_date": "2026-05-11",
+      "authors": "Jarrid Rector-Brooks, Théophile Lambert, Marta Skreta, Daniel Roth, Yueming Long, Zi-Qi Li, Xi Zhang, Miruna Cretu, Francesca-Zhoufan Li, Tanvi Ganapathy, Emily Jin, Avishek Joey Bose, Jason Yang, Kirill Neklyudov, Yoshua Bengio, Alexander Tong, Frances H. Arnold, Cheng-Hao Liu",
+      "speaker": "Jarrid Rector-Brooks and Cheng-Hao Liu"
+    },
+    {
+      "video_id": null,
+      "video_url": null,
+      "thumbnail_url": null,
+      "talk_title": "Leveraging Discrete Function Decomposability for Scientific Design",
+      "speakers": "James C. Bowden, Sergey Levine, Jennifer Listgarten",
+      "abstract": "We address in silico design of discrete objects using AI-driven optimization. We present Decomposition-Aware Distributional Optimization (DADO), an algorithm that enhances distributional optimization by leveraging decomposability structure in property predictors. DADO employs a soft-factorized search distribution, invoking graph message-passing to coordinate optimization across linked factors in the design space. We demonstrate the approach through scientific applications including protein design, circuit optimization, and materials discovery where property predictors can be factorized over design variables, enabling more efficient optimization compared to current methods.",
+      "paper_url": "https://arxiv.org/abs/2511.03032",
+      "published_at": "2026-05-04T00:00:00Z",
+      "talk_date": "2026-05-04",
+      "authors": "James C. Bowden, Sergey Levine, Jennifer Listgarten",
+      "speaker": "James Bowden who is a PhD student at UC Berkeley with Jennifer Listgarten."
+    },
+    {
+      "video_id": null,
+      "video_url": null,
+      "thumbnail_url": null,
+      "talk_title": null,
+      "speakers": null,
+      "abstract": null,
+      "paper_url": null,
+      "published_at": "2026-04-27T00:00:00Z",
+      "talk_date": "2026-04-27",
+      "authors": null,
+      "speaker": null
+    },
+    {
+      "video_id": "cDkLGOUG3d4",
+      "video_url": "https://www.youtube.com/watch?v=cDkLGOUG3d4",
+      "thumbnail_url": "https://i.ytimg.com/vi/cDkLGOUG3d4/maxresdefault.jpg",
       "talk_title": "Engineering the mechanosensitivity of single DNA molecules via high-throughputmicrofluidic force spectroscopy",
       "speakers": "Matthew P. DeJong, Yujia Bian, Jennifer E. Ortiz-Cárdenas, Bianca Figueroa, Ananya Pant, Eduardo Posadas-Barrera, Lillian Brixi, Magnus S. Bauer, Alexander R. Dunn, Polly M. Fordyce",
       "abstract": "Single-molecule force spectroscopy (SMFS) is a powerful tool to measure how biomolecules respond to mechanical force, but limited sequence throughput constrains its potential. Here, we present a single-molecule, multiplexed, microfluidic force spectroscopy (SM3FS) assay that uses parallelized microfluidics to measure up to 80 sequence variants per experiment. Using SM3FS, we stretched, overstretched, or unzipped 241 different DNA structures and generated 131,847 single-molecule traces from a quarter-million observations. High sequence throughput allowed us to identify DNA structures that are kinetically stable yet mechanically fragile (Frupture &lt; 3 pN at 0.5 pN s-1), revealing how mechanosensitivity can arise as an intrinsic property of multivalent systems. By enabling systematic sequence-function mapping under force, SM3FS opens a path to high-throughput nonequilibrium studies of biomolecules.",
@@ -19,9 +71,9 @@
       "speaker": "Matthew DeJong who is a PhD student at Stanford."
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
+      "video_id": "xWDKeygNSkk",
+      "video_url": "https://www.youtube.com/watch?v=xWDKeygNSkk",
+      "thumbnail_url": "https://i.ytimg.com/vi/xWDKeygNSkk/maxresdefault.jpg",
       "talk_title": "BiomniBench: Evaluating AI Agents in Biology",
       "speakers": "Kexin Huang and Yunhao Qu from Phylo.",
       "abstract": "As AI agents become central to biological research, evaluation must keep pace. We examine why existing benchmarks fall short for biology, share lessons from our experience with BixBench including a verified subset, and introduce BiomniBench, a trace-based evaluation framework that scores agents on their analytical process, not just the final answer. Biomni Lab achieves state-of-the-art performance across both general-purpose and domain-specific agents on both benchmarks.",
@@ -32,9 +84,9 @@
       "speaker": "Kexin Huang and Yunhao Qu from Phylo."
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
+      "video_id": "OGIFBwh0KGE",
+      "video_url": "https://www.youtube.com/watch?v=OGIFBwh0KGE",
+      "thumbnail_url": "https://i.ytimg.com/vi/OGIFBwh0KGE/maxresdefault.jpg",
       "talk_title": "One-step Language Modeling via Continuous Denoising",
       "speakers": "Chanhyuk Lee, Jaehoon Yoo, Manan Agarwal, Sheel Shah, Jerry Huang, Aditi Raghunathan, Seunghoon Hong, Nicholas M. Boffi, Jinwoo Kim",
       "abstract": "Language models based on discrete diffusion have attracted widespread interest for their potential to provide faster generation than autoregressive models. In practice, however, they exhibit a sharp degradation of sample quality in the few-step regime, failing to realize this promise. Here we show that language models leveraging flow-based continuous denoising can outperform discrete diffusion in both quality and speed. By revisiting the fundamentals of flows over discrete modalities, we build a flow-based language model (FLM) that performs Euclidean denoising over one-hot token encodings. We show that the model can be trained by predicting the clean data via a cross entropy objective, where we introduce a simple time reparameterization that greatly improves training stability and generation quality. By distilling FLM into its associated flow map, we obtain a distilled flow map language model (FMLM) capable of few-step generation. On the LM1B and OWT language datasets, FLM attains generation quality matching state-of-the-art discrete diffusion models. With FMLM, our approach outperforms recent few-step language models across the board, with one-step generation exceeding their 8-step quality. Our work calls into question the widely held hypothesis that discrete diffusion processes are necessary for generative modeling over discrete modalities, and paves the way toward accelerated flow-based language modeling at scale. Code is available at this https URL.",
