@@ -2,7 +2,7 @@
   "metadata": {
     "total_videos": 167,
     "source_playlist_id": "PLoVkjhDgBOt2UwOm70DAuxHf1Jc9ijmzl",
-    "extracted_at": "2026-04-29T00:00:00.000000Z"
+    "extracted_at": "2026-05-05T00:00:00.000000Z"
   },
   "videos": [
     {
@@ -58,9 +58,9 @@
       "speaker": "James Bowden who is a PhD student at Berkeley and NSF GRFP fellow, working at the intersection of ML and scientific design (proteins, materials). He is advised by Jennifer Listgarten and Sergey Levine."
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
+      "video_id": "cDkLGOUG3d4",
+      "video_url": "https://www.youtube.com/watch?v=cDkLGOUG3d4",
+      "thumbnail_url": "https://i.ytimg.com/vi/cDkLGOUG3d4/maxresdefault.jpg",
       "talk_title": "Engineering the mechanosensitivity of single DNA molecules via high-throughputmicrofluidic force spectroscopy",
       "speakers": "Matthew P. DeJong, Yujia Bian, Jennifer E. Ortiz-Cárdenas, Bianca Figueroa, Ananya Pant, Eduardo Posadas-Barrera, Lillian Brixi, Magnus S. Bauer, Alexander R. Dunn, Polly M. Fordyce",
       "abstract": "Single-molecule force spectroscopy (SMFS) is a powerful tool to measure how biomolecules respond to mechanical force, but limited sequence throughput constrains its potential. Here, we present a single-molecule, multiplexed, microfluidic force spectroscopy (SM3FS) assay that uses parallelized microfluidics to measure up to 80 sequence variants per experiment. Using SM3FS, we stretched, overstretched, or unzipped 241 different DNA structures and generated 131,847 single-molecule traces from a quarter-million observations. High sequence throughput allowed us to identify DNA structures that are kinetically stable yet mechanically fragile (Frupture &lt; 3 pN at 0.5 pN s-1), revealing how mechanosensitivity can arise as an intrinsic property of multivalent systems. By enabling systematic sequence-function mapping under force, SM3FS opens a path to high-throughput nonequilibrium studies of biomolecules.",
@@ -71,9 +71,9 @@
       "speaker": "Matthew DeJong who is a PhD student at Stanford."
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
+      "video_id": "xWDKeygNSkk",
+      "video_url": "https://www.youtube.com/watch?v=xWDKeygNSkk",
+      "thumbnail_url": "https://i.ytimg.com/vi/xWDKeygNSkk/maxresdefault.jpg",
       "talk_title": "BiomniBench: Evaluating AI Agents in Biology",
       "speakers": "Kexin Huang and Yunhao Qu from Phylo.",
       "abstract": "As AI agents become central to biological research, evaluation must keep pace. We examine why existing benchmarks fall short for biology, share lessons from our experience with BixBench including a verified subset, and introduce BiomniBench, a trace-based evaluation framework that scores agents on their analytical process, not just the final answer. Biomni Lab achieves state-of-the-art performance across both general-purpose and domain-specific agents on both benchmarks.",
@@ -84,9 +84,9 @@
       "speaker": "Kexin Huang and Yunhao Qu from Phylo."
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
+      "video_id": "OGIFBwh0KGE",
+      "video_url": "https://www.youtube.com/watch?v=OGIFBwh0KGE",
+      "thumbnail_url": "https://i.ytimg.com/vi/OGIFBwh0KGE/maxresdefault.jpg",
       "talk_title": "One-step Language Modeling via Continuous Denoising",
       "speakers": "Chanhyuk Lee, Jaehoon Yoo, Manan Agarwal, Sheel Shah, Jerry Huang, Aditi Raghunathan, Seunghoon Hong, Nicholas M. Boffi, Jinwoo Kim",
       "abstract": "Language models based on discrete diffusion have attracted widespread interest for their potential to provide faster generation than autoregressive models. In practice, however, they exhibit a sharp degradation of sample quality in the few-step regime, failing to realize this promise. Here we show that language models leveraging flow-based continuous denoising can outperform discrete diffusion in both quality and speed. By revisiting the fundamentals of flows over discrete modalities, we build a flow-based language model (FLM) that performs Euclidean denoising over one-hot token encodings. We show that the model can be trained by predicting the clean data via a cross entropy objective, where we introduce a simple time reparameterization that greatly improves training stability and generation quality. By distilling FLM into its associated flow map, we obtain a distilled flow map language model (FMLM) capable of few-step generation. On the LM1B and OWT language datasets, FLM attains generation quality matching state-of-the-art discrete diffusion models. With FMLM, our approach outperforms recent few-step language models across the board, with one-step generation exceeding their 8-step quality. Our work calls into question the widely held hypothesis that discrete diffusion processes are necessary for generative modeling over discrete modalities, and paves the way toward accelerated flow-based language modeling at scale. Code is available at this https URL.",
