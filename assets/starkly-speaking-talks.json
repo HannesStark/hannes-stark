@@ -2,9 +2,35 @@
   "metadata": {
     "total_videos": 167,
     "source_playlist_id": "PLoVkjhDgBOt2UwOm70DAuxHf1Jc9ijmzl",
-    "extracted_at": "2026-05-05T00:00:00.000000Z"
+    "extracted_at": "2026-05-06T00:00:00.000000Z"
   },
   "videos": [
+    {
+      "video_id": null,
+      "video_url": null,
+      "thumbnail_url": null,
+      "talk_title": "ELF: Embedded Language Flows",
+      "speakers": "Keya Hu, Linlu Qiu, Yiyang Lu, Hanhong Zhao, Tianhong Li, Yoon Kim, Jacob Andreas, Kaiming He",
+      "abstract": "Diffusion and flow-based models have become the de facto approaches for generating continuous data, e.g., in domains such as images and videos. Their success has attracted growing interest in applying them to language modeling. Unlike their image-domain counterparts, today's leading diffusion language models (DLMs) primarily operate over discrete tokens. In this paper, we show that continuous DLMs can be made effective with minimal adaptation to the discrete domain. We propose Embedded Language Flows (ELF), a class of diffusion models in continuous embedding space based on continuous-time Flow Matching. Unlike existing DLMs, ELF predominantly stays within the continuous embedding space until the final time step, where it maps to discrete tokens using a shared-weight network. This formulation makes it straightforward to adapt established techniques from image-domain diffusion models, e.g., classifier-free guidance (CFG). Experiments show that ELF substantially outperforms leading discrete and continuous DLMs, achieving better generation quality with fewer sampling steps. These results suggest that ELF offers a promising path toward effective continuous DLMs.",
+      "paper_url": "https://arxiv.org/abs/2605.10938",
+      "published_at": "2026-06-22T00:00:00Z",
+      "talk_date": "2026-06-22",
+      "authors": "Keya Hu, Linlu Qiu, Yiyang Lu, Hanhong Zhao, Tianhong Li, Yoon Kim, Jacob Andreas, Kaiming He",
+      "speaker": "Keya Hu and Linlu Qiu. Keya Hu is a first-year PhD student at MIT EECS, co-advised by Kaiming He and Jacob Andreas. Linlu Qiu is a PhD student at MIT EECS and CSAIL, advised by Yoon Kim."
+    },
+    {
+      "video_id": null,
+      "video_url": null,
+      "thumbnail_url": null,
+      "talk_title": "Fast and Ultra-Capable Protein Design: Advancing the Frontier Through Atomistic SE(3)-Equivariance with Genie 3",
+      "speakers": "Yeqing Lin, Minji Lee, Aakarsh Vermani, Ellena Jiang, Sebastiaan De Cooman, Matej Špeťko, Mohammed AlQuraishi",
+      "abstract": "Despite the breakneck pace of progress in protein design methodology, frontier problems remain challenging, with leading methods struggling to design high-affinity binders, scaffold multiple functional motifs, or stabilize large multi-domain proteins. Recent research efforts have focused on two areas: improving model reasoning when generating active sites or binding interfaces, and improving concordance between the design process and the in silico oracle used to select promising designs. In addressing the first, the field has shifted towards all-atom models that capture sidechain conformations in atomistic detail by eschewing data-efficient SE(3)-equivariance, mirroring the evolution of AlphaFold2 to AlphaFold3. In addressing the second, recent work has focused on replacing generative models employing diffusion or flow-matching with hallucination approaches that directly optimize the oracle in sequence space; this improves success rates but reduces computational efficiency. Here, we close and surpass the generation-hallucination gap by revisiting SE(3)-equivariance using a branched polymer treatment of protein structures. The resulting diffusion model, Genie 3, achieves state-of-the-art performance on binder design, motif scaffolding, and unconditional generation, while being significantly faster than the best existing methods. We use Genie 3 to design a nanomolar binder of Nipah Glycoprotein G, a tetramer with minimal structural or biophysical characterization, as part of the Adaptyv Bio Nipah Competition, achieving a 12.5% success rate. Taken together, our results present a new frontier in protein design capability and a reexamination of the role of SE(3)-equivariance in molecular modeling.",
+      "paper_url": "https://www.biorxiv.org/content/10.64898/2026.05.01.722168v1",
+      "published_at": "2026-06-15T00:00:00Z",
+      "talk_date": "2026-06-15",
+      "authors": "Yeqing Lin, Minji Lee, Aakarsh Vermani, Ellena Jiang, Sebastiaan De Cooman, Matej Špeťko, Mohammed AlQuraishi",
+      "speaker": "Yeqing Lin who is a PhD student at Columbia in Mohammed AlQuraishi's lab. He has been the lead author on the Genie series of protein structure diffusion models, including the original Genie, Genie 2, and now Genie 3."
+    },
     {
       "video_id": null,
       "video_url": null,
@@ -32,9 +58,9 @@
       "speaker": "Rohit Dilip who is a PhD student at Caltech."
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
+      "video_id": "btJqEG8k52g",
+      "video_url": "https://www.youtube.com/watch?v=btJqEG8k52g",
+      "thumbnail_url": "https://i.ytimg.com/vi/btJqEG8k52g/maxresdefault.jpg",
       "talk_title": "General Multimodal Protein Design Enables DNA-Encoding of Chemistry",
       "speakers": "Jarrid Rector-Brooks, Théophile Lambert, Marta Skreta, Daniel Roth, Yueming Long, Zi-Qi Li, Xi Zhang, Miruna Cretu, Francesca-Zhoufan Li, Tanvi Ganapathy, Emily Jin, Avishek Joey Bose, Jason Yang, Kirill Neklyudov, Yoshua Bengio, Alexander Tong, Frances H. Arnold, Cheng-Hao Liu",
       "abstract": "Evolution is an extraordinary engine for enzymatic diversity, yet the chemistry it has explored remains a narrow slice of what DNA can encode. Deep generative models can design new proteins that bind ligands, but none have created enzymes without pre-specifying catalytic residues. We introduce DISCO (DIffusion for Sequence-structure CO-design), a multimodal model that co-designs protein sequence and 3D structure around arbitrary biomolecules, as well as inference-time scaling methods that optimize objectives across both modalities. Conditioned solely on reactive intermediates, DISCO designs diverse heme enzymes with novel active-site geometries. These enzymes catalyze new-to-nature carbene-transfer reactions, including alkene cyclopropanation, spirocyclopropanation, B-H, and C(sp3)-H insertions, with high activities exceeding those of engineered enzymes. Random mutagenesis of a selected design further confirmed that enzyme activity can be improved through directed evolution. By providing a scalable route to evolvable enzymes, DISCO broadens the potential scope of genetically encodable transformations. Code is available at this https URL.",
