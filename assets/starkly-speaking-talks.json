@@ -2,7 +2,7 @@
   "metadata": {
     "total_videos": 167,
     "source_playlist_id": "PLoVkjhDgBOt2UwOm70DAuxHf1Jc9ijmzl",
-    "extracted_at": "2026-05-06T00:00:00.000000Z"
+    "extracted_at": "2026-05-15T00:00:00.000000Z"
   },
   "videos": [
     {
@@ -35,6 +35,19 @@
       "video_id": null,
       "video_url": null,
       "thumbnail_url": null,
+      "talk_title": "Generative Modeling with Flux Matching",
+      "speakers": "Peter Pao-Huang, Xiaojie Qiu, Stefano Ermon",
+      "abstract": "Flux Matching is a generative modeling paradigm for learning data generating vector fields beyond the score function. The framework is demonstrated across controllable generative fields, interpretable fields applied to RNA velocity, unrestricted fields for image generation on CIFAR-10 and CelebA, fast mixing fields for accelerated sampling, and embedding structure in generative fields for physics simulation. Code is available at github.com/peterpaohuang/flux_matching.",
+      "paper_url": "https://arxiv.org/abs/2605.07319",
+      "published_at": "2026-06-08T00:00:00Z",
+      "talk_date": "2026-06-08",
+      "authors": "Peter Pao-Huang, Xiaojie Qiu, Stefano Ermon",
+      "speaker": "Peter Pao-Huang who is a Computer Science PhD student at Stanford University, co-advised by Stefano Ermon and Xiaojie Qiu. His research develops principled generative modeling methods to understand, treat, and reverse disease, with a current focus on modeling Perturb-seq data."
+    },
+    {
+      "video_id": null,
+      "video_url": null,
+      "thumbnail_url": null,
       "talk_title": "MarS-FM: Generative Modeling of Molecular Dynamics via Markov State Models",
       "speakers": "Kacper Kapuśniak, Cristian Gabellini, Michael Bronstein, Prudencio Tossou, Francesco Di Giovanni",
       "abstract": "Molecular Dynamics (MD) is a powerful computational microscope for probing protein functions. However, the need for fine-grained integration and the long timescales of biomolecular events make MD computationally expensive. To address this, several generative models have been proposed to generate surrogate trajectories at lower cost. Yet, these models typically learn a fixed-lag transition density, causing the training signal to be dominated by frequent but uninformative transitions. We introduce a new class of generative models, MSM Emulators, which instead learn to sample transitions across discrete states defined by an underlying Markov State Model (MSM). We instantiate this class with Markov Space Flow Matching (MarS-FM), whose sampling offers more than two orders of magnitude speedup compared to implicit- or explicit-solvent MD simulations. We benchmark Mars-FM ability to reproduce MD statistics through structural observables such as RMSD, radius of gyration, and secondary structure content. Our evaluation spans protein domains (up to 500 residues) with significant chemical and structural diversity, including unfolding events, and enforces strict sequence dissimilarity between training and test sets to assess generalization. Across all metrics, MarS-FM outperforms existing methods, often by a substantial margin.",
@@ -45,9 +58,9 @@
       "speaker": "Kacper Kapuśniak."
     },
     {
-      "video_id": null,
-      "video_url": null,
-      "thumbnail_url": null,
+      "video_id": "MrBl1w7XmgA",
+      "video_url": "https://www.youtube.com/watch?v=MrBl1w7XmgA",
+      "thumbnail_url": "https://i.ytimg.com/vi/MrBl1w7XmgA/maxresdefault.jpg",
       "talk_title": "Adaptive Protein Tokenization",
       "speakers": "Rohit Dilip, Ayush Varshney, David Van Valen",
       "abstract": "Tokenization is a promising path to multi-modal models capable of jointly understanding protein sequences, structure, and function. Existing protein structure tokenizers create tokens by pooling information from local neighborhoods, an approach that limits their performance on generative and representation tasks. In this work, we present a method for global tokenization of protein structures in which successive tokens contribute increasing levels of detail to a global representation. This change resolves several issues with generative models based on local protein tokenization: it mitigates error accumulation, provides embeddings without sequence-reduction operations, and allows task-specific adaptation of a tokenized sequence's information content. We validate our method on reconstruction, generative, and representation tasks and demonstrate that it matches or outperforms existing models based on local protein structure tokenizers. We show how adaptive tokens enable inference criteria based on information content, which boosts designability. We validate representations generated from our tokenizer on CATH classification tasks and demonstrate that non-linear probing on our tokenized sequences outperforms equivalent probing on representations from other tokenizers. Finally, we demonstrate how our method supports zero-shot protein shrinking and affinity maturation.",
