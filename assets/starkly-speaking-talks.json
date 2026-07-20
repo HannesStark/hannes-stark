@@ -9,6 +9,32 @@
       "video_id": null,
       "video_url": null,
       "thumbnail_url": null,
+      "talk_title": "Strong Stochastic Flow Maps",
+      "speakers": "Sam McCallum, Zander W. Blasingame, Timothy Herschell, Niklas Rindtorff, Alexander Tong, James Foster",
+      "abstract": "Flow and diffusion models generate high-quality samples in many modalities; however, many network evaluations are required during inference due to numerical integration of an underlying differential equation. Flow maps alleviate this problem by learning the solution map of the differential equation directly, enabling few-step sampling. Yet, current methods are restricted to approximating the solution map of ODEs. These methods can be used to learn the transition kernel of an SDE, thereby obtaining a solution map that recovers the marginal distributions of the process (weak convergence) rather than the solution path (strong convergence). We propose Strong Stochastic Flow Maps (SSFMs) as a novel framework for learning the strong solution map of additive-noise SDEs, directly generalizing deterministic flow maps to the stochastic setting. Further, a polynomial approximation to Brownian motion is introduced and shown to converge pathwise. These results enable a simulation-free training objective for the solution map of diffusion models. We demonstrate that SSFMs outperform previous stochastic flow map methods on image generation and enable few-step sampling of molecular systems.",
+      "paper_url": "https://arxiv.org/abs/2606.01086",
+      "published_at": "2026-07-20T00:00:00Z",
+      "talk_date": "2026-07-20",
+      "authors": "Sam McCallum, Zander W. Blasingame, Timothy Herschell, Niklas Rindtorff, Alexander Tong, James Foster",
+      "speaker": "Sam McCallum who is a PhD student at the University of Bath, and Zander W. Blasingame who is a researcher at the AITHYRA Research Institute for Biomedical Artificial Intelligence."
+    },
+    {
+      "video_id": null,
+      "video_url": null,
+      "thumbnail_url": null,
+      "talk_title": "Energy Matching: Unifying Flow Matching and Energy-Based Models for Generative Modeling",
+      "speakers": "Michal Balcerak, Tamaz Amiranashvili, Antonio Terpin, Suprosanna Shit, Lea Bogensperger, Sebastian Kaltenbach, Petros Koumoutsakos, Bjoern Menze",
+      "abstract": "We introduce Energy Matching, a framework that endows flow-based methods with the flexibility of energy-based models (EBMs). At its core, we parameterize the dynamics with a single time-independent scalar field, which serves as both a generator and a prior. Far from the data manifold, samples move along optimal transport paths from noise to data. As they approach the data manifold, an entropic energy term guides the system into a Boltzmann equilibrium distribution, explicitly capturing the underlying likelihood structure of the data. We parameterize this dynamic with a single time-independent scalar field, which serves as both a powerful generator and a flexible prior for effective regularization of inverse problems. Our method substantially outperforms existing EBMs on CIFAR-10 and ImageNet generation in terms of fidelity, while retaining simulation-free training of transport-based approaches away from the data manifold. Furthermore, we leverage the method's flexibility to introduce an interaction energy that supports diverse mode exploration, which we demonstrate in a controlled protein-generation setting. Our approach focuses on learning a scalar potential energy—without time-conditioning, auxiliary generators, or additional networks—which marks a significant departure from recent EBM methods. We believe that this simplified framework significantly advances EBMs capabilities and paves the way for their wider adoption in generative modeling.",
+      "paper_url": "https://arxiv.org/abs/2504.10612",
+      "published_at": "2026-07-13T00:00:00Z",
+      "talk_date": "2026-07-13",
+      "authors": "Michal Balcerak, Tamaz Amiranashvili, Antonio Terpin, Suprosanna Shit, Lea Bogensperger, Sebastian Kaltenbach, Petros Koumoutsakos, Bjoern Menze",
+      "speaker": "Michal Balcerak who is a PhD student at the University of Zurich."
+    },
+    {
+      "video_id": "NRecN81_B_8",
+      "video_url": "https://www.youtube.com/watch?v=NRecN81_B_8",
+      "thumbnail_url": "https://i.ytimg.com/vi/NRecN81_B_8/maxresdefault.jpg",
       "talk_title": "ELF: Embedded Language Flows",
       "speakers": "Keya Hu, Linlu Qiu, Yiyang Lu, Hanhong Zhao, Tianhong Li, Yoon Kim, Jacob Andreas, Kaiming He",
       "abstract": "Diffusion and flow-based models have become the de facto approaches for generating continuous data, e.g., in domains such as images and videos. Their success has attracted growing interest in applying them to language modeling. Unlike their image-domain counterparts, today's leading diffusion language models (DLMs) primarily operate over discrete tokens. In this paper, we show that continuous DLMs can be made effective with minimal adaptation to the discrete domain. We propose Embedded Language Flows (ELF), a class of diffusion models in continuous embedding space based on continuous-time Flow Matching. Unlike existing DLMs, ELF predominantly stays within the continuous embedding space until the final time step, where it maps to discrete tokens using a shared-weight network. This formulation makes it straightforward to adapt established techniques from image-domain diffusion models, e.g., classifier-free guidance (CFG). Experiments show that ELF substantially outperforms leading discrete and continuous DLMs, achieving better generation quality with fewer sampling steps. These results suggest that ELF offers a promising path toward effective continuous DLMs.",
@@ -849,19 +875,6 @@
       "talk_date": "2024-10-07",
       "authors": "Ali Saberi, Benedict Choi, Sean Wang, Mohsen Naghipourfar, Arsham Mikaeili Namini, Vijay Ramani, Amin Emad, Hamed S. Najafabadi, Hani Goodarzi",
       "speaker": "First author Ali Saberi, a PhD student at McGill, working with Hani Goodarzi (UCSF, Arc Institute), Hamed S. Najafabadi (McGill, Institute of Genomic Medicine), and Amin Emad (McGill, Mila)."
-    },
-    {
-      "video_id": "UjCEIkBZZfQ",
-      "video_url": "https://www.youtube.com/watch?v=UjCEIkBZZfQ",
-      "thumbnail_url": "https://i.ytimg.com/vi/UjCEIkBZZfQ/maxresdefault.jpg",
-      "talk_title": "Adjoint Matching: Fine-tuning Flow and Diffusion Generative Models with Memoryless Stochastic Optimal Control",
-      "speakers": "Carles Domingo-Enrich",
-      "abstract": null,
-      "paper_url": "https://arxiv.org/abs/2409.08861",
-      "published_at": "2024-09-27T16:51:14Z",
-      "talk_date": "2024-09-23",
-      "authors": "Carles Domingo-Enrich",
-      "speaker": "Carles Domingo-Enrich works at Meta's FAIR team. In May 2024 he graduated from his PhD in Computer Science from NYU, where his advisor was Joan Bruna. He works on generative AI models (diffusion models, normalizing flows) and related topics at the intersection of machine learning, statistics and optimization."
     },
     {
       "video_id": "gNjIluiiyt0",
